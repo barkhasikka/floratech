@@ -1,0 +1,42 @@
+div, section, svg, body{
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: "HelveticaNeue";
+    src: url("../assets/Helvetica Neue.OTF");
+}
+body{
+    font-family: "Helvetica Neue";
+    overflow-x: hidden;
+    width: 100%;
+}
+.footer-info{
+    display: inline-block;
+    width: 50%;
+    font-size: 10px;
+    height: 28px;
+    line-height: 28px;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.introduction-video{
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+.intro-video{
+    height: auto;
+    width: 100%;
+    z-index: -1;
+}
+.introduction-text{
+    font-size: 15px;
+    width: 100%;
+}
+.text-align-right{
+    text-align: right;
+}
