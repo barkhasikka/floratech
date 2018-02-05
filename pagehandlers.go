@@ -19,6 +19,7 @@ var (
 func landing(wr http.ResponseWriter, req *http.Request) {
 	log.Println("Landing hit")
 	if req.Method == "GET" {
+	log.Println("Sending to parse");
 		t, err := template.ParseFiles("template/index.html")
 
 		if err != nil {

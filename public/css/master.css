@@ -13,6 +13,10 @@ div, section, svg, body{
     font-family: "Arial Black";
     src: url("../assets/Arial Black.TTF");
 }
+@font-face{
+    font-family: "andalemo";
+    src: url("../assets/andalemo.TTF");
+}
 html, body{
     font-family: "Helvetica Neue";
     overflow-x: hidden;
@@ -151,6 +155,39 @@ html, body{
     /* transform: translate(-50%, -50%); */
     display: block;
 }
+.video-overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(../assets/overlay.png);
+    top: 0;
+    left: 0;
+}
+.grow-heading {
+    font-family: "Helvetica Neue";
+    font-size: 7vw;
+    color: orange;
+    position: relative;
+    top: 50%;
+    width: 100px;
+    /*margin: 0 auto;*/
+    border-right: 2px solid rgba(255,255,255,.75);
+    /*text-align: center;*/
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
+.anim-typewriter{
+    animation: typewriter 1s steps(4) 1s 1 normal both, blinkTextCursor 500ms steps(4) infinite normal;
+}
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 100px;}
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}
 
 .text-align-right{
     text-align: right;
@@ -284,7 +321,7 @@ html, body{
     background: linear-gradient(to bottom left, rgba(255, 192, 203, 0.6509803921568628), rgba(255, 165, 0, 0.4392156862745098) 40%, rgb(249, 241, 195) 70%, rgba(255, 192, 203, 0.71) 75%);
 }
 .services-title {
-    width: 100%;
+    width: calc(100% - 5em);
     height: 15%;
     padding: 10px;
     line-height: 30px;
@@ -309,7 +346,7 @@ html, body{
     margin: auto;
 }
 .app-service-section {
-    width: 85%;
+    width: 90%;
     height: 25%;
     float: right;
     border: 2px solid rgb(251, 117, 141);
@@ -319,9 +356,19 @@ html, body{
 .service-txt-alignment {
     padding: 15px 40px;
     float: left;
-    width: 75%;
+    width: 70%;
     margin: auto;
     font-family: "Helvetica Neue";
+}
+.see-more-txt {
+    font-family: andalemo;
+    font-size: 15px;
+    width: 75%;
+    display: block;
+    /* position: absolute; */
+    bottom: 20px;
+    text-align: center;
+    float: left;
 }
 .mobile-svg {
     width: 20%;
@@ -345,12 +392,275 @@ html, body{
     width: 80%;
     float: right;
 }
+.app-margin-bottom {
+    margin-bottom: 0;
+}
 .cloud-svg {
-    width: 17%;
+    width: 20%;
     display: inline-block;
     float: right;
     position: absolute;
 }
+.team-container {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+.team-text {
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    padding-top: 15em;
+}
+.team-txt {
+    font-family: "Helvetica Neue";
+    font-size: 45px;
+    color: rgb(255, 165, 0);
+    display: block;
+    padding-top: 12px;
+}
+.behind-txt {
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    color: rgb(128, 128, 128);
+    margin: 0 30px;
+}
+.team-photos-section {
+    width: 80%;
+    height: 100%;
+    float: right;
+}
+.team-photos-wrapper {
+    width: 95%;
+    height: 70%;
+    margin: auto;
+    display: block;
+    padding-top: 12em;
+}
+.photos-thumbnail {
+    width: 20%;
+    height: 100%;
+    float: left;
+    display: inline-block;
+}
+.photos {
+    background-image: url(../assets/img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 85%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    position: relative;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.team-photos-wrapper:hover .photos {
+    filter: opacity(0.3);
+ }
+.photos-thumbnail .photos:hover{
+    transform: scale(1.2, 1.2); /** default is 1, scale it to 1.5 */
+    opacity: 1;
+    filter: none;
+}
+.motto-container {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+.motto-txt-section {
+    width: calc(100% - 10em);
+    height: 100px;
+    margin-left: 10em;
+}
+.motto-txt {
+    font-family: "Helvetica Neue";
+    font-size: 40px;
+    color: rgb(255, 165, 0);
+    display: block;
+    padding-top: 12px;
+    margin: 0 20px;
+}
+.ceo-txt {
+    font-family: "Helvetica Neue";
+    font-size: 18px;
+    color: rgba(128, 128, 128, 0.64);
+    margin: 0 35px;
+}
+.motto-description {
+    width: 100%;
+    height: calc(100% - 175px);
+    margin: 0 auto;
+    position: relative;
+    margin-top: 75px;
+}
+.pic-description {
+    width: 80%;
+    height: 75%;
+    margin: auto;
+    display: block;
+    border: 2px solid rgb(251, 117, 141);
+}
+.img-description {
+    width: 60%;
+    height: 35%;
+    float: left;
+    margin: auto;
+    display: inline-block;
+    padding: 25px;
+    text-align: justify;
+    font-size: 15px;
+}
+.image-section {
+    float: left;
+    width: 30%;
+    height: calc(100% - 35px);
+    margin-top: 35px;
+}
+.image {
+    width: 300px;
+    height: 220px;
+    background-image: url(../assets/ceo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+}
+.ceo-name {
+    color: rgb(251, 117, 141);
+    font-family: "Helvetica Neue";
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+.quote-txt {
+    width: 60%;
+    height: 15%;
+    border: 2px solid rgb(251, 117, 141);
+    position: absolute;
+    top: 13em;
+    display: table;
+    margin-left: 70px;
+    z-index: -1;
+}
+.quote {
+    font-size: 20px;
+    text-align: center;
+    display: table-cell;
+    color: orange;
+    vertical-align: middle;
+    /* overflow: hidden; */
+}
+.contact-container {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    padding-top: 80px;
+    position: relative;
+    background: linear-gradient(to bottom left, rgba(255, 192, 203, 0.6509803921568628), rgba(255, 165, 0, 0.4392156862745098) 40%, rgb(249, 241, 195) 70%, rgba(255, 192, 203, 0.71) 75%);
+}
+.contact-section {
+    width: 80%;
+    height: 85%;
+    margin: auto;
+    display: block;
+    box-shadow: 1px 3px 16px 0px rgba(0, 0, 0, 0.4);
+    background-color: white;
+}
+.contact-heading {
+    width: calc(100% - 30px);
+    height: 135px;
+    margin-left: 30px;
+    padding: 10px;
+    padding-top: 25px;
+}
+.contact-heading-txt {
+    font-size: 32px;
+    font-family: "Helvetica Neue";
+    color: orange;
+    display: block;
+    margin: 0 10px;
+}
+.contact-heading-txt-second {
+    font-size: 17px;
+    font-family: "Helvetica Neue";
+    color: gray;
+    margin: 0 25px;
+}
+.contact-us-section {
+    width: 100%;
+    height: calc(100% - 135px);
+}
+.contact-wrapper {
+    width: 85%;
+    height: 30%;
+    margin: auto;
+    display: block;
+    padding: 10px;
+}
+.contact-us-left-section {
+    width: 20%;
+    float: left;
+    display: block;
+    text-align: center;
+}
+.left-contact-txt {
+    font-size: 22px;
+    font-family: "Helvetica Neue";
+    color: orange;
+    display: block;
+    margin: 0 10px;
+}
+.contact-us-right-section {
+    width: 70%;
+    float: right;
+    margin: auto;
+}
+.insert-txt {
+    font-size: 15px;
+    font-family: "Helvetica Neue";
+    color: gray;
+    display: block;
+    margin: 0 15px;
+}
+.social-media-connect {
+    width: 25%;
+    height: 20%;
+    box-shadow: 1px 3px 16px 0px rgba(0, 0, 0, 0.4);
+    bottom: 50px;
+    background: linear-gradient(to top right, rgba(255, 192, 203, 0.6509803921568628) 24%, rgba(145, 0, 255, 0.27) 53%, rgb(225, 226, 121) 81%, rgba(187, 202, 234, 0.71) 90%);
+    position: absolute;
+    right: 70px;
+}
+/*ul {*/
+    /*overflow: auto;*/
+/*}*/
+
+/*ul li {*/
+    /*overflow: auto;*/
+    /*padding-top: 20px;*/
+    /*padding-left: 25px;*/
+/*}*/
+
+/*ul li i {*/
+    /*background: #205D7A;*/
+    /*color: #fff;*/
+    /*width: 40px;*/
+    /*height: 40px;*/
+    /*border-radius: 20px;*/
+    /*font-size: 25px;*/
+    /*text-align: center;*/
+    /*margin-right: 10px;*/
+    /*padding-top: 15%;*/
+/*}*/
+/*.fa {*/
+    /*font-size: 35px !important;*/
+/*}*/
 .footer-info{
     display: inline-block;
     width: 50%;
@@ -363,37 +673,4 @@ html, body{
 }
 .float-right{
     float: right;
-}
-.video-overlay{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: url(../assets/overlay.png);
-    top: 0;
-    left: 0;
-}
-.grow-heading {
-    font-family: "Helvetica Neue";
-    font-size: 7vw;
-    color: orange;
-    position: relative;
-    top: 50%;
-    width: 100px;
-    /*margin: 0 auto;*/
-    border-right: 2px solid rgba(255,255,255,.75);
-    /*text-align: center;*/
-    white-space: nowrap;
-    overflow: hidden;
-    display: block;
-}
-.anim-typewriter{
-    animation: typewriter 1s steps(4) 1s 1 normal both, blinkTextCursor 500ms steps(4) infinite normal;
-}
-@keyframes typewriter{
-    from{width: 0;}
-    to{width: 100px;}
-}
-@keyframes blinkTextCursor{
-    from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: transparent;}
 }
