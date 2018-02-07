@@ -171,28 +171,29 @@ html, body{
     top: 50%;
     width: 100px;
     /*margin: 0 auto;*/
-    border-right: 2px solid rgba(255,255,255,.75);
+    border-right: 2px solid transparent;
     /*text-align: center;*/
     white-space: nowrap;
     overflow: hidden;
     display: block;
 }
 .anim-typewriter{
-    animation: typewriter 1s steps(4) 1s 1 normal both, blinkTextCursor 500ms steps(4) infinite normal;
-}
+     animation: typewriter 3s steps(4, end)  alternate both, blinkTextCursor 3s steps(4, end)  alternate;
+ }
 @keyframes typewriter{
-    from{width: 0;}
-    to{width: 100px;}
+    0%{width: 0;}
+    50%{width: 330px;}
+    75%{width: 210px;}
+    90%{width:90px}
+    100%{width: 0;}
 }
 @keyframes blinkTextCursor{
     from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: transparent;}
+    to{border-right-color: rgba(255,255,255,.75);}
 }
-
 .text-align-right{
     text-align: right;
 }
-
 .create-container {
     width: 100%;
     height: 100%;
@@ -217,24 +218,39 @@ html, body{
 }
 .heading {
     display: inline-block;
+    position: absolute;
+    top:0;
 }
 .second-heading {
     font-family: "Helvetica Neue";
-    font-size: 5em;
+    font-size: 7vw;
     color: orange;
+    position: relative;
+    width: 130px;
+    border-right: 2px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 10px;
     display: inline-block;
-    margin: auto;
 }
 .square-icon {
     font-size: 15px;
     color: orange;
 }
+.anim-createwriter{
+    animation: createwriter 4s steps(6, end) 3s 1 normal both, blinkTextCursor 4s steps(6, end) 3s  normal;
+}
+@keyframes createwriter{
+    0%{width: 0;}
+    100%{width: 400px;}
+}
 .menu-bar {
     width: 100%;
     height: 40px;
     list-style-type: none;
-    float: right;
+    /* float: right; */
     position: relative;
+    /*text-align: center;*/
 }
 .menu {
     overflow: hidden;
@@ -245,10 +261,17 @@ html, body{
 }
 .menu-list span {
     text-decoration: none;
-    padding: 10px;
+    padding: 12px;
     display: block;
     float: left;
     font-size: 15px;
+}
+.anim-blink{
+    animation: blink 6s steps(4, end) 6s normal both, blinkTextCursor 6s steps(4, end) 3s  normal;
+}
+@keyframes blink{
+    0%{width: 0;}
+    100%{width: 350px;}
 }
 .fullflower-svg-css {
     height: 100%;
@@ -353,14 +376,26 @@ html, body{
     float: right;
     border: 2px solid rgb(251, 117, 141);
     margin-bottom: 30px;
+    margin-right: 40px;
     position: relative;
 }
 .service-txt-alignment {
     padding: 15px 40px;
     float: left;
+    position: relative;
     width: 70%;
     margin: auto;
     font-family: "Helvetica Neue";
+    text-align: justify;
+    animation: anim-para 3s infinite;
+}
+@keyframes anim-para {
+    0% {right: -165px;}
+    100% {right:0;}
+}
+.mobile-svg-info {
+    height: 165px;
+    width: 250px;
 }
 .see-more-txt {
     font-family: andalemo;
@@ -379,15 +414,31 @@ html, body{
     position: absolute;
 }
 .desktop-app-section {
-    width: 85%;
+    width: 95%;
     height: 25%;
     float: left;
     border: 2px solid rgb(251, 117, 141);
     margin-bottom: 30px;
+    margin-left: 28px;
+}
+.desktop-service-txt-alignment{
+    padding: 15px 20px;
+    float: left;
+    position: relative;
+    width: 75%;
+    text-align: justify;
+    margin: auto;
+    font-family: "Helvetica Neue";
+    animation: anim-desktop 3s infinite;
+}
+@keyframes anim-desktop {
+    0% {left: -100px;}
+    100% {left:0;}
 }
 .dektop-svg {
     width: 20%;
     float: left;
+    margin-left: 15px;
 }
 
 .desktop-right-txt {
@@ -433,13 +484,15 @@ html, body{
     width: 80%;
     height: 100%;
     float: right;
+    display: flex;
 }
 .team-photos-wrapper {
     width: 95%;
-    height: 70%;
+    height: 300px;
     margin: auto;
     display: block;
-    padding-top: 12em;
+    display: flex;
+    align-items: center;
 }
 .photos-thumbnail {
     width: 20%;
@@ -459,16 +512,14 @@ html, body{
     transition: 0.3s ease;
     cursor: pointer;
 }
-
-.team-photos-wrapper:hover .photos {
+.team-photos-wrapper:hover .photos-thumbnail div{
     filter: opacity(0.3);
  }
 .photos-thumbnail .photos:hover{
-    transform: scale(1.2, 1.2); /** default is 1, scale it to 1.5 */
+    transform: scale(1.1, 1.1); /** default is 1, scale it to 1.5 */
     opacity: 1;
-    filter: none;
+    filter: none !important;
 }
-
 .motto-container {
     width: 100%;
     height: 100%;
@@ -724,6 +775,9 @@ html, body{
     display: block;
     margin: 0 15px;
 }
+.fa-size {
+    font-size: 28px !important;
+}
 .social-media-connect {
     width: 25%;
     height: 25%;
@@ -733,19 +787,19 @@ html, body{
     position: absolute;
     right: 70px;
 }
-ul {
+.social-media-wrapper {
     overflow: auto;
     display: block;
     text-align: center;
     margin: 25px auto;
 }
-ul li {
+.social-media-wrapper .social-media-icons {
     overflow: auto;
     padding-right: 30px;
     display: inline-block;
     margin-bottom: 10px;
 }
-ul li i {
+.social-media-wrapper .social-media-icons i {
     background: #808080e8;
     color: #fff;
     width: 50px;
@@ -755,9 +809,7 @@ ul li i {
     margin-right: 10px;
     padding-top: 15%;
 }
-.fa {
-    font-size: 28px !important;
-}
+
 .footer-info{
     display: inline-block;
     width: 50%;
