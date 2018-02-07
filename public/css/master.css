@@ -169,7 +169,7 @@ html, body{
     color: orange;
     position: relative;
     top: 50%;
-    width: 100px;
+    /*width: 100px;*/
     /*margin: 0 auto;*/
     border-right: 2px solid transparent;
     /*text-align: center;*/
@@ -216,11 +216,11 @@ html, body{
     display: block;
     margin: 20px;
 }
-.heading {
-    display: inline-block;
-    position: absolute;
-    top:0;
-}
+/*.heading {*/
+    /*display: inline-block;*/
+    /*position: absolute;*/
+    /*top:0;*/
+/*}*/
 .second-heading {
     font-family: "Helvetica Neue";
     font-size: 7vw;
@@ -383,15 +383,18 @@ html, body{
     padding: 15px 40px;
     float: left;
     position: relative;
+    right: 0;
     width: 70%;
     margin: auto;
     font-family: "Helvetica Neue";
     text-align: justify;
-    animation: anim-para 3s infinite;
+    /*animation: anim-para 3s;*/
 }
 @keyframes anim-para {
-    0% {right: -165px;}
-    100% {right:0;}
+    0% {right: 0px;
+        width: 0%;}
+    100% {right:0;
+    width: 70%;}
 }
 .mobile-svg-info {
     height: 165px;
@@ -429,7 +432,7 @@ html, body{
     text-align: justify;
     margin: auto;
     font-family: "Helvetica Neue";
-    animation: anim-desktop 3s infinite;
+    /*animation: anim-desktop 3s infinite;*/
 }
 @keyframes anim-desktop {
     0% {left: -100px;}
