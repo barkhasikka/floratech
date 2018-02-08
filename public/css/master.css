@@ -2,6 +2,18 @@ div, section, svg, body{
     box-sizing: border-box;
 }
 @font-face{
+    font-family: "HelveticaNeue-Light";
+    src: url("../assets/HelveticaNeue-Light.OTF");
+}
+@font-face{
+    font-family: "Arial Black";
+    src: url("../assets/Arial Black.TTF");
+}
+@font-face{
+    font-family: Verdana;
+    src: url("../assets/Verdana.TTF");
+}
+@font-face{
     font-family: "Helvetica Neue";
     src: url("../assets/Helvetica Neue.OTF");
 }
@@ -10,13 +22,14 @@ div, section, svg, body{
     src: url("../assets/PORKYS.TTF");
 }
 @font-face{
-    font-family: "Arial Black";
-    src: url("../assets/Arial Black.TTF");
+    font-family: TektonPro-Bold;
+    src: url("../assets/TektonPro-Bold.otf");
 }
 @font-face{
     font-family: "andalemo";
     src: url("../assets/andalemo.TTF");
 }
+
 html, body{
     font-family: "Helvetica Neue";
     overflow-x: hidden;
@@ -91,13 +104,13 @@ html, body{
 
 .flora-text {
     font-size: 20px;
-    color: orange;
+    color: rgb(242, 159, 65);
     font-family: PORKYS;
 }
 .techno-text {
     font-size: 20px;
     color: orange;
-    font-family: "Arial Black";
+    font-family: Verdana;
 }
 /*.serach-section {*/
     /*width: 33.33%;*/
@@ -110,7 +123,7 @@ html, body{
 /*.search-text {*/
     /*font-size: 15px;*/
     /*padding: 10px;*/
-    /*font-family: "Helvetica Neue";*/
+/*font-family: "andalemo";*/
 /*}*/
 /*.search-icon {*/
     /*float: right;*/
@@ -128,6 +141,7 @@ html, body{
     font-size: 15px;
     float: right;
     margin-right: 25px;
+    font-family: "andalemo";
 }
 #video-container {
     width: 100%;
@@ -146,13 +160,9 @@ html, body{
     z-index: -1;
 }
 .introduction-text{
-    /* clear: both; */
-    /* width: 50%; */
-    /* height: auto; */
     position: relative;
-    top: 32%;
-    left: 15%;
-    /* transform: translate(-50%, -50%); */
+    top: 30%;
+    left: 12%;
     display: block;
 }
 .video-overlay{
@@ -164,9 +174,9 @@ html, body{
     left: 0;
 }
 .grow-heading {
-    font-family: "Helvetica Neue";
+    font-family: "Arial Black";
     font-size: 7vw;
-    color: orange;
+    color: rgb(242, 159, 65);
     position: relative;
     top: 50%;
     /*width: 100px;*/
@@ -211,10 +221,11 @@ html, body{
     top: 35%;
 }
 .first-heading {
-    font-family: "Helvetica Neue";
+    font-family: HelveticaNeue-Light;
     font-size: 4vw;
     display: block;
-    margin: 20px;
+    margin: 0 20px;
+    color: rgb(174, 174, 174);
 }
 /*.heading {*/
     /*display: inline-block;*/
@@ -261,17 +272,18 @@ html, body{
 }
 .menu-list span {
     text-decoration: none;
-    padding: 12px;
+    padding: 14px;
     display: block;
     float: left;
-    font-size: 15px;
+    font-family: "andalemo";
+    font-size: 17px;
 }
 .anim-blink{
     animation: blink 6s steps(4, end) 6s normal both, blinkTextCursor 6s steps(4, end) 3s  normal;
 }
 @keyframes blink{
     0%{width: 0;}
-    100%{width: 350px;}
+    100%{width: 375px;}
 }
 .fullflower-svg-css {
     height: 100%;
@@ -281,114 +293,132 @@ html, body{
 }
 .company-details-container {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 .company-details-section {
     width: 95%;
-    height: 100%;
+    height: auto;
     margin: auto;
     display: block;
 }
-.who-section {
-    width: 100%;
-    height: 33.33%;
+.company-thumbnail {
+    width: 420px;
+    height: 600px;
+    padding: 15px;
     display: inline-block;
 }
-.company-left-section {
-    width: 30%;
-    height: 100%;
-    float: left;
-    padding: 10px;
+.circle-section {
+    width: 100%;
+    height: 200px;
+    padding-top: 25px;
     line-height: 30px;
     text-align: center;
+    display: block;
+}
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    display: block;
+    position: relative;
+    box-shadow: 0px 1px 22px 1px #2f2e2e42;
+    margin: auto;
 }
 .first-company-txt {
-    font-family: "Helvetica Neue";
-    font-size: 30px;
-    color: orange;
+    font-family: "Arial Black";
+    font-size: 28px;
+    color: rgb(242, 159, 65);
     display: block;
-    padding-top: 60px;
+    padding-top: 50px;
 }
 .second-company-txt {
-    font-family: "Helvetica Neue";
+    font-family: HelveticaNeue-Light;
     font-size: 15px;
-    color: gray;
-    color: rgba(128, 128, 128, 0.64);
+    padding: 5px 15px;
+    text-align: justify;
+    font-size: 13px;
+    margin: auto;
+    font-family: Verdana;
+    color: rgb(83, 88, 95);
 }
-.company-right-section {
-    width: 70%;
-    height: 100%;
-    float: right;
-    padding: 45px 20px;
+.text-section {
+    width: 100%;
+    height: 450px;
+    display: block;
+    /* margin: auto; */
+    padding: 20px 10px;
 }
 .txt-alignment {
     padding: 5px 15px;
     text-align: justify;
-    font-size: 16px;
+    font-size: 14px;
     margin: auto;
-}
-.what-section {
-    width: 100%;
-    height: 33.33%;
-    display: inline-block;
-}
-.clients-section {
-    width: 100%;
-    height: 33.33%;
-    display: inline-block;
+    font-family: Verdana;
+    color: rgb(83, 88, 95);
 }
 .services-container {
     width: 100%;
-    height: 100%;
-    display: block;
+    height: auto;
     margin: auto;
-    background: linear-gradient(to bottom left, rgba(255, 192, 203, 0.6509803921568628), rgba(255, 165, 0, 0.4392156862745098) 40%, rgb(249, 241, 195) 70%, rgba(255, 192, 203, 0.71) 75%);
+    background: linear-gradient(to top right, rgb(235, 147, 160), rgba(241, 188, 224, 0.28)30%, rgb(238, 240, 207), rgba(254, 245, 181, 0.76), rgba(255, 236, 115, 0.61) 65%, rgb(250, 220, 151) 70%, rgba(231, 116, 130, 0.36) 76%, rgba(187, 214, 214, 0.68));
 }
 .services-title {
     width: calc(100% - 5em);
-    height: 15%;
+    height: 120px;
     padding: 10px;
     line-height: 30px;
     margin-left: 5em;
 }
 .service-txt {
-    font-family: "Helvetica Neue";
+    font-family: "Arial Black";
     font-size: 35px;
     color: rgb(255, 165, 0);
     display: block;
-    padding-top: 12px;
-    margin-bottom: 5px;
+    padding-top: 20px;
+    margin-bottom: 10px;
 }
 .offer-txt {
-    font-family: "Helvetica Neue";
+    font-family: HelveticaNeue-Light;
     font-size: 20px;
     color: rgba(128, 128, 128, 0.64);
-    margin: 0 30px;
+    margin: 0 40px;
 }
 .services-description {
     width: 100%;
-    height: 100%;
+    height: 650px;
     margin: auto;
+}
+.services-description-wrapper {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    display: block;
 }
 .app-service-section {
     width: 90%;
-    height: 25%;
+    height: 180px;
     float: right;
-    border: 2px solid rgb(251, 117, 141);
-    margin-bottom: 30px;
+    margin-top: 30px;
     margin-right: 40px;
     position: relative;
+}
+
+.service-text {
+    width: 80%;
+    border: 2px solid rgb(251, 117, 141);
+    height: 165px;
+    display: inline-block;
+    border-right: none;
+    margin-top: 10px;
 }
 .service-txt-alignment {
     padding: 15px 40px;
     float: left;
-    position: relative;
-    right: 0;
-    width: 70%;
+    width: 90%;
     margin: auto;
-    font-family: "Helvetica Neue";
+    font-family: Verdana;
     text-align: justify;
-    /*animation: anim-para 3s;*/
+    font-size: 15px;
 }
 @keyframes anim-para {
     0% {right: 0px;
@@ -397,42 +427,51 @@ html, body{
     width: 70%;}
 }
 .mobile-svg-info {
-    height: 165px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
 }
 .see-more-txt {
     font-family: andalemo;
     font-size: 15px;
-    width: 75%;
-    display: block;
-    /* position: absolute; */
-    bottom: 20px;
+    width: 100%;
+    display: inline-block;
     text-align: center;
-    float: left;
+    padding-top: 5px;
 }
 .mobile-svg {
     width: 20%;
     display: inline-block;
     float: right;
     position: absolute;
+    right: 10px;
+    top: -5px;
+}
+.mobile-info {
+    width: 175px;
 }
 .desktop-app-section {
-    width: 95%;
-    height: 25%;
+    width: 90%;
+    height: 180px;
     float: left;
-    border: 2px solid rgb(251, 117, 141);
-    margin-bottom: 30px;
+    margin-top: 30px;
     margin-left: 28px;
 }
+.desktop-text {
+    width: 80%;
+    border: 2px solid rgb(251, 117, 141);
+    height: 165px;
+    display: inline-block;
+    border-left: none;
+    float: right;
+}
 .desktop-service-txt-alignment{
-    padding: 15px 20px;
+    padding: 24px 22px;
     float: left;
-    position: relative;
-    width: 75%;
+    width: 95%;
     text-align: justify;
     margin: auto;
-    font-family: "Helvetica Neue";
-    /*animation: anim-desktop 3s infinite;*/
+    font-family: Verdana;
+    font-size: 15px;
 }
 @keyframes anim-desktop {
     0% {left: -100px;}
@@ -441,15 +480,16 @@ html, body{
 .dektop-svg {
     width: 20%;
     float: left;
-    margin-left: 15px;
 }
-
 .desktop-right-txt {
     width: 80%;
     float: right;
 }
-.app-margin-bottom {
-    margin-bottom: 0;
+.cloud-info {
+    width: 300px;
+    height: 195px;
+    position: absolute;
+    right: 10px;
 }
 .cloud-svg {
     width: 20%;
@@ -459,33 +499,33 @@ html, body{
 }
 .team-container {
     width: 100%;
-    height: 100%;
     display: block;
     margin: auto;
+    height: auto;
+    overflow: auto;
 }
 .team-text {
     width: 20%;
-    height: 100%;
+    height: 550px;
     float: left;
     display: inline-block;
     text-align: center;
-    padding-top: 15em;
 }
 .team-txt {
-    font-family: "Helvetica Neue";
+    font-family: "Arial Black";
     font-size: 45px;
     color: rgb(255, 165, 0);
     display: block;
-    padding-top: 12px;
+    padding-top: 5em;
 }
 .behind-txt {
-    font-family: "Helvetica Neue";
-    font-size: 20px;
+    font-family: HelveticaNeue-Light;
+    font-size: 18px;
     color: rgba(128, 128, 128, 0.64);
 }
 .team-photos-section {
     width: 80%;
-    height: 100%;
+    height: 550px;
     float: right;
     display: flex;
 }
@@ -499,7 +539,7 @@ html, body{
 }
 .photos-thumbnail {
     width: 20%;
-    height: 100%;
+    height: 300px;
     float: left;
     display: inline-block;
 }
@@ -508,24 +548,25 @@ html, body{
     background-repeat: no-repeat;
     background-size: cover;
     width: 85%;
-    height: 100%;
+    height: 300px;
     display: block;
     margin: auto;
     position: relative;
     transition: 0.3s ease;
     cursor: pointer;
+    filter: grayscale(100%);
 }
-.team-photos-wrapper:hover .photos-thumbnail div{
-    filter: opacity(0.3);
- }
+/*.team-photos-wrapper:hover .photos-thumbnail div{*/
+    /*filter: grayscale(100%);*/
+ /*}*/
 .photos-thumbnail .photos:hover{
-    transform: scale(1.1, 1.1); /** default is 1, scale it to 1.5 */
+    transform: scale(1.2, 1.2); /** default is 1, scale it to 1.5 */
     opacity: 1;
     filter: none !important;
 }
 .motto-container {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
     margin: auto;
 }
@@ -535,41 +576,41 @@ html, body{
     margin-left: 10em;
 }
 .motto-txt {
-    font-family: "Helvetica Neue";
-    font-size: 40px;
-    color: rgb(255, 165, 0);
+    font-family: "Arial Black";
+    font-size: 35px;
+    color: rgb(242, 159, 65);
     display: block;
     padding-top: 12px;
     margin: 0 20px;
     margin-bottom: 8px;
 }
 .ceo-txt {
-    font-family: "Helvetica Neue";
+    font-family: HelveticaNeue-Light;
     font-size: 18px;
-    color: rgba(128, 128, 128, 0.64);
+    color: rgb(83, 88, 95);
     margin: 0 35px;
 }
 .motto-description {
     width: 100%;
-    height: calc(100% - 175px);
+    height: 450px;
     margin: 0 auto;
     position: relative;
-    margin-top: 75px;
+    margin-top: 50px;
 }
 .pic-description {
     width: 80%;
-    height: 75%;
+    height: 385px;
     margin: auto;
     display: block;
-    border: 2px solid rgb(251, 117, 141);
+    border: 2px solid rgb(227, 78, 98);
 }
 .img-description {
     width: 60%;
-    height: 35%;
+    height: 40%;
     float: left;
+    font-family: Verdana;
     margin: auto;
-    display: inline-block;
-    padding: 25px;
+    padding: 20px;
     text-align: justify;
     font-size: 15px;
 }
@@ -588,42 +629,52 @@ html, body{
     margin: auto;
 }
 .ceo-name {
-    color: rgb(251, 117, 141);
-    font-family: "Helvetica Neue";
+    color: #E77482;
+    font-family: "Arial Black";
+    font-size: 18px;
     display: block;
     text-align: center;
     padding: 20px;
 }
 .quote-txt {
     width: 60%;
-    height: 15%;
-    border: 2px solid rgb(251, 117, 141);
+    height: 100px;
+    border: 2px solid rgb(227, 78, 98);
     position: absolute;
-    top: 13em;
+    top: 12em;
     display: table;
     margin-left: 70px;
     z-index: -1;
+}
+.single-quote {
+    text-align: center;
+    display: inline-flex;
+    font-size: 20px;
+    font-family: TektonPro-Bold;
 }
 .quote {
     font-size: 20px;
     text-align: center;
     display: table-cell;
-    color: orange;
     vertical-align: middle;
+    font-family: "Arial Black";
+    color: rgb(242, 159, 65);
 }
 .company-info-container {
     width: 100%;
     height: auto;
     display: block;
     margin: auto;
-    background: linear-gradient(to bottom left, rgba(255, 192, 203, 0.6509803921568628), rgba(255, 165, 0, 0.4392156862745098) 40%, rgb(249, 241, 195) 70%, rgba(255, 192, 203, 0.71) 75%);
+    padding-top: 15px;
+    background: linear-gradient(to top right, rgb(235, 147, 160), rgba(241, 188, 224, 0.28)30%, rgb(238, 240, 207), rgba(254, 245, 181, 0.76), rgba(255, 236, 115, 0.61) 65%, rgb(250, 220, 151) 70%, rgba(231, 116, 130, 0.36) 76%, rgba(187, 214, 214, 0.68));
 }
 .company-info-heading {
-    width: 100%;
+    width: 90%;
     height: 120px;
-    padding: 10px;
     display: block;
     text-align: center;
+    margin: auto;
+    background: white;
 }
 .company-info-section {
     width: 100%;
@@ -660,16 +711,16 @@ html, body{
     padding: 20px 15px;
 }
 .company-heading-txt {
-    font-size: 20px;
-    color: #fb758d;
-    font-family: "Helvetica Neue";
+    font-size: 18px;
+    color: #E77482;
+    font-family: "Arial Black";
     margin: 5px;
 }
 .sub-company-heading-txt {
-    font-size: 15px;
+    font-size: 13px;
     padding: 0 5px;
-    color: rgba(128, 128, 128, 0.64);
-    font-family: "Helvetica Neue";
+    color: rgb(83, 88, 95);
+    font-family: Verdana;
     text-align: justify;
     display: block;
 }
@@ -687,10 +738,10 @@ html, body{
 }
 .contact-container {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
     margin: auto;
-    padding-top: 80px;
+    padding: 80px 0;
     position: relative;
     background: linear-gradient(to bottom left, rgba(255, 192, 203, 0.6509803921568628), rgba(255, 165, 0, 0.4392156862745098) 40%, rgb(249, 241, 195) 70%, rgba(255, 192, 203, 0.71) 75%);
 }
@@ -716,7 +767,7 @@ html, body{
 }
 .contact-section {
     width: 80%;
-    height: 85%;
+    height: 480px;
     margin: auto;
     display: block;
     box-shadow: 1px 3px 16px 0px rgba(0, 0, 0, 0.4);
@@ -729,26 +780,27 @@ html, body{
     padding: 10px;
     padding-top: 25px;
 }
+
 .contact-heading-txt {
     font-size: 32px;
-    font-family: "Helvetica Neue";
-    color: orange;
+    font-family: "Arial Black";
+    color: #F29F41;
     display: block;
     margin: 0 10px;
 }
 .contact-heading-txt-second {
     font-size: 17px;
-    font-family: "Helvetica Neue";
-    color: gray;
-    margin: 0 25px;
+    font-family: HelveticaNeue-Light;
+    color: rgb(83, 88, 95);
+    margin: 0 35px;
 }
 .contact-us-section {
     width: 100%;
-    height: calc(100% - 135px);
+    height: 345px;
 }
 .contact-wrapper {
     width: 85%;
-    height: 30%;
+    height: 115px;
     margin: auto;
     display: block;
     padding: 10px;
@@ -760,11 +812,13 @@ html, body{
     text-align: center;
 }
 .left-contact-txt {
-    font-size: 22px;
-    font-family: "Helvetica Neue";
-    color: orange;
+    font-size: 18px;
+    /* font-family: "Helvetica Neue"; */
+    color: #F29F41;
     display: block;
     margin: 0 10px;
+    font-family: "Arial Black";
+
 }
 .contact-us-right-section {
     width: 70%;
@@ -772,9 +826,9 @@ html, body{
     margin: auto;
 }
 .insert-txt {
-    font-size: 15px;
+    font-size: 12px;
     font-family: "Helvetica Neue";
-    color: gray;
+    color: rgb(83, 88, 95);
     display: block;
     margin: 0 15px;
 }
@@ -783,10 +837,10 @@ html, body{
 }
 .social-media-connect {
     width: 25%;
-    height: 25%;
+    height: 165px;
     box-shadow: 1px 3px 16px 0px rgba(0, 0, 0, 0.4);
-    bottom: 50px;
-    background: linear-gradient(to top right, rgba(204, 0, 255, 0.31) 26%, rgb(255, 192, 203) 34%, rgb(212, 193, 100) 65%, rgba(187, 202, 234, 0.89) 90%);
+    bottom: 25px;
+    background: linear-gradient(to top right, rgba(204, 0, 255, 0.31) 26%, rgb(255, 192, 203) 34%, rgba(238, 205, 43, 0.65) 65%, rgba(252, 183, 55, 0.79) 80%);
     position: absolute;
     right: 70px;
 }
@@ -803,7 +857,7 @@ html, body{
     margin-bottom: 10px;
 }
 .social-media-wrapper .social-media-icons i {
-    background: #808080e8;
+    background: rgb(83, 88, 95);
     color: #fff;
     width: 50px;
     height: 40px;
