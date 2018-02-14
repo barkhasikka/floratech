@@ -82,20 +82,20 @@ html, body{
     z-index: 1;
 }
 .logo-section {
-    width: 70%;
+    width: 250px;
     height: 100%;
     float: left;
     display: inline-block;
     border-right: 2px solid orange;
 }
 .flower-svg {
-    width: 5%;
+    width: 50px;
     display: inline-block;
     padding: 5px;
     float: left;
 }
 .logo-text {
-    width: 30%;
+    width: calc(100% - 50px);
     display: block;
     float: left;
     margin: auto;
@@ -169,7 +169,7 @@ html, body{
     position: absolute;
     height: 100%;
     width: 100%;
-    background: url(../assets/overlay.png);
+    /*background: url(../assets/overlay.png);*/
     top: 0;
     left: 0;
 }
@@ -296,8 +296,8 @@ html, body{
     height: auto;
 }
 .company-details-section {
-    width: 95%;
-    height: auto;
+    width: 1200px;
+    height: 500px;
     margin: auto;
     display: block;
     position: relative;
@@ -307,6 +307,7 @@ html, body{
     height: 500px;
     padding: 15px;
     display: inline-block;
+    float: left;
 }
 
 .circle-section {
@@ -429,7 +430,7 @@ html, body{
     width: 100%;
     height: auto;
     margin: auto;
-    background: linear-gradient(to top right, rgb(235, 147, 160), rgba(241, 188, 224, 0.28)30%, rgb(238, 240, 207), rgba(254, 245, 181, 0.76), rgba(255, 236, 115, 0.61) 65%, rgb(250, 220, 151) 70%, rgba(231, 116, 130, 0.36) 76%, rgba(187, 214, 214, 0.68));
+    /*background: linear-gradient(to top right, rgb(235, 147, 160), rgba(241, 188, 224, 0.28)30%, rgb(238, 240, 207), rgba(254, 245, 181, 0.76), rgba(255, 236, 115, 0.61) 65%, rgb(250, 220, 151) 70%, rgba(231, 116, 130, 0.36) 76%, rgba(187, 214, 214, 0.68));*/
 }
 .services-title {
     width: calc(100% - 5em);
@@ -523,7 +524,7 @@ html, body{
     position: relative;
     /*z-index: 1;*/
     float: right;
-    background: linear-gradient(to top right, rgb(252, 228, 157)11%, rgb(243, 207, 212)40%);
+    /*background: linear-gradient(to top right, rgb(252, 228, 157)11%, rgb(243, 207, 212)40%);*/
 
 }
 .mobile-info {
@@ -764,7 +765,7 @@ html, body{
     display: block;
     margin: auto;
     padding-top: 15px;
-    background: linear-gradient(to top right, rgb(235, 147, 160), rgba(241, 188, 224, 0.28)30%, rgb(238, 240, 207), rgba(254, 245, 181, 0.76), rgba(255, 236, 115, 0.61) 65%, rgb(250, 220, 151) 70%, rgba(231, 116, 130, 0.36) 76%, rgba(187, 214, 214, 0.68));
+    /*background: linear-gradient(to top right, rgb(235, 147, 160), rgba(241, 188, 224, 0.28)30%, rgb(238, 240, 207), rgba(254, 245, 181, 0.76), rgba(255, 236, 115, 0.61) 65%, rgb(250, 220, 151) 70%, rgba(231, 116, 130, 0.36) 76%, rgba(187, 214, 214, 0.68));*/
 }
 .company-info-heading {
     width: 90%;
@@ -841,7 +842,7 @@ html, body{
     margin: auto;
     padding: 80px 0;
     position: relative;
-    background: linear-gradient(to bottom left, rgba(255, 192, 203, 0.6509803921568628), rgba(255, 165, 0, 0.4392156862745098) 40%, rgb(249, 241, 195) 70%, rgba(255, 192, 203, 0.71) 75%);
+    /*background: linear-gradient(to bottom left, rgba(255, 192, 203, 0.6509803921568628), rgba(255, 165, 0, 0.4392156862745098) 40%, rgb(249, 241, 195) 70%, rgba(255, 192, 203, 0.71) 75%);*/
 }
 .innovation-svg {
     width: 13%;
@@ -938,7 +939,7 @@ html, body{
     height: 165px;
     box-shadow: 1px 3px 16px 0px rgba(0, 0, 0, 0.4);
     bottom: 25px;
-    background: linear-gradient(to top right, rgba(204, 0, 255, 0.31) 26%, rgb(255, 192, 203) 34%, rgba(238, 205, 43, 0.65) 65%, rgba(252, 183, 55, 0.79) 80%);
+    /*background: linear-gradient(to top right, rgba(204, 0, 255, 0.31) 26%, rgb(255, 192, 203) 34%, rgba(238, 205, 43, 0.65) 65%, rgba(252, 183, 55, 0.79) 80%);*/
     position: absolute;
     right: 70px;
 }
@@ -977,4 +978,13 @@ html, body{
 }
 .float-right{
     float: right;
+}
+.header-options {
+    width: calc(100% - 250px);
+    display: inline-block;
+    height: 100%;
+    line-height: 50px;
+}
+.header-options-span{
+    margin: 0 25px;
 }
