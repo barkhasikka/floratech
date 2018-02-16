@@ -127,23 +127,40 @@ html, body{
     font-family: "andalemo";
     font-size: 15px;
 }
-/*.serach-section {*/
-    /*width: 33.33%;*/
-    /*height: 100%;*/
-    /*float: left;*/
-    /*padding-top: 15px;*/
+
+/*.dropdown{*/
     /*display: inline-block;*/
-    /*border-right: 2px solid orange;*/
-/*}*/
-/*.search-text {*/
-    /*font-size: 15px;*/
-    /*padding: 10px;*/
-/*font-family: "andalemo";*/
-/*}*/
-/*.search-icon {*/
+    /*position: relative;*/
     /*float: right;*/
-    /*padding: 0 15px;*/
+    /*margin: 20px 0;*/
+    /*padding-right: 25px;*/
+/*}*/
+/*.font-color {*/
+    /*font-size:30px;*/
+    /*color: black;*/
+/*}*/
+/*.dropdown-content {*/
+    /*display: none;*/
+    /*position: absolute;*/
+    /*background-color: #f9f9f9;*/
+    /*min-width: 160px;*/
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    /*padding: 12px 16px;*/
+    /*z-index: 1;*/
+    /*list-style-type: none;*/
     /*font-size: 20px;*/
+/*}*/
+/*.dropdown:hover .dropdown-content{*/
+    /*display: block;*/
+    /*right: 0;*/
+/*}*/
+/*.dropdown-content li{*/
+    /*height: 30px;*/
+    /*line-height: 30px;*/
+/*}*/
+/*.dropdown-content a {*/
+    /*text-decoration: none;*/
+    /*color: black;*/
 /*}*/
 .login-section {
     width: 30%;
@@ -699,9 +716,9 @@ app-service-wrapper.service-text {
     border: 4px solid rgb(242, 164, 147);
 }
 .round{
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
+    border-radius:  15px;
+    -webkit-border-radius:  15px;
+    -moz-border-radius:  15px;
 
 }
 /* Right triangle placed top right flush. */
@@ -816,6 +833,7 @@ app-service-wrapper.service-text {
     /* float: left; */
     position: absolute;
     bottom: -12px;
+    left: 40px;
 }
 .right-company-txt {
     width: 78%;
@@ -862,6 +880,7 @@ app-service-wrapper.service-text {
     float: left;
     transform: rotate(50deg);
     margin-left: 55px;
+    position: absolute;
 }
 .built-svg {
     width: 11%;
@@ -996,6 +1015,63 @@ app-service-wrapper.service-text {
 }
 /* iPad Portrait */
 @media only screen and (min-device-width: 768px)and (max-device-width: 1024px)and (orientation: portrait)and (-webkit-min-device-pixel-ratio: 1) {
+    .company-details-section {
+        height: 665px;
+    }
+    .filling-line {
+        left: 190px;
+        top: 90px;
+    }
+    .point-general {
+        left: 250px;
+        top: 82px;
+    }
+    .company-thumbnail {
+        width: 255px;
+        height: 585px;
+        padding: 5px;
+    }
+    .circle {
+        width: 135px;
+        height: 135px;
+    }
+    .text-section {
+        width: 250px;
+        height: 320px;
+    }
+    .txt-alignment {
+        padding: 5px;
+    }
+    .filling-line-1 {
+        top: 90px;
+        left: 430px;
+    }
+    .point-general-1 {
+        left: 500px;
+        top: 82px;
+    }
+    .team-text {
+        height: 495px;
+    }
+    .team-photos-section {
+        height: 495px;
+        padding-top: 45px;
+    }
+    .team-photos-wrapper {
+        width: 600px;
+    }
+    .team-txt {
+         font-size: 40px;
+    }
+    .photos {
+        width: 105px;
+        height: 235px;
+        background-position-x: 50%;
+    }
+    .motto-txt-section {
+        width: calc(100% - 4em);
+        margin-left: 4em;
+    }
     .motto-description {
         width: 735px;
     }
@@ -1022,8 +1098,77 @@ app-service-wrapper.service-text {
         height: 225px;
         background-position: 50% 50%;
     }
+    .flip-container {
+        width: 255px;
+    }
+    .card {
+        width: 210px;
+    }
+    .card .side {
+        width: 215px;
+    }
+    .card .back {
+        padding: 15px;
+        font-size: 10px;
+    }
+    .service-text {
+        font-size: 12px;
+    }
+    .see-more-txt {
+        font-size: 14px;
+        padding-top: 35px;
+    }
+    .svg-info {
+        width: 200px;
+    }
+    .svg-description {
+        font-size: 13px;
+        width: 200px;
+        padding-top: 2em;
+    }
+    .listener-svg {
+        width: 20%;
+        bottom: 18px;
+        left: 5px;
+    }
+    .deliver-svg {
+        width: 18%;
+        right: -30px;
+        bottom: 30px;
+    }
+    .innovation-svg {
+        width: 17%;
+        bottom: 15px;
+        left: -40px;
+    }
+    .built-svg {
+        width: 15%;
+        right: -25px;
+        top: 35px;
+    }
+    .bloom-svg {
+        width: 12%;
+        top: 40px;
+        left: -60px;
+    }
+    .social-media-connect {
+        width: 235px;
+        bottom: 40px;
+        right: 30px;
+    }
+    .social-media-wrapper {
+        padding-left: 15px;
+    }
+    .social-media-wrapper .social-media-icons {
+    padding-right: 15px;
+        margin-bottom: 12px;
+    }
+    .social-media-wrapper .social-media-icons i {
+        width: 48px;
+        margin-right: 0;
+    }
 }
-
+/* end iPad Portrait */
 /* iPad Landscape */
 @media only screen and (min-device-width: 768px)and (max-device-width: 1024px)and (orientation: landscape)and (-webkit-min-device-pixel-ratio: 1) {
     #video-container {
@@ -1097,3 +1242,334 @@ app-service-wrapper.service-text {
         margin-bottom: 15px;
     }
 }
+/* end iPad Landscape */
+
+@media all and (min-width: 767px) and (max-width: 2500px){
+    .mobile-nav{
+        display: none;
+    }
+    .desktop-nav{
+        display: block;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px){
+    .mobile-nav{
+        display: block;
+    }
+    .desktop-nav{
+        display: none;
+    }
+}
+/*end media query for header in mobile and desktop view in portrait*/
+
+
+/* phone Portrait */
+@media only screen and (min-device-width: 320px)and (max-device-width: 767px)and (-webkit-min-device-pixel-ratio: 2)and (orientation: portrait) {
+    .motto-txt-section {
+        width: calc(100% - 1em);
+        margin-left: 1em;
+    }
+    .motto-description {
+        width: 365px;
+        height: 610px;
+    }
+    .img-description {
+        width: 330px;
+        height: 140px;
+        padding-top: 0;
+        font-size: 12px;
+    }
+    .talk-bubble {
+        width: 295px;
+        height: 100px;
+        top: 40px;
+        left: 2.3em;
+    }
+    .ceo-txt {
+        font-size: 16px;
+    }
+    .motto-txt {
+        font-size: 30px;
+    }
+    .tri-right.border.right-top:before {
+        right: 2px;
+        top: 93px;
+    }
+    .tri-right.right-top:after {
+        right: 4px;
+        top: 89px;
+    }
+    .pic-description {
+        width: 365px;
+        height: 330px;
+    }
+    .quote {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    .talktext {
+        padding: 32px;
+    }
+    .image-section {
+        height: 275px;
+        padding-top:0;
+    }
+    .image {
+        width: 290px;
+        height: 205px;
+    }
+    .company-info-thumbnail {
+        width: 100%;
+    }
+    .company-heading-txt {
+        font-size: 11px;
+        margin: 10px 0;
+    }
+    .sub-company-heading-txt {
+        font-size: 10px;
+    }
+    .listener-svg {
+        width: 22%;
+        bottom: 45px;
+        left: 5px;
+    }
+    .right-company-txt {
+        width: 80%;
+        padding: 10px 15px;
+    }
+    .left-company-txt {
+        padding: 10px 15px;
+    }
+    .deliver-svg {
+        width: 20%;
+        right: -5px;
+        bottom: 55px;
+    }
+    .innovation-svg {
+        width: 17%;
+        left: -45px;
+        bottom: 52px;
+    }
+    .built-svg {
+        width: 15%;
+        top: 30px;
+    }
+    .bloom-svg {
+        width: 12%;
+        top: 40px;
+        left: -75px;
+    }
+    .contact-section {
+        width: 85%;
+    }
+    .contact-heading {
+        width: calc(100% - 10px);
+        height: 120px;
+        margin-left: 10px;
+    }
+    .contact-heading-txt {
+        font-size: 30px;
+    }
+    .contact-heading-txt-second {
+        font-size: 15px;
+    }
+    .contact-wrapper {
+        width: 90%;
+        height: 90px;
+        padding: 5px;
+    }
+    .left-contact-txt {
+        font-size: 15px;
+    }
+    .insert-txt {
+        font-size: 10px;
+        margin: 6px 30px;
+    }
+    .social-media-connect {
+        width: 50%;
+        height: 140px;
+        bottom: 35px;
+        right: 10px;
+    }
+    .social-media-wrapper {
+        margin: 18px auto;
+        padding-left: 10px;
+    }
+    .social-media-wrapper .social-media-icons {
+        padding-right: 5px;
+    }
+    .social-media-wrapper .social-media-icons i {
+        width: 40px;
+        height: 35px;
+        border-radius: 50px;
+        font-size: 25px;
+        margin-right: 5px;
+    }
+}
+/* end phone Portrait */
+/* phone Landscape */
+@media only screen and (min-device-width: 320px)and (max-device-width: 767px)and (-webkit-min-device-pixel-ratio: 2)and (orientation: landscape) {
+    .header-options-span {
+        margin: 0px 12px;
+        font-size: 14px;
+    }
+    .company-details-section {
+        width: 950px;
+        height: 460px;
+    }
+    .company-thumbnail {
+        width: 668px;
+        height: 155px;
+        padding: 10px;
+    }
+    .circle-section {
+        height: 135px;
+        width: 155px;
+        float: left;
+        padding: 10px;
+    }
+    .circle {
+        width: 100px;
+        height: 100px;
+    }
+    .first-company-txt {
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    .second-company-txt {
+        font-size: 12px;
+    }
+    .services-description {
+        width: 965px;
+        height: 390px;
+    }
+    .text-section {
+        height: 135px;
+        padding: 10px;
+        float: right;
+        width: calc(100% - 155px);
+    }
+    .filling-line {
+        display: none;
+    }
+    .point-general {
+        display: none;
+    }
+    .txt-alignment {
+        padding: 5px;
+        font-size: 11px;
+    }
+    .flip-container {
+        width: 220px;
+        height: 390px;
+    }
+    .card {
+    width: 185px;
+        height: 310px;
+    }
+    .card .side {
+        height: 280px;
+        width: 190px;
+    }
+    .svg-info {
+        width: 170px;
+    }
+    .svg-description {
+        font-size: 11px;
+        width: 165px;
+    }
+    .card .back {
+        padding: 10px;
+        font-size: 10px;
+    }
+    .service-text {
+        font-size: 11px;
+    }
+    .see-more-txt {
+        font-size: 12px;
+        padding-top: 20px;
+    }
+    .motto-txt-section {
+        width: calc(100% - 4em);
+        margin-left: 4em;
+    }
+    .motto-description {
+        height: 350px;
+    }
+    .pic-description {
+        width: 390px;
+        height: 345px;
+    }
+    .img-description {
+        width: 337px;
+        height: 150px;
+        padding-top: 65px;
+        font-size: 12px;
+    }
+    .talk-bubble {
+        width: 375px;
+        height: 75px;
+        top: -8px;
+        left: 2.5em;
+    }
+    /*.ceo-name {*/
+        /*font-size: 15px;*/
+    /*}*/
+    .talktext {
+        padding: 22px;
+    }
+    .single-quote {
+        font-size: 15px !important;
+    }
+    .quote {
+        font-size: 15px;
+    }
+    .listener-svg {
+        bottom: 28px;
+        left: 20px;
+    }
+    .deliver-svg {
+        right: -10px;
+        bottom: 40px;
+    }
+    .innovation-svg {
+        bottom: 30px;
+        left: -25px;
+    }
+    .built-svg {
+        width: 12%;
+        top: 45px;
+    }
+    .bloom-svg {
+        width: 10%;
+        top: 40px;
+        left: -45px;
+    }
+    .company-info-thumbnail {
+        width: 90%;
+    }
+    .social-media-connect {
+        width: 225px;
+        height: 150px;
+        bottom: 0px;
+        right: 30px;
+    }
+    .social-media-wrapper {
+        padding-left: 25px;
+        margin: 22px auto;
+    }
+    .social-media-wrapper .social-media-icons {
+        padding-right: 10px;
+    }
+    .social-media-wrapper .social-media-icons i {
+        width: 46px;
+        height: 33px;
+        margin-right: 5px;
+        padding-top: 11px;
+    }
+    .fa-size {
+        font-size: 20px !important;
+    }
+}
+/* end phone Landscape */
