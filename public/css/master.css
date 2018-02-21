@@ -127,41 +127,6 @@ html, body{
     font-family: "andalemo";
     font-size: 15px;
 }
-
-/*.dropdown{*/
-    /*display: inline-block;*/
-    /*position: relative;*/
-    /*float: right;*/
-    /*margin: 20px 0;*/
-    /*padding-right: 25px;*/
-/*}*/
-/*.font-color {*/
-    /*font-size:30px;*/
-    /*color: black;*/
-/*}*/
-/*.dropdown-content {*/
-    /*display: none;*/
-    /*position: absolute;*/
-    /*background-color: #f9f9f9;*/
-    /*min-width: 160px;*/
-    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-    /*padding: 12px 16px;*/
-    /*z-index: 1;*/
-    /*list-style-type: none;*/
-    /*font-size: 20px;*/
-/*}*/
-/*.dropdown:hover .dropdown-content{*/
-    /*display: block;*/
-    /*right: 0;*/
-/*}*/
-/*.dropdown-content li{*/
-    /*height: 30px;*/
-    /*line-height: 30px;*/
-/*}*/
-/*.dropdown-content a {*/
-    /*text-decoration: none;*/
-    /*color: black;*/
-/*}*/
 .login-section {
     width: 30%;
     height: 100%;
@@ -377,7 +342,7 @@ html, body{
     height: 4px;
     position: absolute;
     top: 110px;
-    left: 680px;
+    left: 670px;
     background: #f29f41;
     z-index: -1;
     /*display: none;*/
@@ -410,7 +375,7 @@ html, body{
     background: #ffffff;
     display: block;
     position: relative;
-    box-shadow: 0px 6px 22px -1px #2f2e2e;
+    border: 3px solid orange;
     margin: auto;
 }
 /*.company-thumbnail-tra nsform {*/
@@ -483,7 +448,7 @@ html, body{
     margin: 0 40px;
 }
 .services-description {
-    width: 1210px;
+    width: 1250px;
     height: 420px;
     margin: auto;
     padding-top: 40px;
@@ -515,20 +480,21 @@ app-service-wrapper.service-text {
     /*padding: 10px;*/
 }
 .svg-info {
-    width: 270px;
+    width: 245px;
     height: 200px;
     display: block;
     margin: auto;
     padding-top: 12px;
 }
 .svg-description {
-    font-family: Verdana;
-    text-align: justify;
-    font-size: 14px;
-    width: 240px;
+    font-family: "andalemo";
+    text-align: center;
+    font-size: 18px;
+    width: 270px;
     display: block;
     margin: auto;
-    padding-top: 1em;
+    padding-top: 3em;
+    line-height: 25px;
 }
 @-moz-document url-prefix() {
     .card {
@@ -536,14 +502,14 @@ app-service-wrapper.service-text {
     }
 }
 .flip-container {
-    cursor: pointer;
+    width: 312px;
     height: 400px;
+    cursor: pointer;
     position: relative;
-    width: 33.33%;
     float: left;
 }
 .card {
-    width: 315px;
+    width: 280px;
     height: 400px;
     /* position: absolute; */
     transform-style: preserve-3d;
@@ -559,15 +525,13 @@ app-service-wrapper.service-text {
     -moz-transform: rotateY(180deg);
 }
 .card .side {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    border-radius: 0px;
+    width: 280px;
     height: 375px;
+    backface-visibility: hidden;
+    border-radius: 0px;
     position: absolute;
     overflow: hidden;
-    width: 315px;
-    box-shadow: 0px 0px 16px 2px rgba(169, 169, 169, 0.84);
+    background: #fbfbfb;
 }
 .card .back {
     /*background: #f2f2fe;*/
@@ -593,69 +557,70 @@ app-service-wrapper.service-text {
     padding-top: 50px;
 }
 .team-container {
-    width: 100%;
+    width: 1350px;
     display: block;
     margin: auto;
     height: auto;
     overflow: auto;
 }
 .team-text {
-    width: 20%;
-    height: 550px;
-    float: left;
-    display: inline-block;
-    text-align: center;
+    width: calc(100% - 7em);
+    height: 100px;
+    display: block;
+    margin: auto;
+    margin-left: 7em;
 }
 .team-txt {
     font-family: "Arial Black";
     font-size: 45px;
     color: rgb(255, 165, 0);
     display: block;
-    padding-top: 5em;
 }
 .behind-txt {
     font-family: HelveticaNeue-Light;
     font-size: 18px;
+    margin: 0 20px;
     color: rgba(128, 128, 128, 0.64);
 }
 .team-photos-section {
-    width: 80%;
-    height: 550px;
-    float: right;
-    display: flex;
+    width: 1250px;
+    height: 500px;
+    margin: auto;
 }
 .team-photos-wrapper {
-    width: 95%;
-    height: 300px;
+    width: 1245px;
+    height: 550px;
     margin: auto;
     display: block;
-    display: flex;
     align-items: center;
 }
 .photos-thumbnail {
-    width: 20%;
-    height: 300px;
+    width: 200px;
+    height: auto;
     float: left;
     display: inline-block;
 }
 .photos {
-    background-image: url(../assets/img.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 85%;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     display: block;
     margin: auto;
     position: relative;
     transition: 0.3s ease;
     cursor: pointer;
-    filter: grayscale(100%);
 }
-.photos-thumbnail .photos:hover{
-    transform: scale(1.2, 1.2); /** default is 1, scale it to 1.5 */
-    opacity: 1;
-    filter: none !important;
+.photo-wrapper {
+    width: 100%;
+    /* max-width: 150px; */
+    height: auto;
+    margin: auto;
+    display: block;
 }
+/*.photos-thumbnail .photos:hover{*/
+    /*transform: scale(1.2, 1.2); !** default is 1, scale it to 1.5 *!*/
+    /*opacity: 1;*/
+    /*filter: none !important;*/
+/*}*/
 .motto-container {
     width: 100%;
     height: auto;
@@ -1010,9 +975,52 @@ app-service-wrapper.service-text {
 .float-left{
     float: left;
 }
-.float-right{
+.float-right {
     float: right;
 }
+/*.dropdown{*/
+    /*display: inline-block;*/
+    /*position: relative;*/
+    /*float: right;*/
+    /*margin: 20px 0;*/
+    /*padding-right: 25px;*/
+/*}*/
+/*.font-color {*/
+    /*font-size:30px;*/
+    /*color: black;*/
+/*}*/
+/*.dropdown-content {*/
+    /*display: none;*/
+    /*position: absolute;*/
+    /*background-color: #f9f9f9;*/
+    /*min-width: 160px;*/
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    /*padding: 12px 16px;*/
+    /*z-index: 1;*/
+    /*list-style-type: none;*/
+    /*font-size: 20px;*/
+    /*font-family: "andalemo";*/
+/*}*/
+/*.dropdown:hover .dropdown-content{*/
+    /*display: block;*/
+    /*right: 0;*/
+/*}*/
+/*.dropdown-content li{*/
+    /*height: 30px;*/
+    /*line-height: 30px;*/
+/*}*/
+/*.dropdown-content a {*/
+    /*text-decoration: none;*/
+    /*color: black;*/
+/*}*/
+/*@media all and (min-width: 1025px) and (max-width: 2500px){*/
+    /*.mobile-nav{*/
+        /*display: none;*/
+    /*}*/
+    /*.desktop-nav{*/
+        /*display: block;*/
+    /*}*/
+/*}*/
 /* iPad Portrait */
 @media only screen and (min-device-width: 768px)and (max-device-width: 1024px)and (orientation: portrait)and (-webkit-min-device-pixel-ratio: 1) {
     .company-details-section {
@@ -1244,16 +1252,16 @@ app-service-wrapper.service-text {
 }
 /* end iPad Landscape */
 
-@media all and (min-width: 767px) and (max-width: 2500px){
-    .mobile-nav{
-        display: none;
-    }
-    .desktop-nav{
-        display: block;
-    }
-}
+/*@media all and (min-width: 767px) and (max-width: 2500px){*/
+    /*.mobile-nav{*/
+        /*display: none;*/
+    /*}*/
+    /*.desktop-nav{*/
+        /*display: block;*/
+    /*}*/
+/*}*/
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px){
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px){
     .mobile-nav{
         display: block;
     }
@@ -1265,7 +1273,43 @@ app-service-wrapper.service-text {
 
 
 /* phone Portrait */
-@media only screen and (min-device-width: 320px)and (max-device-width: 767px)and (-webkit-min-device-pixel-ratio: 2)and (orientation: portrait) {
+@media only screen and (min-device-width: 320px)and (max-device-width: 736px)and (-webkit-min-device-pixel-ratio: 2)and (orientation: portrait) {
+    .company-details-section {
+        width: 380px;
+        height: 1340px;
+    }
+    .filling-line {
+        display: none;
+    }
+    .point-general {
+        display: none;
+    }
+    .company-thumbnail {
+        width: 375px;
+        height: 440px;
+        display: block;
+        float: none;
+    }
+    .text-section {
+        height: 230px;
+    }
+    .services-description {
+        width: 375px;
+        height: 1500px;
+    }
+    .flip-container {
+        width: 365px;
+        height: 365px;
+    }
+    .card {
+        height: 380px;
+    }
+    .card .side {
+        height: 335px;
+    }
+    .service-text {
+        height: 200px;
+    }
     .motto-txt-section {
         width: calc(100% - 1em);
         margin-left: 1em;
@@ -1409,7 +1453,7 @@ app-service-wrapper.service-text {
 }
 /* end phone Portrait */
 /* phone Landscape */
-@media only screen and (min-device-width: 320px)and (max-device-width: 767px)and (-webkit-min-device-pixel-ratio: 2)and (orientation: landscape) {
+@media only screen and (min-device-width: 320px)and (max-device-width: 736px)and (-webkit-min-device-pixel-ratio: 2)and (orientation: landscape) {
     .header-options-span {
         margin: 0px 12px;
         font-size: 14px;
