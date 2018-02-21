@@ -557,11 +557,11 @@ app-service-wrapper.service-text {
     padding-top: 50px;
 }
 .team-container {
-    width: 1350px;
+    width: 100%;
     display: block;
     margin: auto;
     height: auto;
-    overflow: auto;
+    /*overflow: hidden;*/
 }
 .team-text {
     width: calc(100% - 7em);
@@ -583,22 +583,43 @@ app-service-wrapper.service-text {
     color: rgba(128, 128, 128, 0.64);
 }
 .team-photos-section {
-    width: 1250px;
-    height: 500px;
+    width: 1275px;
+    height: 630px;
+    padding: 15px;
     margin: auto;
+}
+.photos-thumbnail:nth-child(1) {
+    margin-left: 10%;
+}
+.photos-thumbnail:nth-child(5) {
+    margin-left: 20%;
+}
+.photos-thumbnail:nth-child(8) {
+    margin-left: 10%;
+}
+.photos-thumbnail:nth-child(12) {
+    margin-left: 20%;
 }
 .team-photos-wrapper {
-    width: 1245px;
-    height: 550px;
+    width: 1190px;
+    height: 585px;
+    padding: 15px;
     margin: auto;
-    display: block;
-    align-items: center;
 }
 .photos-thumbnail {
-    width: 200px;
+    width: 230px;
     height: auto;
-    float: left;
     display: inline-block;
+    position: relative;
+}
+.pic-wrapper {
+    bottom: 30px;
+}
+.pic-wrapper-one {
+    bottom: 52px;
+}
+.pic-wrapper-two {
+    bottom: 70px;
 }
 .photos {
     width: 150px;
@@ -616,11 +637,40 @@ app-service-wrapper.service-text {
     margin: auto;
     display: block;
 }
-/*.photos-thumbnail .photos:hover{*/
-    /*transform: scale(1.2, 1.2); !** default is 1, scale it to 1.5 *!*/
-    /*opacity: 1;*/
-    /*filter: none !important;*/
+.photos-thumbnail .photos:hover{
+    transform: scale(1.2, 1.2); /** default is 1, scale it to 1.5 */
+opacity: 1;
+    filter: none !important;
+    z-index: 1;
+}
+.photos-thumbnail:hover .pic-name {
+    display: block;
+    background: rgba(0, 0, 0, 0.68);
+}
+/*.photos-thumbnail:hover .pic-transparent {*/
+    /*display: block;*/
 /*}*/
+/*.pic-transparent {*/
+    /*width: 100%;*/
+    /*margin: auto;*/
+    /*height: 150px;*/
+    /*background-color: #f5f0f08c;*/
+    /*z-index: 1;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*display: none;*/
+/*}*/
+.pic-name {
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+    margin: 0 auto;
+    display: none;
+    position: absolute;
+    top: 115px;
+    color: white;
+    width: 150px;
+    text-align: center;
+}
 .motto-container {
     width: 100%;
     height: auto;
