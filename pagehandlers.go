@@ -23,7 +23,7 @@ func landing(wr http.ResponseWriter, req *http.Request) {
 		t, err := template.ParseFiles("template/index.html")
 
 		if err != nil {
-			http.Error(wr, "Error parsing template, ["+err.Error()+"]", http.StatusInternalServerError)
+			http.Error(wr, "Error parsing template, ["+err.Error()+"]", http.StatusNotFound)
 			return
 		}
 
