@@ -17,5 +17,6 @@ func main() {
 	rtr.HandleFunc("/js/{subdir}/{file}", serveResource)
 	rtr.HandleFunc("/css/{file}", serveResource)
 	rtr.HandleFunc("/assets/{file}", serveResource)
+	rtr.HandleFunc("/{file}", headerPage)
 	log.Fatal(http.ListenAndServe(c.WEBPORT, nil))
 }

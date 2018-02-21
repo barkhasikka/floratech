@@ -1,6 +1,6 @@
 var webpack = require("webpack");
 var path = require("path");
-var BUILD_DIR = path.resolve(__dirname, "./public/js");
+var BUILD_DIR = path.resolve(__dirname, ".");
 var APP_DIR = path.resolve(__dirname, ".");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
@@ -48,7 +48,7 @@ var config = {
         })
     ],
     output: {
-        path: BUILD_DIR,
+        path: BUILD_DIR+"/public/js/build",
         filename: "[name].js"
     }
 
