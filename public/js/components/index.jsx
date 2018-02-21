@@ -35,7 +35,7 @@ class App extends React.Component {
 
 
     headerPages(page) {
-        window.location  = '/'+page
+        // window.location  = '/'+page
     }
     render () {
         return (
