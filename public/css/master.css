@@ -1,5 +1,10 @@
-div, section, svg, body{
+div, section, svg{
     box-sizing: border-box;
+}
+body{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 @font-face{
     font-family: "HelveticaNeue-Light";
@@ -62,17 +67,17 @@ html, body{
 
 /*mobile svg css*/
 .mobile-st0{fill: #000000;}
-.mobile-st1{fill:#FFFFFF;}
+.mobile-st1{fill:#fbfbfb;}
 /*end mobile svg css*/
 
 /*desktop svg css*/
-.desktop-st0 {fill: #ffffff;}
+.desktop-st0 {fill: #fbfbfb;}
 .desktop-st1{fill: #000000;}
 .desktop-st2{fill:#FFFDFD;stroke:#000000;stroke-width:0.25;stroke-miterlimit:10;}
 /*end desktop svg css*/
 
 /*cloud svg css*/
-.cloud-st0{fill: #ffffff;;}
+.cloud-st0{fill: #fbfbfb;;}
 .cloud-st1{fill: #000000;}
 /*end cloud svg css*/
 .header-section {
@@ -477,7 +482,7 @@ app-service-wrapper.service-text {
     font-family: Verdana;
     text-align: justify;
     font-size: 13px;
-    /*padding: 10px;*/
+    height: 260px;
 }
 .svg-info {
     width: 245px;
@@ -513,9 +518,10 @@ app-service-wrapper.service-text {
     height: 400px;
     /* position: absolute; */
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     transition: all 1s ease-in-out;
-    /*-webkit-transition: all 1s ease-in-out;*/
-    /*-moz-transition: all 1s ease-in-out;*/
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
     display: block;
     margin: auto;
 }
@@ -528,16 +534,16 @@ app-service-wrapper.service-text {
     width: 280px;
     height: 375px;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     border-radius: 0px;
     position: absolute;
     overflow: hidden;
     background: #fbfbfb;
 }
 .card .back {
-    /*background: #f2f2fe;*/
     transform: rotateY(180deg);
-    /*-webkit-transform: rotateY(180deg);*/
-    /*-moz-transform: rotateY(180deg);*/
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
     padding: 20px;
     font-family: Verdana;
     text-align: justify;
@@ -554,7 +560,7 @@ app-service-wrapper.service-text {
     width: 100%;
     display: inline-block;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 35px;
 }
 .team-container {
     width: 100%;
@@ -631,9 +637,10 @@ app-service-wrapper.service-text {
     cursor: pointer;
 }
 .photo-wrapper {
-    width: 100%;
-    /* max-width: 150px; */
-    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
     margin: auto;
     display: block;
 }
@@ -666,9 +673,11 @@ opacity: 1;
     margin: 0 auto;
     display: none;
     position: absolute;
-    top: 115px;
+    bottom: 0;
     color: white;
     width: 150px;
+    height: 35px;
+    line-height: 35px;
     text-align: center;
 }
 .motto-container {
@@ -816,7 +825,6 @@ opacity: 1;
     width: 90%;
     height: 120px;
     display: block;
-    text-align: center;
     margin: auto;
     background: white;
 }
@@ -1074,7 +1082,7 @@ opacity: 1;
 /* iPad Portrait */
 @media only screen and (min-device-width: 768px)and (max-device-width: 1024px)and (orientation: portrait)and (-webkit-min-device-pixel-ratio: 1) {
     .company-details-section {
-        height: 665px;
+        height: 570px;
     }
     .filling-line {
         left: 190px;
@@ -1086,7 +1094,7 @@ opacity: 1;
     }
     .company-thumbnail {
         width: 255px;
-        height: 585px;
+        height: 570px;
         padding: 5px;
     }
     .circle {
@@ -1108,27 +1116,60 @@ opacity: 1;
         left: 500px;
         top: 82px;
     }
-    .team-text {
-        height: 495px;
-    }
     .team-photos-section {
-        height: 495px;
-        padding-top: 45px;
+        width: 765px;
+        height: 625px;
     }
     .team-photos-wrapper {
-        width: 600px;
+        width: 735px;
+        height: 595px;
+    }
+    .team-text {
+        width: calc(100% - 5em);
+        margin-left: 5em;
+    }
+    .company-info-heading {
+        width: calc(100% - 5em);
+        margin-left: 5em;
     }
     .team-txt {
          font-size: 40px;
     }
+    .photos-thumbnail {
+        width:  172px;
+    }
     .photos {
-        width: 105px;
-        height: 235px;
-        background-position-x: 50%;
+        width: 140px;
+    }
+    .pic-wrapper {
+        bottom: 20px;
+    }
+    .pic-name {
+        width: 140px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .pic-wrapper-one {
+        bottom: 42px;
+    }
+    .pic-wrapper-two {
+        bottom: 62px;
+    }
+    .photos-thumbnail:nth-child(1) {
+        margin-left: 0%;
+    }
+    .photos-thumbnail:nth-child(5) {
+        margin-left: 12%;
+    }
+    .photos-thumbnail:nth-child(8) {
+        margin-left: 0;
+    }
+    .photos-thumbnail:nth-child(12) {
+        margin-left: 12%;
     }
     .motto-txt-section {
-        width: calc(100% - 4em);
-        margin-left: 4em;
+        width: calc(100% - 5em);
+        margin-left: 5em;
     }
     .motto-description {
         width: 735px;
@@ -1156,31 +1197,38 @@ opacity: 1;
         height: 225px;
         background-position: 50% 50%;
     }
+    .services-description {
+        width: 1120px;
+        height: 865px;
+    }
     .flip-container {
-        width: 255px;
+        width: 380px;
+        height: 420px;
     }
     .card {
-        width: 210px;
+        width: 280px;
+        height: 375px;
     }
     .card .side {
-        width: 215px;
+        width: 280px;
     }
     .card .back {
         padding: 15px;
         font-size: 10px;
     }
     .service-text {
-        font-size: 12px;
+        height: 290px;
+        font-size: 14px;
     }
     .see-more-txt {
         font-size: 14px;
-        padding-top: 35px;
+        padding-top: 15px;
     }
     .svg-info {
         width: 200px;
     }
     .svg-description {
-        font-size: 13px;
+        /*font-size: 16px;*/
         width: 200px;
         padding-top: 2em;
     }
@@ -1254,26 +1302,58 @@ opacity: 1;
         font-size: 13px;
     }
     .flip-container {
-        width: 340px;
+        width: 255px;
     }
     .card {
-        width: 280px;
+        width: 235px;
+        height: 375px;
     }
     .card .side {
-        width: 280px;
+        width: 235px;
+        padding: 15px;
+    }
+    .service-text {
+        height: 275px;
+    }
+    .see-more-txt {
+        padding-top: 40px;
     }
     .svg-info {
-        width: 240px;
+        width: 200px;
+        padding-top: 20px;
     }
-    .team-txt {
-        padding-top: 4.5em;
+    .svg-description {
+        width: 235px;
     }
-    .photos {
-        width: 140px;
-        height: 235px;
+    .team-text {
+        line-height: 35px;
     }
+    .team-photos-section {
+        width: 1025px;
+        padding: 10px;
+    }
+    /*.photos {*/
+        /*width: 140px;*/
+    /*}*/
     .team-photos-wrapper {
-        margin-bottom: 100px;
+        width: 1005px;
+    }
+    .photos-thumbnail:nth-child(1) {
+        margin-left: 3%;
+    }
+    .photos-thumbnail:nth-child(5) {
+        margin-left: 15%;
+    }
+    .photos-thumbnail:nth-child(8) {
+        margin-left: 3%;
+    }
+    .photos-thumbnail:nth-child(12) {
+        margin-left: 15%;
+    }
+    .pic-name {
+        top: 120px;
+        height: 30px;
+        line-height: 30px;
     }
     .motto-description {
         width: 1000px;
@@ -1311,14 +1391,14 @@ opacity: 1;
     /*}*/
 /*}*/
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 736px){
-    .mobile-nav{
-        display: block;
-    }
-    .desktop-nav{
-        display: none;
-    }
-}
+/*@media only screen and (min-device-width: 320px) and (max-device-width: 736px){*/
+    /*.mobile-nav{*/
+        /*display: block;*/
+    /*}*/
+    /*.desktop-nav{*/
+        /*display: none;*/
+    /*}*/
+/*}*/
 /*end media query for header in mobile and desktop view in portrait*/
 
 
@@ -1358,7 +1438,59 @@ opacity: 1;
         height: 335px;
     }
     .service-text {
-        height: 200px;
+        height: 245px;
+    }
+    .see-more-txt {
+        padding-top: 25px;
+    }
+    .team-text {
+        width: calc(100% - 5em);
+        margin-left: 5em;
+    }
+    .team-photos-section {
+        width: 375px;
+        height: 1270px;
+        padding: 0;
+    }
+    .team-photos-wrapper {
+        width: 375px;
+        height: 1270px;
+        padding: 10px;
+    }
+    .photos-thumbnail {
+        width: 175px;
+        height: 175px;
+    }
+    .pic-name {
+        font-size: 14px;
+        width: 135px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .photos-thumbnail:nth-child(1) {
+        margin-left: 0;
+    }
+    .photos-thumbnail:nth-child(5) {
+        margin-left: 0;
+    }
+    .pic-wrapper {
+        bottom: 0;
+    }
+    .photos-thumbnail:nth-child(8) {
+        margin-left: 0;
+    }
+    .pic-wrapper-one {
+        bottom: 0;
+    }
+    .photos-thumbnail:nth-child(12) {
+        margin-left: 0;
+    }
+    .pic-wrapper-two {
+        bottom: 0;
+    }
+    .photos {
+        width: 135px;
+        height: 135px;
     }
     .motto-txt-section {
         width: calc(100% - 1em);
@@ -1482,13 +1614,14 @@ opacity: 1;
     }
     .social-media-connect {
         width: 50%;
-        height: 140px;
+        height: 130px;
         bottom: 35px;
         right: 10px;
     }
     .social-media-wrapper {
-        margin: 18px auto;
-        padding-left: 10px;
+        margin: 0;
+        padding-left: 16px;
+        margin-top: 18px;
     }
     .social-media-wrapper .social-media-icons {
         padding-right: 5px;
@@ -1499,6 +1632,10 @@ opacity: 1;
         border-radius: 50px;
         font-size: 25px;
         margin-right: 5px;
+    }
+    .footer-info {
+        font-size: 8px;
+        padding: 0 12px;
     }
 }
 /* end phone Portrait */
@@ -1524,8 +1661,8 @@ opacity: 1;
         padding: 10px;
     }
     .circle {
-        width: 100px;
-        height: 100px;
+        width: 110px;
+        height: 110px;
     }
     .first-company-txt {
         font-size: 20px;
@@ -1533,10 +1670,11 @@ opacity: 1;
     }
     .second-company-txt {
         font-size: 12px;
+        padding: 5px;
     }
     .services-description {
-        width: 965px;
-        height: 390px;
+        width: 670px;
+        height: 680px;
     }
     .text-section {
         height: 135px;
@@ -1551,38 +1689,88 @@ opacity: 1;
         display: none;
     }
     .txt-alignment {
-        padding: 5px;
-        font-size: 11px;
+        padding: 15px 5px;
+        font-size: 12px;
     }
     .flip-container {
-        width: 220px;
-        height: 390px;
+        width: 330px;
+        height: 315px;
     }
     .card {
-    width: 185px;
-        height: 310px;
+        width: 260px;
+        height: 280px;
     }
     .card .side {
         height: 280px;
-        width: 190px;
+        width: 260px;
     }
     .svg-info {
-        width: 170px;
+        width: 220px;
     }
     .svg-description {
-        font-size: 11px;
-        width: 165px;
+        font-size: 16px;
+        width: 175px;
+        padding-top: 22px;
     }
     .card .back {
-        padding: 10px;
+        padding: 15px;
         font-size: 10px;
     }
     .service-text {
-        font-size: 11px;
+        height: 215px;
+        font-size: 12px;
     }
     .see-more-txt {
         font-size: 12px;
-        padding-top: 20px;
+        padding-top: 15px;
+    }
+    .team-text {
+        width: calc(100% - 5em);
+        margin-left: 5em;
+    }
+    .team-photos-section {
+        width: 670px;
+        height: 510px;
+        padding: 0;
+    }
+    .team-photos-wrapper {
+        width: 655px;
+        height: auto;
+        padding: 10px;
+    }
+    .photos-thumbnail:nth-child(1) {
+        margin-left: 0;
+    }
+    .photos-thumbnail {
+        width: 155px;
+    }
+    .photos {
+        width: 125px;
+        height: 125px;
+    }
+    .photos-thumbnail:nth-child(5) {
+        margin-left: 13%;
+    }
+    .pic-wrapper {
+        bottom: 20px;
+    }
+    .photos-thumbnail:nth-child(8) {
+        margin-left: 0;
+    }
+    .pic-wrapper-one {
+        bottom: 40px;
+    }
+    .photos-thumbnail:nth-child(12) {
+        margin-left: 13%;
+    }
+    .pic-wrapper-two {
+        bottom: 60px;
+    }
+    .pic-name {
+        font-size: 13px;
+        width: 125px;
+        height: 30px;
+        line-height: 30px;
     }
     .motto-txt-section {
         width: calc(100% - 4em);
