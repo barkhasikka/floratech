@@ -19,11 +19,11 @@ var (
 func landing(wr http.ResponseWriter, req *http.Request) {
 	log.Println("Landing hit")
 	if req.Method == "GET" {
-	log.Println("Sending to parse");
+		log.Println("Sending to parse")
 		t, err := template.ParseFiles("template/index.html")
 
 		if err != nil {
-			http.Error(wr, "Error parsing template, ["+err.Error()+"]", http.StatusInternalServerError)
+			http.Error(wr, "Error parsing template, ["+err.Error()+"]", http.StatusNotFound)
 			return
 		}
 
@@ -86,4 +86,20 @@ func serveResource(wr http.ResponseWriter, req *http.Request) {
 	}
 
 	//log.Println("Out :" + req.URL.Path)
+}
+
+func headerPage(wr http.ResponseWriter, req *http.Request) {
+	log.Println("About hit")
+	if req.Method == "GET" {
+		log.Println("Sending to parse")
+		pages := "template/headerpages" + req.URL.Path + ".html"
+		t, err := template.ParseFiles(pages)
+
+		if err != nil {
+			http.Error(wr, "Error parsing template, ["+err.Error()+"]", http.StatusInternalServerError)
+			return
+		}
+
+		err = t.Execute(wr, nil)
+	}
 }
