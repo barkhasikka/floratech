@@ -3,12 +3,15 @@ package main
 import (
 	handlers "ec_webapp/externals/gorilla/handlers"
 	"ec_webapp/externals/gorilla/mux"
+	"floratechno/connections"
 	c "floratechno/flag"
 	"log"
 	"net/http"
 )
 
 func main() {
+	log.Println("calling to mailer-------------")
+	connections.CallMAIL()
 	rtr := mux.NewRouter() //create a new router from the imported Gorilla Mux pckg
 	rtr.HandleFunc("/", landing)
 
@@ -18,4 +21,5 @@ func main() {
 	rtr.HandleFunc("/css/{file}", serveResource)
 	rtr.HandleFunc("/assets/{file}", serveResource)
 	log.Fatal(http.ListenAndServe(c.WEBPORT, nil))
+
 }
