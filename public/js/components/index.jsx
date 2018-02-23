@@ -31,6 +31,19 @@ class App extends React.Component {
             }
         }
         typeWriter();
+        function getWordPressContent() {
+            fetch("http://192.168.1.14:1234/wordpress/wp-json/wp/v2/posts", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(),
+            }).then(response => response.json())
+                .then(response => {debugger
+                    console.log(response);
+                });
+        }
+        setTimeout(getWordPressContent, 9000);
     };
 
 
