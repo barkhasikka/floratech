@@ -9,7 +9,6 @@ import (
 
 func SendContactUs(args *ctxlanding.ContactUs, res *ctxcommon.EmptyReply) error {
 	spew.WriteHead("SendContactUsMail")
-	spew.Println("this is send contact us fun..")
 	reply := &ctxcommon.EmptyReply{}
 	EmailCall := connections.MAILClient.Go("EmailR.SendContactUsMail", args, reply, nil)
 	EmailCallReply := <-EmailCall.Done
@@ -17,6 +16,5 @@ func SendContactUs(args *ctxlanding.ContactUs, res *ctxcommon.EmptyReply) error 
 	if EmailCallReply.Error != nil {
 		return EmailCallReply.Error //return RegisterPerson from reply
 	}
-	spew.Println("this is send contact us fun....... response")
 	return nil
 }

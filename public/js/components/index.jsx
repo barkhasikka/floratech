@@ -7,8 +7,17 @@ class App extends React.Component {
         super(props);
         // this.headerPages = this.headerPages.bind(this);
         this.state = {
-            isJoined: false
-        }
+            Email:'',
+            EmailErrorMessage:false,
+            MobileNo:'',
+            MobileErrorMessage:false,
+            Content :'',
+            ContentErrorMessage:false,
+            loader:false
+        };
+        this.sendEmail = this.sendEmail.bind(this);
+        this.isValidEmail = this.isValidEmail.bind(this);
+        this.isValidMobileNO = this.isValidMobileNO.bind(this);
     }
     componentWillMount() {
 
@@ -33,9 +42,99 @@ class App extends React.Component {
         typeWriter();
     };
 
-
     headerPages(page) {
         // window.location  = '/'+page
+    }
+
+
+    displayMessage(){
+        var that = this;
+        setTimeout(function(){
+            that.setState({
+                EmailErrorMessage:false,
+                MobileErrorMessage:false,
+                ContentErrorMessage:false,
+            });
+        },3000);
+    }
+
+    sendEmail() {
+        let email = this.isValidEmail(this.state.Email);
+        if(!email) {
+            this.setState({
+                EmailErrorMessage:true,
+                MobileErrorMessage:false,
+                ContentErrorMessage:false
+            });
+            this.displayMessage();
+            return;
+        }
+        let mobNo = this.isValidMobileNO(this.state.MobileNo);
+        if(!mobNo){
+            this.setState({
+                MobileErrorMessage:true,
+                EmailErrorMessage:false,
+                ContentErrorMessage:false
+            });
+            this.displayMessage();
+            return;
+        }
+        if(!this.state.Content){
+            this.setState({
+                MobileErrorMessage:false,
+                EmailErrorMessage:false,
+                ContentErrorMessage:true,
+            });
+            this.displayMessage();
+            return;
+        }
+        this.setState({loader:true});
+        let contactUsParams = {
+            params: [{
+                Email:this.state.Email,
+                MobileNo:this.state.MobileNo,
+                Content :this.state.Content,
+            }],
+            method: "LandingService.SendContactUs",
+            id: "1"
+        };
+        fetch("/api/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            credentials: "same-origin",
+            body: JSON.stringify(contactUsParams),
+        }).then(response => response.json())
+            .then((contactResponse) => {
+                this.setState({
+                    Email: "",
+                    MobileNo:"",
+                    Content:"",
+                    loader:false
+                });
+            }).catch(function(error){
+            console.log(error);
+        });
+    }
+    isValidEmail(email) {
+        email = email.trim();
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(re.test(email)){
+            this.state.EmailErrorMessage = true;
+        } else {
+            this.state.EmailErrorMessage = false;
+        }
+        return this.state.EmailErrorMessage;
+    }
+    isValidMobileNO(mNo) {
+        var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        if(phoneno.test(mNo)){
+            this.state.MobileErrorMessage = true
+        }else {
+            this.state.MobileErrorMessage = false
+        }
+        return this.state.MobileErrorMessage;
     }
     render () {
         return (
@@ -102,10 +201,10 @@ class App extends React.Component {
                         </div>
                     </div>
                     <div className="header-options desktop-nav">
-                        <span className="header-options-span">ABOUT</span>
-                        <span className="header-options-span">CLIENTS</span>
-                        <span className="header-options-span">SERVICES</span>
-                        <span className="header-options-span">CONTACT</span>
+                        <span className="header-options-span" onClick={() =>this.headerPages('about')}>ABOUT</span>
+                        <span className="header-options-span" onClick={() =>this.headerPages('clients')}>CLIENTS</span>
+                        <span className="header-options-span" onClick={() =>this.headerPages('services')}>SERVICES</span>
+                        <span className="header-options-span" onClick={() =>this.headerPages('contact')}>CONTACT</span>
                     </div>
                     <div className="dropdown mobile-nav">
                         <i className="fa fa-bars fa-color menu-font-size" aria-hidden="true"></i>
@@ -129,10 +228,10 @@ class App extends React.Component {
                             <span className="heading">
                                 <div className="menu-bar ">
 							<ul className="menu anim-blink">
-								<li className="menu-list"><span>ABOUT</span></li>
-								<li className="menu-list"><span>CLIENTS</span></li>
-								<li className="menu-list"><span>SERVICES</span></li>
-								<li className="menu-list"><span>CONTACT</span></li>
+								<li className="menu-list" onClick={() =>this.headerPages('about')}><span>ABOUT</span></li>
+								<li className="menu-list" onClick={() =>this.headerPages('clients')}><span>CLIENTS</span></li>
+								<li className="menu-list" onClick={() =>this.headerPages('services')}><span>SERVICES</span></li>
+								<li className="menu-list" onClick={() =>this.headerPages('contact')}><span>CONTACT</span></li>
 							</ul>
 						</div>
 				</span>
@@ -916,6 +1015,9 @@ class App extends React.Component {
                         </div>
                     </div>
                 </section>
+                {this.state.EmailErrorMessage == true  ? <span >Please enter valid email.</span> :null }
+                {this.state.MobileErrorMessage == true  ? <span >Please enter valid mobile no.</span> :null }
+                {this.state.ContentErrorMessage == true  ? <span >Please enter message.</span> :null }
 
                 <section className="contact-container">
                     <div className="contact-section">
@@ -929,7 +1031,7 @@ class App extends React.Component {
                                     <span className="left-contact-txt">ADDRESS</span>
                                 </div>
                                 <div className="contact-us-right-section">
-                                    <textarea rows="4" className="input-data" type="text" placeholder="INSERT"></textarea>
+                                    <textarea rows="4" className="input-data" value={this.state.Content} onChange = {(event) => this.setState({Content: event.target.value})} type="text" placeholder="INSERT"></textarea>
                                 </div>
                             </div>
 
@@ -938,7 +1040,9 @@ class App extends React.Component {
                                     <span className="left-contact-txt">CALL</span>
                                 </div>
                                 <div className="contact-us-right-section ">
-                                    <input className="input-data" type="text" placeholder="INSERT"/>
+                                    <input className="input-data" value={this.state.MobileNo} onChange = {(event) => this.setState({MobileNo: event.target.value})} type="text" maxLength={10} placeholder="INSERT"/>
+                                    {/*<input className="input-data" value={this.state.MobileNo} onChange = {(event) => this.setState({MobileNo: this.isValidMobileNO (event.target.value)? event.target.value : event.target.value})} type="text" maxLength={10} placeholder="INSERT"/>*/}
+                                    {/*{this.state.MobileErrorMessage == false ? <label>Invalid Number</label> : <label >valid NO</label> }*/}
                                 </div>
                             </div>
 
@@ -947,9 +1051,14 @@ class App extends React.Component {
                                     <span className="left-contact-txt">EMAIL</span>
                                 </div>
                                 <div className="contact-us-right-section ">
-                                    <input className="input-data" type="text" placeholder="INSERT"/>
+                                    <input className="input-data" value={this.state.Email} type="text" onChange = {(event) => this.setState({Email:event.target.value})} placeholder="INSERT"/>
+                                    {/*<input className="input-data" value={this.state.Email} type="text" onChange = {(event) => this.setState({Email: this.isValidEmail(event.target.value) ? event.target.value :event.target.value})} placeholder="INSERT"/>*/}
+                                    {/*{this.state.EmailErrorMessage == false ? <label>Invalid email</label> : <label >valid email Id</label> }*/}
                                 </div>
                             </div>
+                            <input className="input-data" type="button" value={"Send"} onClick={() =>this.sendEmail()}/>
+                            {  this.state.loader == true ?  <i className="fa fa-spinner fa-spin loader-color" aria-hidden="true" ></i> : null}
+
                         </div>
 
                         <div className="social-media-connect">

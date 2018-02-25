@@ -1082,6 +1082,11 @@ opacity: 1;
 .menu-font-size {
     font-size: 22px !important;
 }
+
+loader-color{
+    color:#000
+}
+
 @media all and (min-width: 1025px) and (max-width: 2500px){
     .mobile-nav{
         display: none;
