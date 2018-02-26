@@ -1082,8 +1082,17 @@ opacity: 1;
 .menu-font-size {
     font-size: 22px !important;
 }
-
-loader-color{
+.send-bttn {
+    width: 10%;
+    height: 12%;
+    margin: auto;
+    display: block;
+    margin-top: -10px;
+    border-radius: 5px;
+    outline: none;
+    /*background-color: #f7de58;*/
+}
+.loader-color{
     color:#000
 }
 

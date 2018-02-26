@@ -1056,7 +1056,7 @@ class App extends React.Component {
                                     {/*{this.state.EmailErrorMessage == false ? <label>Invalid email</label> : <label >valid email Id</label> }*/}
                                 </div>
                             </div>
-                            <input className="input-data" type="button" value={"Send"} onClick={() =>this.sendEmail()}/>
+                            <button className="send-bttn"  onClick={() =>this.sendEmail()}>Send</button>
                             {  this.state.loader == true ?  <i className="fa fa-spinner fa-spin loader-color" aria-hidden="true" ></i> : null}
 
                         </div>
