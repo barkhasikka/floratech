@@ -17,7 +17,7 @@ func main() {
 	rtr := mux.NewRouter() //create a new router from the imported Gorilla Mux pckg
 	rtr.HandleFunc("/", landing)
 	log.Println("calling to mailer-------------")
-	connections.CallMAIL()
+	go connections.CallMAIL()
 	log.Println("Server started on port" + c.WEBPORT)
 	http.Handle("/", handlers.CORS()(rtr))
 	rtr.HandleFunc("/js/{subdir}/{file}", serveResource)
