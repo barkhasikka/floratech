@@ -1022,10 +1022,7 @@ class App extends React.Component {
                         </div>
                     </div>
                 </section>
-                {this.state.EmailErrorMessage == true  ? <span >Please enter valid email.</span> :null }
-                {this.state.MobileErrorMessage == true  ? <span >Please enter valid mobile no.</span> :null }
-                {this.state.ContentErrorMessage == true  ? <span >Please enter message.</span> :null }
-
+                             
                 <section id="contact" className="contact-container">
                     <div className="contact-section">
                         <div className="contact-heading">
@@ -1039,6 +1036,9 @@ class App extends React.Component {
                                 </div>
                                 <div className="contact-us-right-section">
                                     <textarea rows="4" className="input-data" value={this.state.Content} onChange = {(event) => this.setState({Content: event.target.value})} type="text" placeholder="INSERT"></textarea>
+                                    <div className="error-msg-section">
+                                        {this.state.ContentErrorMessage == true  ? <span className="error-msg">Please Enter Message.</span> :null }
+                                    </div>
                                 </div>
                             </div>
 
@@ -1050,6 +1050,9 @@ class App extends React.Component {
                                     <input className="input-data" value={this.state.MobileNo} onChange = {(event) => this.setState({MobileNo: event.target.value})} type="text" maxLength={10} placeholder="INSERT"/>
                                     {/*<input className="input-data" value={this.state.MobileNo} onChange = {(event) => this.setState({MobileNo: this.isValidMobileNO (event.target.value)? event.target.value : event.target.value})} type="text" maxLength={10} placeholder="INSERT"/>*/}
                                     {/*{this.state.MobileErrorMessage == false ? <label>Invalid Number</label> : <label >valid NO</label> }*/}
+                                    <div className="error-msg-section">
+                                        {this.state.MobileErrorMessage == true  ? <span className="error-msg">Please Enter Valid Mobile Number</span> :null }
+                                    </div>
                                 </div>
                             </div>
 
@@ -1061,6 +1064,9 @@ class App extends React.Component {
                                     <input className="input-data" value={this.state.Email} type="text" onChange = {(event) => this.setState({Email:event.target.value})} placeholder="INSERT"/>
                                     {/*<input className="input-data" value={this.state.Email} type="text" onChange = {(event) => this.setState({Email: this.isValidEmail(event.target.value) ? event.target.value :event.target.value})} placeholder="INSERT"/>*/}
                                     {/*{this.state.EmailErrorMessage == false ? <label>Invalid email</label> : <label >valid email Id</label> }*/}
+                                    <div className="error-msg-section">
+                                        {this.state.EmailErrorMessage == true  ? <span className="error-msg">Please Enter Valid Email Id</span> :null }
+                                    </div>
                                 </div>
                             </div>
                             <button className="send-bttn"  onClick={() =>this.sendEmail()}>Send</button>
