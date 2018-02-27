@@ -80,6 +80,19 @@ html, body{
 .cloud-st0{fill: #fbfbfb;;}
 .cloud-st1{fill: #000000;}
 /*end cloud svg css*/
+
+.digital-market-st0 {
+    stroke: #000000;
+    stroke-width: 3px;
+}
+.digital-market-st1{
+    stroke: #000000;
+    stroke-width: 4px;
+}
+.digital-market-st2{
+    stroke: #000000;
+    stroke-width: 2px;
+}
 .header-section {
     width: 100%;
     height: 50px;
@@ -127,6 +140,7 @@ html, body{
     line-height: 50px;
     margin-right: 30px;
     float: right;
+    cursor: pointer;
 }
 .header-options-span{
     margin: 0 15px;
@@ -280,6 +294,7 @@ html, body{
     float: left;
     font-family: "andalemo";
     font-size: 17px;
+    cursor: pointer;
 }
 .anim-blink{
     animation: blink 6s steps(4, end) 6s normal both, blinkTextCursor 6s steps(4, end) 3s  normal;
@@ -820,7 +835,7 @@ opacity: 1;
 }
 .company-info-section {
     width: 100%;
-    height: calc(100% - 135px);
+    height: 770px;
     margin: auto;
     display: block;
 }
@@ -885,7 +900,8 @@ opacity: 1;
     margin: auto;
     padding: 80px 0;
     position: relative;
-    /*background: linear-gradient(to bottom left, rgba(255, 192, 203, 0.6509803921568628), rgba(255, 165, 0, 0.4392156862745098) 40%, rgb(249, 241, 195) 70%, rgba(255, 192, 203, 0.71) 75%);*/
+    /*background
+    : linear-gradient(to bottom left, rgba(255, 192, 203, 0.6509803921568628), rgba(255, 165, 0, 0.4392156862745098) 40%, rgb(249, 241, 195) 70%, rgba(255, 192, 203, 0.71) 75%);*/
 }
 .innovation-svg {
     width: 13%;
@@ -1082,8 +1098,17 @@ opacity: 1;
 .menu-font-size {
     font-size: 22px !important;
 }
-
-loader-color{
+.send-bttn {
+    width: 10%;
+    height: 12%;
+    margin: auto;
+    display: block;
+    margin-top: -10px;
+    border-radius: 5px;
+    outline: none;
+    /*background-color: #f7de58;*/
+}
+.loader-color{
     color:#000
 }
 
