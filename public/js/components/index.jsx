@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom'
 import {render} from 'react-dom';
 import {smoothScroll} from "../common";
 
@@ -7,6 +8,7 @@ class App extends React.Component {
     constructor(props){
         super(props);
         // this.headerPages = this.headerPages.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
         this.state = {
             Email:'',
             EmailErrorMessage:false,
@@ -14,18 +16,56 @@ class App extends React.Component {
             MobileErrorMessage:false,
             Content :'',
             ContentErrorMessage:false,
-            loader:false
+            loader:false,
+            currentTab:''
         };
         this.sendEmail = this.sendEmail.bind(this);
         this.isValidEmail = this.isValidEmail.bind(this);
         this.isValidMobileNO = this.isValidMobileNO.bind(this);
     }
     goToElement(e,id,offset){
+        if (id == "about"){
+            this.setState({currentTab:"aboutUs"})
+        } else if(id == "services"){
+            this.setState({currentTab:"service"})
+        }else if(id == "contact") {
+            this.setState({currentTab: "contactus"})
+        }
         smoothScroll(id,offset)
     }
+    handleScroll(event){
+        // if (event.target.scrollTop > document.querySelector("#about").clientHeight) {
+        //     document.getElementsByClassName("header-options-span")[0].classList.add('tab-color')
+        // }else if(event.target.scrollTop > document.querySelector("#services").clientHeight){
+        //     document.getElementsByClassName("header-options-span")[0].classList.remove('tab-color');
+        //     document.getElementsByClassName("header-options-span")[0].classList.add('tab-color')
+        // }
+        if(document.querySelector("#about") && event.target.scrollTop + window.innerHeight >=  document.querySelector("#about").offsetTop - 70){
+            if(document.querySelectorAll(".header-options-span").length > 0) {
+                document.querySelectorAll(".header-options-span").forEach((ele) => {
+                    ele.classList.remove("tab-color");
+                })
+            }
+            document.querySelector("#option-about").classList.add("tab-color");
 
-    componentWillMount() {
-
+        }else if(document.querySelector("#services") && event.target.scrollTop + window.innerHeight >=  document.querySelector("#services").offsetTop - 70){
+            if(document.querySelectorAll(".header-options-span").length > 0) {
+                document.querySelectorAll(".header-options-span").forEach((ele) => {
+                    ele.classList.remove("tab-color");
+                })
+            }
+            document.querySelector("#option-services").classList.add("tab-color");
+        }else if(document.querySelector("#contact") && event.target.scrollTop + window.innerHeight >=  document.querySelector("#contact").offsetTop - 70){
+            if(document.querySelectorAll(".header-options-span").length > 0) {
+                document.querySelectorAll(".header-options-span").forEach((ele) => {
+                    ele.classList.remove("tab-color");
+                })
+            }
+            document.querySelector("#option-contact").classList.add("tab-color");
+        }
+    }
+    componentWillUnmount() {
+        document.querySelector("body").removeEventListener("scroll",this.handleScroll);
     };
     componentDidMount() {
         var i = 0;
@@ -45,6 +85,7 @@ class App extends React.Component {
             }
         }
         typeWriter();
+        document.querySelector("body").addEventListener("scroll",this.handleScroll);
     };
 
     headerPages(page) {
@@ -206,16 +247,18 @@ class App extends React.Component {
                         </div>
                     </div>
                     <div className="header-options desktop-nav">
-                        <span className="header-options-span" onClick={(e) =>this.goToElement(e,'about',50)}>ABOUT</span>
-                        <span className="header-options-span" onClick={(e) =>this.goToElement(e,'services',100)}>SERVICES</span>
-                        <span className="header-options-span" onClick={(e) =>this.goToElement(e,'contact',-30)}>CONTACT</span>
+                        <ul className="nav-bar">
+                            <li id='option-about' className="header-options-span" onClick={(e) =>this.goToElement(e,'about',50)}><span style={this.state.currentTab==="aboutUs"?{color: 'orange'} : {color:''}}>ABOUT</span></li>
+                            <li id='option-services' className="header-options-span" onClick={(e) =>this.goToElement(e,'services',100)}><span style={this.state.currentTab==="service"?{color: 'orange'} : {color:''}}>SERVICES</span></li>
+                            <li id='option-contact' className="header-options-span" onClick={(e) =>this.goToElement(e,'contact',-30)}><span style={this.state.currentTab==="contactus"?{color: 'orange'} : {color:''}}>CONTACT</span></li>
+                        </ul>
                     </div>
                     <div className="dropdown mobile-nav">
                         <i className="fa fa-bars fa-color menu-font-size" aria-hidden="true"></i>
                         <ul className="dropdown-content">
-                            <li className="" onClick={(e) =>this.goToElement(e,'about',50)}>ABOUT</li>
-                            <li className="" onClick={(e) =>this.goToElement(e,'services',100)}>SERVICES</li>
-                            <li className="" onClick={(e) =>this.goToElement(e,'contact',-30)}>CONTACT</li>
+                            <li className="" onClick={(e) =>this.goToElement(e,'about',50)}><span style={this.state.currentTab==="aboutUs"?{color: 'orange'} : {color:''}}>ABOUT</span></li>
+                            <li className="" onClick={(e) =>this.goToElement(e,'services',100)}><span style={this.state.currentTab==="service"?{color: 'orange'} : {color:''}}>SERVICES</span></li>
+                            <li className="" onClick={(e) =>this.goToElement(e,'contact',-30)}><span style={this.state.currentTab==="contactus"?{color: 'orange'} : {color:''}}>CONTACT</span></li>
                         </ul>
                     </div>
                 </header>
