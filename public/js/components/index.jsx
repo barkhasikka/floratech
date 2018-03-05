@@ -7,8 +7,10 @@ class App extends React.Component {
 
     constructor(props){
         super(props);
-        // this.headerPages = this.headerPages.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
+        this.sendEmail = this.sendEmail.bind(this);
+        this.isValidEmail = this.isValidEmail.bind(this);
+        this.isValidMobileNO = this.isValidMobileNO.bind(this);
         this.state = {
             Email:'',
             EmailErrorMessage:false,
@@ -19,9 +21,7 @@ class App extends React.Component {
             loader:false,
             currentTab:''
         };
-        this.sendEmail = this.sendEmail.bind(this);
-        this.isValidEmail = this.isValidEmail.bind(this);
-        this.isValidMobileNO = this.isValidMobileNO.bind(this);
+
     }
     goToElement(e,id,offset){
         if (id == "about"){
@@ -31,37 +31,63 @@ class App extends React.Component {
         }else if(id == "contact") {
             this.setState({currentTab: "contactus"})
         }
-        smoothScroll(id,offset)
+          smoothScroll(id, offset)
     }
-    handleScroll(event){
-        // if (event.target.scrollTop > document.querySelector("#about").clientHeight) {
-        //     document.getElementsByClassName("header-options-span")[0].classList.add('tab-color')
-        // }else if(event.target.scrollTop > document.querySelector("#services").clientHeight){
-        //     document.getElementsByClassName("header-options-span")[0].classList.remove('tab-color');
-        //     document.getElementsByClassName("header-options-span")[0].classList.add('tab-color')
-        // }
-        if(document.querySelector("#about") && event.target.scrollTop + window.innerHeight >=  document.querySelector("#about").offsetTop - 70){
-            if(document.querySelectorAll(".header-options-span").length > 0) {
-                document.querySelectorAll(".header-options-span").forEach((ele) => {
-                    ele.classList.remove("tab-color");
-                })
-            }
-            document.querySelector("#option-about").classList.add("tab-color");
+    handleScroll(event) {
+        let scrollerTop  = event.target.scrollTop;
+        let scrollerBottom = scrollerTop + 50;
 
-        }else if(document.querySelector("#services") && event.target.scrollTop + window.innerHeight >=  document.querySelector("#services").offsetTop - 70){
+        let aboutOffsetTop = document.querySelector("#about").offsetTop - 50 ;
+        let aboutBottom = aboutOffsetTop +  document.querySelector("#about").clientHeight;
+
+        let servicesOffsetTop =  document.querySelector("#services").offsetTop - 50;
+        let servicesBottom = servicesOffsetTop +  document.querySelector("#services").clientHeight;
+
+        let contactOffsetTop =  document.querySelector("#contact").offsetTop - 50;
+        let contactBottom = contactOffsetTop +  document.querySelector("#contact").clientHeight;
+
+        let isSet = false;
+        if(scrollerBottom >= aboutOffsetTop && scrollerBottom <= aboutBottom){
+            this.setState({currentTab: ""})
             if(document.querySelectorAll(".header-options-span").length > 0) {
                 document.querySelectorAll(".header-options-span").forEach((ele) => {
                     ele.classList.remove("tab-color");
                 })
             }
+            isSet = true;
+            document.querySelector("#option-about").classList.add("tab-color");
+        }
+        if(scrollerBottom >= servicesOffsetTop && scrollerBottom <= servicesBottom){
+            this.setState({currentTab: ""})
+            if(document.querySelectorAll(".header-options-span").length > 0) {
+                document.querySelectorAll(".header-options-span").forEach((ele) => {
+                    ele.classList.remove("tab-color");
+                })
+            }
+            isSet = true;
             document.querySelector("#option-services").classList.add("tab-color");
-        }else if(document.querySelector("#contact") && event.target.scrollTop + window.innerHeight >=  document.querySelector("#contact").offsetTop - 70){
+
+        }
+
+        if(scrollerBottom >= contactOffsetTop && scrollerBottom <= contactBottom){
+            this.setState({currentTab: ""})
             if(document.querySelectorAll(".header-options-span").length > 0) {
                 document.querySelectorAll(".header-options-span").forEach((ele) => {
                     ele.classList.remove("tab-color");
                 })
             }
+            isSet = true;
             document.querySelector("#option-contact").classList.add("tab-color");
+
+        }
+
+        if ( !isSet){
+            if(document.querySelectorAll(".header-options-span").length > 0) {
+                document.querySelectorAll(".header-options-span").forEach((ele) => {
+                    ele.classList.remove("tab-color");
+                })
+            }
+            isSet = false;
         }
     }
     componentWillUnmount() {
@@ -88,64 +114,54 @@ class App extends React.Component {
         document.querySelector("body").addEventListener("scroll",this.handleScroll);
     };
 
-    headerPages(page) {
-        // window.location  = '/'+page
-    }
-
-
     displayMessage(){
-        var that = this;
-        setTimeout(function(){
-            that.setState({
-                EmailErrorMessage:false,
-                MobileErrorMessage:false,
-                ContentErrorMessage:false,
-            });
-        },3000);
+        setTimeout(() => {
+            this.setState({EmailErrorMessage:false,
+                            MobileErrorMessage:false,
+                            ContentErrorMessage:false});
+        }, 3000);
     }
 
     sendEmail() {
         let email = this.isValidEmail(this.state.Email);
         if(!email) {
-            this.setState({
-                EmailErrorMessage:true,
-                MobileErrorMessage:false,
-                ContentErrorMessage:false
+                this.setState({
+                EmailErrorMessage:true
             });
-            this.displayMessage();
-            return;
+                this.displayMessage();
+                return;
         }
-        let mobNo = this.isValidMobileNO(this.state.MobileNo);
+                this.setState({EmailErrorMessage:false});
+                let mobNo = this.isValidMobileNO(this.state.MobileNo);
         if(!mobNo){
-            this.setState({
+                this.setState({
                 MobileErrorMessage:true,
-                EmailErrorMessage:false,
-                ContentErrorMessage:false
             });
-            this.displayMessage();
-            return;
+                this.displayMessage();
+                return;
         }
+                this.setState({MobileErrorMessage:false});
         if(!this.state.Content){
-            this.setState({
-                MobileErrorMessage:false,
-                EmailErrorMessage:false,
+                this.setState({
                 ContentErrorMessage:true,
-            });
-            this.displayMessage();
-            return;
-        }
+        });
+                this.displayMessage();
+                return;
+    }
+        this.setState({ContentErrorMessage:false});
         this.setState({loader:true});
-        let contactUsParams = {
+    let contactUsParams = {
             params: [{
-                Email:this.state.Email,
-                MobileNo:this.state.MobileNo,
-                Content :this.state.Content,
-            }],
-            method: "LandingService.SendContactUs",
-            id: "1"
-        };
-        fetch("/api/", {
-            method: "POST",
+            Email:this.state.Email,
+            MobileNo:this.state.MobileNo,
+            Content :this.state.Content,
+
+        }],
+        method: "LandingService.SendContactUs",
+        id: "1"
+    };
+
+    fetch("/api/", {
             headers: {
                 "Content-Type": "application/json",
             },
@@ -249,8 +265,8 @@ class App extends React.Component {
                     <div className="header-options desktop-nav">
                         <ul className="nav-bar">
                             <li id='option-about' className="header-options-span" onClick={(e) =>this.goToElement(e,'about',50)}><span style={this.state.currentTab==="aboutUs"?{color: 'orange'} : {color:''}}>ABOUT</span></li>
-                            <li id='option-services' className="header-options-span" onClick={(e) =>this.goToElement(e,'services',100)}><span style={this.state.currentTab==="service"?{color: 'orange'} : {color:''}}>SERVICES</span></li>
-                            <li id='option-contact' className="header-options-span" onClick={(e) =>this.goToElement(e,'contact',-30)}><span style={this.state.currentTab==="contactus"?{color: 'orange'} : {color:''}}>CONTACT</span></li>
+                            <li id='option-services' className="header-options-span" onClick={(e) =>this.goToElement(e,'services',50)}><span style={this.state.currentTab==="service"?{color: 'orange'} : {color:''}}>SERVICES</span></li>
+                            <li id='option-contact' className="header-options-span" onClick={(e) =>this.goToElement(e,'contact', 50)}><span style={this.state.currentTab==="contactus"?{color: 'orange'} : {color:''}}>CONTACT</span></li>
                         </ul>
                     </div>
                     <div className="dropdown mobile-nav">
@@ -1072,48 +1088,48 @@ class App extends React.Component {
                             <span className="contact-heading-txt">CONTACT</span>
                             <span className="contact-heading-txt-second">US WHENEVER</span>
                         </div>
+                        <div className="contact-wrapper input-height">
+                            <div className="contact-us-left-section">
+                                <span className="left-contact-txt">EMAIL</span>
+                            </div>
+                            <div className="contact-us-right-section ">
+                                <input className="input-data" value={this.state.Email} type="text" onChange = {(event) => this.setState({Email:event.target.value})} placeholder="EMAIL"/>
+                                {/*<input className="input-data" value={this.state.Email} type="text" onChange = {(event) => this.setState({Email: this.isValidEmail(event.target.value) ? event.target.value :event.target.value})} placeholder="INSERT"/>*/}
+                                {/*{this.state.EmailErrorMessage == false ? <label>Invalid email</label> : <label >valid email Id</label> }*/}
+                                <div className="error-msg-section">
+                                    {this.state.EmailErrorMessage == true  ? <span className="error-msg">Please Enter Valid Email Id</span> :null }
+                                </div>
+                            </div>
+                        </div>
+                        <div className="contact-wrapper input-height">
+                            <div className="contact-us-left-section">
+                                <span className="left-contact-txt">CALL</span>
+                            </div>
+                            <div className="contact-us-right-section ">
+                                <input className="input-data" value={this.state.MobileNo} onChange = {(event) => this.setState({MobileNo: event.target.value})} type="text" maxLength={10} placeholder="MOBILE"/>
+                                {/*<input className="input-data" value={this.state.MobileNo} onChange = {(event) => this.setState({MobileNo: this.isValidMobileNO (event.target.value)? event.target.value : event.target.value})} type="text" maxLength={10} placeholder="INSERT"/>*/}
+                                {/*{this.state.MobileErrorMessage == false ? <label>Invalid Number</label> : <label >valid NO</label> }*/}
+                                <div className="error-msg-section">
+                                    {this.state.MobileErrorMessage == true  ? <span className="error-msg">Please Enter Valid Mobile Number</span> :null }
+                                </div>
+                            </div>
+                        </div>
                         <div className="contact-us-section">
                             <div className="contact-wrapper">
                                 <div className="contact-us-left-section">
                                     <span className="left-contact-txt">ADDRESS</span>
                                 </div>
                                 <div className="contact-us-right-section">
-                                    <textarea rows="4" className="input-data" value={this.state.Content} onChange = {(event) => this.setState({Content: event.target.value})} type="text" placeholder="INSERT"></textarea>
+                                    <textarea rows="4" className="input-data" value={this.state.Content} onChange = {(event) => this.setState({Content: event.target.value})} type="text" placeholder="ADDRESS"></textarea>
                                     <div className="error-msg-section">
                                         {this.state.ContentErrorMessage == true  ? <span className="error-msg">Please Enter Message.</span> :null }
                                     </div>
                                 </div>
                             </div>
-
-                            <div className="contact-wrapper input-height">
-                                <div className="contact-us-left-section">
-                                    <span className="left-contact-txt">CALL</span>
-                                </div>
-                                <div className="contact-us-right-section ">
-                                    <input className="input-data" value={this.state.MobileNo} onChange = {(event) => this.setState({MobileNo: event.target.value})} type="text" maxLength={10} placeholder="INSERT"/>
-                                    {/*<input className="input-data" value={this.state.MobileNo} onChange = {(event) => this.setState({MobileNo: this.isValidMobileNO (event.target.value)? event.target.value : event.target.value})} type="text" maxLength={10} placeholder="INSERT"/>*/}
-                                    {/*{this.state.MobileErrorMessage == false ? <label>Invalid Number</label> : <label >valid NO</label> }*/}
-                                    <div className="error-msg-section">
-                                        {this.state.MobileErrorMessage == true  ? <span className="error-msg">Please Enter Valid Mobile Number</span> :null }
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="contact-wrapper input-height">
-                                <div className="contact-us-left-section">
-                                    <span className="left-contact-txt">EMAIL</span>
-                                </div>
-                                <div className="contact-us-right-section ">
-                                    <input className="input-data" value={this.state.Email} type="text" onChange = {(event) => this.setState({Email:event.target.value})} placeholder="INSERT"/>
-                                    {/*<input className="input-data" value={this.state.Email} type="text" onChange = {(event) => this.setState({Email: this.isValidEmail(event.target.value) ? event.target.value :event.target.value})} placeholder="INSERT"/>*/}
-                                    {/*{this.state.EmailErrorMessage == false ? <label>Invalid email</label> : <label >valid email Id</label> }*/}
-                                    <div className="error-msg-section">
-                                        {this.state.EmailErrorMessage == true  ? <span className="error-msg">Please Enter Valid Email Id</span> :null }
-                                    </div>
-                                </div>
-                            </div>
+                            <div className="send-btn-flex">
                             <button className="send-bttn"  onClick={() =>this.sendEmail()}>Send</button>
-                            {  this.state.loader == true ?  <i className="fa fa-spinner fa-spin loader-color" aria-hidden="true" ></i> : null}
+                                {  this.state.loader == true ? <i className="fa fa-spinner fa-spin loader-color" aria-hidden="true" ></i> : null}
+                            </div>
 
                         </div>
 
