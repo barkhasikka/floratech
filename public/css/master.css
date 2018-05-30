@@ -8,19 +8,19 @@ body{
 }
 @font-face{
     font-family: "HelveticaNeue-Light";
-    src: url("../assets/HelveticaNeue-Light.OTF");
+    src: url("../assets/HelveticaNeue-Light.otf");
 }
 @font-face{
     font-family: "Arial Black";
-    src: url("../assets/Arial Black.TTF");
+    src: url("../assets/Arial Black.ttf");
 }
 @font-face{
     font-family: Verdana;
-    src: url("../assets/Verdana.TTF");
+    src: url("../assets/Verdana.ttf");
 }
 @font-face{
     font-family: "Helvetica Neue";
-    src: url("../assets/Helvetica Neue.OTF");
+    src: url("../assets/Helvetica Neue.otf");
 }
 @font-face{
     font-family: PORKYS;
@@ -32,7 +32,7 @@ body{
 }
 @font-face{
     font-family: "andalemo";
-    src: url("../assets/andalemo.TTF");
+    src: url("../assets/andalemo.ttf");
 }
 
 html, body{
@@ -309,7 +309,7 @@ html, body{
 }
 @keyframes blink{
     0%{width: 0;}
-    100%{width: 385px;}
+    100%{width: 380px;}
 }
 .fullflower-svg-css {
     height: 100%;
@@ -323,7 +323,7 @@ html, body{
 }
 .company-details-section {
     width: 1200px;
-    height: 450px;
+    height: 500px;
     margin: auto;
     display: block;
     position: relative;
@@ -901,7 +901,7 @@ opacity: 1;
     /* float: right; */
     transform: rotate(115deg);
     position: absolute;
-    right: 50px;
+    right: 35px;
 }
 .contact-container {
     width: 100%;
