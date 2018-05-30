@@ -24,7 +24,7 @@ body{
 }
 @font-face{
     font-family: PORKYS;
-    src: url("../assets/PORKYS.TTF");
+    src: url("../assets/PORKYS.ttf");
 }
 @font-face{
     font-family: TektonPro-Bold;
@@ -98,7 +98,7 @@ html, body{
     list-style-type: none;
     margin: auto;
     padding: 0px;
-    padding-top: 10px;
+    /*padding-top: 10px;*/
     display: inline-flex;
 }
 .header-section {
@@ -309,7 +309,7 @@ html, body{
 }
 @keyframes blink{
     0%{width: 0;}
-    100%{width: 375px;}
+    100%{width: 385px;}
 }
 .fullflower-svg-css {
     height: 100%;
@@ -323,14 +323,14 @@ html, body{
 }
 .company-details-section {
     width: 1200px;
-    height: 500px;
+    height: 450px;
     margin: auto;
     display: block;
     position: relative;
 }
 .company-thumbnail {
     width: 400px;
-    height: 500px;
+    height: 450px;
     padding: 15px;
     display: inline-block;
     float: left;
@@ -436,7 +436,7 @@ html, body{
 }
 .text-section {
     width: 100%;
-    height: 285px;
+    height: 225px;
     display: block;
     /* margin: auto; */
     padding: 20px 10px;
@@ -474,7 +474,8 @@ html, body{
 .offer-txt {
     font-family: HelveticaNeue-Light;
     font-size: 20px;
-    color: rgba(128, 128, 128, 0.64);
+    /*color: rgba(128, 128, 128, 0.64);*/
+    color: rgb(83, 88, 95);
     margin: 0 40px;
 }
 .services-description {
@@ -612,7 +613,8 @@ app-service-wrapper.service-text {
     font-family: HelveticaNeue-Light;
     font-size: 18px;
     margin: 0 20px;
-    color: rgba(128, 128, 128, 0.64);
+    /*color: rgba(128, 128, 128, 0.64);*/
+    color: rgb(83, 88, 95);
 }
 .team-photos-section {
     width: 1275px;
@@ -848,7 +850,7 @@ opacity: 1;
     display: block;
 }
 .company-info-section-wrapper {
-    width: 90%;
+    width: 85%;
     height: 100%;
     margin: auto;
     display: block;
@@ -867,13 +869,13 @@ opacity: 1;
     padding: 2px;
     transform: rotate(-25deg);
     position: absolute;
-    bottom: -18px;
+    bottom: 0;
     left: 40px;
 }
 .right-company-txt {
-    width: 78%;
+    width: 80%;
     float: right;
-    padding: 20px 15px;
+    padding: 20px 50px 20px 15px;
 }
 .company-heading-txt {
     font-size: 18px;
@@ -890,16 +892,16 @@ opacity: 1;
     display: block;
 }
 .left-company-txt {
-    width: 86%;
+    width: 80%;
     float: left;
-    padding: 20px 15px;
+    padding: 20px 20px 20px 50px;
 }
 .deliver-svg {
     width: 14%;
     /* float: right; */
     transform: rotate(115deg);
     position: absolute;
-    right: 0;
+    right: 50px;
 }
 .contact-container {
     width: 100%;
@@ -918,12 +920,13 @@ opacity: 1;
     transform: rotate(50deg);
     margin-left: 55px;
     position: absolute;
+    bottom: 10px;
 }
 .built-svg {
     width: 11%;
     position: absolute;
-    right: 0;
-    top: 10px;
+    right: 50px;
+    top: 0;
 }
 .bloom-svg {
     width: 7%;
@@ -931,7 +934,7 @@ opacity: 1;
     transform: rotate(-8deg);
     margin-left: 6em;
     position: absolute;
-    top: 20px;
+    top: 10px;
 }
 .contact-section {
     width: 95%;
@@ -1043,6 +1046,7 @@ opacity: 1;
     font-size: 25px;
     margin-right: 10px;
     padding-top: 15%;
+    cursor: pointer;
 }
 
 .footer-info{
@@ -1112,8 +1116,28 @@ opacity: 1;
     height: 12%;
     /*margin: 10px auto;*/
     display: block;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     outline: none;
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin: 5px;
+    padding: 3px 13px;
+    text-align: center;
+    vertical-align: middle;
+}
+.send-bttn:hover {
+    background-color: #f29f5c;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 3px;
+    border: 1px solid #f39f41;
 }
 .error-msg-section {
     width: 65%;
@@ -1673,7 +1697,7 @@ opacity: 1;
     }
     .right-company-txt {
         width: 80%;
-        padding: 10px 15px;
+        padding: 20px 50px 20px 15px;
     }
     .left-company-txt {
         padding: 10px 15px;
