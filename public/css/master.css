@@ -1156,7 +1156,11 @@ opacity: 1;
     color:#000;
     margin: 10px 20px;
 }
-
+.send-btn-flex{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 @media all and (min-width: 1025px) and (max-width: 2500px){
     .mobile-nav{
         display: none;
@@ -1167,6 +1171,19 @@ opacity: 1;
 }
 /* iPad Portrait */
 @media only screen and (min-device-width: 768px)and (max-device-width: 1024px)and (orientation: portrait)and (-webkit-min-device-pixel-ratio: 1) {
+    #video-container {
+        height: 435px;
+    }
+    .introduction-text {
+        left: 8%;
+    }
+    .first-heading {
+        margin: 0 8px;
+    }
+    .menu-list span {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
     .company-details-section {
         height: 570px;
     }
@@ -1187,6 +1204,10 @@ opacity: 1;
         width: 135px;
         height: 135px;
     }
+    .services-title {
+        width: calc(100% - 5em);
+        margin-left: 5em;
+    }
     .text-section {
         width: 250px;
         height: 320px;
@@ -1203,12 +1224,15 @@ opacity: 1;
         top: 82px;
     }
     .team-photos-section {
-        width: 765px;
+        width: 770px;
         height: 625px;
+        padding: 5px;
     }
     .team-photos-wrapper {
-        width: 735px;
+        width: 760px;
         height: 595px;
+        margin: 0;
+        padding: 5px;
     }
     .team-text {
         width: calc(100% - 5em);
@@ -1251,7 +1275,7 @@ opacity: 1;
         margin-left: 0;
     }
     .photos-thumbnail:nth-child(12) {
-        margin-left: 12%;
+        margin-left: 8%;
     }
     .motto-txt-section {
         width: calc(100% - 5em);
@@ -1267,16 +1291,17 @@ opacity: 1;
     .img-description {
         width: 420px;
         height: 160px;
+        padding-top: 50px;
     }
     .talk-bubble {
         width: 455px;
         height: 100px;
-        top: 35px;
-        left: 2.6em;
+        top: 50px;
+        left: 1em;
     }
     .image-section {
         width: 220px;
-        padding-top: 5em;
+        padding-top: 50px;
     }
     .image {
         width: 200px;
@@ -1325,7 +1350,7 @@ opacity: 1;
     }
     .deliver-svg {
         width: 18%;
-        right: -30px;
+        right: 10px;
         bottom: 30px;
     }
     .innovation-svg {
@@ -1335,8 +1360,8 @@ opacity: 1;
     }
     .built-svg {
         width: 15%;
-        right: -25px;
-        top: 35px;
+        right: 22px;
+        top: 15px;
     }
     .bloom-svg {
         width: 12%;
@@ -1364,7 +1389,9 @@ opacity: 1;
         height: 110px;
     }
     .contact-heading {
-        height: 125px;
+        height: 124px;
+        width: calc(100% - 3em);
+        margin-left: 3em;
     }
     .input-height {
         height: 68px;
@@ -1389,17 +1416,21 @@ opacity: 1;
 /* end iPad Portrait */
 /* iPad Landscape */
 @media only screen and (min-device-width: 768px)and (max-device-width: 1024px)and (orientation: landscape)and (-webkit-min-device-pixel-ratio: 1) {
+    .introduction-text {
+        left: 10%;
+        top: 35%;
+    }
+    .first-heading {
+        margin: 0 10px;
+    }
     #video-container {
         height: 565px;
-    }
-    .company-details-section {
-        height: 550px;
     }
     .company-thumbnail {
         width: 340px;
     }
     .filling-line {
-        left: 248px;
+        left: 235px;
     }
     .point-general {
         left: 332px;
@@ -1424,8 +1455,15 @@ opacity: 1;
         width: 235px;
         padding: 15px;
     }
+    .services-title, .team-text, .motto-txt-section, .company-info-heading {
+        margin-left: 5em;
+        width: calc(100% - 5em);
+    }
     .service-text {
         height: 275px;
+    }
+    .services-description {
+        height: 450px;
     }
     .see-more-txt {
         padding-top: 40px;
@@ -1437,30 +1475,28 @@ opacity: 1;
     .svg-description {
         width: 235px;
     }
-    .team-text {
-        line-height: 35px;
-    }
     .team-photos-section {
         width: 1025px;
         padding: 10px;
     }
-    /*.photos {*/
-        /*width: 140px;*/
-    /*}*/
+    .photos-thumbnail {
+        width: 210px;
+    }
     .team-photos-wrapper {
         width: 1005px;
+        padding: 5px;
     }
     .photos-thumbnail:nth-child(1) {
-        margin-left: 3%;
+        margin-left: 4%;
     }
     .photos-thumbnail:nth-child(5) {
-        margin-left: 15%;
+        margin-left: 14%;
     }
     .photos-thumbnail:nth-child(8) {
         margin-left: 3%;
     }
     .photos-thumbnail:nth-child(12) {
-        margin-left: 15%;
+        margin-left: 13%;
     }
     .pic-name {
         top: 120px;
@@ -1478,8 +1514,9 @@ opacity: 1;
         font-size: 13px;
     }
     .talk-bubble {
-        top: 45px;
-        left: 2.2em;
+        top: 90px;
+        left: 2em;
+        width: 605px;
     }
     .image {
         width: 275px;
@@ -1497,13 +1534,15 @@ opacity: 1;
     }
     .contact-heading {
         height: 125px;
+        width: calc(100% - 4em);
+        margin-left: 4em;
     }
     .contact-us-right-section {
         width: 75%;
     }
     .social-media-connect {
         height: 150px;
-        bottom: 0;
+        bottom: 15px;
     }
     .social-media-wrapper {
         padding-left: 25px;
@@ -1513,6 +1552,19 @@ opacity: 1;
     .social-media-wrapper .social-media-icons {
         padding-right: 8px;
         margin-bottom: 15px;
+    }
+    .listener-svg {
+        bottom: 25px;
+    }
+    .innovation-svg {
+        bottom: 30px;
+    }
+    .built-svg {
+        top: 20px;
+    }
+    .bloom-svg {
+        top: 25px;
+        left: -20px;
     }
 }
 /* end iPad Landscape */
@@ -2017,7 +2069,3 @@ opacity: 1;
     color: orange;
 }
 /* end phone Landscape */
-.send-btn-flex{
-    display: flex;
-    justify-content: center;
-}
