@@ -42,6 +42,15 @@ html, body{
     height: 100%;
     margin: auto;
 }
+.flora-btn{
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background: #f29f41;
+}
 /*svg style css for flower*/
 .flora-st0{opacity:0.7;}
 .flora-st1{fill:#FFE547;}
@@ -51,6 +60,13 @@ html, body{
 .flora-st5{fill:#F0A9BE;}
 .flora-st6{opacity:0.4;}
 .flora-st7{fill:#F9E1E8;}
+.header-section .st0{fill:#E6570F;}
+.header-section .st1{fill:#1C3650;}
+.flora-logo{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
 /*end style css for flower*/
 
 /*svg style css for full flower*/
@@ -93,13 +109,24 @@ html, body{
     width: 250px;
     height: 100%;
     float: left;
+    left:-100vw;
     display: inline-block;
 }
+.add-left{
+ left:-100vw;
+}
+.left-animation{
+    left:0;
+    transition: all 10s ease-in;
+}
+
 .flower-svg {
-    width: 50px;
+    width: 65%;
     display: inline-block;
     padding: 5px;
     float: left;
+    position: relative;
+    height: 100%;
 }
 .logo-text {
     width: calc(100% - 50px);
@@ -548,6 +575,7 @@ app-service-wrapper.service-text {
     -moz-transform: rotateY(180deg);
     padding: 20px;
     font-family: Verdana;
+    border: 1px solid lightgray;
     text-align: justify;
     font-size: 15px;
     /*box-shadow: -8px 10px 25px -5px rgba(121, 118, 118, 0.84);*/
@@ -834,7 +862,7 @@ opacity: 1;
 }
 .company-info-thumbnail {
     width: 100%;
-    height: 150px;
+    height: 169px;
     display: block;
     margin: auto;
     position: relative;
@@ -842,13 +870,12 @@ opacity: 1;
 .listener-svg {
     width: 14%;
     padding: 2px;
+    float: left;
     transform: rotate(-25deg);
-    position: absolute;
-    bottom: -18px;
-    left: 40px;
 }
 .right-company-txt {
-    width: 78%;
+    width: 84%;
+    height: 100%;
     float: right;
     padding: 20px 15px;
 }
@@ -867,16 +894,15 @@ opacity: 1;
     display: block;
 }
 .left-company-txt {
+    clear: both;
     width: 86%;
     float: left;
     padding: 20px 15px;
 }
 .deliver-svg {
     width: 14%;
-    /* float: right; */
+     float: right;
     transform: rotate(115deg);
-    position: absolute;
-    right: 0;
 }
 .contact-container {
     width: 100%;
@@ -891,7 +917,6 @@ opacity: 1;
     width: 13%;
     float: left;
     transform: rotate(50deg);
-    margin-left: 55px;
     position: absolute;
 }
 .built-svg {
@@ -907,6 +932,22 @@ opacity: 1;
     margin-left: 6em;
     position: absolute;
     top: 20px;
+}
+.social-media-wrapper .social-media-icons i:hover.facebook{
+    background:  #3B5998 ;
+}
+.social-media-wrapper .social-media-icons i:hover.linkin{
+    background:#0077B5;
+}
+.social-media-wrapper .social-media-icons i:hover.twit{
+    background: #2196F3;
+}
+.social-media-wrapper .social-media-icons i:hover.insta{
+    background:  linear-gradient( #8a3ab9, #4c68d7, #cd486b, #fbad50,#fccc63,#bc2a8d,#e95950);
+}
+.social-media-wrapper .social-media-icons i:hover.youtube{
+    background:#FF0000;
+;
 }
 .contact-section {
     width: 95%;
@@ -1008,6 +1049,14 @@ opacity: 1;
     padding-right: 30px;
     display: inline-block;
     margin-bottom: 10px;
+    cursor: pointer;
+}
+.company-thumbnail:hover .circle {
+    background: orange;
+    border: 3px solid white;
+}
+.company-thumbnail:hover .first-company-txt {
+    color: white;
 }
 .social-media-wrapper .social-media-icons i {
     background: rgb(83, 88, 95);
