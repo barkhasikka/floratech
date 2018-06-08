@@ -14,29 +14,25 @@ class App extends React.Component {
 
     };
     componentDidMount() {
-        var i = 0;
-        var txt = 'GROW';
-        var speed = 300;
 
-        function typeWriter() {
-            if (i < txt.length) {
-                document.getElementById("type-grow").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            }else if(txt==="GROW"){
-                document.getElementById("type-grow").innerHTML = "";
-                txt ='CREATE.'
-                i = 0;
-                setTimeout(typeWriter, speed);
-            }
-        }
-        typeWriter();
-    };
-
-
-    headerPages(page) {
-        // window.location  = '/'+page
+    // let p = document.getElementById("video-container");
+    //   let q = p.offsetWidth;
+    //     this.movea(q);
     }
+
+    movea(){
+        document.getElementById("myH1").style.left = -100 + "vw";
+        document.getElementById("myH2").style.left = -100 + "vw";
+        document.getElementById("myH3").style.left = -100 + "vw";
+}
+    moveb(){
+        document.getElementById("myH1").style.left = "0";
+        document.getElementById("myH2").style.left = "0";
+        document.getElementById("myH3").style.left = "0";
+}
+    // function headerPages(page) {
+    //     // window.location  = '/'+page
+    // }
     render () {
         return (
             <div>
@@ -128,24 +124,22 @@ class App extends React.Component {
                 </header>
 
                 <section id="video-container" className="introduction-video">
-                    <video className="intro-video" autoPlay loop>
-                        <source src="./assets/flower.mp4" type="video/mp4"/>
-                    </video>
+                    {/*<video className="intro-video" autoPlay loop>*/}
+                        {/*<source src="./assets/flower.mp4" type="video/mp4"/>*/}
+                    {/*</video>*/}
                     <div className="video-overlay">
-                        <div className="introduction-text">
-                            <span className="first-heading">LETS</span>
-                            <span className="grow-heading" id="type-grow"></span>
-                            <span className="heading">
-                                <div className="menu-bar ">
-                                    <ul className="menu anim-blink">
-                                        <li className="menu-list" onClick={() =>this.headerPages('about')}><span>ABOUT</span></li>
-                                        <li className="menu-list" onClick={() =>this.headerPages('clients')}><span>CLIENTS</span></li>
-                                        <li className="menu-list" onClick={() =>this.headerPages('services')}><span>SERVICES</span></li>
-                                        <li className="menu-list" onClick={() =>this.headerPages('contact')}><span>CONTACT</span></li>
-                                    </ul>
-						        </div>
-                            </span>
+                        <div className="introduction-text first-background" id="myH1">
                         </div>
+                        <div className="introduction-text sec-background" id="myH2">
+                            </div>
+                        <div className="introduction-text third-background" id="myH3">
+                        </div>
+                    </div>
+                    <div class="slide-no">
+                        <span onClick={() => this.movea()}>01</span>
+                        <span  onClick={() => this.moveb()}>02</span>
+                        <span>03</span>
+
                     </div>
                 </section>
 

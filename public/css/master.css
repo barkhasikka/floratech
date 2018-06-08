@@ -75,6 +75,7 @@ html, body{
     position: absolute;
     top: 0;
     bottom: 0;
+    height: 83%;
 }
 /*end style css for flower*/
 
@@ -107,8 +108,8 @@ html, body{
 /*end cloud svg css*/
 .header-section {
     width: 100%;
-    height: 50px;
-    background: rgb(255, 255, 255);
+    height: 100px;
+    background: #0000002e;
     position: fixed;
     top: 0;
     z-index: 11;
@@ -182,7 +183,26 @@ html, body{
 .header-options-span{
     margin: 0 15px;
     font-family: "andalemo";
-    font-size: 15px;
+    font-size: 17px;
+    line-height: 99px;
+    color: white;
+}
+.slide-no{
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 30%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.slide-no span{
+    display: block;
+    text-align: center;
+    height: 29px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
 }
 .login-section {
     width: 30%;
@@ -214,18 +234,31 @@ html, body{
     z-index: -1;
 }
 .introduction-text{
+    width: 100vw;
+    height: 100%;
     position: relative;
-    top: 30%;
-    left: 12%;
-    display: block;
+    float: left;
+    left:0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: left 0.5s linear;
 }
 .video-overlay{
-    position: absolute;
     height: 100%;
-    width: 100%;
-    /*background: url(../assets/overlay.png);*/
-    top: 0;
-    left: 0;
+    width: 300vw;
+    overflow: hidden;
+    position: relative;
+    /* background: url(../assets/overlay.png); */
+    overflow-x: auto;
+}
+.first-background{
+    background-image: url("https://psd.graphics/wp-content/uploads/2017/10/Macbook-Pro-on-Desk-Mockup-PSD.jpg");
+}
+.sec-background{
+    background-image: url("https://static.makeuseof.com/wp-content/uploads/2016/02/useful-things-mac-670x335.jpg");
+}
+.third-background{
+    background-image: url("https://i2.wp.com/lowstressliving.com/wp-content/uploads/2018/02/compfinal.jpg?resize=980%2C551&ssl=1");
 }
 .grow-heading {
     font-family: "Arial Black";
