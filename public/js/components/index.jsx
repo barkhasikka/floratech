@@ -18,8 +18,8 @@ class App extends React.Component {
     // let p = document.getElementById("video-container");
     //   let q = p.offsetWidth;
     //     this.movea(q);
-        var elmnt = document.body;
-        var y = elmnt.scrollTop;
+        var elmnt = document.getElementById("myHeader");
+        var y = elmnt.offsetTop;
         console.log(y);
     }
 
@@ -76,7 +76,7 @@ class App extends React.Component {
         return (
             <div >
 
-                <header class="header-section">
+                <header class="header-section" id="myHeader">
                     <div class="logo-section">
                         <div class="flower-svg">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"

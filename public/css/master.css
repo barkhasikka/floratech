@@ -397,7 +397,7 @@ html, body{
     left: 0;
     height: 25%;
     right: 0;
-    width: 68%;
+    width: 72%;
 }
 .third-text-div span{
     border-bottom: 2px solid #e46224;
@@ -571,14 +571,13 @@ html, body{
     padding-top: 50px;
 }
 .second-company-txt {
-    font-family: HelveticaNeue-Light;
-    font-size: 15px;
+    
     padding: 5px 15px;
     text-align: justify;
     font-size: 13px;
     margin: auto;
     font-family: Verdana;
-    color: rgb(83, 88, 95);
+    color: #000;
 }
 .text-section {
     width: 100%;
