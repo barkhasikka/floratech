@@ -190,10 +190,10 @@ html, body{
 .slide-no{
     position: absolute;
     top: 0;
-    width: 5%;
+    width: 4%;
     height: 30%;
     bottom: 0;
-    left: 0;
+    left: 10px;
     margin: auto;
 }
 .slide-no span{
@@ -202,7 +202,15 @@ html, body{
     height: 29px;
     color: white;
     font-size: 20px;
+    margin: 4px 0;
     cursor: pointer;
+    transition: border-width 0.3s linear;
+}
+.slide-no span:hover{
+    border-bottom: 3px solid #e46224
+}
+.yellow-border{
+    border-bottom: 3px solid #e46224;
 }
 .login-section {
     width: 30%;
@@ -241,7 +249,7 @@ html, body{
     left:0;
     background-size: cover;
     background-repeat: no-repeat;
-    transition: left 0.5s linear;
+    transition: left 0.3s linear;
 }
 .video-overlay{
     height: 100%;
@@ -252,13 +260,69 @@ html, body{
     overflow-x: auto;
 }
 .first-background{
-    background-image: url("https://psd.graphics/wp-content/uploads/2017/10/Macbook-Pro-on-Desk-Mockup-PSD.jpg");
+    background-image: url("https://cdn2.macworld.co.uk/cmsdata/features/3605337/macbookair11_lifestyle__17_.jpg");
 }
 .sec-background{
-    background-image: url("https://static.makeuseof.com/wp-content/uploads/2016/02/useful-things-mac-670x335.jpg");
+    background-image: url("https://icdn7.digitaltrends.com/image/macbook-air-11-inch-1500x1000-1500x1000.jpg?ver=1");
 }
 .third-background{
-    background-image: url("https://i2.wp.com/lowstressliving.com/wp-content/uploads/2018/02/compfinal.jpg?resize=980%2C551&ssl=1");
+    background-image: url("https://www.mockupworld.co/wp-content/uploads/edd/2018/04/free-macbook-mockup-set-psd-1.jpg");
+}
+.text-div{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    height: 25%;
+    right: 0;
+    width: 50%;
+}
+.text-div-h5{
+    font-size: 3em;
+    margin: 0;
+    text-align: center;
+    position: relative;
+
+}
+.show-h5{
+    animation:headeranimation 0.8s ease-in;
+}
+.h5-transition{
+   animation:headeranimation 0.8s ease-in;
+}
+@keyframes headeranimation {
+    from{
+        top:-55px;
+        opacity: 0;
+    }
+    to{
+        top:0;
+        opacity: 1;
+    }
+}
+.text-div-p{
+    font-size: 1.7em;
+    margin: 15px 0 0 0;
+    text-align: center;
+    position: relative;
+
+}
+.show-p{
+    animation:panimation 0.9s ease-in ;
+}
+.p-transition{
+    animation:panimation 0.9s ease-in ;
+}
+@keyframes panimation {
+    from{
+        left:-50px;
+        opacity: 0;
+    }
+    to{
+        left:0;
+        opacity: 1;
+    }
 }
 .grow-heading {
     font-family: "Arial Black";
@@ -274,20 +338,8 @@ html, body{
     overflow: hidden;
     display: block;
 }
-.anim-typewriter{
-     animation: typewriter 3s steps(4, end)  alternate both, blinkTextCursor 3s steps(4, end)  alternate;
- }
-@keyframes typewriter{
-    0%{width: 0;}
-    50%{width: 330px;}
-    75%{width: 210px;}
-    90%{width:90px}
-    100%{width: 0;}
-}
-@keyframes blinkTextCursor{
-    from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: rgba(255,255,255,.75);}
-}
+
+
 .text-align-right{
     text-align: right;
 }
@@ -314,11 +366,50 @@ html, body{
     margin: 0 20px;
     color: rgb(174, 174, 174);
 }
-/*.heading {*/
-    /*display: inline-block;*/
-    /*position: absolute;*/
-    /*top:0;*/
-/*}*/
+.div-align{
+    float: right;
+    width: 98%;
+    position: relative;
+}
+.div-transition{
+    animation:divanimation 0.9s ease-in ;
+}
+@keyframes divanimation {
+    from{
+        right:-70px;
+        opacity: 0;
+    }
+    to{
+        right:0;
+        opacity: 1;
+    }
+}
+.div-align section{
+    display: inline-block;
+    margin: 16px 11px 0 11px;
+}
+
+.third-text-div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    height: 25%;
+    right: 0;
+    width: 68%;
+}
+.third-text-div span{
+    border-bottom: 2px solid #e46224;
+}
+.third-text-div-h5 {
+    font-size: 2.5em;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    color: #000;
+
+}
 .second-heading {
     font-family: "Helvetica Neue";
     font-size: 7vw;
@@ -335,13 +426,7 @@ html, body{
     font-size: 15px;
     color: orange;
 }
-.anim-createwriter{
-    animation: createwriter 4s steps(6, end) 3s 1 normal both, blinkTextCursor 4s steps(6, end) 3s  normal;
-}
-@keyframes createwriter{
-    0%{width: 0;}
-    100%{width: 400px;}
-}
+
 .menu-bar {
     width: 100%;
     height: 40px;
@@ -512,9 +597,14 @@ html, body{
 }
 .services-container {
     width: 100%;
-    height: auto;
     margin: auto;
-    /*background: linear-gradient(to top right, rgb(235, 147, 160), rgba(241, 188, 224, 0.28)30%, rgb(238, 240, 207), rgba(254, 245, 181, 0.76), rgba(255, 236, 115, 0.61) 65%, rgb(250, 220, 151) 70%, rgba(231, 116, 130, 0.36) 76%, rgba(187, 214, 214, 0.68));*/
+    background-image: url("https://cnet4.cbsistatic.com/img/s7OzxR8Y3xxOlegTpRQW3CuZPuk=/830x467/2017/06/06/349b7e65-a855-44f0-ae0a-6610ebca0809/apple-macbook-pro-12-inch-2017-4181.jpg");
+    height: 50%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
 }
 .services-title {
     width: calc(100% - 7em);

@@ -18,24 +18,63 @@ class App extends React.Component {
     // let p = document.getElementById("video-container");
     //   let q = p.offsetWidth;
     //     this.movea(q);
+        var elmnt = document.body;
+        var y = elmnt.scrollTop;
+        console.log(y);
     }
 
     movea(){
+        document.getElementById("myH1").style.left = "0";
+        document.getElementById("myH2").style.left = 100 + "vw";
+        document.getElementById("myH3").style.left = 100 + "vw";
+        document.getElementById("nu1").classList.add("yellow-border");
+        document.getElementById("header").classList.remove("show-h5");
+        document.getElementById("page").classList.remove("show-p");
+        document.getElementById("nu2").classList.remove("yellow-border");
+        document.getElementById("nu3").classList.remove("yellow-border");
+        document.getElementById("header").classList.add("h5-transition");
+        document.getElementById("page").classList.add("p-transition");
+        setTimeout(function(){
+            document.getElementById("header").classList.remove("h5-transition");
+            document.getElementById("page").classList.remove("p-transition");}, 2000);
+}
+    movec(){
         document.getElementById("myH1").style.left = -100 + "vw";
         document.getElementById("myH2").style.left = -100 + "vw";
         document.getElementById("myH3").style.left = -100 + "vw";
-}
+        document.getElementById("nu2").classList.add("yellow-border");
+        document.getElementById("nu1").classList.remove("yellow-border");
+        document.getElementById("nu3").classList.remove("yellow-border");
+        document.getElementById("header1").classList.add("h5-transition");
+        document.getElementById("page1").classList.add("p-transition");
+        document.getElementById("animate-div").classList.add("div-transition");
+        setTimeout(function(){
+            document.getElementById("header1").classList.remove("h5-transition");
+            document.getElementById("page1").classList.remove("p-transition");
+            document.getElementById("animate-div").classList.remove("div-transition");
+        }, 3000);
+    }
     moveb(){
-        document.getElementById("myH1").style.left = "0";
-        document.getElementById("myH2").style.left = "0";
-        document.getElementById("myH3").style.left = "0";
-}
+        document.getElementById("myH1").style.left = -200 + "vw";
+        document.getElementById("myH2").style.left = -200 + "vw";
+        document.getElementById("myH3").style.left = -200 + "vw";
+        document.getElementById("nu3").classList.add("yellow-border");
+        document.getElementById("nu2").classList.remove("yellow-border");
+        document.getElementById("nu1").classList.remove("yellow-border");
+        document.getElementById("header2").classList.add("h5-transition");
+        document.getElementById("animate-div1").classList.add("div-transition");
+        setTimeout(function(){
+            document.getElementById("header2").classList.remove("h5-transition");
+            document.getElementById("animate-div1").classList.remove("div-transition");
+        }, 3000);
+
+    }
     // function headerPages(page) {
     //     // window.location  = '/'+page
     // }
     render () {
         return (
-            <div>
+            <div >
 
                 <header class="header-section">
                     <div class="logo-section">
@@ -129,16 +168,38 @@ class App extends React.Component {
                     {/*</video>*/}
                     <div className="video-overlay">
                         <div className="introduction-text first-background" id="myH1">
+                             <div className="text-div" >
+                                 <h5 id="header" className="text-div-h5 show-h5">HELLO!!!</h5>
+                                 <p id="page" className="text-div-p show-p">ALL THAT YOU NEED FOR YOUR BUSINESS.</p>
+                             </div>
                         </div>
                         <div className="introduction-text sec-background" id="myH2">
+                            <div className="text-div" >
+                                <h5 id="header1" className="text-div-h5">WE PROVIDE</h5>
+                                <p id="page1" className="text-div-p">WE ARE HERE TECHNOLOGY MEETS INOVATION.</p>
+                                <div className="div-align" id="animate-div">
+                                    <section><input type="checkbox" checked/><span>Designing</span></section>
+                                    <section><input type="checkbox" checked/><span>Development</span></section>
+                                    <section><input type="checkbox" checked/><span>Digital Marketing</span></section>
+                                </div>
+                            </div>
                             </div>
                         <div className="introduction-text third-background" id="myH3">
+                            <div className="third-text-div">
+                                <h5 id="header2" className="third-text-div-h5">POWERED BY YOUTH DRIVEN BY TECHNOLOGY</h5>
+                                <div className="div-align" id="animate-div1">
+                                   <section>LETS <span> CO</span>DREAM</section>
+                                    <section>LETS <span> CO</span>THINK</section>
+                                    <section>LETS <span> CO</span>GROW</section>
+                                    <section>LETS <span> CO</span>DREAM</section>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="slide-no">
-                        <span onClick={() => this.movea()}>01</span>
-                        <span  onClick={() => this.moveb()}>02</span>
-                        <span>03</span>
+                        <span onClick={() => this.movea()} id="nu1">01</span>
+                        <span  onClick={() => this.movec()} id="nu2">02</span>
+                        <span  onClick={() => this.moveb()} id="nu3">03</span>
 
                     </div>
                 </section>
