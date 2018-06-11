@@ -633,6 +633,59 @@ html, body{
     margin: auto;
     padding-top: 40px;
 }
+.our-technology section{
+    width:100%;
+    height: 50%;
+}
+.about-technology{
+    width:90%;
+    height:560px;
+    margin: auto;
+}
+.techo-div{
+    width:100%;
+    height:calc(100% - 28px);
+}
+
+.our-technology .techo-div section img,.our-right-technology section img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    right: 0;
+}
+.our-technology{
+    width:50%;
+    height:100%;
+    float: left;
+}
+.our-right-technology{
+    width: 35%;
+    float: right;
+    height:100%;
+}
+.our-right-technology section{
+    width: 100%;
+    height: 50%;
+}
+.about-technology h5{
+    font-family: "Arial Black";
+    font-size: 35px;
+    color: rgb(242, 159, 65);
+    display: block;
+    padding-top: 12px;
+    margin: 0;
+}
+.our-technology p{
+    color: #2d6296;
+
+}
+.our-right-technology p {
+    color: #2d6296;
+}
 .app-service-section {
     width: 400px;
     height: 500px;
@@ -640,6 +693,22 @@ html, body{
     display: inline-block;
     overflow: hidden;
     position: relative;
+}
+.our-technology .techo-div section{
+    width: calc(25% - 8px);
+    margin: 3px 4px;
+    background: #e6570f;
+    height: calc(50% - 7px);
+    position: relative;
+    display: inline-block;
+}
+.our-right-technology .techo-div section{
+    width: calc(33.33% - 8px);
+    margin: 3px 4px;
+    background: #e6570f;
+    height: calc(50% - 7px);
+    position: relative;
+    display: inline-block;
 }
 .app-service-wrapper {
     width: 360px;

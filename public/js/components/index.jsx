@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 
 class App extends React.Component {
 
+
     constructor(props){
         super(props);
         // this.headerPages = this.headerPages.bind(this);
@@ -24,6 +25,7 @@ class App extends React.Component {
 
         document.getElementById("nu1").classList.add("yellow-border");
     }
+
 
     movea(){
         document.getElementById("myH1").style.left = "0";
@@ -702,7 +704,97 @@ class App extends React.Component {
                         </div>
                     </div>
                 </section>
+                <div className="company-info-container">
+                   <div className="about-technology">
+                       <h5>Our Technologies</h5>
+                    <div className="our-technology">
 
+                        <section>
+                          <p>FRONT END</p>
+                            <div className="techo-div">
+                                <section>
+                                    <img src="https://cdn0.iconfinder.com/data/icons/document-file-types/512/html-512.png"/>
+                                </section>
+                                <section>
+                                    <img src="https://image.flaticon.com/icons/svg/29/29088.svg"/>
+                                </section>
+                                <section>
+                                    <img src="http://www.iconninja.com/files/795/251/801/black-bootstrap-icon.png"/>
+                                </section>
+                                <section>
+                                    <img src="https://png.icons8.com/ios/1600/angularjs.png"/>
+                                </section>
+                                <section>
+                                    <img src="https://cdn0.iconfinder.com/data/icons/file-extension/100/JS_TAG-512.png"/>
+                                </section>
+                                <section>
+                                    <img src="http://www.free-icons-download.net/images/jquery-icon-17841.png"/>
+                                </section>
+                                <section>
+                                    <img src="http://felknar.com/images/icon-react-7b609cd3.svg"/>
+                                </section>
+                            </div>
+
+                        </section>
+                        <section>
+                            <p>BACK END</p>
+                            <div className="techo-div">
+                                <section>
+                                    <img src="https://intami.pl/wp-content/uploads/sites/3/2016/09/golang-icon.png"/>
+                                 </section>
+                                <section>
+                                    <img src="https://cdn1.iconfinder.com/data/icons/files-vol-2/24/_php-512.png"/>
+                                </section>
+                                <section>
+                                    <img src="http://www.cloudwareoutsourcing.com/test/dotnet-256-black.png"/>
+                                </section>
+                                <section>
+                                    <img src="https://image.flaticon.com/icons/svg/28/28884.svg"/>
+                                </section>
+
+                            </div>
+
+                        </section>
+                    </div>
+                    <div className="our-right-technology">
+                        <section>
+                            <p>OTHER</p>
+                            <div className="techo-div">
+                                <section>
+                                    <img src="http://simpleicon.com/wp-content/uploads/wordpress.png"/>
+                                </section>
+                                <section>
+                                    <img src="https://image.flaticon.com/icons/svg/29/29594.svg"/>
+                                </section>
+                                <section>
+                                    <img src="http://www.myiconfinder.com/uploads/iconsets/1c99182403db6fa330f0b15024c587a9-android.png"/>
+                                </section>
+                                <section>
+                                    <img src="https://image.flaticon.com/icons/svg/28/28884.svg"/>
+                                </section>
+
+                            </div>
+
+                        </section>
+                        <section>
+                            <p>WEB DESIGN</p>
+                            <div className="techo-div">
+                                <section>
+                                    <img src="https://cdn.iconscout.com/public/images/icon/free/png-512/adobe-illustrator-logo-3ab7f1b01fdac1ec-512x512.png"/>
+                                </section>
+                                <section>
+                                    <img src="https://png.icons8.com/ios/1600/adobe-photoshop.png"/>
+                                </section>
+                                <section>
+                                    <img src="https://png.icons8.com/windows/1600/adobe-after-effects.png"/>
+                                </section>
+
+                            </div>
+
+                        </section>
+                    </div>
+                   </div>
+                </div>
                 <section class="contact-container">
                     <div class="contact-section">
                         <div class="contact-heading">
