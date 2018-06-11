@@ -571,7 +571,7 @@ html, body{
     padding-top: 50px;
 }
 .second-company-txt {
-    
+
     padding: 5px 15px;
     text-align: justify;
     font-size: 13px;
@@ -624,7 +624,7 @@ html, body{
 .offer-txt {
     font-family: HelveticaNeue-Light;
     font-size: 20px;
-    color: rgba(128, 128, 128, 0.64);
+    color: rgb(45, 98, 150);
     margin: 0 40px;
 }
 .services-description {
@@ -765,7 +765,7 @@ html, body{
     font-family: HelveticaNeue-Light;
     font-size: 18px;
     margin: 0 20px;
-    color: rgba(128, 128, 128, 0.64);
+    color: rgb(45, 98, 150);
 }
 .team-photos-section {
     width: 1275px;
@@ -872,7 +872,7 @@ opacity: 1;
 .ceo-txt {
     font-family: HelveticaNeue-Light;
     font-size: 18px;
-    color: rgb(83, 88, 95);
+    color: rgb(45, 98, 150);
     margin: 0 35px;
 }
 .motto-description {
@@ -1012,26 +1012,31 @@ opacity: 1;
 }
 .company-info-thumbnail {
     width: 100%;
-    height: 169px;
+    height: 250px;
     display: block;
-    margin: auto;
+    /*margin: auto;*/
     position: relative;
+    margin: 11px auto;
 }
 .listener-svg {
-    width: 14%;
+    width: 25%;
     padding: 2px;
     float: left;
-    transform: rotate(-25deg);
+    height: 100%;
+    background-image: url("http://rpmconsultancy.com/wp-content/uploads/2017/04/meeting-iStock.jpg");
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat
 }
 .right-company-txt {
-    width: 84%;
+    width: 75%;
     height: 100%;
     float: right;
     padding: 20px 15px;
 }
 .company-heading-txt {
     font-size: 18px;
-    color: #E77482;
+    color: #2d6296;
     font-family: "Arial Black";
     margin: 5px;
 }
@@ -1045,14 +1050,18 @@ opacity: 1;
 }
 .left-company-txt {
     clear: both;
-    width: 86%;
+    width: 75%;
     float: left;
-    padding: 20px 15px;
+    padding: 20px 0;
 }
 .deliver-svg {
-    width: 14%;
+    width: 25%;
      float: right;
-    transform: rotate(115deg);
+    height: 100%;
+    background-image: url("http://www.mangalamtours.com/image/corporate/sub/1505540593Meetings%201.jpg");
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat
 }
 .contact-container {
     width: 100%;
@@ -1064,16 +1073,24 @@ opacity: 1;
     /*background: linear-gradient(to bottom left, rgba(255, 192, 203, 0.6509803921568628), rgba(255, 165, 0, 0.4392156862745098) 40%, rgb(249, 241, 195) 70%, rgba(255, 192, 203, 0.71) 75%);*/
 }
 .innovation-svg {
-    width: 13%;
+    width: 25%;
     float: left;
-    transform: rotate(50deg);
-    position: absolute;
+    /*transform: rotate(50deg);*/
+    /*position: absolute;*/
+    height: 100%;
+    background-image: url("https://blog.gotomeeting.com/wp-content/uploads/sites/8/2018/02/stand-up-meeting.jpg");
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat
 }
 .built-svg {
-    width: 11%;
-    position: absolute;
-    right: 0;
-    top: 10px;
+    width: 25%;
+    height: 100%;
+    float: left;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDaash0njTtBkq0FgYOP756JfxbfB7_8ihvcPLFR3PqCnTZwF");
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat
 }
 .bloom-svg {
     width: 7%;
@@ -1125,7 +1142,7 @@ opacity: 1;
 .contact-heading-txt-second {
     font-size: 17px;
     font-family: HelveticaNeue-Light;
-    color: rgb(83, 88, 95);
+    color: rgb(45, 98, 150);
     margin: 0 35px;
 }
 .contact-us-section {
