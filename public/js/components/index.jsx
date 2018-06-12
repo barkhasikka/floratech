@@ -21,6 +21,7 @@ class App extends React.Component {
             MobileErrorMessage:false,
             Content :'',
             contactEmail:"",
+            showContactLoader : false,
             ContentErrorMessage:false,
             loader:false,
             currentTab:''
@@ -182,7 +183,7 @@ class App extends React.Component {
         }, 3000);
     }
 
-    sendEmail() {debugger
+    sendEmail() {
         let email = this.isValidEmail(this.state.Email);
         if(!email) {
                 this.setState({
@@ -224,7 +225,7 @@ class App extends React.Component {
                 return;
         }
         this.setState({ContentErrorMessage:false});
-        this.setState({loader:true});
+        this.setState({ showContactLoader:true});
         let contactUsParams = {
             params: [{
             Email:this.state.Email,
@@ -249,7 +250,7 @@ class App extends React.Component {
                     Email: "",
                     MobileNo:"",
                     Content:"",
-                    loader:false
+                    showContactLoader:false
                 });
             }).catch(function(error){
             console.log(error);
@@ -290,6 +291,10 @@ class App extends React.Component {
             MobileNo: event.target.value
         });
     }
+    goToElement(event, id, offset){
+        smoothScroll(id, offset);
+    }
+
     // function headerPages(page) {
     //     // window.location  = '/'+page
     // }
@@ -449,10 +454,10 @@ class App extends React.Component {
                         </div>
                     </div>
                     <div class="header-options desktop-nav" id="myHeaderSpan">
-                        <span class="header-options-span">ABOUT</span>
-                        <span class="header-options-span">CLIENTS</span>
-                        <span class="header-options-span">SERVICES</span>
-                        <span class="header-options-span">CONTACT</span>
+                        <span class="header-options-span" onClick={(e) => this.goToElement(e, "about-container", 70)}>ABOUT</span>
+                        <span class="header-options-span" onClick={(e) => this.goToElement(e, "team-containers", 101)}>TEAM</span>
+                        <span class="header-options-span" onClick={(e) => this.goToElement(e, "servicesContainer", 85)}>SERVICES</span>
+                        <span class="header-options-span" onClick={(e) => this.goToElement(e, "contact-container", 40)}>CONTACT</span>
                     </div>
                     <div class="dropdown mobile-nav">
                         <i class="fa fa-bars fa-color menu-font-size" aria-hidden="true"></i>
@@ -507,7 +512,7 @@ class App extends React.Component {
                     </div>
                 </section>
 
-                <section className="company-details-container">
+                <section className="company-details-container" id="about-container">
                     <div className="company-details-section">
                         <span className="filling-line" aria-hidden="true"></span>
                         <div className="point-general"></div>
@@ -565,7 +570,7 @@ class App extends React.Component {
                     </div>
                 </section>
 
-                <section className="services-container">
+                <section className="services-container" id="servicesContainer">
                     <div className="services-title">
                         <span className="service-txt">SERVICES</span>
                         <span className="offer-txt">WE OFFER</span>
@@ -851,7 +856,7 @@ class App extends React.Component {
 
                 </section>
 
-                <section className="team-container">
+                <section className="team-container" id="team-containers">
                     <div className="team-text">
                         <span className="team-txt">TEAM</span>
                         <span className="behind-txt">BEHIND THIS</span>
@@ -1094,7 +1099,7 @@ class App extends React.Component {
                         </div>
                     </div>
                 </div>
-                <section class="contact-container">
+                <section class="contact-container" id="contact-container">
                     <div class="contact-section">
                         <div class="contact-heading">
                             <span class="contact-heading-txt">CONTACT</span>
@@ -1130,7 +1135,10 @@ class App extends React.Component {
                                     <span className="error-msgs" id="text">Please Enter Email</span>
                                 </div>
                             </div>
+                            <div className="flora-loader">
                             <button class="flora-btn" onClick={() => this.sendEmail()} >SEND</button>
+                            {this.state.showContactLoader ? <div className="loader-flora"></div> : null }
+                            </div>
                         </div>
 
                         <div class="social-media-connect">
