@@ -19,11 +19,27 @@ class App extends React.Component {
     // let p = document.getElementById("video-container");
     //   let q = p.offsetWidth;
     //     this.movea(q);
-        var elmnt = document.getElementById("myHeader");
-        var y = elmnt.offsetTop;
-        console.log(y);
+
+
+         document.getElementsByTagName("body")[0].addEventListener("scroll", function () {
+             var elmnt =  document.getElementsByTagName("body")[0];
+             var y = elmnt.scrollTop;
+             if(y >=400){
+
+                 document.getElementById("myHeader").classList.add("header-background");
+                 document.getElementById("myHeaderSpan").classList.add("header-span-background");
+             }else{
+                 document.getElementById("myHeader").classList.remove("header-background");
+                 document.getElementById("myHeaderSpan").classList.remove("header-span-background");
+             }
+
+
+
+        });
+
 
         document.getElementById("nu1").classList.add("yellow-border");
+
     }
 
 
@@ -149,7 +165,7 @@ class App extends React.Component {
 
                         </div>
                     </div>
-                    <div class="header-options desktop-nav">
+                    <div class="header-options desktop-nav" id="myHeaderSpan">
                         <span class="header-options-span">ABOUT</span>
                         <span class="header-options-span">CLIENTS</span>
                         <span class="header-options-span">SERVICES</span>
@@ -655,7 +671,7 @@ class App extends React.Component {
 
                     <div className="company-info-section">
                         <div className="company-info-section-wrapper">
-                            <div className="company-info-thumbnail">
+                            <div className="company-info-thumbnail ">
                                 <div className="listener-svg">
                                 </div>
                                 <div className="right-company-txt">
