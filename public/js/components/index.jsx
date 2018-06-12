@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import {render} from 'react-dom';
-import {smoothScroll} from "../common";
-
+import {smoothScroll} from './commoncomponent/helper.js'
 class App extends React.Component {
 
 
@@ -11,6 +10,9 @@ class App extends React.Component {
         this.handleScroll = this.handleScroll.bind(this);
         this.sendEmail = this.sendEmail.bind(this);
         this.isValidEmail = this.isValidEmail.bind(this);
+        this.handleContactEmailChange = this.handleContactEmailChange.bind(this);
+        this.handleMobileNoChange = this.handleMobileNoChange.bind(this);
+        this.handleContentChange = this.handleContentChange.bind(this);
         this.isValidMobileNO = this.isValidMobileNO.bind(this);
         this.state = {
             Email:'',
@@ -18,12 +20,14 @@ class App extends React.Component {
             MobileNo:'',
             MobileErrorMessage:false,
             Content :'',
+            contactEmail:"",
             ContentErrorMessage:false,
             loader:false,
             currentTab:''
         };
 
     }
+
     goToElement(e,id,offset){
         if (id == "about"){
             this.setState({currentTab:"aboutUs"})
@@ -109,9 +113,13 @@ class App extends React.Component {
 
                  document.getElementById("myHeader").classList.add("header-background");
                  document.getElementById("myHeaderSpan").classList.add("header-span-background");
+                 document.getElementById("firstSvg").classList.add("display-none");
+                 document.getElementById("secSvg").classList.add("display-block");
              }else{
                  document.getElementById("myHeader").classList.remove("header-background");
                  document.getElementById("myHeaderSpan").classList.remove("header-span-background");
+                 document.getElementById("firstSvg").classList.remove("display-none");
+                 document.getElementById("secSvg").classList.remove("display-block");
             }
 
         });
@@ -174,22 +182,31 @@ class App extends React.Component {
         }, 3000);
     }
 
-    sendEmail() {
+    sendEmail() {debugger
         let email = this.isValidEmail(this.state.Email);
         if(!email) {
                 this.setState({
                 EmailErrorMessage:true
             });
+            document.getElementById("text").classList.add("display-block");
+            setTimeout(function(){
+                document.getElementById("text").classList.remove("display-block");
+            }, 5000);
                 this.displayMessage();
                 return;
         }
                 this.setState({EmailErrorMessage:false});
-                let mobNo = this.isValidMobileNO(this.state.MobileNo);
-        if(!mobNo){
+                let isValidMobNo = this.isValidMobileNO(this.state.MobileNo);
+        if(!isValidMobNo){
                 this.setState({
                 MobileErrorMessage:true,
             });
-                this.displayMessage();
+            document.getElementById("mobilenum").classList.add("display-block");
+            setTimeout(function(){
+                document.getElementById("mobilenum").classList.remove("display-block");
+            }, 5000);
+
+            this.displayMessage();
                 return;
         }
                 this.setState({MobileErrorMessage:false});
@@ -197,7 +214,13 @@ class App extends React.Component {
                 this.setState({
                 ContentErrorMessage:true,
         });
+            document.getElementById("address").classList.add("display-block");
+            setTimeout(function(){
+                document.getElementById("address").classList.remove("display-block");
+            }, 5000);
+
                 this.displayMessage();
+
                 return;
         }
         this.setState({ContentErrorMessage:false});
@@ -214,6 +237,7 @@ class App extends React.Component {
     };
 
     fetch("/api/", {
+            method:"POST",
             headers: {
                 "Content-Type": "application/json",
             },
@@ -242,13 +266,29 @@ class App extends React.Component {
         return this.state.EmailErrorMessage;
     }
     isValidMobileNO(mNo) {
-        var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-        if(phoneno.test(mNo)){
-            this.state.MobileErrorMessage = true
+        let isValidPhone = false;
+        var phoneNumberRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        if(phoneNumberRegex.test(mNo)){
+            isValidPhone = true
         }else {
-            this.state.MobileErrorMessage = false
+            isValidPhone = false
         }
-        return this.state.MobileErrorMessage;
+        return isValidPhone;
+    }
+    handleContactEmailChange(event){
+        this.setState({
+            Email: event.target.value
+        });
+    }
+    handleContentChange(event){
+        this.setState({
+            Content: event.target.value
+        });
+    }
+    handleMobileNoChange(event){
+        this.setState({
+            MobileNo: event.target.value
+        });
     }
     // function headerPages(page) {
     //     // window.location  = '/'+page
@@ -260,7 +300,7 @@ class App extends React.Component {
                 <header class="header-section" id="myHeader">
                     <div class="logo-section">
                         <div class="flower-svg">
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+                            <svg version="1.1" id="firstSvg" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
                                  viewBox="0 0 369 98"  class="flora-logo">
 
                                 <g>
@@ -322,7 +362,89 @@ class App extends React.Component {
                         c2.9,0,5.1-1.2,6.7-3.5c1.4-2,2.1-4.5,2.1-7.5c0-3-0.7-5.4-2.1-7.4c-1.6-2.3-3.8-3.5-6.7-3.5c-2.9,0-5.1,1.2-6.7,3.5
                         c-1.4,2-2.1,4.5-2.1,7.4c0,3,0.7,5.5,2.1,7.5C322.3,75.5,324.6,76.7,327.4,76.7z"/>
                                 </g>
-                            </svg>
+                            </svg >
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+                             viewBox="0 0 400 400"  id="secSvg" className="second-svg">
+
+                        <g id="Layer_1">
+                            <g>
+                                <path class="flo-st0" d="M204,9.5c-80.2,0-124.4,60.9-124.4,125.9S132.3,253,197.3,253s123.6-57.9,123.6-122.9S269,9.5,204,9.5z
+                                     M203.3,244c-63.2,0-117.6-55.9-117.6-119.1S135.5,17.1,199.6,17c63.2-0.1,114,54,114,117.3S266.5,244,203.3,244z"/>
+                                <g class="flo-st1">
+                                    <path class="flo-st2" d="M146,113.8v-7.4h20.7V82.6c0-16.2,11.5-22.9,25.4-22.9c3.4,0,6.7,0.4,10.1,1.1v7.4
+                                        c-3.4-0.7-6.7-1.1-10.1-1.1c-9.4,0-16.9,3.4-16.9,16.2v23.2h24.1v7.4h-24.1v108.1h-8.5V113.8H146z"/>
+                                </g>
+                                <g class="flo-st1">
+                                    <path class="flo-st3" d="M254.5,113.8h-25.2v80.7c0,18.7,8.8,20.5,24.9,20v7.4c-17.5,1.1-34.4-1.3-33.5-27.4v-80.7h-21.4v-7.4h21.4
+                                        v-36h8.5v36h25.2L254.5,113.8L254.5,113.8z"/>
+                                </g>
+                            </g>
+                        </g>
+                        <g id="Layer_2">
+                            <g>
+                                <path class="flo-st4" d="M25.6,283.2c0-3.4-0.3-6.4-0.6-8.9c-0.4-2.5-1.3-4.8-2.5-6.9c-1.4-2.3-2.6-3.5-3.6-3.8
+                                    c-0.6-0.1-1.3,0.3-2,1.1c-0.9,1-1.6,2.4-2.3,4.2c-0.6,1.9-1.1,3.6-1.3,5.4c-0.6,5-0.9,10.8-0.5,17.4c3.8-0.9,7.2-1.5,10.2-2
+                                    c0.5,0,0.9,0,1.4,0.4c0.4,0.3,0.6,0.8,0.8,1.1c0,0.5,0,0.9-0.4,1.4c-0.3,0.4-0.8,0.6-1.1,0.8c-3.1,0.4-6.7,1.1-10.6,2
+                                    c0.1,1.6,0.3,3.4,0.5,5.3c0,1.3,0.3,3.4,0.5,6.5l0.6,7.2c0.1,1.6,0.4,3.8,0.5,6.3c0.1,2.5,0.1,4.8,0.1,6.9c0,0.5-0.1,0.9-0.5,1.3
+                                    c-0.4,0.4-0.8,0.5-1.3,0.5s-0.9-0.1-1.3-0.5c-0.4-0.4-0.5-0.8-0.5-1.3c0-2,0-4.3-0.1-6.8c-0.1-2.5-0.3-4.5-0.5-6.2l-0.6-7
+                                    c-0.3-3-0.5-5.3-0.6-6.4c-0.1-1.9-0.3-3.5-0.4-4.8l-7.2,1.8c-0.5,0.1-0.9,0-1.4-0.1c-0.4-0.3-0.8-0.6-0.8-1.1
+                                    c-0.1-0.5,0-0.9,0.1-1.4c0.3-0.4,0.6-0.8,1.1-0.8l7.8-2.1c-0.4-7-0.1-13.2,0.5-18.6c0.3-1.9,0.9-4,1.6-6.2
+                                    c0.8-2.1,1.8-3.9,2.9-5.3c1.6-2,3.5-2.8,5.5-2.3c2,0.5,4,2.4,5.9,5.5c1.5,2.5,2.5,5.2,3,7.9c0.4,2.8,0.6,6,0.6,9.7
+                                    c0,0.5-0.1,0.9-0.5,1.3c-0.4,0.4-0.8,0.5-1.3,0.5c-0.5,0-0.9-0.1-1.3-0.5C25.7,284.2,25.6,283.7,25.6,283.2z"/>
+                                <path class="flo-st4" d="M32.8,324.9c1.4-1,2.9-3.5,4.7-7.5c0.8-1.9,1.6-4,2.5-6.5c-0.3-0.9-0.5-1.9-0.6-2.8
+                                    c-1.3-6.2-1.6-13.6-1.3-22.3c0.1-3.8,0.9-7.8,2-11.8c0.8-2.8,1.5-4.9,2.5-6.5c1.4-2.3,3-3.5,5-3.8c1.9-0.1,3.3,0.8,4.2,2.9
+                                    c0.5,1.3,0.8,3,0.8,5.2c0,2.4-0.3,5-0.6,8.1c-1.1,6.8-3.1,15.2-6.2,25.2l-1.9,6c1.8,6.4,4.8,10.8,8.9,13.2c0.5,0.3,1,0.4,1.5,0.5
+                                    c0.5,0.1,1.3,0.3,2.4,0.3c1,0,1.8,0.1,2.3,0.1c0.5,0,0.9,0.3,1.3,0.6s0.5,0.9,0.4,1.3c0,0.5-0.3,0.9-0.6,1.3s-0.9,0.5-1.3,0.4
+                                    c-0.1,0-0.6,0-1.5-0.1c-0.8,0-1.5-0.1-2-0.1c-0.5,0-1.3-0.1-2-0.4c-0.8-0.1-1.5-0.5-2-0.8c-3.9-2.3-6.9-5.9-9.1-10.9l-1.4,2.6
+                                    c-2,4.7-3.9,7.7-5.7,8.9c-0.4,0.3-0.8,0.4-1.3,0.4c-0.5,0-0.9-0.3-1.3-0.6c-0.3-0.4-0.4-0.9-0.4-1.4
+                                    C32.2,325.5,32.4,325.1,32.8,324.9z M42.2,303.7c3-9.8,4.9-18,6-24.5c0.4-2.9,0.6-5.3,0.6-7.5c0-1.6-0.1-3-0.5-3.8L48,267v0.3
+                                    c-0.8,0-1.5,0.8-2.1,2c-0.9,1.4-1.6,3.1-2.3,5.7c-1,3.8-1.6,7.5-1.8,11.1C41.5,292.7,41.6,298.6,42.2,303.7z"/>
+                                <path class="flo-st4" d="M84.6,286.5c1.9,1.4,3.5,3.4,4.9,6c2.1,4.2,3.3,9.2,3.3,15s-1,10.7-3.1,14.7c-2.5,4.9-6,7.4-10.6,7.5
+                                    c-3.1,0-5.9-0.8-7.9-2.3c-2.1-1.5-3.6-3.8-4.7-6.5c-1.9-4.8-2.1-10.6-0.9-17.4c1.3-6.5,3.4-11.7,6.7-15.4c1.8-2,3.8-3.1,5.8-3.5
+                                    c0.3,0,0.5-0.1,0.6-0.1c0.3,0,0.5-0.1,0.8-0.1c0.1,0,0.3,0,0.4,0.1C81.2,284.7,83,285.4,84.6,286.5z M82.6,289.6L82.6,289.6
+                                    l-0.1-0.1c-1-0.6-2-1.1-3.1-1.3c-0.3,0-0.5,0-0.8,0.1c-1.4,0.3-2.6,1-3.8,2.4c-2.8,3-4.8,7.5-5.9,13.5c-1.1,6-0.9,11.3,0.8,15.5
+                                    c1.6,4.4,4.8,6.5,9.2,6.4c3.1,0,5.7-1.9,7.5-5.5c1.8-3.5,2.8-7.9,2.8-13.1c0-5.2-0.9-9.7-2.8-13.3C85.3,292.3,84,290.8,82.6,289.6
+                                    z"/>
+                                <path class="flo-st4" d="M97.8,283.6c0.3,3,0.6,9.1,0.8,18.2v1.1c0.4-1.4,0.9-2.5,1.4-3.8c0.8-2,1.6-3.9,2.6-5.7
+                                    c0.9-1.6,2-3.3,3.4-4.9c1.3-1.5,2.6-2.8,4.2-3.6c1.5-0.9,3.1-1.5,5-1.9c1.9-0.4,3.9-0.3,6,0.4c0.5,0.1,0.9,0.4,1.1,0.8
+                                    c0.3,0.4,0.3,0.9,0.1,1.4c-0.1,0.5-0.4,0.9-0.8,1.1c-0.4,0.3-0.9,0.3-1.4,0.1c-3.6-0.9-6.8-0.1-9.7,2.3c-2.9,2.4-5.3,6.2-7.2,11.2
+                                    c-2.3,5.8-3.6,12.1-4,18.9v3.5v1.1c0,0.4,0,0.8,0,1.3s0,0.9,0,1.1v1.4v0.4l-0.1,0.5c-0.3,0.5-0.8,0.9-1.4,1
+                                    c-0.8,0.1-1.4-0.1-1.8-0.8l-0.3-0.6c0,0,0-0.1,0-0.3s0-0.3,0-0.4c-0.3-2.3-0.3-5-0.1-8.3c0-0.9,0-2.3-0.1-3.9
+                                    c0-1.6-0.1-2.8-0.1-3.3c0-2.3-0.1-3.9-0.1-4.9c0-0.9-0.1-2.6-0.1-5.3c-0.3-9.1-0.5-15.1-0.8-18c0-0.5,0.1-0.9,0.4-1.3
+                                    c0.4-0.4,0.8-0.6,1.3-0.6c0.5,0,0.9,0.1,1.3,0.4C97.6,282.7,97.8,283.1,97.8,283.6z"/>
+                                <path class="flo-st4" d="M154.8,299.5c-0.9,1.9-1.6,3.5-2.3,4.8c-0.1,0.1-0.5,1-1.3,2.4l-2.1,4c-0.6,1.3-1.4,2.6-2.5,4.5
+                                    c-1,1.8-2,3.4-3,4.8c-2.5,3.5-4.9,5.9-7.2,7.3c-3.3,1.9-6.2,1.5-8.6-1c-3-2.9-3.9-7.4-2.8-13.5c0.9-5.4,3-10.7,6.4-16
+                                    c3.5-5.5,7.3-9.4,11.5-11.8c5-3,9.7-2.9,13.7,0.1c0.4,0.3,0.6,0.6,0.6,1.1c0.1,0.5,0,0.9-0.3,1.3c0.1,0,0.3,0.1,0.5,0.1
+                                    c0.3,0.1,0.4,0.3,0.6,0.5c0.1,0.1,0.3,0.4,0.3,0.5l0.1,0.1c0,0.1,0,0.3,0.1,0.4c0.1,1.1,0.1,2.8,0,4.8c-0.1,2.1-0.3,3.6-0.3,4.3
+                                    c0.3,11.1,1.8,20.4,4.7,27.7c0.1,0.5,0.1,1,0,1.4c-0.3,0.5-0.5,0.8-1,1c-0.5,0.1-1,0.1-1.4,0c-0.5-0.3-0.8-0.5-1-1
+                                    C156.9,319.5,155.2,310.3,154.8,299.5z M154.7,287.9c-2.8-2-6-2-9.8,0.1c-3.6,2.1-7,5.7-10.2,10.8c-3.1,4.9-5.2,9.8-6,14.6
+                                    c-0.9,4.9-0.3,8.3,1.8,10.4c1.3,1.3,2.6,1.4,4.3,0.4c1.8-1,3.8-3,6-6.2c0.9-1.4,1.9-2.9,2.9-4.5c1-1.6,1.9-3.1,2.4-4.4l2-4
+                                    c0.8-1.5,1.1-2.3,1.3-2.4c0.6-1.3,2.1-4.3,4.3-9.2c0.5-1.3,0.9-2.3,1.1-3c0,0,0-0.4,0.1-1c0-0.4,0.1-0.6,0.1-0.8
+                                    c0-0.1,0.1-0.4,0.3-0.5C155.2,288.1,155,288,154.7,287.9z"/>
+                                <path class="flo-st5" d="M163.1,295.3v-6.4h6.5v-11.7h8.6v11.7h7.8v6.4h-7.8v20.9c0,2,0.3,3.4,0.6,4c0.5,0.9,1.8,1.4,3.5,1.4
+                                    c1.6,0,2.8-0.1,3.6-0.3v6.7c-3.8,0.3-5.7,0.5-5.5,0.5c-4.3,0-7.2-0.9-8.8-2.5c-1.4-1.4-2-3.9-2-7.4v-23.3H163.1z"/>
+                                <path class="flo-st5" d="M227.7,310.7H199c0,3.3,0.9,5.9,2.5,8.1c1.9,2.3,4.5,3.5,7.9,3.5c4.8,0,8.1-2.1,9.6-6.5h8.2
+                                    c-0.9,4.2-3,7.4-6.2,9.8c-3.3,2.4-7,3.5-11.5,3.5c-6,0-10.7-1.9-14.1-5.7c-3.4-3.8-5-8.7-5-14.8c0-5.8,1.6-10.6,5-14.5
+                                    c3.5-4,8.2-6.2,13.8-6.2c5.5,0,9.9,2,13.5,6c3.4,3.8,5,8.4,5,13.8C227.8,308.8,227.7,309.7,227.7,310.7z M199,305h20.1
+                                    c-0.1-2.9-1.1-5.3-2.9-7.3c-1.8-2-4.2-3-6.9-3c-2.9,0-5.3,1-7.3,2.9C200,299.6,199,302,199,305z"/>
+                                <path class="flo-st5" d="M269.2,302h-8.6c-0.8-4.9-3.6-7.3-8.9-7.3c-2.9,0-5.2,0.9-7,2.6c-2.5,2.4-3.6,6.3-3.6,11.6
+                                    c0,3.6,0.8,6.7,2.4,9.2c1.9,2.8,4.5,4.3,8.1,4.3c2.5,0,4.5-0.8,6.2-2.4c1.6-1.6,2.6-3.8,3-6.5h8.6c-1.6,10.4-7.7,15.7-17.9,15.7
+                                    c-5.9,0-10.6-1.9-14.1-5.8c-3.3-3.6-4.9-8.4-4.9-14.3c0-6.2,1.6-11.2,4.8-15c3.4-4,8.2-6,14.5-6c4.8,0,8.7,1.1,11.8,3.5
+                                    C266.8,293.8,268.7,297.3,269.2,302z"/>
+                                <path class="flo-st5" d="M276.1,327.9V274h8.6v20h0.1c1.1-1.8,2.6-3.3,4.8-4.4c2.1-1.1,4.4-1.8,6.9-1.8c4.3,0,7.7,1.1,10.2,3.4
+                                    c2.4,2.3,3.6,5.5,3.6,9.9V328h-8.6v-24.7c0-5.8-2.5-8.8-7.7-8.8c-2.8,0-5,1-6.8,2.9c-1.8,2-2.6,4.4-2.6,7.3v23h-8.6V327.9z"/>
+                                <path class="flo-st5" d="M319.6,327.9v-39h8.2v5.8l0.1,0.1c2.8-4.7,6.8-6.9,12.2-6.9c4.3,0,7.7,1.1,10.2,3.4c2.4,2.3,3.6,5.5,3.6,9.9
+                                    V328h-8.6v-24.7c0-5.8-2.5-8.8-7.7-8.8c-2.8,0-5,1-6.8,2.9c-1.8,2-2.6,4.4-2.6,7.3v23h-8.7V327.9z"/>
+                                <path class="flo-st5" d="M380.7,329c-6.2,0-10.9-1.9-14.6-5.8c-3.4-3.8-5.2-8.7-5.2-14.8c0-6,1.8-11.1,5.3-14.8
+                                    c3.5-3.8,8.3-5.7,14.5-5.7c6.2,0,10.9,1.9,14.6,5.8c3.4,3.8,5.2,8.7,5.2,14.7c0,6.2-1.8,11.1-5.2,14.8
+                                    C391.8,327,386.9,329,380.7,329z M380.7,322.2c3.6,0,6.4-1.5,8.4-4.4c1.8-2.5,2.6-5.7,2.6-9.4c0-3.8-0.9-6.8-2.6-9.3
+                                    c-2-2.9-4.8-4.4-8.4-4.4c-3.6,0-6.4,1.5-8.4,4.4c-1.8,2.5-2.6,5.7-2.6,9.3c0,3.8,0.9,6.9,2.6,9.4
+                                    C374.3,320.7,377.2,322.2,380.7,322.2z"/>
+                            </g>
+                        </g>
+                        </svg>
+
+
 
                         </div>
                     </div>
@@ -984,7 +1106,8 @@ class App extends React.Component {
                                     <span class="left-contact-txt">ADDRESS</span>
                                 </div>
                                 <div class="contact-us-right-section">
-                                    <textarea rows="4" class="input-data" type="text" placeholder="Address"></textarea>
+                                    <textarea value={this.state.Content} onChange={(e) => this.handleContentChange(e)} rows="4" class="input-data" type="text" placeholder="Address"></textarea>
+                                    <span className="error-msgs" id="address">Please Enter Email</span>
                                 </div>
                             </div>
 
@@ -993,7 +1116,8 @@ class App extends React.Component {
                                     <span class="left-contact-txt">CALL</span>
                                 </div>
                                 <div class="contact-us-right-section ">
-                                    <input class="input-data" type="text" placeholder="Call"/>
+                                    <input value={this.state.MobileNo} onChange={(e) => this.handleMobileNoChange(e)} class="input-data" type="text" placeholder="Call"/>
+                                    <span className="error-msgs" id="mobilenum">Please Enter Number</span>
                                 </div>
                             </div>
 
@@ -1002,10 +1126,11 @@ class App extends React.Component {
                                     <span class="left-contact-txt">EMAIL</span>
                                 </div>
                                 <div class="contact-us-right-section ">
-                                    <input class="input-data" type="text" placeholder="Email"/>
+                                    <input value={this.state.Email} onChange={(e) => this.handleContactEmailChange(e)} class="input-data" type="text" placeholder="Email"/>
+                                    <span className="error-msgs" id="text">Please Enter Email</span>
                                 </div>
                             </div>
-                            <button class="flora-btn" >SEND</button>
+                            <button class="flora-btn" onClick={() => this.sendEmail()} >SEND</button>
                         </div>
 
                         <div class="social-media-connect">
