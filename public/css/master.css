@@ -211,9 +211,7 @@ html, body{
 
     color: white;
 }
-.header-options-span:hover {
-    color: #60b0ff;
-}
+
 .header-span-background{
     color: #185795;
     font-weight: 500;
@@ -226,6 +224,7 @@ html, body{
     margin: 0 15px;
     cursor: pointer;
     font-family: "andalemo";
+    position: relative;
     font-size: 17px;
     /*line-height: 99px;*/
 
@@ -249,6 +248,9 @@ html, body{
     cursor: pointer;
     transition: border-width 0.3s linear;
 }
+.orange-color{
+    color: #e46224;
+}
 .slide-no span:hover{
     border-bottom: 3px solid #e46224
 }
@@ -260,6 +262,21 @@ html, body{
     height: 100%;
     padding: 15px;
     float: left;
+}
+.span-border{
+    position: absolute;
+    width: 0;
+    height: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    margin: auto;
+    border-bottom: 2px solid #e6570f;
+    transition:width 0.6s linear;
+}
+.header-options-span:hover .span-border{
+    width: 100%;
 }
 .login-text {
     font-family: "Helvetica Neue";
