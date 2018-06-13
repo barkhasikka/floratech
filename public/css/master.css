@@ -133,8 +133,22 @@ html, body{
     /*padding-top: 10px;*/
     display: inline-flex;
 }
-.header-section {
+#app .header-section {
     width: calc(100% - 16px);
+    height: 150px;
+    background: #0000002e;
+    position: fixed;
+    transition:height 0.3s ease-out;
+    top: 0;
+    z-index: 11;
+    box-shadow: 0 1px 25px -1px #575757;
+}
+#app .header-background {
+    background: #fff;
+    height: 100px;
+}
+.header-section {
+    width: 100%;
     height: 150px;
     background: #0000002e;
     position: fixed;
@@ -686,6 +700,7 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     background-color: white;
+    margin-top: 150px;
 }
 .services-title {
     width: calc(100% - 7em);
@@ -925,6 +940,7 @@ a{
     width: 100%;
     display: block;
     margin: auto;
+    padding-top: 160px;
     height: auto;
     /*overflow: hidden;*/
 }
@@ -1258,8 +1274,8 @@ opacity: 1;
     height: auto;
     display: block;
     margin: auto;
-    padding-top: 30px;
-    padding-bottom: 85px;
+    padding-top: 155px;
+
     position: relative;
     /*background
     : linear-gradient(to bottom left, rgba(255, 192, 203, 0.6509803921568628), rgba(255, 165, 0, 0.4392156862745098) 40%, rgb(249, 241, 195) 70%, rgba(255, 192, 203, 0.71) 75%);*/

@@ -22,6 +22,9 @@ func main() {
 	log.Println("Server started on port" + c.WEBPORT)
 	http.Handle("/", handlers.CORS()(rtr))
 	rtr.HandleFunc("/about", about)
+	rtr.HandleFunc("/team", team)
+	rtr.HandleFunc("/contact", contact)
+	rtr.HandleFunc("/services", service)
 	rtr.HandleFunc("/js/{subdir}/{file}", serveResource)
 	rtr.HandleFunc("/css/{file}", serveResource)
 	rtr.HandleFunc("/assets/{file}", serveResource)
@@ -41,6 +44,39 @@ func about(wr http.ResponseWriter, req *http.Request) {
 	if req.Method == "GET" {
 		//Get API call to find the color config of user.
 		t := template.Must(template.ParseFiles("template/headerpages/about.html"))
+
+		err := t.Execute(wr, nil)
+		if err != nil {
+			http.Error(wr, "Error parsing template, ["+err.Error()+"]", http.StatusInternalServerError)
+		}
+	}
+}
+func team(wr http.ResponseWriter, req *http.Request) {
+	if req.Method == "GET" {
+		//Get API call to find the color config of user.
+		t := template.Must(template.ParseFiles("template/headerpages/team.html"))
+
+		err := t.Execute(wr, nil)
+		if err != nil {
+			http.Error(wr, "Error parsing template, ["+err.Error()+"]", http.StatusInternalServerError)
+		}
+	}
+}
+func contact(wr http.ResponseWriter, req *http.Request) {
+	if req.Method == "GET" {
+		//Get API call to find the color config of user.
+		t := template.Must(template.ParseFiles("template/headerpages/contact.html"))
+
+		err := t.Execute(wr, nil)
+		if err != nil {
+			http.Error(wr, "Error parsing template, ["+err.Error()+"]", http.StatusInternalServerError)
+		}
+	}
+}
+func service(wr http.ResponseWriter, req *http.Request) {
+	if req.Method == "GET" {
+		//Get API call to find the color config of user.
+		t := template.Must(template.ParseFiles("template/headerpages/services.html"))
 
 		err := t.Execute(wr, nil)
 		if err != nil {

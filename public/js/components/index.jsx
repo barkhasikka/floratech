@@ -2,9 +2,7 @@ import React from 'react';
 import {render} from 'react-dom';
 import {smoothScroll} from './commoncomponent/helper.js'
 
-import Team from './team.jsx';
-import Services from './service.jsx';
-import Contact from './contact.jsx';
+
 class App extends React.Component {
 
 
@@ -104,7 +102,7 @@ class App extends React.Component {
          document.getElementsByTagName("body")[0].addEventListener("scroll", function () {
              var elmnt =  document.getElementsByTagName("body")[0];
              var y = elmnt.scrollTop;
-             if(y >=400){
+             if(y >=100){
 
                  document.getElementById("myHeader").classList.add("header-background");
                  document.getElementById("myHeaderSpan").classList.add("header-span-background");
@@ -443,18 +441,25 @@ class App extends React.Component {
                         </div>
                     </div>
                     <div class="header-options desktop-nav" id="myHeaderSpan">
-                       <a href="/about" target="_parent"> <span className={"header-options-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
-                        <span className="span-border"></span>
+                       <a href="/about" target="_parent">
+                           <span className={"header-options-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
+                           <span className="span-border"></span>
                         </span></a>
-                        <span className={"header-options-span " + (this.state.selectedTab == 'team-containers' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
-                         <span className="span-border"></span>
+                        <a href="/team" target="_parent">
+                            <span className={"header-options-span " + (this.state.selectedTab == 'team-containers' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
+                            <span className="span-border"></span>
                         </span>
+                        </a>
+                        <a href="/services" target="_parent">
                         <span className={"header-options-span " + (this.state.selectedTab == 'servicesContainer' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>SERVICES
                          <span className="span-border"></span>
                         </span>
+                            </a>
+                        <a href="/contact" target="_parent">
                         <span className={"header-options-span " + (this.state.selectedTab == 'contact-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
                          <span className="span-border"></span>
                         </span>
+                            </a>
                     </div>
                     <div class="dropdown mobile-nav">
                         <i class="fa fa-bars fa-color menu-font-size" aria-hidden="true"></i>
@@ -509,17 +514,6 @@ class App extends React.Component {
                     </div>
                 </section>
 
-                {
-                    this.state.selectedTab === 'servicesContainer' ?
-                        <Services/>
-                        : null
-                }
-
-                {
-                    this.state.selectedTab === 'team-containers' ?
-                        <Team/>
-                        : null
-                }
                 <section className="company-info-container">
                     <div className="company-info-heading">
                         <span className="motto-txt">WHAT MAKES US</span>
@@ -668,12 +662,6 @@ class App extends React.Component {
                         </div>
                     </div>
                 </div>
-                {
-                    this.state.selectedTab === 'contact-container' ?
-                        <Contact/>
-                        : null
-                }
-
                 <footer>
                     <div className="footer-info float-left">Powered by <span>Floratechno Solutions Pvt. Ltd.</span></div>
                     <div className="footer-info float-right text-align-right"><span className="copyright-info">©2018 India</span></div>
