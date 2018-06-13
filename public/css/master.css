@@ -459,6 +459,10 @@ html, body{
     float: right;
     width:98%;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 .div-align i{
     color: #e46224;
     font-size: 15px;
@@ -543,6 +547,7 @@ html, body{
 .company-details-container {
     width: 100%;
     height: auto;
+    padding-top: 150px;
 }
 .company-details-section {
     width: 1200px;

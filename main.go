@@ -8,6 +8,7 @@ import (
 	"floratechno/clientrpc/landing"
 	"floratechno/connections"
 	c "floratechno/flag"
+	"html/template"
 	"log"
 	"net/http"
 )
@@ -20,6 +21,7 @@ func main() {
 	go connections.CallMAIL()
 	log.Println("Server started on port" + c.WEBPORT)
 	http.Handle("/", handlers.CORS()(rtr))
+	rtr.HandleFunc("/about", about)
 	rtr.HandleFunc("/js/{subdir}/{file}", serveResource)
 	rtr.HandleFunc("/css/{file}", serveResource)
 	rtr.HandleFunc("/assets/{file}", serveResource)
@@ -33,4 +35,16 @@ func main() {
 	rtr.Handle("/api/", jsonRPC)
 	log.Fatal(http.ListenAndServe(c.WEBPORT, nil))
 
+}
+
+func about(wr http.ResponseWriter, req *http.Request) {
+	if req.Method == "GET" {
+		//Get API call to find the color config of user.
+		t := template.Must(template.ParseFiles("template/headerpages/about.html"))
+
+		err := t.Execute(wr, nil)
+		if err != nil {
+			http.Error(wr, "Error parsing template, ["+err.Error()+"]", http.StatusInternalServerError)
+		}
+	}
 }

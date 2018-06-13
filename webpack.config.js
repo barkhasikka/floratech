@@ -7,6 +7,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 var config = {
     entry: {
         "floratechno":APP_DIR + "/public/js/components/index.jsx",
+        "floratechnoabout":APP_DIR+"/public/js/components/about.jsx"
     },
     module : {
 

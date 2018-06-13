@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {smoothScroll} from './commoncomponent/helper.js'
-import About from './about.jsx';
+
 import Team from './team.jsx';
 import Services from './service.jsx';
 import Contact from './contact.jsx';
@@ -443,9 +443,9 @@ class App extends React.Component {
                         </div>
                     </div>
                     <div class="header-options desktop-nav" id="myHeaderSpan">
-                        <span className={"header-options-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
+                       <a href="/about" target="_parent"> <span className={"header-options-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
                         <span className="span-border"></span>
-                        </span>
+                        </span></a>
                         <span className={"header-options-span " + (this.state.selectedTab == 'team-containers' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
                          <span className="span-border"></span>
                         </span>
@@ -508,11 +508,6 @@ class App extends React.Component {
 
                     </div>
                 </section>
-                {
-                    this.state.selectedTab === 'about-container' ?
-                        <About/>
-                        : null
-                }
 
                 {
                     this.state.selectedTab === 'servicesContainer' ?
