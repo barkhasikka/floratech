@@ -169,13 +169,6 @@ class App extends React.Component {
         }, 3000);
     };
 
-    displayMessage(){
-        setTimeout(() => {
-            this.setState({EmailErrorMessage:false,
-                            MobileErrorMessage:false,
-                            ContentErrorMessage:false});
-        }, 3000);
-    }
 
     sendEmail() {
         let email = this.isValidEmail(this.state.Email);
@@ -482,17 +475,17 @@ class App extends React.Component {
                         <div className="introduction-text first-background" id="myH1">
                             <div className="text-div" >
                                 <h5 id="header" className="text-div-h5 show-h5">HELLO!!!</h5>
-                                <p id="page" className="text-div-p show-p">ALL THAT YOU NEED FOR YOUR BUSINESS.</p>
+                                <p id="page" className="text-div-p show-p">WE ARE HERE TECHNOLOGY MEETS INOVATION.</p>
                             </div>
                         </div>
                         <div className="introduction-text sec-background" id="myH2">
                             <div className="text-div" >
                                 <h5 id="header1" className="text-div-h5">WE PROVIDE</h5>
-                                <p id="page1" className="text-div-p">WE ARE HERE TECHNOLOGY MEETS INOVATION.</p>
+                                <p id="page1" className="text-div-p">ALL THAT YOU NEED FOR YOUR BUSINESS.</p>
                                 <div className="div-align" id="animate-div">
-                                    <section><input type="checkbox" checked/><span>Designing</span></section>
-                                    <section><input type="checkbox" checked/><span>Development</span></section>
-                                    <section><input type="checkbox" checked/><span>Digital Marketing</span></section>
+                                    <section><i class="fa fa-check" aria-hidden="true"></i><span>Designing</span></section>
+                                    <section><i class="fa fa-check" aria-hidden="true"></i><span>Development</span></section>
+                                    <section><i class="fa fa-check" aria-hidden="true"></i><span>Digital Marketing</span></section>
                                 </div>
                             </div>
                         </div>
@@ -540,7 +533,7 @@ class App extends React.Component {
 
                     <div className="company-info-section">
                         <div className="company-info-section-wrapper">
-                            <div className="company-info-thumbnail ">
+                            <div className="company-info-thumbnail " id="wrapper">
                                 <div className="listener-svg">
                                 </div>
                                 <div className="right-company-txt">
