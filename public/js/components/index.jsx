@@ -136,6 +136,10 @@ class App extends React.Component {
             document.getElementById("header").classList.remove("h5-transition");
             document.getElementById("page").classList.remove("p-transition");}, 2000);
     }
+    moved(){
+        document.getElementById("myH1").style.left = "0";
+        document.getElementById("myH2").style.left = "0";
+    }
     movec(){
         document.getElementById("myH1").style.left = -100 + "vw";
         document.getElementById("myH2").style.left = -100 + "vw";
@@ -482,6 +486,9 @@ class App extends React.Component {
                                 <h5 id="header" className="text-div-h5 show-h5">HELLO!!!</h5>
                                 <p id="page" className="text-div-p show-p">WE ARE WHERE TECHNOLOGY MEETS INOVATION.</p>
                             </div>
+                            <div className="arrow">
+                                <a onClick={() => this.movec()}><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            </div>
                         </div>
                         <div className="introduction-text sec-background" id="myH2">
                             <div className="text-div" >
@@ -492,6 +499,10 @@ class App extends React.Component {
                                     <section><i class="fa fa-check" aria-hidden="true"></i><span>Development</span></section>
                                     <section><i class="fa fa-check" aria-hidden="true"></i><span>Digital Marketing</span></section>
                                 </div>
+                            </div>
+                            <div className="arrow">
+                                <a onClick={() => this.moveb()}><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                <a onClick={() => this.moved()}><i class="fa fa-angle-left" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <div className="introduction-text third-background" id="myH3">
@@ -504,14 +515,19 @@ class App extends React.Component {
                                     <section>LETS <span> CO</span>DREAM</section>
                                 </div>
                             </div>
+                            <div className="arrow">
+                                <a></a>
+                                <a onClick={() => this.movec()}><i class="fa fa-angle-left " aria-hidden="true"></i></a>
+                            </div>
                         </div>
                     </div>
                     <div class="slide-no">
-                        <span onClick={() => this.movea()} id="nu1">01</span>
-                        <span  onClick={() => this.movec()} id="nu2">02</span>
-                        <span  onClick={() => this.moveb()} id="nu3">03</span>
+                        <span onClick={() => this.movea()} id="nu1"></span>
+                        <span  onClick={() => this.movec()} id="nu2"></span>
+                        <span  onClick={() => this.moveb()} id="nu3"></span>
 
                     </div>
+
                 </section>
 
                 <section className="company-info-container">

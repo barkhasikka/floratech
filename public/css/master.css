@@ -250,31 +250,62 @@ html, body{
 }
 .slide-no{
     position: absolute;
-    top: 0;
-    width: 4%;
-    height: 30%;
+    width: 10%;
+    height: 23%;
     bottom: 0;
-    left: 10px;
+    left: 0;
+    right: 0;
     margin: auto;
 }
 .slide-no span{
-    display: block;
+    display: inline-block;
     text-align: center;
-    height: 29px;
+    height: 18px;
     color: white;
+    border: 1px solid #979797;
     font-size: 20px;
-    margin: 4px 0;
+    width: 18px;
+    margin: 4px 12px;
     cursor: pointer;
     transition: border-width 0.3s linear;
+    border-radius: 50%;
 }
 .orange-color{
     color: #e46224;
 }
 .slide-no span:hover{
-    border-bottom: 3px solid #e46224
+    background: #e46224;
+    border: 1px solid transparent;
 }
-.yellow-border{
-    border-bottom: 3px solid #e46224;
+.arrow{
+
+}
+.arrow a:nth-child(1){
+    position: absolute;
+    top: 0;
+    display: block;
+    bottom: 0;
+    margin: auto;
+    height: 19%;
+    right: 24px;
+}
+.arrow a:nth-child(2){
+    position: absolute;
+    top: 0;
+    display: block;
+    bottom: 0;
+    margin: auto;
+    height: 19%;
+    left: 8px;
+}
+.arrow a i{
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+.slide-no span.yellow-border{
+    background: #e46224;
+    border: 1px solid transparent ;
 }
 .login-section {
     width: 30%;
