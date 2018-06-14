@@ -74,14 +74,19 @@ html, body{
 .flora-st5{fill:#F0A9BE;}
 .flora-st6{opacity:0.4;}
 .flora-st7{fill:#F9E1E8;}
-.header-section .st0{fill:#E6570F;}
-.header-section .st1{fill:#1C3650;}
+.header-section .st0{fill:#183C47;}
+.header-section .st1{enable-background:new    ;}
+.header-section .st2{fill:#DE5B38;}
+.header-section .st3{fill:#133346;}
 .flora-logo{
     position: absolute;
     top: 0;
-    bottom: 0;
-    height: 84px;
-    margin:auto;
+    bottom: 40%;
+    height: 85%;
+    width: 86%;
+    right: 0;
+    margin: auto;
+    left: 0;
 }
 /*end style css for flower*/
 
@@ -143,29 +148,46 @@ html, body{
     /*z-index: 11;*/
     /*!*box-shadow: 0 1px 25px -1px #575757;*!*/
 /*}*/
-#app .header-background {
-    background: #fff;
-    height: 100px;
-}
+
 .header-section {
     width: 100%;
     height: 150px;
-    /*background: #0000002e;*/
+    background: #0000002e;
     position: fixed;
     transition:height 0.3s ease-out;
     top: 0;
     z-index: 11;
     /*box-shadow: 0 1px 25px -1px #575757;*/
 }
+#app .header-section {
+    width: 100%;
+    height: 150px;
+background: none;
+    position: absolute;
+    transition: height 0.3s ease-out;
+    bottom: 0;
+    top: inherit;
 
+    z-index: 11;
+    /* box-shadow: 0 1px 25px -1px #575757; */
+}
+#app .header-section:hover{
+    background: #0000002e;
+}
 .clear-both{
     clear: both;
 }
+/*#app .header-background {*/
+    /*background: #fff;*/
+    /*height: 100px;*/
+    /*position: fixed;*/
+    /*top:0;*/
+/*}*/
 .logo-section {
-    width: 300px;
+    width: 10%;
     height: 100%;
-    float: left;
-    left:-100vw;
+    /* float: left; */
+    /* left: -100vw; */
     display: inline-block;
 }
 .background-krishna{
@@ -189,7 +211,7 @@ html, body{
 }
 
 .flower-svg {
-    width: 65%;
+    width: 100%;
     display: inline-block;
     padding: 5px;
     float: left;
@@ -214,15 +236,36 @@ html, body{
     color: orange;
     font-family: Verdana;
 }
+#app .header-options-right.header-span-background {
+    color: #185795;
+}
 .header-options {
-    width: calc(100% - 330px);
+    width: calc(45% - 30px);
     display: inline-block;
     height: 100%;
-    text-align: right;
+    text-align: center;
     line-height: 150px;
-    margin-right: 30px;
     float: right;
-    color: #185795;
+    color: #fff;
+}
+.bind-header{
+    height: 100%;
+    margin: auto;
+    width: 65%;
+
+}
+.padding-35px{
+    padding: 35px;
+}
+.header-options-right {
+    width: 45%;
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    line-height: 150px;
+    float: left;
+    color: #fff;
+
 }
 #app .header-options{
     color: white;
@@ -238,6 +281,14 @@ html, body{
 
     cursor: pointer;
 
+}
+.header-section-wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url("/assets/b69ca8d5-411f-4548-84fe-75923d9c1323.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .header-options-span{
     margin: 0 15px;
@@ -338,8 +389,9 @@ html, body{
 #video-container {
     width: 100%;
     overflow: hidden;
-    height: 758px;
+    height: 100%;
     display: block;
+
 }
 .introduction-video{
     height: 100%;
@@ -376,7 +428,7 @@ html, body{
     background-image: url("https://icdn7.digitaltrends.com/image/macbook-air-11-inch-1500x1000-1500x1000.jpg?ver=1");
 }
 .third-background{
-    background-image: url("https://www.mockupworld.co/wp-content/uploads/edd/2018/04/free-macbook-mockup-set-psd-1.jpg");
+    background-image: url("/assets/b69ca8d5-411f-4548-84fe-75923d9c1323.jpg");
 }
 .text-div{
     position: absolute;
@@ -2607,7 +2659,7 @@ opacity: 1;
 .second-svg{
     display: none;
     position: absolute;
-    top: 0;
+    top: 19%;
     bottom: 0;
     margin: auto;
     height: 75%;
@@ -2621,9 +2673,12 @@ opacity: 1;
 .display-block{
     display: block;
 }
-.header-background {
+#app .header-section.header-background {
     background: #fff;
     height: 100px;
+    position: fixed;
+    top:0;
+    box-shadow: 2px 2px 2px 2px #cdcdcd;
 }
 
 .flo-st0{fill:#183C47;}
