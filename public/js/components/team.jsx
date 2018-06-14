@@ -157,7 +157,7 @@ class Team extends React.Component {
                                 <span class="r"></span>
                                 <span class="b"></span>
                                 <span class="l"></span>
-                                <div className="vission-name">
+                                <div className="vision-name">
                                     <span class="text">MISSION</span>
                                     <p> To be a reality of other’s dreams by building the best teams to work with.</p>
                                 </div>
