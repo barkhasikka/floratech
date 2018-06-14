@@ -561,6 +561,7 @@ class App extends React.Component {
                         </div>
                     </div>
                 </section>
+
                 <div className="company-info-container">
                     <div className="about-technology">
                         <h5>Our Technologies</h5>

@@ -78,6 +78,8 @@ html, body{
 .header-section .st1{enable-background:new    ;}
 .header-section .st2{fill:#DE5B38;}
 .header-section .st3{fill:#133346;}
+#floraService .header-section .st0{fill:#E6570F;}
+#floraService .header-section .st1{fill:#1C3650;}
 .flora-logo{
     position: absolute;
     top: 0;
@@ -168,7 +170,7 @@ background: none;
     bottom: 0;
     top: inherit;
 
-    z-index: 11;
+    z-index: 1111;
     /* box-shadow: 0 1px 25px -1px #575757; */
 }
 #app .header-section:hover{
@@ -256,6 +258,12 @@ background: none;
 }
 .padding-35px{
     padding: 35px;
+}
+.header-a{
+    padding: 35px;
+    clear: both;
+    line-height: 100px;
+    color: #185795
 }
 .header-options-right {
     width: 45%;
@@ -1030,9 +1038,12 @@ a{
     width: 100%;
     display: block;
     margin: auto;
-    padding-top: 160px;
+    padding-top: 170px;
     height: auto;
     /*overflow: hidden;*/
+}
+.padding-top-160px{
+    padding-top: 120px !important;
 }
 .team-text {
     width: calc(100% - 7em);
@@ -2680,12 +2691,281 @@ opacity: 1;
     top:0;
     box-shadow: 2px 2px 2px 2px #cdcdcd;
 }
-
+.third-svg {
+    position: absolute;
+    top: 19%;
+    bottom: 0;
+    margin: auto;
+    height: 75%;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+#team .header-section{
+    background: #fff;
+    height: 100px;
+    position: fixed;
+    z-index: 11111;
+    top: 0;
+    box-shadow: 2px 2px 2px 2px #cdcdcd;
+}
 .flo-st0{fill:#183C47;}
 .flo-st1{enable-background:new    ;}
 .flo-st2{fill:#DE5B38;}
 .flo-st3{fill:#133346;}
 .flo-st4{fill:#E6570F;}
 .flo-st5{fill:#1C3650;}
+
+
+/* CSS Document */
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+.puzzle-body{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+.jigsaw1{
+    width: calc(50% - 100px);
+    height: 100%;
+    margin: 50px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 111;
+    left:0;
+    transition:left 2s linear;
+}
+.jigsaw2 {
+    width: calc(50% - 100px);
+    height: 100%;
+    margin: 50px;
+    z-index: 1;
+    right:0;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition:right 2s linear;
+}
+.jigsaw3,.jigsaw4 {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    -webkit-border-radius: .5em;
+    display: inline-block;
+    -moz-border-radius: .5em;
+    border-radius: 0;
+    cursor: pointer;
+    float: left;
+}
+
+.jigsaw3,
+.jigsaw3 span {
+    background-color: #00008B;
+}
+.jigsaw4,
+.jigsaw4 span {
+    background-color: #00008B;
+}
+
+.jigsaw1,
+.jigsaw1 span {
+    background-color: #0284cf;
+}
+
+.jigsaw2,
+.jigsaw2 span {
+    background-color: #E91E63;
+}
+.puzzle-body:hover .jigsaw1{
+    left: 54px;
+    z-index: 111;
+}
+.puzzle-body:hover .jigsaw2{
+    right: 54px;
+}
+.puzzle-body:hover .jig1{
+    position: relative;
+    top: -115px;
+    z-index: 0;
+}
+
+
+.text {
+    display: block;
+    color: #fff;
+    font-size: 1.1em;
+
+    text-align: center;
+    padding: 7px;
+    position: relative;
+    background: transparent !important;
+}
+.vission-name{
+    width: 67%;
+    font-size: 17px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    height: 49%;
+    left: 6%;
+    right: 0;
+    color: #fff;
+    bottom: 0;
+}
+.text2 {
+    position: absolute;
+    left: 90%;
+    margin: auto;
+    z-index: 1;
+    display: block;
+    color: #fff;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 7px;
+    background: transparent !important;
+}
+.text1 {
+    display: block;
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 7px;
+    position: relative;
+    background: transparent !important;
+}
+.jigsaw1 .t {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    top: -2.5em;
+    left: 42%;
+    border-radius: 4em;
+}
+.jigsaw2 .t {
+    width: 3.9em;
+    background-color: #fff;
+    height: 3.6em;
+    position: absolute;
+    top: 39.5%;
+    left: -1em;
+    -webkit-border-radius: 4em;
+    -moz-border-radius: 4em;
+    border-radius: 4em;
+}
+
+.jigsaw1 .r, .jigsaw2 .r {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    top: 38%;
+    left: 26.5em;
+    z-index: 111;
+
+    -webkit-border-radius: 4em;
+    -moz-border-radius: 4em;
+    border-radius: 4em;
+}
+
+.jigsaw1 .b, .jigsaw2 .b {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    top: 15.5em;
+    left: 36%;
+
+    -webkit-border-radius: 4em;
+    -moz-border-radius: 4em;
+    border-radius: 4em;
+    z-index:111;
+}
+.jig{
+    width: 100%;
+    margin: auto;
+    height: 50%;
+}
+.jig1{
+    top: 0;
+    transition: top 2s linear;
+    width: 80.8%;
+    position: relative;
+    margin: 162px auto;
+    height: 50%;
+}
+
+.jigsaw1 .l, .jigsaw2 .l {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    top: 39%;
+    left: -.4em;
+    -webkit-border-radius: 4em;
+    -moz-border-radius: 4em;
+    border-radius: 4em;
+    background-color: #fff;
+}
+
+
+.jigsaw3 .t {
+    width: 3.6em;
+    height: 3.6em;
+    position: absolute;
+    background: #fff;
+    top: -0.75em;
+    left: 37%;
+    -webkit-border-radius: 4em;
+    -moz-border-radius: 4em;
+    border-radius: 4em;
+}
+.jigsaw4 .t {
+    width: 3.6em;
+    height: 3.6em;
+    position: absolute;
+    background: #fff;
+    top: -0.75em;
+    left: 37%;
+    -webkit-border-radius: 4em;
+    -moz-border-radius: 4em;
+    border-radius: 4em;
+}
+
+.jigsaw3 .r, .jigsaw4 .r {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    top: 39%;
+    right: -3em;
+    -webkit-border-radius: 4em;
+    -moz-border-radius: 4em;
+    border-radius: 4em;
+}
+
+.jigsaw3 .b, .jigsaw4 .b {
+    width: 1.8em;
+    height: 1.8em;
+    position: absolute;
+    top: 5.5em;
+    left: 2.2em;
+    -webkit-border-radius: 4em;
+    -moz-border-radius: 4em;
+    border-radius: 4em;
+    background-color: #00008b;
+}
+
+.jigsaw3 .l, .jigsaw4 .l {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    top: 39%;
+    left: -3.4em;
+
+    -webkit-border-radius: 4em;
+    -moz-border-radius: 4em;
+    border-radius: 4em;
+    background-color: #00008b;
+}
 
 /* end phone Landscape */
