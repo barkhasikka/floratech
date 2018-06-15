@@ -13,6 +13,11 @@ class Contact extends React.Component{
     componentDidMount(){
         smoothScroll("contact-container", 100);
     }
+    arrowDown(){
+        document.getElementById("contact-wrapper").classList.add("height-0");
+        document.getElementById("contact-p").classList.add("display-none");
+
+    }
     render(){
         return(
             <div >
@@ -133,10 +138,9 @@ class Contact extends React.Component{
                     </div>
                 </header>
             <section class="contact-container" id="contact-container">
+
                 <div class="contact-section">
                     <div class="contact-heading">
-                        <span class="contact-heading-txt">CONTACT</span>
-                        <span class="contact-heading-txt-second">US WHENEVER</span>
                     </div>
                     <div class="contact-us-section">
                         <div class="contact-wrapper">
@@ -187,6 +191,10 @@ class Contact extends React.Component{
                         </ul>
                     </div>
                 </div>
+                <section className="contact-container-wrapper" id="contact-wrapper">
+                    <p className="contact-p" id="contact-p">CONTACT US</p>
+                    <a onClick={() => this.arrowDown()}><i class="fa fa-arrow-circle-down contact-container-i" aria-hidden="true"></i></a>
+                </section>
             </section>
             </div>
         );

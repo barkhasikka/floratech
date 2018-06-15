@@ -1370,17 +1370,7 @@ opacity: 1;
     /*position: absolute;*/
     /*right: 35px;*/
 /*}*/
-.contact-container {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-    padding-top: 128px;
 
-    position: relative;
-    /*background
-    : linear-gradient(to bottom left, rgba(255, 192, 203, 0.6509803921568628), rgba(255, 165, 0, 0.4392156862745098) 40%, rgb(249, 241, 195) 70%, rgba(255, 192, 203, 0.71) 75%);*/
-}
 .innovation-svg {
     width: 25%;
     float: left;
@@ -1427,7 +1417,7 @@ opacity: 1;
 }
 .contact-section {
     width: 95%;
-    height: 510px;
+    height: calc(100% - 106px);
     margin: auto;
     display: block;
     box-shadow: 1px 3px 16px 0px rgba(0, 0, 0, 0.4);
@@ -2967,5 +2957,50 @@ html,body{
     border-radius: 4em;
     background-color: #00008b;
 }
+/*new contact*/
+.contact-container-wrapper {
+    width: 100%;
+    height:calc(100% - 100px);
+    display: block;
+    position: absolute;
+    top: 0;
+    float: left;
+    margin: auto;
+    margin-top: 100px;
+    transition: height 2s linear;
+    /* background: linear-gradient(to bottom left, rgba(255, 192, 203, 0.6509803921568628), rgba(255, 165, 0, 0.4392156862745098) 40%, rgb(249, 241, 195) 70%, rgba(255, 192, 203, 0.71) 75%); */
+    background-image: url(https://mait.ae/wp-content/uploads/2018/02/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.height-0{
+    height: 0;
+}
+.contact-container{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+    position: relative;
+}
+.fa.contact-container-i{
 
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    font-size: 40px;
+    position: absolute;
+    bottom: 80px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.contact-p{
+    color: white;
+    font-size: 41px;
+    text-align: center;
+    margin: 5em;
+}
 /* end phone Landscape */
