@@ -883,6 +883,16 @@ a{
     height: 100px;
     right: 0;
 }
+.our-right-technology section#web svg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    width: 85px;
+    height: 85px;
+    right: 0;
+}
 .our-technology{
     width:50%;
     height:100%;
@@ -3015,4 +3025,11 @@ html,body{
 .css-st2{stroke:#000000;stroke-miterlimit:10;}
 .jq-st0{fill:#000;stroke:#000000;stroke-miterlimit:10;}
 .react-st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+.illustr-st0{fill:#e6570f;}
+.illustr-st1{fill:#000;}
+.photos-st0{fill:#e6570f;}
+.photos-st1{fill:#000;}
+.ae-st0{fill:#e6570f;}
+.ae-st1{fill:#000;}
+
 /* end phone Landscape */
