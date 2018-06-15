@@ -1038,7 +1038,7 @@ a{
     width: 100%;
     display: block;
     margin: auto;
-    padding-top: 170px;
+    padding-top: 100px;
     height: auto;
     /*overflow: hidden;*/
 }
@@ -2736,6 +2736,7 @@ html,body{
     display: inline-block;
     cursor: pointer;
     z-index: 111;
+    float: left;
     left:0;
     transition:left 2s linear;
 }
@@ -2750,8 +2751,8 @@ html,body{
     cursor: pointer;
     transition:right 2s linear;
 }
-.jigsaw3,.jigsaw4 {
-    width: 50%;
+.jigsaw3 {
+    width: 100%;
     height: 75%;
     position: relative;
     -webkit-border-radius: .5em;
@@ -2764,10 +2765,6 @@ html,body{
 
 .jigsaw3,
 .jigsaw3 span {
-    background-color: #00008B;
-}
-.jigsaw4,
-.jigsaw4 span {
     background-color: #00008B;
 }
 
@@ -2805,33 +2802,25 @@ html,body{
     background: transparent !important;
 }
 .vission-name{
-    width: 73%;
+    width: 68%;
     font-size: 16px;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    left: 6%;
-    right: 0;
+    margin: auto 44px auto auto;
+    height: 63%;
+    display: table;
     color: #fff;
 }
 .vision-name{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    left: 5%;
-    right: 0;
-    height: 70%;
-    width: 68%;
+    width: 73%;
+    font-size: 16px;
+    margin: auto 36px auto auto;
     color: #fff;
 }
 .vission-name p,.vision-name p{
-    margin:0;
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
 }
 .text2 {
-    position: absolute;
-    left: 90%;
     margin: auto;
     z-index: 1;
     display: block;
@@ -2839,7 +2828,6 @@ html,body{
     font-size: 1.1em;
     text-align: center;
     padding: 7px;
-    background: transparent !important;
 }
 .text1 {
     display: block;
@@ -2848,7 +2836,6 @@ html,body{
     text-align: center;
     padding: 7px;
     position: relative;
-    background: transparent !important;
 }
 .jigsaw1 .t {
     width: 4em;
@@ -2928,18 +2915,18 @@ html,body{
     position: absolute;
     background: #fff;
     top: -0.75em;
-    left: 37%;
+    left: 18.9%;
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
     border-radius: 4em;
 }
-.jigsaw4 .t {
+.jigsaw3 .p {
     width: 3.6em;
     height: 3.6em;
     position: absolute;
     background: #fff;
     top: -0.75em;
-    left: 37%;
+    right: 23.9%;
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
     border-radius: 4em;

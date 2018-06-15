@@ -157,18 +157,20 @@ class Team extends React.Component {
                                 <span class="r"></span>
                                 <span class="b"></span>
                                 <span class="l"></span>
-                                <div className="vision-name">
+
                                     <span class="text">MISSION</span>
+                                <div className="vission-name">
                                     <p> To be a reality of other’s dreams by building the best teams to work with.</p>
-                                </div>
+                                    </div>
                             </div>
 
                             <div class="jigsaw2">
                                 <span class="t"></span>
                                 <span class="r"></span>
                                 <span class="b"></span>
-                                <div className="vission-name">
+
                                 <span class="text1">VISION</span>
+                                <div className="vision-name">
                                 <p>Floratechno turns your ideas into a saleable product by working on its design, development and marketing. We deliver best quality on time, every time.</p>
                                </div>
                             </div>
@@ -179,13 +181,8 @@ class Team extends React.Component {
                                 <span class="r"></span>
                                 <span class="b"></span>
                                 <span class="l"></span>
+                                <span class="p"></span>
                                 <span class="text2">VALUES</span>
-                            </div>
-
-                            <div class="jigsaw4">
-                                <span class="t"></span>
-                                <span class="r"></span>
-                                <span class="b"></span>
                             </div>
                         </div>
                     </div>
