@@ -183,11 +183,16 @@ class Contact extends React.Component{
                             <a href="https://www.facebook.com/Floratechno-Solutions-Private-Limited-1687218574707601/?modal=admin_todo_tour" target="_blank">
                                 <li class="social-media-icons "><i class="fa fa-facebook fa-size facebook"></i></li>
                             </a>
-                            <li class="social-media-icons"><i class="fa fa-youtube-play fa-size youtube"></i></li>
+                         <li class="social-media-icons"><i class="fa fa-youtube-play fa-size youtube"></i></li>
+                        <a href="https://www.linkedin.com/company/floratechnosolutions/" target="_blank">
                             <li class="social-media-icons"><i class="fa fa-linkedin fa-size linkin"></i></li>
-                            <li class="social-media-icons"><i class="fa fa-instagram fa-size insta"></i></li>
-                            <li class="social-media-icons"><i class="fa fa-twitter fa-size twit"></i></li>
+                        </a>
 
+                            <li class="social-media-icons"><i class="fa fa-instagram fa-size insta"></i></li>
+
+                        <a href="https://twitter.com/FloratechnoL" target="_blank">
+                            <li class="social-media-icons"><i class="fa fa-twitter fa-size twit"></i></li>
+                        </a>
                         </ul>
                     </div>
                 </div>

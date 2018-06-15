@@ -879,20 +879,11 @@ a{
     bottom: 0;
     margin: auto;
     left: 0;
-    width: 100px;
-    height: 100px;
-    right: 0;
-}
-.our-right-technology section#web svg{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    left: 0;
     width: 85px;
     height: 85px;
     right: 0;
 }
+
 .our-technology{
     width:50%;
     height:100%;
@@ -2857,7 +2848,7 @@ html,body{
     height: 3.6em;
     position: absolute;
     top: 39.5%;
-    left: -1em;
+    left: -3%;
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
     border-radius: 4em;
@@ -3022,7 +3013,9 @@ html,body{
 .js-st0{stroke:#000000;stroke-miterlimit:10;}
 .js-st1{fill: #e6570f;;}
 .js-st2{fill:none;}
+.js-st3{fill:#000;}
 .ht-st0{fill:#e6570f;}
+.ht-st3{fill:#000;}
 .ht-st1{fill:none;}
 .ht-st2{stroke:#000000;stroke-miterlimit:10;}
 .css-st0{fill:#050505;}
@@ -3036,6 +3029,8 @@ html,body{
 .photos-st1{fill:#000;}
 .ae-st0{fill:#e6570f;}
 .ae-st1{fill:#000;}
+.php-st0{fill:#e6570f;}
+.sql-st0{fill:#e6570f;}
 
 .vision-name ul {
     height: calc(100% - 75px);
