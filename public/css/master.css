@@ -1417,7 +1417,7 @@ opacity: 1;
 }
 .contact-section {
     width: 95%;
-    height: calc(100% - 106px);
+    height: calc(100% - 128px);
     margin: auto;
     display: block;
     box-shadow: 1px 3px 16px 0px rgba(0, 0, 0, 0.4);
@@ -2990,6 +2990,7 @@ html,body{
     text-align: center;
     cursor: pointer;
     display: block;
+    width:30px;
     font-size: 40px;
     position: absolute;
     bottom: 80px;
