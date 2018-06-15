@@ -507,6 +507,10 @@ class Services extends React.Component{
                         </div>
                     </div>
                 </div>
+                <footer>
+                    <div className="footer-info float-left">Powered by <span>Floratechno Solutions Pvt. Ltd.</span></div>
+                    <div className="footer-info float-right text-align-right"><span className="copyright-info">©2018 India</span></div>
+                </footer>
                 </div>
         );
     }

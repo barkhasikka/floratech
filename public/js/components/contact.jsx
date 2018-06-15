@@ -196,6 +196,10 @@ class Contact extends React.Component{
                     <a onClick={() => this.arrowDown()}><i class="fa fa-arrow-circle-down contact-container-i" aria-hidden="true"></i></a>
                 </section>
             </section>
+                <footer>
+                    <div className="footer-info float-left">Powered by <span>Floratechno Solutions Pvt. Ltd.</span></div>
+                    <div className="footer-info float-right text-align-right"><span className="copyright-info">©2018 India</span></div>
+                </footer>
             </div>
         );
     }
