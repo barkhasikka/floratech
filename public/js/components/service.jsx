@@ -631,7 +631,21 @@ class Services extends React.Component {
 
                                     </section>
                                     <section>
-                                        <img src="https://png.icons8.com/ios/1600/angularjs.png"/>
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+                                             viewBox="0 0 50 50">
+
+                                            <path d="M7.1,35.2c0,0-1.1-0.3-1-1.5L3,9c0,0-0.4-1.4,0.8-1.5l18.8-6.6l1.1-0.4L43,7l1,0.4c0,0,1.4-0.1,0.6,2.5l-2.7,23.3
+                                                c0,0,0.5,1.6-1.4,2L24.7,44c0,0-0.6,1-2.1-0.2L7.1,35.2z"/>
+                                                                                        <path class="angular-st0" d="M9.1,33.5c0,0-1-0.2-0.9-1.3L5.6,10.4c0,0-0.4-1.2,0.7-1.3l16.5-5.8l1-0.4l16.9,5.7L41.6,9c0,0,1.3-0.1,0.5,2.2
+                                                l-2.4,20.5c0,0,0.4,1.4-1.3,1.8l-13.9,7.6c0,0-0.5,0.8-1.8-0.2L9.1,33.5z"/>
+                                                                                        <g>
+                                                                                            <g>
+                                                                                                <path d="M22.5,24.9l-0.6,3.5h-3.7l3.2-16.2h5.2l3.2,16.2H26l-0.6-3.5H22.5z M24.9,21.8c-0.4-2.4-0.7-5-0.9-6.5h-0.1
+                                                        c-0.2,1.6-0.6,4.1-0.9,6.5H24.9z"/>
+                                                </g>
+                                            </g>
+                                        </svg>
+
                                     </section>
                                     <section>
                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px"
