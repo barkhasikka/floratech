@@ -1296,13 +1296,13 @@ opacity: 1;
 }
 .company-info-section {
     width: 100%;
-    height: 770px;
+    height:auto;
     margin: auto;
     display: block;
 }
 .company-info-section-wrapper {
     width: 85%;
-    height: 100%;
+    height: auto;
     margin: auto;
     display: block;
     background: white;
