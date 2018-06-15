@@ -873,7 +873,7 @@ a{
     height:calc(100% - 28px);
 }
 
-.our-technology .techo-div section img,.our-right-technology section img{
+.our-technology .techo-div section img,.our-right-technology section img,.our-technology .techo-div section svg,.our-right-technology section svg{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -3004,4 +3004,10 @@ html,body{
     text-align: center;
     margin: 5em;
 }
+.js-st0{stroke:#000000;stroke-miterlimit:10;}
+.js-st1{fill: #e6570f;;}
+.js-st2{fill:none;}
+.ht-st0{fill:#e6570f;}
+.ht-st1{fill:none;}
+.ht-st2{stroke:#000000;stroke-miterlimit:10;}
 /* end phone Landscape */
