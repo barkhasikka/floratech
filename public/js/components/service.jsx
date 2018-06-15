@@ -550,10 +550,26 @@ class Services extends React.Component{
 
                                     </section>
                                     <section>
-                                        <img src="http://www.free-icons-download.net/images/jquery-icon-17841.png"/>
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px" viewBox="0 0 50 50">
+
+                                            <path class="jq-st0" d="M9.3,7.9c0,0-5.6,5.7-4.6,13.1c0,0,0.8,6.9,5.2,11.1c0,0,3.5,3.5,4.2,3.6c0,0,8.8,6,17.6,2.9
+                                            c0,0,5.8-1.6,8.9-8.2c0,0-6.8,5.2-14.9,3.5c0,0-11.7-3-15.7-12.2C10.1,21.7,7,16.7,9.3,7.9z"/>
+                                                                                    <path class="jq-st0" d="M41.5,19.9c0,0-2.3,5.2-7.4,6.4c0,0-4.8,1.3-8.6-0.5c0,0-3.2-1.4-3.5-1.9c0,0-6.2-4.2-6.5-10.8c0,0-0.4-4.2,3-8
+                                            c0,0-1.7,5.8,1.6,10.7c0,0,5,6.9,12.1,7.1C32.2,23,36.3,23.8,41.5,19.9z"/>
+                                                                                    <path class="jq-st0" d="M41.5,11.5c0,0-1.5,3.4-4.8,4.2c0,0-3.1,0.8-5.6-0.4c0,0-2.1-0.9-2.2-1.2c0,0-4.1-2.7-4.2-7c0,0-0.3-2.7,2-5.2
+                                            c0,0-1.1,3.8,1,7c0,0,3.3,4.5,7.9,4.6C35.4,13.5,38.1,14,41.5,11.5z"/>
+                                        </svg>
+
                                     </section>
                                     <section>
-                                        <img src="http://felknar.com/images/icon-react-7b609cd3.svg"/>
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+                                             viewBox="0 0 50 50">
+
+                                            <ellipse class="react-st0" cx="25" cy="24.3" rx="24" ry="6.2"/>
+                                            <ellipse transform="matrix(0.787 -0.6169 0.6169 0.787 -9.7167 20.6039)" class="react-st0" cx="25" cy="24.4" rx="6" ry="24.8"/>
+                                            <ellipse transform="matrix(0.6169 -0.787 0.787 0.6169 -9.6134 28.9983)" class="react-st0" cx="25" cy="24.4" rx="24.8" ry="6"/>
+                                            <ellipse cx="25" cy="24.3" rx="1.6" ry="1.6"/>
+                                        </svg>
                                     </section>
                                 </div>
 
