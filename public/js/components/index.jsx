@@ -341,7 +341,8 @@ class App extends React.Component {
                                 <a onClick={() => this.movec()}><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
-                        <div className="introduction-text sec-background" id="myH2">
+                        <div className="introduction-text" id="myH2">
+                            <video src="./../../assets/pinkal_video.mp4" autoplay></video>
                             <div className="text-div" >
                                 <h5 id="header1" className="text-div-h5">WE PROVIDE</h5>
                                 <p id="page1" className="text-div-p">ALL THAT YOU NEED FOR YOUR BUSINESS.</p>
@@ -528,7 +529,7 @@ class App extends React.Component {
                                     <p className="company-heading-txt">WE ALWAYS DELIVER ON THE PROMISE.</p>
                                     <span className="sub-company-heading-txt">We don't belive in making false promise to get you on board. We ensure whats promised
                                            to you gets delivered to you on time without compromising the quality.
-                        </span>
+                                    </span>
                                 </div>
                                 <div className="deliver-svg">
 

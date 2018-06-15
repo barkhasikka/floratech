@@ -179,10 +179,18 @@ class Team extends React.Component {
                             <div class="jigsaw3">
                                 <span class="t"></span>
                                 <span class="r"></span>
-                                <span class="b"></span>
                                 <span class="l"></span>
                                 <span class="p"></span>
                                 <span class="text2">VALUES</span>
+                                <div className="vision-name">
+                                    <ul>
+                                        <li>Keep it simple, silly!</li>
+                                        <li>Work is not work if you are passionate about it.</li>
+                                        <li>Your time is money, and so is others'</li>
+                                        <li>Obsession with innovation.</li>
+                                        <li>Trust is directly proportional to transparency.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
