@@ -798,7 +798,7 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     background-color: white;
-    margin-top: 150px;
+    margin-top: 122px;
 }
 .services-title {
     width: calc(100% - 7em);
@@ -1375,7 +1375,7 @@ opacity: 1;
     height: auto;
     display: block;
     margin: auto;
-    padding-top: 155px;
+    padding-top: 128px;
 
     position: relative;
     /*background
@@ -2701,7 +2701,7 @@ opacity: 1;
     left: 0;
     right: 0;
 }
-#team .header-section{
+#team .header-section,#floraService .header-section,#about .header-section,#contact .header-section{
     background: #fff;
     height: 100px;
     position: fixed;
