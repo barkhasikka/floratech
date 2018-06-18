@@ -342,7 +342,7 @@ class App extends React.Component {
                             </div>
                         </div>
                         <div className="introduction-text" id="myH2">
-                            <video  autoplay>
+                            <video  autoPlay loop>
                                 <source src="assets/pinkal_video.mp4" type="video/mp4"/>
                                         Your browser does not support the video tag.
                             </video>
