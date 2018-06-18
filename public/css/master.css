@@ -429,8 +429,17 @@ background: none;
     /* background: url(../assets/overlay.png); */
     overflow-x: auto;
 }
+.introduction-text video{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70%;
+}
 .first-background{
-    background-image: url("../assets/pinkal_8.jpg");
+    background-image: url("../assets/tower.jpg");
 }
 .sec-background{
     background-image: url("https://icdn7.digitaltrends.com/image/macbook-air-11-inch-1500x1000-1500x1000.jpg?ver=1");
@@ -565,7 +574,7 @@ background: none;
 #animate-div1 section{
     display: inline-block;
     margin: 16px 11px 0 11px;
-    width:14%;
+    width:22%;
 }
 #animate-div1{
     float: right;
@@ -2778,7 +2787,7 @@ html,body{
 }
 .puzzle-body:hover .jig1{
     position: relative;
-    top: -70px;
+    top: -53px;
     z-index: 0;
 }
 
@@ -2848,7 +2857,7 @@ html,body{
     height: 3.6em;
     position: absolute;
     top: 39.5%;
-    left: -3%;
+    left: -5%;
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
     border-radius: 4em;
@@ -2923,7 +2932,7 @@ html,body{
     position: absolute;
     background: #fff;
     top: -0.75em;
-    right: 23.9%;
+    right: 21.9%;
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
     border-radius: 4em;
@@ -3040,5 +3049,16 @@ html,body{
     margin: 0;
     vertical-align: middle;
 }
-
+.go-st0{fill:#000;stroke:#000000;stroke-miterlimit:10;}
+.go-st1{fill:#e6570f;stroke:#000000;stroke-miterlimit:10;}
+.go-st2{stroke:#000000;stroke-miterlimit:10;}
+.go-st3{fill:none;stroke:#000000;stroke-miterlimit:10;}
+.net-st0{stroke:#000000;stroke-miterlimit:10;}
+.py-st0{stroke:#000000;stroke-miterlimit:10;}
+.py-st1{fill:#e6570f;}
+.android-st0{stroke:#000000;stroke-miterlimit:10;}
+.android-st1{fill:#e6570f;}
+.press-st0{fill:#e6570f;stroke:#000000;stroke-miterlimit:10;}
+.press-st1{stroke:#000000;stroke-miterlimit:10;}
+.press-st2{fill:#e6570f;}
 /* end phone Landscape */
