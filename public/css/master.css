@@ -2797,7 +2797,7 @@ html,body{
     display: block;
     color: #fff;
     font-size: 1.1em;
-
+    font-family: TektonPro-Bold;
     text-align: center;
     padding: 7px;
     position: relative;
@@ -2825,12 +2825,14 @@ html,body{
 .vission-name p,.vision-name p{
     margin: 0;
     display: table-cell;
+    font-family: "Helvetica Neue";
     vertical-align: middle;
 }
 .text2 {
     margin: auto;
     z-index: 1;
     display: block;
+    font-family: TektonPro-Bold;
     color: #fff;
     font-size: 1.1em;
     text-align: center;
@@ -2841,6 +2843,7 @@ html,body{
     color: #fff;
     font-size: 1.2em;
     text-align: center;
+    font-family: TektonPro-Bold;
     padding: 7px;
     position: relative;
 }
