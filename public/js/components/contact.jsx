@@ -2,36 +2,41 @@ import React from 'react';
 import {render} from 'react-dom';
 import {smoothScroll} from './commoncomponent/helper.js'
 
-class Contact extends React.Component{
+class Contact extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-
-        };
+        this.state = {};
 
     }
-    componentDidMount(){
+
+    componentDidMount() {
         smoothScroll("contact-container", 100);
     }
-    arrowDown(){
+
+    arrowDown() {
         document.getElementById("contact-wrapper").classList.add("height-0");
         document.getElementById("contact-p").classList.add("display-none");
 
     }
-    render(){
-        return(
+
+    render() {
+        return (
             <div >
 
                 <header class="header-section" id="myHeader">
                     <div className="bind-header">
                         <div className="header-options-right" id="myHeaderSpan1">
                             <a href="/about" target="_parent" className="header-a">
-                           <span className={"header-options-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
+                           <span
+                               className={"header-options-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')}
+                               onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
                                 <span className="span-border"></span>
                             </span>
                             </a>
                             <a href="/team" target="_parent" className="header-a">
-                            <span className={"header-options-span " + (this.state.selectedTab == 'team-containers' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
+                            <span
+                                className={"header-options-span " + (this.state.selectedTab == 'team-containers' ? 'orange-color' : '')}
+                                onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
                                 <span className="span-border"></span>
                             </span>
                             </a>
@@ -39,8 +44,8 @@ class Contact extends React.Component{
                         <div class="logo-section">
                             <a href="/" target="_parent">
                                 <div class="flower-svg">
-                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
-                                         viewBox="0 0 400 400"  id="secSvg" className="third-svg">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                         viewBox="0 0 400 400" id="secSvg" className="third-svg">
 
                                         <g id="Layer_1">
                                             <g>
@@ -125,85 +130,98 @@ class Contact extends React.Component{
                         <div class="header-options desktop-nav" id="myHeaderSpan">
 
                             <a href="/services" target="_parent" className="header-a">
-                            <span className={"header-options-span " + (this.state.selectedTab == 'servicesContainer' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>SERVICES
+                            <span
+                                className={"header-options-span " + (this.state.selectedTab == 'servicesContainer' ? 'orange-color' : '')}
+                                onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>SERVICES
                              <span className="span-border"></span>
                             </span>
                             </a>
                             <a href="/contact" target="_parent" className="header-a">
-                            <span className={"header-options-span " + (this.state.selectedTab == 'contact-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
+                            <span
+                                className={"header-options-span " + (this.state.selectedTab == 'contact-container' ? 'orange-color' : '')}
+                                onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
                              <span className="span-border"></span>
                             </span>
                             </a>
                         </div>
                     </div>
                 </header>
-            <section class="contact-container" id="contact-container">
+                <section class="contact-container" id="contact-container">
 
-                <div class="contact-section">
-                    <div class="contact-heading">
-                    </div>
-                    <div class="contact-us-section">
-                        <div class="contact-wrapper">
-                            <div class="contact-us-left-section">
+                    <div class="contact-section">
+                        <div class="contact-heading">
+                        </div>
+                        <div class="contact-us-section">
+                            <div class="contact-wrapper">
+                                <div class="contact-us-left-section">
+
                                 <span class="left-contact-txt">ADDRESS</span>
+                                </div>
+                                <div class="contact-us-right-section">
+                                    <textarea value={this.state.Content} onChange={(e) => this.handleContentChange(e)}
+                                              rows="4" class="input-data" type="text" placeholder="Address"></textarea>
+                                    <span className="error-msgs" id="address">Please Enter Email</span>
+                                </div>
                             </div>
-                            <div class="contact-us-right-section">
-                                <textarea value={this.state.Content} onChange={(e) => this.handleContentChange(e)} rows="4" class="input-data" type="text" placeholder="Address"></textarea>
-                                <span className="error-msgs" id="address">Please Enter Email</span>
+
+                            <div class="contact-wrapper input-height">
+                                <div class="contact-us-left-section">
+                                    <span class="left-contact-txt">CALL</span>
+                                </div>
+                                <div class="contact-us-right-section ">
+                                    <input value={this.state.MobileNo} onChange={(e) => this.handleMobileNoChange(e)}
+                                           class="input-data" type="text" placeholder="Call"/>
+                                    <span className="error-msgs" id="mobilenum">Please Enter Number</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-wrapper input-height">
+                                <div class="contact-us-left-section">
+
+                                    <span class="left-contact-txt">EMAIL</span>
+                                </div>
+                                <div class="contact-us-right-section ">
+                                    <input value={this.state.Email} onChange={(e) => this.handleContactEmailChange(e)}
+                                           class="input-data" type="text" placeholder="Email"/>
+                                    <span className="error-msgs" id="text">Please Enter Email</span>
+                                </div>
+                            </div>
+                            <div className="flora-loader">
+                                <button class="flora-btn" onClick={() => this.sendEmail()}>SEND</button>
+                                {this.state.showContactLoader ? <div className="loader-flora"></div> : null }
                             </div>
                         </div>
 
-                        <div class="contact-wrapper input-height">
-                            <div class="contact-us-left-section">
-                                <span class="left-contact-txt">CALL</span>
-                            </div>
-                            <div class="contact-us-right-section ">
-                                <input value={this.state.MobileNo} onChange={(e) => this.handleMobileNoChange(e)} class="input-data" type="text" placeholder="Call"/>
-                                <span className="error-msgs" id="mobilenum">Please Enter Number</span>
-                            </div>
-                        </div>
+                        <div class="social-media-connect">
+                            <ul class="social-media-wrapper">
+                                <a href="https://www.facebook.com/Floratechno-Solutions-Private-Limited-1687218574707601/?modal=admin_todo_tour"
+                                   target="_blank">
+                                    <li class="social-media-icons "><i class="fa fa-facebook fa-size facebook"></i></li>
+                                </a>
+                                <li class="social-media-icons"><i class="fa fa-youtube-play fa-size youtube"></i></li>
+                                <a href="https://www.linkedin.com/company/floratechnosolutions/" target="_blank">
+                                    <li class="social-media-icons"><i class="fa fa-linkedin fa-size linkin"></i></li>
+                                </a>
 
-                        <div class="contact-wrapper input-height">
-                            <div class="contact-us-left-section">
-                                <span class="left-contact-txt">EMAIL</span>
-                            </div>
-                            <div class="contact-us-right-section ">
-                                <input value={this.state.Email} onChange={(e) => this.handleContactEmailChange(e)} class="input-data" type="text" placeholder="Email"/>
-                                <span className="error-msgs" id="text">Please Enter Email</span>
-                            </div>
-                        </div>
-                        <div className="flora-loader">
-                            <button class="flora-btn" onClick={() => this.sendEmail()} >SEND</button>
-                            {this.state.showContactLoader ? <div className="loader-flora"></div> : null }
+                                <li class="social-media-icons"><i class="fa fa-instagram fa-size insta"></i></li>
+
+                                <a href="https://twitter.com/FloratechnoL" target="_blank">
+                                    <li class="social-media-icons"><i class="fa fa-twitter fa-size twit"></i></li>
+                                </a>
+                            </ul>
                         </div>
                     </div>
-
-                    <div class="social-media-connect">
-                        <ul class="social-media-wrapper">
-                            <a href="https://www.facebook.com/Floratechno-Solutions-Private-Limited-1687218574707601/?modal=admin_todo_tour" target="_blank">
-                                <li class="social-media-icons "><i class="fa fa-facebook fa-size facebook"></i></li>
-                            </a>
-                         <li class="social-media-icons"><i class="fa fa-youtube-play fa-size youtube"></i></li>
-                        <a href="https://www.linkedin.com/company/floratechnosolutions/" target="_blank">
-                            <li class="social-media-icons"><i class="fa fa-linkedin fa-size linkin"></i></li>
-                        </a>
-
-                            <li class="social-media-icons"><i class="fa fa-instagram fa-size insta"></i></li>
-
-                        <a href="https://twitter.com/FloratechnoL" target="_blank">
-                            <li class="social-media-icons"><i class="fa fa-twitter fa-size twit"></i></li>
-                        </a>
-                        </ul>
-                    </div>
-                </div>
-                <section className="contact-container-wrapper" id="contact-wrapper">
-                    <p className="contact-p" id="contact-p">CONTACT US</p>
-                    <a onClick={() => this.arrowDown()}><i class="fa fa-arrow-circle-down contact-container-i" aria-hidden="true"></i></a>
+                    <section className="contact-container-wrapper" id="contact-wrapper">
+                        <p className="contact-p" id="contact-p">CONTACT US</p>
+                        <a onClick={() => this.arrowDown()}><i class="fa fa-arrow-circle-down contact-container-i"
+                                                               aria-hidden="true"></i></a>
+                    </section>
                 </section>
-            </section>
                 <footer>
-                    <div className="footer-info float-left">Powered by <span>Floratechno Solutions Pvt. Ltd.</span></div>
-                    <div className="footer-info float-right text-align-right"><span className="copyright-info">©2018 India</span></div>
+                    <div className="footer-info float-left">Powered by <span>Floratechno Solutions Pvt. Ltd.</span>
+                    </div>
+                    <div className="footer-info float-right text-align-right"><span className="copyright-info">©2018 India</span>
+                    </div>
                 </footer>
             </div>
         );
