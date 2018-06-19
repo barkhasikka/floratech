@@ -213,7 +213,7 @@ class Contact extends React.Component {
                                </section>
                            </div>
                             <section className="contact-parts">
-
+                                <div id="googleMap" className="google-map"></div>
                             </section>
                         </div>
                     </div>
