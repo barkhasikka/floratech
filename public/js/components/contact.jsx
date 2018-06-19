@@ -170,7 +170,8 @@ class Contact extends React.Component {
                                    <span>
                                       <i class="fa fa-envelope" aria-hidden="true"></i>
                                    </span>
-                                     <p>floratechno@gmail.com</p>
+                                     <p>floratechnosolutions@gmail.com
+                                     </p>
                                  </section>
                             </section>
                                <section className="drop">
