@@ -33,6 +33,10 @@ class Team extends React.Component {
     render (){
         return(
             <div >
+                <div id="triangle-topright"></div>
+                <div id="triangle-bottomleft"></div>
+                <div id="triangle-bottomright"></div>
+                <div id="triangle-topleft"></div>
 
                 <header className="header-section" id="myHeader">
                     <div className="bind-header">
@@ -150,6 +154,7 @@ class Team extends React.Component {
                     </div>
                 </header>
                 <section className="company-info-container clear-both padding-top-160px" id="team-containers">
+
                     <div className="puzzle-body">
                         <div className="jig">
                             <div className="jigsaw1">
