@@ -13,11 +13,7 @@ class Contact extends React.Component {
         smoothScroll("contact-container", 100);
     }
 
-    arrowDown() {
-        document.getElementById("contact-wrapper").classList.add("height-0");
-        document.getElementById("contact-p").classList.add("display-none");
 
-    }
 
     render() {
         return (
@@ -146,77 +142,83 @@ class Contact extends React.Component {
                         </div>
                     </div>
                 </header>
-                <section class="contact-container" id="contact-container">
+                <div class="contact-container" id="contact-container">
 
                     <div class="contact-section">
-                        <div class="contact-heading">
-                        </div>
-                        <div class="contact-us-section">
-                            <div class="contact-wrapper">
-                                <div class="contact-us-left-section">
+                        <nav>
+                            <p>CONTACT US</p>
+                        </nav>
+                        <div class="contact-us-wrapper">
+                           <div className="contact-parts">
+                             <section className="about-contact">
+                               <section>
+                                   <span>
+                                       <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                   </span>
+                                   <address>
+                                        Offc No:202,Astha Seagull,
+                                       Jambhulkar Chowk,Wanowrie,Pune.
+                                   </address>
+                                </section>
+                                 <section>
+                                   <span>
+                                       <i class="fa fa-phone" aria-hidden="true"></i>
+                                   </span>
+                                    <p>8975669513</p>
+                                 </section>
+                                 <section>
+                                   <span>
+                                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                                   </span>
+                                     <p>floratechno@gmail.com</p>
+                                 </section>
+                            </section>
+                               <section className="drop">
+                                   <div class="contact-us-section">
+                                       <div class="contact-wrapper input-height">
+                                           <input
+                                                  class="input-data" type="text" placeholder="Name"/>
+                                           <span className="error-msgs" id="mobilenum">Please Enter Name</span>
+                                       </div>
+                                       <div class="contact-wrapper input-height">
+                                           <input
+                                                  class="input-data" type="text" placeholder="Subject"/>
+                                           <span className="error-msgs" id="mobilenum">Please Enter subject</span>
+                                       </div>
 
-                                <span class="left-contact-txt">ADDRESS</span>
-                                </div>
-                                <div class="contact-us-right-section">
-                                    <textarea value={this.state.Content} onChange={(e) => this.handleContentChange(e)}
-                                              rows="4" class="input-data" type="text" placeholder="Address"></textarea>
-                                    <span className="error-msgs" id="address">Please Enter Email</span>
-                                </div>
-                            </div>
+                                       <div class="contact-wrapper input-height">
+                                               <input value={this.state.MobileNo} onChange={(e) => this.handleMobileNoChange(e)}
+                                                      class="input-data" type="text" placeholder="Call"/>
+                                               <span className="error-msgs" id="mobilenum">Please Enter Number</span>
+                                       </div>
 
-                            <div class="contact-wrapper input-height">
-                                <div class="contact-us-left-section">
-                                    <span class="left-contact-txt">CALL</span>
-                                </div>
-                                <div class="contact-us-right-section ">
-                                    <input value={this.state.MobileNo} onChange={(e) => this.handleMobileNoChange(e)}
-                                           class="input-data" type="text" placeholder="Call"/>
-                                    <span className="error-msgs" id="mobilenum">Please Enter Number</span>
-                                </div>
-                            </div>
+                                       <div class="contact-wrapper input-height">
+                                               <input value={this.state.Email} onChange={(e) => this.handleContactEmailChange(e)}
+                                                      class="input-data" type="text" placeholder="Email"/>
+                                               <span className="error-msgs" id="text">Please Enter Email</span>
+                                       </div>
+                                       <div class="contact-textarea">
 
-                            <div class="contact-wrapper input-height">
-                                <div class="contact-us-left-section">
+                                            <textarea value={this.state.Content} onChange={(e) => this.handleContentChange(e)}
+                                                      rows="4" class="input-data" type="text" placeholder="Address"></textarea>
+                                           <span className="error-msgs" id="address">Please Enter Email</span>
 
-                                    <span class="left-contact-txt">EMAIL</span>
-                                </div>
-                                <div class="contact-us-right-section ">
-                                    <input value={this.state.Email} onChange={(e) => this.handleContactEmailChange(e)}
-                                           class="input-data" type="text" placeholder="Email"/>
-                                    <span className="error-msgs" id="text">Please Enter Email</span>
-                                </div>
-                            </div>
-                            <div className="flora-loader">
-                                <button class="flora-btn" onClick={() => this.sendEmail()}>SEND</button>
-                                {this.state.showContactLoader ? <div className="loader-flora"></div> : null }
-                            </div>
-                        </div>
+                                       </div>
+                                       <div className="flora-loader">
+                                           <button class="flora-btn" onClick={() => this.sendEmail()}>SEND</button>
+                                           {this.state.showContactLoader ? <div className="loader-flora"></div> : null }
+                                       </div>
+                                   </div>
 
-                        <div class="social-media-connect">
-                            <ul class="social-media-wrapper">
-                                <a href="https://www.facebook.com/Floratechno-Solutions-Private-Limited-1687218574707601/?modal=admin_todo_tour"
-                                   target="_blank">
-                                    <li class="social-media-icons "><i class="fa fa-facebook fa-size facebook"></i></li>
-                                </a>
-                                <li class="social-media-icons"><i class="fa fa-youtube-play fa-size youtube"></i></li>
-                                <a href="https://www.linkedin.com/company/floratechnosolutions/" target="_blank">
-                                    <li class="social-media-icons"><i class="fa fa-linkedin fa-size linkin"></i></li>
-                                </a>
+                               </section>
+                           </div>
+                            <section className="contact-parts">
 
-                                <li class="social-media-icons"><i class="fa fa-instagram fa-size insta"></i></li>
-
-                                <a href="https://twitter.com/FloratechnoL" target="_blank">
-                                    <li class="social-media-icons"><i class="fa fa-twitter fa-size twit"></i></li>
-                                </a>
-                            </ul>
+                            </section>
                         </div>
                     </div>
-                    <section className="contact-container-wrapper" id="contact-wrapper">
-                        <p className="contact-p" id="contact-p">CONTACT US</p>
-                        <a onClick={() => this.arrowDown()}><i class="fa fa-arrow-circle-down contact-container-i"
-                                                               aria-hidden="true"></i></a>
-                    </section>
-                </section>
+
+                </div>
                 <footer>
                     <div className="footer-info float-left">Powered by <span>Floratechno Solutions Pvt. Ltd.</span>
                     </div>
