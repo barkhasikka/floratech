@@ -436,7 +436,7 @@ background: none;
     left: 0;
     right: 0;
     margin: auto;
-    width: 70%;
+    width: 100%;
 }
 .first-background{
     background-image: url("../assets/tower.jpg");
@@ -457,7 +457,31 @@ background: none;
     right: 0;
     width: 50%;
     color: white;
-    background: rgba(0, 0, 0, 0.58);
+    /*background: rgba(0, 0, 0, 0.58);*/
+    display: flex;
+    flex-direction: column;
+}
+.we-pro-div{
+    width:50%;
+    height:160px;
+    margin: auto;;
+}
+.we-pro-div p{
+    font-size: 1.7em;
+    text-align: center;
+    vertical-align: middle;
+}
+.text-div1{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    height: 100%;
+    right: 0;
+    width: 100%;
+    color: white;
+    background: rgba(0, 0, 0, 0.52);
     display: flex;
     flex-direction: column;
 }
@@ -2791,7 +2815,7 @@ opacity: 1;
 }
 .puzzle-body:hover .jig1{
     position: relative;
-    top: -53px;
+    top: -60px;
     z-index: 0;
 }
 
@@ -2799,7 +2823,7 @@ opacity: 1;
 .text {
     display: block;
     color: #fff;
-    font-size: 1.1em;
+    font-size: 1.5em;
     font-family: TektonPro-Bold;
     text-align: center;
     padding: 20px 7px;
@@ -2838,14 +2862,14 @@ opacity: 1;
     display: block;
     font-family: TektonPro-Bold;
     color: #fff;
-    font-size: 1.1em;
+    font-size: 1.5em;
     text-align: center;
     padding: 20px 7px;
 }
 .text1 {
     display: block;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.5em;
     text-align: center;
     font-family: TektonPro-Bold;
     padding: 20px 7px;
@@ -2940,7 +2964,7 @@ opacity: 1;
     position: absolute;
     background: #fff;
     top: -0.75em;
-    right: 21.9%;
+    right: 24.8%;
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
     border-radius: 4em;
@@ -3218,3 +3242,58 @@ nav p{
 .msg-st1{fill:#DF5B38;}
 .msg-st2{fill:none;stroke:#FFFFFF;stroke-width:10;stroke-miterlimit:10;}
 /* end phone Landscape */
+/* ---- reset ---- */
+
+body {
+    margin: 0;
+    font:normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+
+    background: linear-gradient(to right, rgb(170, 43, 3), rgb(45, 52, 91));
+
+}
+
+/* ---- stats.js ---- */
+
+.count-particles{
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.js-count-particles{
+    font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+    -webkit-user-select: none;
+}
+
+#stats{
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles{
+    border-radius: 0 0 3px 3px;
+}

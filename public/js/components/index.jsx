@@ -111,7 +111,7 @@ class App extends React.Component {
                     if(keyPressCount > 2 ){
                         keyPressCount = 0;
                     }
-                    document.getElementById("myH1").style.left = (keyPressCount * -100) + "vw";
+                    document.getElementById("particles-js").style.left = (keyPressCount * -100) + "vw";
                     document.getElementById("myH2").style.left = (keyPressCount * -100) + "vw";
                     document.getElementById("myH3").style.left =(keyPressCount * -100) + "vw";
                 }
@@ -124,7 +124,7 @@ class App extends React.Component {
                 }
                 document.getElementById("myH2").style.left = (keyPressCount * -100) + "vw";
                 document.getElementById("myH3").style.left =  (keyPressCount * -100) + "vw";
-                document.getElementById("myH1").style.left =  (keyPressCount * -100) + "vw";;
+                document.getElementById("particles-js").style.left =  (keyPressCount * -100) + "vw";;
 
             }
         });
@@ -156,7 +156,7 @@ class App extends React.Component {
 
 
     movea(){
-        document.getElementById("myH1").style.left = "0";
+        document.getElementById("particles-js").style.left = "0";
         document.getElementById("myH2").style.left = 100 + "vw";
         document.getElementById("myH3").style.left = 100 + "vw";
         document.getElementById("nu1").classList.add("yellow-border");
@@ -171,11 +171,11 @@ class App extends React.Component {
             document.getElementById("page").classList.remove("p-transition");}, 2000);
     }
     moved(){
-        document.getElementById("myH1").style.left = "0";
+        document.getElementById("particles-js").style.left = "0";
         document.getElementById("myH2").style.left = "0";
     }
     movec(){
-        document.getElementById("myH1").style.left = -100 + "vw";
+        document.getElementById("particles-js").style.left = -100 + "vw";
         document.getElementById("myH2").style.left = -100 + "vw";
         document.getElementById("myH3").style.left = -100 + "vw";
         document.getElementById("nu2").classList.add("yellow-border");
@@ -191,7 +191,7 @@ class App extends React.Component {
         }, 3000);
     }
     moveb(){
-        document.getElementById("myH1").style.left = -200 + "vw";
+        document.getElementById("particles-js").style.left = -200 + "vw";
         document.getElementById("myH2").style.left = -200 + "vw";
         document.getElementById("myH3").style.left = -200 + "vw";
         document.getElementById("nu3").classList.add("yellow-border");
@@ -332,10 +332,10 @@ class App extends React.Component {
                     {/*<source src="./assets/flower.mp4" type="video/mp4"/>*/}
                     {/*</video>*/}
                     <div className="video-overlay">
-                        <div className="introduction-text first-background" id="myH1" >
+                        <div className="introduction-text" id="particles-js" >
                             <div className="text-div" >
                                 <h5 id="header" className="text-div-h5 show-h5">HELLO!!!</h5>
-                                <p id="page" className="text-div-p show-p">WE ARE WHERE TECHNOLOGY MEETS INOVATION.</p>
+                                <p id="page" className="text-div-p show-p">WE ARE WHERE TECHNOLOGY MEETS INOVATION</p>
                             </div>
                             <div className="arrow">
                                 <a onClick={() => this.movec()}><i class="fa fa-angle-right" aria-hidden="true"></i></a>
@@ -346,14 +346,16 @@ class App extends React.Component {
                                 <source src="assets/pinkal_video.mp4" type="video/mp4"/>
                                         Your browser does not support the video tag.
                             </video>
-                            <div className="text-div" >
-                                <h5 id="header1" className="text-div-h5">WE PROVIDE</h5>
-                                <p id="page1" className="text-div-p">ALL THAT YOU NEED FOR YOUR BUSINESS.</p>
-                                <div className="div-align" id="animate-div">
-                                    <section><i class="fa fa-check" aria-hidden="true"></i><span>Designing</span></section>
-                                    <section><i class="fa fa-check" aria-hidden="true"></i><span>Development</span></section>
-                                    <section><i class="fa fa-check" aria-hidden="true"></i><span>Digital Marketing</span></section>
-                                </div>
+                            <div className="text-div1" >
+                               <div className="we-pro-div">
+                                   <h5 id="header1" className="text-div-h5">WE PROVIDE</h5>
+                                   <p id="page1" className="">ALL THAT YOU NEED FOR YOUR BUSINESS</p>
+                                   <div className="div-align" id="animate-div">
+                                       <section><i class="fa fa-check" aria-hidden="true"></i><span>Designing</span></section>
+                                       <section><i class="fa fa-check" aria-hidden="true"></i><span>Development</span></section>
+                                       <section><i class="fa fa-check" aria-hidden="true"></i><span>Digital Marketing</span></section>
+                                   </div>
+                               </div>
                             </div>
                             <div className="arrow">
                                 <a onClick={() => this.moveb()}><i class="fa fa-angle-right" aria-hidden="true"></i></a>
