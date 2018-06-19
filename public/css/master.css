@@ -174,7 +174,7 @@ background: none;
     /* box-shadow: 0 1px 25px -1px #575757; */
 }
 #app .header-section:hover{
-    background: #0000002e;
+    background: rgba(249, 194, 173, 0.8);
 }
 .clear-both{
     clear: both;
@@ -3258,7 +3258,7 @@ canvas {
 
 #particles-js {
 
-    background: linear-gradient(to right, rgb(170, 43, 3), rgb(45, 52, 91));
+    background: linear-gradient(to right, rgb(232, 178, 161), rgb(199, 100, 41));
 
 }
 
@@ -3296,4 +3296,14 @@ canvas {
 
 .count-particles{
     border-radius: 0 0 3px 3px;
+}
+
+.ft-logo .st0{fill:#183C47;}
+.ft-logo .st1{enable-background:new    ;}
+.ft-logo .st2{fill:#DE5B38;}
+.ft-logo .st3{fill:#133346;}
+
+.flower-svg .ft-logo {
+    height: 150px;
+    width: 150px;
 }
