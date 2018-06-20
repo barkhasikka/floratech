@@ -186,7 +186,7 @@ background: none;
     /*top:0;*/
 /*}*/
 .logo-section {
-    width: 10%;
+    width: 18%;
     height: 100%;
     /* float: left; */
     /* left: -100vw; */
@@ -242,7 +242,7 @@ background: none;
     color: #185795;
 }
 .header-options {
-    width: calc(45% - 30px);
+    width: calc(41% - 30px);
     display: inline-block;
     height: 100%;
     text-align: center;
@@ -256,17 +256,16 @@ background: none;
     width: 65%;
 
 }
-.padding-35px{
-    padding: 35px;
-}
+/*.padding-35px{*/
+    /*padding: 35px;*/
+/*}*/
 .header-a{
-    padding: 35px;
     clear: both;
     line-height: 100px;
     color: #185795
 }
 .header-options-right {
-    width: 45%;
+    width: 41%;
     display: inline-block;
     height: 100%;
     text-align: center;
@@ -299,12 +298,15 @@ background: none;
     background-repeat: no-repeat;
 }
 .header-options-span{
-    margin: 0 15px;
     cursor: pointer;
     font-family: "andalemo";
     position: relative;
     font-size: 17px;
-    /*line-height: 99px;*/
+    line-height: 150px;
+    width: 46%;
+    display: block;
+    height:100%;
+    float: left;
 
 }
 .slide-no{
@@ -384,8 +386,8 @@ background: none;
     border-bottom: 2px solid #e6570f;
     transition:width 0.6s linear;
 }
-.header-options-span:hover .span-border{
-    width: 100%;
+.header-options-span:hover .span-border,.header-option-span:hover .span-border{
+    width: 50%;
 }
 .login-text {
     font-family: "Helvetica Neue";
@@ -394,6 +396,7 @@ background: none;
     margin-right: 25px;
     font-family: "andalemo";
 }
+
 #video-container {
     width: 100%;
     overflow: hidden;
@@ -691,8 +694,9 @@ a{
 }
 .company-details-container {
     width: 100%;
-    height: auto;
+    height: calc(100% - 32px);
     padding-top: 130px;
+    position: relative;
 }
 .company-details-section {
     width: 1200px;
@@ -816,22 +820,24 @@ a{
 .txt-alignment {
     padding: 5px 15px;
     text-align: justify;
-    font-size: 14px;
+    font-size: 16px;
     margin: auto;
-    font-family: Verdana;
-    color: rgb(83, 88, 95);
+    font-family: HelveticaNeue-Light;
+    color: #000;
 }
 .services-container {
     width: 100%;
     margin: auto;
-    background-image: url("https://cnet4.cbsistatic.com/img/s7OzxR8Y3xxOlegTpRQW3CuZPuk=/830x467/2017/06/06/349b7e65-a855-44f0-ae0a-6610ebca0809/apple-macbook-pro-12-inch-2017-4181.jpg");
     height: auto;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     background-color: white;
-    margin-top: 122px;
+
+}
+.service-wrapper{
+    float: left;
+    width: 100%;
+    margin-top: 102px;
+    position: relative;
+
 }
 .services-title {
     width: calc(100% - 7em);
@@ -1562,7 +1568,7 @@ opacity: 1;
 }
 .company-thumbnail:hover .circle {
     background: orange;
-    border: 3px solid white;
+
 }
 .company-thumbnail:hover .first-company-txt {
     color: white;
@@ -3099,10 +3105,20 @@ opacity: 1;
     width: 0;
     height: 0;
    left: 0;
-    z-index:-1;
+
     top:0;
     position: absolute;
     border-top: 900px solid #ff78752e;
+    border-right: 1000px solid transparent;
+}
+#triangle-topleft1 {
+    width: 0;
+    height: 0;
+    left: 0;
+
+    top:0;
+    position: absolute;
+    border-top: 640px solid #ff78752e;
     border-right: 1000px solid transparent;
 }
 
@@ -3304,6 +3320,21 @@ canvas {
 .ft-logo .st3{fill:#133346;}
 
 .flower-svg .ft-logo {
-    height: 150px;
-    width: 150px;
+    height: 100%;
+    width: 100%;
+}
+.header-option-span {
+    cursor: pointer;
+    font-family: "andalemo";
+    position: relative;
+    font-size: 17px;
+    line-height: 100px;
+    width: 46%;
+    display: block;
+    height: 100%;
+    float: left;
+}
+footer{
+    width: 100%;
+    height: 32px;
 }

@@ -24,14 +24,14 @@ class Contact extends React.Component {
                         <div className="header-options-right" id="myHeaderSpan1">
                             <a href="/about" target="_parent" className="header-a">
                            <span
-                               className={"header-options-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')}
+                               className={"header-option-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')}
                                onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
                                 <span className="span-border"></span>
                             </span>
                             </a>
                             <a href="/team" target="_parent" className="header-a">
                             <span
-                                className={"header-options-span " + (this.state.selectedTab == 'team-containers' ? 'orange-color' : '')}
+                                className={"header-option-span " + (this.state.selectedTab == 'team-containers' ? 'orange-color' : '')}
                                 onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
                                 <span className="span-border"></span>
                             </span>
@@ -127,14 +127,14 @@ class Contact extends React.Component {
 
                             <a href="/services" target="_parent" className="header-a">
                             <span
-                                className={"header-options-span " + (this.state.selectedTab == 'servicesContainer' ? 'orange-color' : '')}
+                                className={"header-option-span " + (this.state.selectedTab == 'servicesContainer' ? 'orange-color' : '')}
                                 onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>SERVICES
                              <span className="span-border"></span>
                             </span>
                             </a>
                             <a href="/contact" target="_parent" className="header-a">
                             <span
-                                className={"header-options-span " + (this.state.selectedTab == 'contact-container' ? 'orange-color' : '')}
+                                className={"header-option-span " + (this.state.selectedTab == 'contact-container' ? 'orange-color' : '')}
                                 onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
                              <span className="span-border"></span>
                             </span>

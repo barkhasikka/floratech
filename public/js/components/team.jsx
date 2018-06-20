@@ -33,21 +33,18 @@ class Team extends React.Component {
     render (){
         return(
             <div >
-                <div id="triangle-topright"></div>
-                <div id="triangle-bottomleft"></div>
-                <div id="triangle-bottomright"></div>
-                <div id="triangle-topleft"></div>
+
 
                 <header className="header-section" id="myHeader">
                     <div className="bind-header">
                         <div className="header-options-right" id="myHeaderSpan1">
                             <a href="/about" target="_parent" className="header-a">
-                           <span className={"header-options-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
+                           <span className={"header-option-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
                                 <span className="span-border"></span>
                             </span>
                             </a>
                             <a href="/team" target="_parent" className="header-a">
-                            <span className={"header-options-span " + (this.state.selectedTab == 'team-containers' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
+                            <span className={"header-option-span " + (this.state.selectedTab == 'team-containers' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
                                 <span className="span-border"></span>
                             </span>
                             </a>
@@ -141,18 +138,23 @@ class Team extends React.Component {
                         <div className="header-options desktop-nav" id="myHeaderSpan">
 
                             <a href="/services" target="_parent" className="header-a">
-                            <span className={"header-options-span " + (this.state.selectedTab == 'servicesContainer' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>SERVICES
+                            <span className={"header-option-span " + (this.state.selectedTab == 'servicesContainer' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>SERVICES
                              <span className="span-border"></span>
                             </span>
                             </a>
                             <a href="/contact" target="_parent" className="header-a">
-                            <span className={"header-options-span " + (this.state.selectedTab == 'contact-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
+                            <span className={"header-option-span " + (this.state.selectedTab == 'contact-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
                              <span className="span-border"></span>
                             </span>
                             </a>
                         </div>
                     </div>
                 </header>
+                <div className="service-wrapper">
+                    <div id="triangle-topright"></div>
+                    <div id="triangle-bottomleft"></div>
+                    <div id="triangle-bottomright"></div>
+                    <div id="triangle-topleft"></div>
                 <section className="company-info-container clear-both padding-top-160px" id="team-containers">
 
                     <div className="puzzle-body">
@@ -294,6 +296,7 @@ class Team extends React.Component {
                     </div>
                 </div>
             </section>
+                    </div>
                 <footer>
                     <div className="footer-info float-left">Powered by <span>Floratechno Solutions Pvt. Ltd.</span></div>
                     <div className="footer-info float-right text-align-right"><span className="copyright-info">©2018 India</span></div>
