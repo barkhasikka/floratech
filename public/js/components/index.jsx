@@ -354,7 +354,9 @@ class App extends React.Component {
                             <div className="text-div" >
                                 <h5 id="header" className="text-div-h5 show-h5">HELLO!!!</h5>
                                 <p id="page" className="text-div-p show-p">WE ARE WHERE TECHNOLOGY MEETS INOVATION</p>
+
                             </div>
+
                             <div className="arrow">
                                 <a onClick={() => this.movec()}><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                             </div>
@@ -397,7 +399,23 @@ class App extends React.Component {
                             </div>
                                 </div>
                         </div>
+
                     </div>
+                    <svg version="1.1" id="Layer_1" className="ft-logo mobile-svg" x="0px" y="0px" viewBox="0 0 400 400" >
+                        <g>
+                            <path class="st0" d="M206.5,33.5c-107,0-166,81.3-166,168s70.3,157,157,157s165-77.3,165-164S293.2,33.5,206.5,33.5z M205.5,346.5
+                                                c-84.4,0-157-74.6-157-159s66.5-143.8,152-144c84.4-0.2,152.2,72.1,152.2,156.5S289.9,346.5,205.5,346.5z"/>
+                            <g class="st1">
+                                <path class="st2" d="M129,172.7v-9.9h27.6V131c0-21.6,15.3-30.6,33.9-30.6c4.5,0,9,0.6,13.5,1.5v9.9c-4.5-0.9-9-1.5-13.5-1.5
+                                                    c-12.6,0-22.5,4.5-22.5,21.6v30.9h32.1v9.9H168V317h-11.4V172.7H129z"/>
+                            </g>
+                            <g class="st1">
+                                <path class="st3" d="M273.8,172.7h-33.6v107.7c0,24.9,11.7,27.3,33.3,26.7v9.9c-23.4,1.5-45.9-1.8-44.7-36.6V172.7h-28.5v-9.9
+                                                    h28.5v-48h11.4v48h33.6L273.8,172.7L273.8,172.7z"/>
+                            </g>
+                        </g>
+                    </svg>
+
                     <header class="header-section my-Header" id="myHeader">
                        <div className="bind-header">
                         <div className="header-options-right" id="myHeaderSpan1">
@@ -476,6 +494,7 @@ class App extends React.Component {
                         </section>
                         <section className="section-icon">
                             <section className="icon-place">
+
                                   </section>
                             <a href="/services" target="_parent">
                             <span  id="mySpan2" className={"profile " + (this.state.selectedTab == 'servicesContainer' ? 'orange-colors' : '')} onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>Services</span>
@@ -483,6 +502,7 @@ class App extends React.Component {
                         </section>
                         <section className="section-icon">
                             <section className="icon-place">
+                                <i class="fa fa-address-book-o contact-book"></i>
                                 </section>
                             <a href="/contact" target="_parent">
                             <span id="mySpan3" className={"profile " + (this.state.selectedTab == 'contact-container' ? 'orange-colors' : '')} onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>Contact</span>

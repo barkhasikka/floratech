@@ -55,10 +55,11 @@ html, body{
 .Drp-dwn{
     width: 88%;
     right: 28px;
-    height: 223px;
+    height: 202px;
     display: none;
+
     top: 78px;
-    background: white;
+    background: #0e0e0e57;
     position: fixed;
     z-index: 5;
     transition: height 2s ease-out;
@@ -360,8 +361,12 @@ background: none;
     color: #e46224;
 }
 .profile{
-    line-height: 37px;
+    line-height: 50px;
     font-size: 16px;
+    display: block;
+    width: 86%;
+    color: #000;
+    float: left;
 }
 .slide-no span:hover{
     background: #e46224;
@@ -457,7 +462,6 @@ background: none;
 .video-overlay{
     height: 100%;
     width: 300vw;
-    z-index:-1;
     overflow: hidden;
     position: relative;
     /* background: url(../assets/overlay.png); */
@@ -1627,6 +1631,9 @@ opacity: 1;
     padding-top: 15%;
     cursor: pointer;
 }
+.fa.fa-bars{
+    display: none;
+}
 
 .footer-info{
     display: inline-block;
@@ -2360,7 +2367,7 @@ canvas {
 }
 .section-icon{
     width: 100%;
-    height: 40px;
+    height: 50px;
 }
 .icon-place{
     width: 14%;
@@ -2374,8 +2381,10 @@ canvas {
     left: 0;
     right: 0;
     bottom: 0;
-    margin: 10px auto;
+    height: 100%;
+    margin: auto;
     width: 20px;
+
 }
 .header-option-span {
     cursor: pointer;
@@ -2392,12 +2401,28 @@ footer{
     width: 100%;
     height: 32px;
 }
+.mobile-svg{
+    position: absolute;
+    bottom: 22%;
+    width: 100px;
+    margin: auto;
+    height: 100px;
+    left: 0;
+    right: 0;
+    display: none;
+}
 /*mediaqueries*/
 @media all and (max-width:479px) and (min-width:320px) and (orientation: portrait){
     .we-pro-div {
         width: 100%;
-        height: 260px;
+        height: 320px;
 
+    }
+    .we-pro-div p {
+        font-size: 1.2em;
+    }
+    .arrow a:nth-child(1){
+        right:12px;
     }
     .third-text-div {
         height: 51%;
@@ -2512,16 +2537,27 @@ footer{
         width:90%;
         height:250px;
     }
-    .cate{
+    .fa.cate{
         position: absolute;
         top: 27px;
         font-size: 3em !important;
         right: 27px;
         color: white;
+        display: block;
+        z-index:1;
 
     }
-    .section-icon:nth-child(even){
-        background: #f9f9f9;
+    .fa.contact-book{
+        line-height: 50px;
+        text-align: center;
+        display: block;
+        font-size: 17px;
+    }
+    .Drop-down .section-icon:nth-child(even) {
+        background:#dbf1c173;
+    }
+    .Drp-dwn .section-icon:nth-child(even){
+        background: #ffe2d561;
     }
   /*.header-section{*/
     /*display: none;*/
@@ -2542,15 +2578,20 @@ footer{
     .Drop-down {
         width: 88%;
         right: 19px;
-        height: 223px;
+        height: 202px;
         display: none;
         top: 106px;
-        background: white;
+        background: #c8662c57;
         position: fixed;
         z-index: 111;
         transition: height 2s ease-out;
     }
-
+    .fa.fa-bars{
+        display: block;
+    }
+    .mobile-svg{
+        display: block;
+    }
 
 }
 /*end*/

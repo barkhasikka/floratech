@@ -174,6 +174,7 @@ class About extends React.Component {
                     </section>
                     <section className="section-icon">
                         <section className="icon-place">
+
                         </section>
                         <a href="/services" target="_parent">
                             <span  id="mySpan2" className={"profile " + (this.state.selectedTab == 'servicesContainer' ? 'orange-colors' : '')} onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>Services</span>
@@ -181,6 +182,7 @@ class About extends React.Component {
                     </section>
                     <section className="section-icon">
                         <section className="icon-place">
+                            <i class="fa fa-address-book-o contact-book"></i>
                         </section>
                         <a href="/contact" target="_parent">
                             <span id="mySpan3" className={"profile " + (this.state.selectedTab == 'contact-container' ? 'orange-colors' : '')} onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>Contact</span>
