@@ -371,19 +371,21 @@ class App extends React.Component {
                             </div>
                         </div>
                         <div className="introduction-text third-background" id="myH3">
+                            <div className="text-div1" >
                             <div className="third-text-div">
                                 <h5 id="header2" className="third-text-div-h5">POWERED BY YOUTH DRIVEN BY TECHNOLOGY</h5>
                                 <div className="div-align" id="animate-div1">
                                     <section>LETS <span> CO</span>DREAM</section>
                                     <section>LETS <span> CO</span>THINK</section>
+                                    <section>LETS <span> CO</span>CREATE</section>
                                     <section>LETS <span> CO</span>GROW</section>
-                                    <section>LETS <span> CO</span>DREAM</section>
                                 </div>
                             </div>
                             <div className="arrow">
                                 <a></a>
                                 <a onClick={() => this.movec()}><i class="fa fa-angle-left " aria-hidden="true"></i></a>
                             </div>
+                                </div>
                         </div>
                     </div>
                     <header class="header-section" id="myHeader">
