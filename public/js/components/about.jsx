@@ -14,7 +14,10 @@ class About extends React.Component {
     }
     componentDidMount(){
         smoothScroll("about-container", 70);
+        this.setState({selectedTab: "about-container"})
+
     }
+
     render (){
         return (
             <div >
@@ -28,7 +31,7 @@ class About extends React.Component {
                             </span>
                             </a>
                             <a href="/team" target="_parent" className="header-a">
-                            <span className={"header-option-span " + (this.state.selectedTab == 'team-containers' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
+                            <span className="header-option-span"  onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
                                 <span className="span-border"></span>
                             </span>
                             </a>
@@ -122,12 +125,12 @@ class About extends React.Component {
                         <div class="header-options desktop-nav" id="myHeaderSpan">
 
                             <a href="/services" target="_parent" className="header-a">
-                            <span className={"header-option-span " + (this.state.selectedTab == 'servicesContainer' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>SERVICES
+                            <span className="header-option-span" onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>SERVICES
                              <span className="span-border"></span>
                             </span>
                             </a>
                             <a href="/contact" target="_parent" className="header-a">
-                            <span className={"header-option-span " + (this.state.selectedTab == 'contact-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
+                            <span className="header-option-span" onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
                              <span className="span-border"></span>
                             </span>
                             </a>

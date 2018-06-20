@@ -10,6 +10,7 @@ class Services extends React.Component {
 
     componentDidMount() {
         smoothScroll("servicesContainer", 100);
+        this.setState({selectedTab: "servicesContainer"})
     }
 
     render() {
@@ -21,14 +22,14 @@ class Services extends React.Component {
                         <div className="header-options-right" id="myHeaderSpan1">
                             <a href="/about" target="_parent" className="header-a">
                            <span
-                               className={"header-option-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')}
+                               className="header-option-span "
                                onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
                                 <span className="span-border"></span>
                             </span>
                             </a>
                             <a href="/team" target="_parent" className="header-a">
                             <span
-                                className={"header-option-span " + (this.state.selectedTab == 'team-containers' ? 'orange-color' : '')}
+                                className="header-option-span "
                                 onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
                                 <span className="span-border"></span>
                             </span>
@@ -131,7 +132,7 @@ class Services extends React.Component {
                             </a>
                             <a href="/contact" target="_parent" className="header-a">
                             <span
-                                className={"header-option-span " + (this.state.selectedTab == 'contact-container' ? 'orange-color' : '')}
+                                className="header-option-span "
                                 onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
                              <span className="span-border"></span>
                             </span>

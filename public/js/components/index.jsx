@@ -138,6 +138,10 @@ class App extends React.Component {
                  document.getElementById("myHeader").classList.add("header-background");
                  document.getElementById("myHeaderSpan").classList.add("header-span-background");
                  document.getElementById("myHeaderSpan1").classList.add("header-span-background");
+                 document.getElementById("mySpan").classList.add("lin-height-100");
+                 document.getElementById("mySpan1").classList.add("lin-height-100");
+                 document.getElementById("mySpan2").classList.add("lin-height-100");
+                 document.getElementById("mySpan3").classList.add("lin-height-100");
                  document.getElementById("firstSvg").classList.add("display-none");
                  document.getElementById("secSvg").classList.add("display-block");
              }else{
@@ -146,6 +150,10 @@ class App extends React.Component {
                  document.getElementById("myHeaderSpan1").classList.remove("header-span-background");
                  document.getElementById("firstSvg").classList.remove("display-none");
                  document.getElementById("secSvg").classList.remove("display-block");
+                 document.getElementById("mySpan").classList.remove("lin-height-100");
+                 document.getElementById("mySpan1").classList.remove("lin-height-100");
+                 document.getElementById("mySpan2").classList.remove("lin-height-100");
+                 document.getElementById("mySpan3").classList.remove("lin-height-100");
             }
 
         });
@@ -381,13 +389,13 @@ class App extends React.Component {
                     <header class="header-section" id="myHeader">
                        <div className="bind-header">
                         <div className="header-options-right" id="myHeaderSpan1">
-                            <a href="/about" target="_parent" className="padding-35px">
-                           <span className={"header-options-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
+                            <a href="/about" target="_parent" >
+                           <span id="mySpan" className={"header-options-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
                                 <span className="span-border"></span>
                             </span>
                             </a>
-                            <a href="/team" target="_parent" className="padding-35px">
-                            <span className={"header-options-span " + (this.state.selectedTab == 'team-containers' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
+                            <a href="/team" target="_parent" >
+                            <span id="mySpan1" className={"header-options-span " + (this.state.selectedTab == 'team-containers' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
                                 <span className="span-border"></span>
                             </span>
                             </a>
@@ -415,13 +423,13 @@ class App extends React.Component {
                         </div>
                         <div class="header-options desktop-nav" id="myHeaderSpan">
 
-                            <a href="/services" target="_parent" className="padding-35px">
-                            <span className={"header-options-span " + (this.state.selectedTab == 'servicesContainer' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>SERVICES
+                            <a href="/services" target="_parent">
+                            <span id="mySpan2" className={"header-options-span " + (this.state.selectedTab == 'servicesContainer' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>SERVICES
                              <span className="span-border"></span>
                             </span>
                             </a>
-                            <a href="/contact" target="_parent" className="padding-35px">
-                            <span className={"header-options-span " + (this.state.selectedTab == 'contact-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
+                            <a href="/contact" target="_parent">
+                            <span id="mySpan3" className={"header-options-span " + (this.state.selectedTab == 'contact-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
                              <span className="span-border"></span>
                             </span>
                             </a>

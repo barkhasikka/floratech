@@ -12,6 +12,7 @@ class Team extends React.Component {
 
     componentDidMount(){
         smoothScroll("team-containers", 100);
+        this.setState({selectedTab: "team-containers"})
         document.getElementsByTagName("body")[0].addEventListener("scroll", function () {
             var elmnt =  document.getElementsByTagName("body")[0];
             var y = elmnt.scrollTop;
@@ -39,7 +40,7 @@ class Team extends React.Component {
                     <div className="bind-header">
                         <div className="header-options-right" id="myHeaderSpan1">
                             <a href="/about" target="_parent" className="header-a">
-                           <span className={"header-option-span " + (this.state.selectedTab == 'about-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
+                           <span className="header-option-span " onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
                                 <span className="span-border"></span>
                             </span>
                             </a>
@@ -138,12 +139,12 @@ class Team extends React.Component {
                         <div className="header-options desktop-nav" id="myHeaderSpan">
 
                             <a href="/services" target="_parent" className="header-a">
-                            <span className={"header-option-span " + (this.state.selectedTab == 'servicesContainer' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>SERVICES
+                            <span className="header-option-span "onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>SERVICES
                              <span className="span-border"></span>
                             </span>
                             </a>
                             <a href="/contact" target="_parent" className="header-a">
-                            <span className={"header-option-span " + (this.state.selectedTab == 'contact-container' ? 'orange-color' : '')} onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
+                            <span className="header-option-span " onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
                              <span className="span-border"></span>
                             </span>
                             </a>
@@ -155,7 +156,7 @@ class Team extends React.Component {
                     <div id="triangle-bottomleft"></div>
                     <div id="triangle-bottomright"></div>
                     <div id="triangle-topleft"></div>
-                <section className="company-info-container clear-both padding-top-160px" id="team-containers">
+                <section className="company-info-container clear-both" id="team-containers">
 
                     <div className="puzzle-body">
                         <div className="jig">

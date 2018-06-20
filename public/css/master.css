@@ -825,6 +825,9 @@ a{
     font-family: HelveticaNeue-Light;
     color: #000;
 }
+.lin-height-100{
+    line-height: 100px;
+}
 .services-container {
     width: 100%;
     margin: auto;
@@ -2891,7 +2894,7 @@ opacity: 1;
 }
 .jigsaw2 .t {
     width: 3.9em;
-    background-color: #fff;
+    background-color:#ffd9c0;
     height: 3.6em;
     position: absolute;
     top: 39.5%;
