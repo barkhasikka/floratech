@@ -1331,6 +1331,14 @@ opacity: 1;
     padding-top: 15px;
 
 }
+.team-info-container {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+
+}
 #team{
     position: relative;
 }
@@ -2762,13 +2770,12 @@ opacity: 1;
 
 .puzzle-body{
     width: 800px;
-    height: 80%;
+    height:500px;
     margin: auto;
 }
 .jigsaw1{
     width: 300px;
     height: 250px;
-    margin: 50px;
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -2780,12 +2787,12 @@ opacity: 1;
 .jigsaw2 {
     width: 300px;
     height: 250px;
-    margin: 50px;
+
     position: relative;
     display: inline-block;
     cursor: pointer;
     z-index: 1;
-    float: left;
+    float: right;
     right: 0;
     transition: right 2s linear;
 }
@@ -2816,15 +2823,15 @@ opacity: 1;
     background-color: #408eda;
 }
 .puzzle-body:hover .jigsaw1{
-    left: 60px;
+    left: 101px;
     /*z-index: 111;*/
 }
 .puzzle-body:hover .jigsaw2{
-    right: 40px;
+    right: 100px;
 }
 .puzzle-body:hover .jig1{
     position: relative;
-    top: -60px;
+    top: -54px;
     z-index: 0;
 }
 
@@ -2939,8 +2946,8 @@ opacity: 1;
     transition: top 2s linear;
     width: 600px;
     position: relative;
-    margin: 70px 110px;
-    height: 50%;
+    margin: 54px auto;
+    height: calc(50% - 46px);
 }
 
 .jigsaw1 .l, .jigsaw2 .l {
@@ -2960,8 +2967,8 @@ opacity: 1;
     width: 3.6em;
     height: 3.6em;
     position: absolute;
-    background: #fff;
-    top: -0.75em;
+    background: #ffe7e6;
+    top: -1.75em;
     left: 18.9%;
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
@@ -2972,7 +2979,7 @@ opacity: 1;
     height: 3.6em;
     position: absolute;
     background: #fff;
-    top: -0.75em;
+    top: -1.75em;
     right: 24.8%;
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;

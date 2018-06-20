@@ -156,7 +156,7 @@ class Team extends React.Component {
                     <div id="triangle-bottomleft"></div>
                     <div id="triangle-bottomright"></div>
                     <div id="triangle-topleft"></div>
-                <section className="company-info-container clear-both" id="team-containers">
+                <section className="team-info-container clear-both" id="team-containers">
 
                     <div className="puzzle-body">
                         <div className="jig">
