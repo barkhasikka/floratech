@@ -11,19 +11,25 @@
 <body>
 <section id='contact'></section>
 </body>
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAw9iQmS3YSuknIGLIVUODEEvBURDNCW2U&callback=initMap" type="text/javascript"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAw9iQmS3YSuknIGLIVUODEEvBURDNCW2U&callback=newMap" type="text/javascript"></script>
 <script src="/js/build/floratechnocontact.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1; //&& ua.indexOf("mobile");
+    if(isAndroid) {
+        document.write('<meta name="viewport" content="width=device-width,height='+window.innerHeight+', initial-scale=1.0">');
+    }
+</script>
 <script>
-    function initMap() {
+
+
+    function newMap() {
         // Styles a map in night mode.
         var myLatLng = {lat: 18.4912, lng: 73.9095};
         var map = new google.maps.Map(document.getElementById('map'), {
             center:myLatLng ,
             zoom: 15,
-           
+
         });
         var contentString = '<div id="content">'+
                 '<div id="siteNotice">'+

@@ -241,13 +241,13 @@ class Contact extends React.Component {
 
                                        <div class="contact-wrapper input-height">
                                                <input value={this.state.MobileNo} onChange={(e) => this.handleMobileNoChange(e)}
-                                                      class="input-data" type="text" placeholder="Call"/>
+                                                      class="input-data" type="number" placeholder="Call"/>
                                                <span className="error-msgs" id="mobilenum">Please Enter Number</span>
                                        </div>
 
                                        <div class="contact-wrapper input-height">
                                                <input value={this.state.Email} onChange={(e) => this.handleContactEmailChange(e)}
-                                                      class="input-data" type="text" placeholder="Email"/>
+                                                      class="input-data" type="email" placeholder="Email"/>
                                                <span className="error-msgs" id="text">Please Enter Email</span>
                                        </div>
                                        <div class="contact-textarea">
