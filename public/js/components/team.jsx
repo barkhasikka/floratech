@@ -190,7 +190,7 @@ class Team extends React.Component {
                                 <span className="l"></span>
                                 <span className="p"></span>
                                 <span className="text2">VALUES</span>
-                                <div className="vision-name">
+                                <div className="vision-name vission-section">
                                     <ul>
                                         <li>Keep it simple, silly!</li>
                                         <li>Work is not work if you are passionate about it.</li>

@@ -142,14 +142,10 @@ class App extends React.Component {
                  document.getElementById("mySpan1").classList.add("lin-height-100");
                  document.getElementById("mySpan2").classList.add("lin-height-100");
                  document.getElementById("mySpan3").classList.add("lin-height-100");
-                 document.getElementById("firstSvg").classList.add("display-none");
-                 document.getElementById("secSvg").classList.add("display-block");
              }else{
                  document.getElementById("myHeader").classList.remove("header-background");
                  document.getElementById("myHeaderSpan").classList.remove("header-span-background");
                  document.getElementById("myHeaderSpan1").classList.remove("header-span-background");
-                 document.getElementById("firstSvg").classList.remove("display-none");
-                 document.getElementById("secSvg").classList.remove("display-block");
                  document.getElementById("mySpan").classList.remove("lin-height-100");
                  document.getElementById("mySpan1").classList.remove("lin-height-100");
                  document.getElementById("mySpan2").classList.remove("lin-height-100");

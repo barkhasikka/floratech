@@ -12,12 +12,22 @@ class Services extends React.Component {
         smoothScroll("servicesContainer", 100);
         this.setState({selectedTab: "servicesContainer"})
     }
+    show (){
+        if( document.getElementById("to").style.display == "block"  ){
+            document.getElementById("to").style.display = "none" ;
+        }
+        else{
+            document.getElementById("to").style.display = "block" ;
+        }
+
+    }
 
     render() {
         return (
             <div >
 
                 <header className="header-section" id="myHeader">
+                    <i className="fa fa-bars cates" onClick={() => this.show()}></i>
                     <div className="bind-header">
                         <div className="header-options-right" id="myHeaderSpan1">
                             <a href="/about" target="_parent" className="header-a">
@@ -140,6 +150,48 @@ class Services extends React.Component {
                         </div>
                     </div>
                 </header>
+                <div className="Drop-down" id="to">
+                    <section className="section-icon">
+                        <section className="icon-place">
+                            <svg data-name="Layer 1" id="Layer_1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" className="section-feed">
+                                <path d="M64,32A32,32,0,1,0,32,64,32,32,0,0,0,64,32Zm-5.57,0A26.43,26.43,0,1,1,32,5.57,26.45,26.45,0,0,1,58.43,32Z" data-name="&lt;Compound Path&gt;" id="_Compound_Path_"/>
+                                <rect height="6.96" width="6.96" x="28.52" y="12.19"/><polygon points="35.48 44.39 35.48 30.85 35.48 23.89 28.88 23.89 25.65 23.89 25.65 30.85 28.88 30.85 28.88 44.39 25.65 44.39 25.65 51.35 28.88 51.35 35.48 51.35 38.35 51.35 38.35 44.39 35.48 44.39"/></svg>
+
+                        </section>
+                        <a href="/about" target="_parent" >
+                            <span id="mySpan" className={"profile " + (this.state.selectedTab == 'about-container' ? 'orange-colors' : '')} onClick={(e) => this.goToElement(e, "about-container", 70, false)}>About</span>
+                        </a>
+                    </section>
+                    <section className="section-icon">
+                        <section className="icon-place">
+                            <svg enable-background="new 0 0 500 500" id="Layer_1" version="1.1" viewBox="0 0 500 500"  xmlns="http://www.w3.org/2000/svg" className="section-svg"><g><g>
+                                <path d="M113.6,311c-30.2,0-54.8-24.6-54.8-54.8c0-30.2,24.6-54.8,54.8-54.8s54.8,24.6,54.8,54.8C168.4,286.5,143.8,311,113.6,311    z M113.6,228.9c-15.1,0-27.4,12.3-27.4,27.4c0,15.1,12.3,27.4,27.4,27.4s27.4-12.3,27.4-27.4C141,241.2,128.7,228.9,113.6,228.9z"/></g><g>
+                                <path d="M346.3,365.8h-27.4c0-37.7-30.7-68.4-68.4-68.4s-68.4,30.7-68.4,68.4h-27.4c0-52.8,43-95.8,95.8-95.8    S346.3,313,346.3,365.8z"/></g><g>
+                                <path d="M387.4,311c-30.2,0-54.8-24.6-54.8-54.8c0-30.2,24.6-54.8,54.8-54.8c30.2,0,54.8,24.6,54.8,54.8    C442.1,286.5,417.6,311,387.4,311z M387.4,228.9c-15.1,0-27.4,12.3-27.4,27.4c0,15.1,12.3,27.4,27.4,27.4    c15.1,0,27.4-12.3,27.4-27.4C414.8,241.2,402.5,228.9,387.4,228.9z"/></g><g><path d="M250.5,297.4c-37.7,0-68.4-30.7-68.4-68.4s30.7-68.4,68.4-68.4s68.4,30.7,68.4,68.4S288.2,297.4,250.5,297.4z     M250.5,187.9c-22.6,0-41.1,18.4-41.1,41.1s18.4,41.1,41.1,41.1s41.1-18.4,41.1-41.1S273.1,187.9,250.5,187.9z"/></g><g><path d="M346.3,365.8h-27.4v-13.7c0-37.7,30.7-68.4,68.4-68.4s68.4,30.7,68.4,68.4h-27.4c0-22.6-18.4-41.1-41.1-41.1    s-41.1,18.4-41.1,41.1V365.8z"/></g><g>
+                                <path d="M182.1,365.8h-27.4v-13.7c0-22.6-18.4-41.1-41.1-41.1s-41.1,18.4-41.1,41.1H45.2c0-37.7,30.7-68.4,68.4-68.4    s68.4,30.7,68.4,68.4V365.8z"/></g></g></svg>
+
+                        </section>
+                        <a href="/team" target="_parent" >
+                            <span id="mySpan1" className={"profile " + (this.state.selectedTab == 'team-containers' ? 'orange-colors' : '')} onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>Team</span>
+                        </a>
+                    </section>
+                    <section className="section-icon">
+                        <section className="icon-place">
+
+                        </section>
+                        <a href="/services" target="_parent">
+                            <span  id="mySpan2" className={"profile " + (this.state.selectedTab == 'servicesContainer' ? 'orange-colors' : '')} onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>Services</span>
+                        </a>
+                    </section>
+                    <section className="section-icon">
+                        <section className="icon-place">
+                            <i class="fa fa-address-book-o contact-book"></i>
+                        </section>
+                        <a href="/contact" target="_parent">
+                            <span id="mySpan3" className={"profile " + (this.state.selectedTab == 'contact-container' ? 'orange-colors' : '')} onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>Contact</span>
+                        </a>
+                    </section>
+                </div>
                 <div className="service-wrapper">
                     <div id="triangle-topleft"></div>
                     <div id="triangle-topright"></div>
@@ -719,7 +771,7 @@ class Services extends React.Component {
                                 </div>
 
                             </section>
-                            <section>
+                            <section className="our-technology-margin">
                                 <p>BACK END</p>
                                 <div className="techo-div">
                                     <section>
@@ -828,6 +880,63 @@ class Services extends React.Component {
                             </section>
                         </div>
                         <div className="our-right-technology">
+                            <section id="web">
+                                <p>WEB DESIGN</p>
+                                <div className="techo-div">
+                                    <section>
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px"
+                                             y="0px"
+                                             viewBox="0 0 240 234">
+
+                                            <g>
+                                                <path className="illustr-st0" d="M10,10h220v214H10V10z"/>
+                                                <path className="illustr-st1" d="M0,0v234h240V0H0z M10,10h220v214H10V10z"/>
+                                                <path className="illustr-st1" d="M83.3,132.5l-7.9,30c-0.2,0.8-0.5,1-1.5,1H59.2c-1,0-1.2-0.3-1-1.5l28.4-99.4c0.5-1.8,0.8-3.4,1-8.3
+                                                    c0-0.7,0.3-1,0.8-1h21c0.7,0,1,0.2,1.2,1l31.8,107.9c0.2,0.8,0,1.3-0.8,1.3H125c-0.8,0-1.3-0.2-1.5-0.9l-8.3-30.1L83.3,132.5
+                                                    L83.3,132.5z M111.1,116.3c-2.8-11.1-9.4-35.3-11.9-47h-0.2c-2.1,11.7-7.4,31.5-11.6,47H111.1z M156.1,60.7
+                                                    c0-6.4,4.5-10.2,10.2-10.2c6.1,0,10.2,4.1,10.2,10.2c0,6.6-4.3,10.2-10.4,10.2C160.3,70.9,156.1,67.3,156.1,60.7L156.1,60.7z
+                                                     M157.3,83.4c0-0.8,0.3-1.2,1.2-1.2h15.7c0.8,0,1.2,0.3,1.2,1.2v78.9c0,0.8-0.2,1.2-1.2,1.2h-15.5c-1,0-1.3-0.5-1.3-1.3V83.4z"/>
+                                            </g>
+                                        </svg>
+                                    </section>
+                                    <section>
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px"
+                                             y="0px"
+                                             viewBox="0 0 240 234">
+
+                                            <path className="photos-st0" d="M10,10h220v214H10V10z"/>
+                                            <path className="photos-st1" d="M0,0v234h240V0H0z M10,10h220v214H10V10z M58,54.8c0-0.7,1.4-1.2,2.2-1.2c6.4-0.3,15.9-0.5,25.8-0.5
+                                                c27.7,0,38.5,15.2,38.5,34.7c0,25.4-18.4,36.3-41,36.3c-3.8,0-5.1-0.2-7.8-0.2v38.4c0,0.8-0.3,1.2-1.2,1.2H59.2
+                                                c-0.8,0-1.2-0.3-1.2-1.2L58,54.8L58,54.8z M75.8,107.9c2.3,0.2,4.1,0.2,8.1,0.2c11.7,0,22.7-4.1,22.7-20c0-12.7-7.9-19.1-21.2-19.1
+                                                c-4,0-7.8,0.2-9.6,0.3V107.9L75.8,107.9z M161.8,96c-7.9,0-10.6,4-10.6,7.3c0,3.6,1.8,6.1,12.4,11.6c15.7,7.6,20.6,14.9,20.6,25.6
+                                                c0,16-12.2,24.6-28.7,24.6c-8.7,0-16.2-1.8-20.5-4.3c-0.7-0.3-0.8-0.8-0.8-1.6v-14.7c0-1,0.5-1.3,1.2-0.8c6.3,4.1,13.5,5.9,20.1,5.9
+                                                c7.9,0,11.2-3.3,11.2-7.8c0-3.6-2.3-6.8-12.4-12c-14.2-6.8-20.1-13.7-20.1-25.2c0-12.9,10.1-23.6,27.6-23.6c8.6,0,14.6,1.3,17.9,2.8
+                                                c0.8,0.5,1,1.3,1,2v13.7c0,0.8-0.5,1.3-1.5,1C174.8,97.7,168.3,96,161.8,96L161.8,96z"/>
+                                        </svg>
+
+                                    </section>
+                                    <section>
+                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px"
+                                             y="0px"
+                                             viewBox="0 0 240 234">
+
+                                            <g>
+                                                <path className="ae-st0" d="M10,10h220v214H10V10z"/>
+                                                <path className="ae-st1" d="M0,0v234h240V0H0z M10,10h220v214H10V10z M67.8,132.5l-7.9,29.9c-0.2,0.8-0.5,1.1-1.5,1.1H43.7
+                                                    c-1,0-1.2-0.3-1-1.5l28.4-99.3c0.5-1.8,0.8-3.2,1-8.2c0-0.7,0.3-1,0.8-1h21c0.7,0,1,0.2,1.2,1l31.8,107.7c0.2,0.8,0,1.3-0.8,1.3
+                                                    h-16.5c-0.8,0-1.3-0.3-1.5-1l-8.3-30H67.8L67.8,132.5z M95.9,116.3c-2.8-11.1-9.6-35.3-12.1-47h-0.2c-2.1,11.7-7.6,31.5-11.7,47
+                                                    C72,116.3,95.9,116.3,95.9,116.3z M149.5,126.5c0.2,13.5,6.6,22.6,21.8,22.6c5.9,0,11-0.8,16.3-3.1c0.7-0.3,1.2-0.2,1.2,0.7v12.5
+                                                    c0,1-0.3,1.5-1,2c-5.3,2.6-11.9,3.8-20.1,3.8c-26.4,0-36.3-19.5-36.3-41.3c0-23.6,12.2-42.9,33.7-42.9c21.8,0,29.4,18.3,29.4,33.2
+                                                    c0,4.8-0.3,8.7-0.8,10.6c-0.2,0.8-0.5,1.1-1.3,1.3c-2,0.3-7.9,0.7-16.7,0.7L149.5,126.5L149.5,126.5z M169.8,112.7
+                                                    c5.1,0,6.9,0,7.4-0.2c0-0.7,0.2-1.2,0.2-1.7c0-5.4-2.6-15.4-13-15.4c-9.6,0-13.7,8.4-14.7,17.3L169.8,112.7L169.8,112.7z"/>
+                                            </g>
+                                        </svg>
+
+                                    </section>
+
+                                </div>
+
+                            </section>
                             <section>
                                 <p>OTHER</p>
                                 <div className="techo-div">
@@ -896,63 +1005,7 @@ class Services extends React.Component {
                                 </div>
 
                             </section>
-                            <section id="web">
-                                <p>WEB DESIGN</p>
-                                <div className="techo-div">
-                                    <section>
-                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px"
-                                             y="0px"
-                                             viewBox="0 0 240 234">
 
-                                            <g>
-                                                <path className="illustr-st0" d="M10,10h220v214H10V10z"/>
-                                                <path className="illustr-st1" d="M0,0v234h240V0H0z M10,10h220v214H10V10z"/>
-                                                <path className="illustr-st1" d="M83.3,132.5l-7.9,30c-0.2,0.8-0.5,1-1.5,1H59.2c-1,0-1.2-0.3-1-1.5l28.4-99.4c0.5-1.8,0.8-3.4,1-8.3
-                                                    c0-0.7,0.3-1,0.8-1h21c0.7,0,1,0.2,1.2,1l31.8,107.9c0.2,0.8,0,1.3-0.8,1.3H125c-0.8,0-1.3-0.2-1.5-0.9l-8.3-30.1L83.3,132.5
-                                                    L83.3,132.5z M111.1,116.3c-2.8-11.1-9.4-35.3-11.9-47h-0.2c-2.1,11.7-7.4,31.5-11.6,47H111.1z M156.1,60.7
-                                                    c0-6.4,4.5-10.2,10.2-10.2c6.1,0,10.2,4.1,10.2,10.2c0,6.6-4.3,10.2-10.4,10.2C160.3,70.9,156.1,67.3,156.1,60.7L156.1,60.7z
-                                                     M157.3,83.4c0-0.8,0.3-1.2,1.2-1.2h15.7c0.8,0,1.2,0.3,1.2,1.2v78.9c0,0.8-0.2,1.2-1.2,1.2h-15.5c-1,0-1.3-0.5-1.3-1.3V83.4z"/>
-                                            </g>
-                                        </svg>
-                                    </section>
-                                    <section>
-                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px"
-                                             y="0px"
-                                             viewBox="0 0 240 234">
-
-                                            <path className="photos-st0" d="M10,10h220v214H10V10z"/>
-                                            <path className="photos-st1" d="M0,0v234h240V0H0z M10,10h220v214H10V10z M58,54.8c0-0.7,1.4-1.2,2.2-1.2c6.4-0.3,15.9-0.5,25.8-0.5
-                                                c27.7,0,38.5,15.2,38.5,34.7c0,25.4-18.4,36.3-41,36.3c-3.8,0-5.1-0.2-7.8-0.2v38.4c0,0.8-0.3,1.2-1.2,1.2H59.2
-                                                c-0.8,0-1.2-0.3-1.2-1.2L58,54.8L58,54.8z M75.8,107.9c2.3,0.2,4.1,0.2,8.1,0.2c11.7,0,22.7-4.1,22.7-20c0-12.7-7.9-19.1-21.2-19.1
-                                                c-4,0-7.8,0.2-9.6,0.3V107.9L75.8,107.9z M161.8,96c-7.9,0-10.6,4-10.6,7.3c0,3.6,1.8,6.1,12.4,11.6c15.7,7.6,20.6,14.9,20.6,25.6
-                                                c0,16-12.2,24.6-28.7,24.6c-8.7,0-16.2-1.8-20.5-4.3c-0.7-0.3-0.8-0.8-0.8-1.6v-14.7c0-1,0.5-1.3,1.2-0.8c6.3,4.1,13.5,5.9,20.1,5.9
-                                                c7.9,0,11.2-3.3,11.2-7.8c0-3.6-2.3-6.8-12.4-12c-14.2-6.8-20.1-13.7-20.1-25.2c0-12.9,10.1-23.6,27.6-23.6c8.6,0,14.6,1.3,17.9,2.8
-                                                c0.8,0.5,1,1.3,1,2v13.7c0,0.8-0.5,1.3-1.5,1C174.8,97.7,168.3,96,161.8,96L161.8,96z"/>
-                                        </svg>
-
-                                    </section>
-                                    <section>
-                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px"
-                                             y="0px"
-                                             viewBox="0 0 240 234">
-
-                                            <g>
-                                                <path className="ae-st0" d="M10,10h220v214H10V10z"/>
-                                                <path className="ae-st1" d="M0,0v234h240V0H0z M10,10h220v214H10V10z M67.8,132.5l-7.9,29.9c-0.2,0.8-0.5,1.1-1.5,1.1H43.7
-                                                    c-1,0-1.2-0.3-1-1.5l28.4-99.3c0.5-1.8,0.8-3.2,1-8.2c0-0.7,0.3-1,0.8-1h21c0.7,0,1,0.2,1.2,1l31.8,107.7c0.2,0.8,0,1.3-0.8,1.3
-                                                    h-16.5c-0.8,0-1.3-0.3-1.5-1l-8.3-30H67.8L67.8,132.5z M95.9,116.3c-2.8-11.1-9.6-35.3-12.1-47h-0.2c-2.1,11.7-7.6,31.5-11.7,47
-                                                    C72,116.3,95.9,116.3,95.9,116.3z M149.5,126.5c0.2,13.5,6.6,22.6,21.8,22.6c5.9,0,11-0.8,16.3-3.1c0.7-0.3,1.2-0.2,1.2,0.7v12.5
-                                                    c0,1-0.3,1.5-1,2c-5.3,2.6-11.9,3.8-20.1,3.8c-26.4,0-36.3-19.5-36.3-41.3c0-23.6,12.2-42.9,33.7-42.9c21.8,0,29.4,18.3,29.4,33.2
-                                                    c0,4.8-0.3,8.7-0.8,10.6c-0.2,0.8-0.5,1.1-1.3,1.3c-2,0.3-7.9,0.7-16.7,0.7L149.5,126.5L149.5,126.5z M169.8,112.7
-                                                    c5.1,0,6.9,0,7.4-0.2c0-0.7,0.2-1.2,0.2-1.7c0-5.4-2.6-15.4-13-15.4c-9.6,0-13.7,8.4-14.7,17.3L169.8,112.7L169.8,112.7z"/>
-                                            </g>
-                                        </svg>
-
-                                    </section>
-
-                                </div>
-
-                            </section>
                         </div>
                     </div>
                 </div>
