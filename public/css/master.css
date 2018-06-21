@@ -3010,7 +3010,7 @@ footer{
     }
 
     .our-technology .techo-div section {
-        width: calc(33.33% - 8px);
+        width: calc(50% - 8px);
     }
 
     .our-technology-margin {
@@ -3022,14 +3022,16 @@ footer{
     }
     .our-right-technology .techo-div section {
         height: calc(80% - 7px);
+        width:calc(33.33% - 8px);
     }
     .our-right-technology section {
-
+        margin-top: 67px;
         height: 35%;
     }
     .jigsaw1 {
         z-index: 0;
         display: block;
+        width: 245px;
         margin: auto;
         float: unset;
     }
@@ -3042,6 +3044,7 @@ footer{
     .jigsaw2 {
         z-index: 0;
         display: block;
+        width: 245px;
         margin: auto;
         float: unset;
     }
@@ -3066,6 +3069,7 @@ footer{
     }
     .vision-name,.vission-name{
         margin-left: 39px;
+        font-size: 14px;
     }
 
     .vision-name ul {
@@ -3115,6 +3119,10 @@ footer{
     .pic-name{
         display: block;
         background: rgba(0, 0, 0, 0.68);
+    }
+    .company-thumbnail {
+        height: 465px;
+        padding:0 15px;
     }
 
 
