@@ -2450,12 +2450,11 @@ footer{
 }
 .mobile-svg{
     position: absolute;
-    bottom: 22%;
-    width: 100px;
+    top:8px;
+    width: 70px;
     margin: auto;
-    height: 100px;
-    left: 0;
-    right: 0;
+    height: 70px;
+    left: 12px;
     display: none;
 }
 /*mediaqueries*/
@@ -2585,6 +2584,7 @@ footer{
 
     .company-details-container {
         padding-top: 90px;
+        position: unset;
     }
 
     .company-thumbnail:hover {
@@ -2781,7 +2781,7 @@ footer{
     }
     .team-photos-section {
         width: 100%;
-        overflow: scroll;
+        /*overflow: scroll;*/
     }
     .team-photos-wrapper {
         width: 100%;
@@ -2791,8 +2791,8 @@ footer{
         width: 50%;
     }
     #about{
-        background: linear-gradient(to right, rgb(196, 212, 132), rgb(222, 186, 98));
-        overflow-y: auto;
+        overflow-y: hidden;
+        overflow-x: hidden;
 
     }
     .photos-thumbnail .photos:hover {
@@ -2824,6 +2824,17 @@ footer{
     }
     .service-wrapper {
         margin-top: 70px;
+        overflow: hidden;
+        overflow-y: auto;
+
+    }
+    #about #triangle-topleft1 {
+        border-top: 640px solid #ff78752e;
+        border-right: 200px solid transparent;
+    }
+    #about #triangle-bottomright {
+        border-bottom: 900px solid #98d64f59;
+        border-left: 200px solid transparent;
     }
     }
 @media all and (max-width:349px) and (min-width:320px) and (orientation: portrait) {
