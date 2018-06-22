@@ -1011,7 +1011,7 @@ a{
 .our-technology .techo-div section{
     width: calc(25% - 8px);
     margin: 3px 4px;
-    background: #e6570f;
+    border:1px solid lightgray;
     height: calc(50% - 7px);
     position: relative;
     display: inline-block;
@@ -1019,7 +1019,7 @@ a{
 .our-right-technology .techo-div section{
     width: calc(33.33% - 8px);
     margin: 3px 4px;
-    background: #e6570f;
+    border:1px solid lightgray;
     height: calc(50% - 7px);
     position: relative;
     display: inline-block;
@@ -1106,7 +1106,6 @@ a{
     background: #ffd28e;
     padding: 20px;
     font-family: Verdana;
-    border: 1px solid lightgray;
     text-align: justify;
     font-size: 15px;
     /*box-shadow: -8px 10px 25px -5px rgba(121, 118, 118, 0.84);*/
@@ -2133,27 +2132,27 @@ opacity: 1;
     margin: 5em;
 }
 .js-st0{stroke:#000000;stroke-miterlimit:10;}
-.js-st1{fill: #e6570f;;}
+.js-st1{fill: #ffebd9;;}
 .js-st2{fill:none;}
 .js-st3{fill:#000;}
-.ht-st0{fill:#e6570f;}
+.ht-st0{fill:#fee6e5;}
 .ht-st3{fill:#000;}
 .ht-st1{fill:none;}
 .ht-st2{stroke:#000000;stroke-miterlimit:10;}
 .css-st0{fill:#050505;}
-.css-st1{fill:#e6570f;}
+.css-st1{fill:#fff;}
 .css-st2{stroke:#000000;stroke-miterlimit:10;}
 .jq-st0{fill:#000;stroke:#000000;stroke-miterlimit:10;}
 .react-st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
-.illustr-st0{fill:#e6570f;}
+.illustr-st0{fill:#fff;}
 .illustr-st1{fill:#000;}
-.photos-st0{fill:#e6570f;}
+.photos-st0{fill:#fff;}
 .photos-st1{fill:#000;}
-.ae-st0{fill:#e6570f;}
+.ae-st0{fill:#fff;}
 .ae-st1{fill:#000;}
-.php-st0{fill:#e6570f;}
-.sql-st0{fill:#e6570f;}
-.angular-st0{fill:#e6570f;}
+.php-st0{fill:#ffebd9;}
+.sql-st0{fill:#dbf1c1;}
+.angular-st0{fill:#fff;}
 
 .vision-name ul {
     height: calc(100% - 75px);
@@ -2322,17 +2321,17 @@ nav p{
     padding: 9px 20px;
 }
 .go-st0{fill:#000;stroke:#000000;stroke-miterlimit:10;}
-.go-st1{fill:#e6570f;stroke:#000000;stroke-miterlimit:10;}
+.go-st1{fill:#ffebd9;stroke:#000000;stroke-miterlimit:10;}
 .go-st2{stroke:#000000;stroke-miterlimit:10;}
 .go-st3{fill:none;stroke:#000000;stroke-miterlimit:10;}
 .net-st0{stroke:#000000;stroke-miterlimit:10;}
 .py-st0{stroke:#000000;stroke-miterlimit:10;}
-.py-st1{fill:#e6570f;}
+.py-st1{fill:#fff;}
 .android-st0{stroke:#000000;stroke-miterlimit:10;}
-.android-st1{fill:#e6570f;}
-.press-st0{fill:#e6570f;stroke:#000000;stroke-miterlimit:10;}
+.android-st1{fill:#fff;}
+.press-st0{fill:#fff;stroke:#000000;stroke-miterlimit:10;}
 .press-st1{stroke:#000000;stroke-miterlimit:10;}
-.press-st2{fill:#e6570f;}
+.press-st2{fill:#fff;}
 .msg-st0{fill:#133245;}
 .msg-st1{fill:#DF5B38;}
 .msg-st2{fill:none;stroke:#FFFFFF;stroke-width:10;stroke-miterlimit:10;}
