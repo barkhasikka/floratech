@@ -1605,7 +1605,8 @@ opacity: 1;
     padding-left: 7px;
     height: 80%;
     border: 1px solid #dadada;
-    font-size: 15px;
+    font-size: 13px;
+    color: #555;
     resize: none;
     font-family: "Helvetica Neue";
 }
