@@ -157,12 +157,11 @@ class App extends React.Component {
     }
 
     show (){
-        if( document.getElementById("to").style.display == "block"  ){
-            document.getElementById("to").style.display = "none" ;
-        }
-        else{
-            document.getElementById("to").style.display = "block" ;
-        }
+
+            document.getElementById("to").classList.toggle("drp-view");
+
+
+
 
     }
 
