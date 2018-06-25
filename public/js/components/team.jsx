@@ -183,7 +183,7 @@ class Team extends React.Component {
                                         <li>Keep it simple, silly!</li>
                                         <li>Work is not work if you are passionate about it.</li>
                                         <li>Your time is money, and so is others'</li>
-                                        <li>Obsession with innovation.</li>
+                                        <li> innovation is the heart beat of progress .</li>
                                         <li>Trust is directly proportional to transparency.</li>
                                     </ul>
                                 </div>
