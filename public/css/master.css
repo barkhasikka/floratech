@@ -85,7 +85,7 @@ html, body{
 }
 .flora-loader{
     margin: auto;
-    width: 18%;
+    width: 23%;
 }
 .digital-logo0{
     stroke: #000000; stroke-width: 4px;
@@ -1485,6 +1485,9 @@ opacity: 1;
     background-size:cover;
     background-position: center center;
     background-repeat: no-repeat
+}
+.clock-tip{
+    transform:rotate(4deg) translate(95px);
 }
 .bloom-svg {
     width: 7%;

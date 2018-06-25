@@ -5,7 +5,23 @@ import {smoothScroll} from './commoncomponent/helper.js'
 class Contact extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.sendEmail = this.sendEmail.bind(this);
+
+        this.isValidEmail = this.isValidEmail.bind(this);
+        this.handleContactEmailChange = this.handleContactEmailChange.bind(this);
+        this.handleMobileNoChange = this.handleMobileNoChange.bind(this);
+        this.handleContentChange = this.handleContentChange.bind(this);
+        this.isValidMobileNO = this.isValidMobileNO.bind(this);
+        this.state = {
+            Content: '',
+            contactEmail: "",
+            showContactLoader: false,
+            ContentErrorMessage: false,
+            loader: false,
+            currentTab: '',
+            selectedTab: ''
+        };
+
 
     }
 
@@ -22,6 +38,118 @@ class Contact extends React.Component {
             document.getElementById("to").style.display = "block" ;
         }
 
+    }
+    sendEmail() {
+        let email = this.isValidEmail(this.state.Email);
+        if (!email) {
+            this.setState({
+                EmailErrorMessage: true
+            });
+            document.getElementById("text").classList.add("display-block");
+            setTimeout(function () {
+                document.getElementById("text").classList.remove("display-block");
+            }, 5000);
+            this.displayMessage();
+            return;
+        }
+        this.setState({EmailErrorMessage: false});
+        let isValidMobNo = this.isValidMobileNO(this.state.MobileNo);
+        if (!isValidMobNo) {
+            this.setState({
+                MobileErrorMessage: true,
+            });
+            document.getElementById("mobilenum").classList.add("display-block");
+            setTimeout(function () {
+                document.getElementById("mobilenum").classList.remove("display-block");
+            }, 5000);
+
+            this.displayMessage();
+            return;
+        }
+        this.setState({MobileErrorMessage: false});
+        if (!this.state.Content) {
+            this.setState({
+                ContentErrorMessage: true,
+            });
+            document.getElementById("address").classList.add("display-block");
+            setTimeout(function () {
+                document.getElementById("address").classList.remove("display-block");
+            }, 5000);
+
+            this.displayMessage();
+
+            return;
+        }
+        this.setState({ContentErrorMessage: false});
+        this.setState({showContactLoader: true});
+        let contactUsParams = {
+            params: [{
+                Email: this.state.Email,
+                MobileNo: this.state.MobileNo,
+                Content: this.state.Content,
+
+            }],
+            method: "LandingService.SendContactUs",
+            id: "1"
+        };
+
+        fetch("/api/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            credentials: "same-origin",
+            body: JSON.stringify(contactUsParams),
+        }).then(response => response.json())
+            .then((contactResponse) => {
+                this.setState({
+                    Email: "",
+                    MobileNo: "",
+                    Content: "",
+                    showContactLoader: false
+                });
+            }).catch(function (error) {
+            console.log(error);
+        });
+    }
+
+    isValidEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (re.test(email)) {
+            this.state.EmailErrorMessage = true;
+        } else {
+            this.state.EmailErrorMessage = false;
+        }
+        return this.state.EmailErrorMessage;
+    }
+
+    isValidMobileNO(mNo) {
+        let isValidPhone = false;
+        var phoneNumberRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        if (phoneNumberRegex.test(mNo)) {
+            isValidPhone = true
+        } else {
+            isValidPhone = false
+        }
+        return isValidPhone;
+    }
+
+    handleContactEmailChange(event) {
+        this.setState({
+            Email: event.target.value
+        });
+    }
+
+    handleContentChange(event) {
+        this.setState({
+            Content: event.target.value
+        });
+    }
+
+    handleMobileNoChange(event) {
+        this.setState({
+            MobileNo: event.target.value
+        });
     }
 
     render() {
