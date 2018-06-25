@@ -1420,10 +1420,6 @@ opacity: 1;
     padding: 2px;
     float: left;
     height: 100%;
-    background-image: url("http://rpmconsultancy.com/wp-content/uploads/2017/04/meeting-iStock.jpg");
-    background-size:cover;
-    background-position: center center;
-    background-repeat: no-repeat
 }
 .right-company-txt {
     width: 75%;
@@ -1450,17 +1446,16 @@ opacity: 1;
     clear: both;
     width: 75%;
     float: left;
-    padding: 20px 0;
+    padding: 28px 0;
 }
 .deliver-svg {
     width: 25%;
      float: right;
     height: 100%;
-    background-image: url("http://www.mangalamtours.com/image/corporate/sub/1505540593Meetings%201.jpg");
-    background-size:cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    padding: 20px 20px 20px 50px;
+}
+.deliver-svg svg{
+    width:100%;
+    height:100%;
 }
 /*.deliver-svg {*/
     /*width: 14%;*/
@@ -1476,16 +1471,17 @@ opacity: 1;
     /*transform: rotate(50deg);*/
     /*position: absolute;*/
     height: 100%;
-    background-image: url("https://blog.gotomeeting.com/wp-content/uploads/sites/8/2018/02/stand-up-meeting.jpg");
-    background-size:cover;
-    background-position: center center;
-    background-repeat: no-repeat
 }
+.innovation-svg svg{
+    width:100%;
+    height:100%;
+}
+
 .built-svg {
     width: 25%;
     height: 100%;
     float: left;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDaash0njTtBkq0FgYOP756JfxbfB7_8ihvcPLFR3PqCnTZwF");
+    background-image: url("/assets/timemachine.png");
     background-size:cover;
     background-position: center center;
     background-repeat: no-repeat
@@ -2457,6 +2453,34 @@ footer{
     left: 12px;
     display: none;
 }
+.listn-st0{fill:#FDE463;stroke:#000000;stroke-width:40;stroke-miterlimit:10;}
+.listn-st1{fill:#FFFFFF;}
+.listn-st2{fill:#F2DF91;}
+.listn-st3{fill:none;stroke:#000000;stroke-width:22;stroke-linecap:round;stroke-miterlimit:10;}
+.ino-st0{fill:none;stroke:#1A6691;stroke-width:27;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.ino-st1{fill:#36464E;}
+.ino-st2{fill:#F4A457;}
+.ino-st3{fill:#F8BE2C;}
+.ino-st4{fill:#BC360C;}
+.ino-st5{fill:#CCD6DA;}
+.ino-st6{fill:#DD660E;stroke:#1A6691;stroke-miterlimit:10;}
+.ino-st7{fill:#B26D12;stroke:#1A6691;stroke-miterlimit:10;}
+.ino-st8{fill:#F85F59;}
+.ino-st9{fill:#FE9345;}
+.ino-st10{fill:none;stroke:#919191;stroke-width:3;}
+.ino-st11{fill:#97C03D;}
+.ino-st12{fill:#FFFFFF;}
+.ino-st13{fill:#69D7E2;stroke:#000000;stroke-miterlimit:10;}
+.ino-st14{fill:#F6D2A2;stroke:#000000;stroke-miterlimit:10;}
+.ino-st15{fill:#F9F9F9;stroke:#000000;stroke-miterlimit:10;}
+.ino-st16{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+.ino-st17{stroke:#000000;stroke-miterlimit:10;}
+.ino-st18{fill:none;stroke:#000000;stroke-miterlimit:10;}
+.ino-st19{fill:none;stroke:#61DAFB;stroke-width:7;stroke-miterlimit:10;}
+.time-st0{fill:#006837;stroke:#FEC534;stroke-width:20;stroke-miterlimit:10;}
+.time-st1{fill:#FEC534;}
+.time-st2{fill:none;}
+.time-st3{fill:#F7931E;}
 /*mediaqueries*/
 @media all and (max-width:479px) and (min-width:350px) and (orientation: portrait) {
     .we-pro-div {
