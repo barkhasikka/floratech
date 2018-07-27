@@ -205,7 +205,10 @@ background: none;
     /* box-shadow: 0 1px 25px -1px #575757; */
 }
 #app .header-section:hover{
-    background: rgba(249, 194, 173, 0.8);
+    background: rgba(255, 255, 255, 0.53);
+}
+#app .header-section:hover .header-options-right, #app .header-section:hover .header-options{
+    color: #133446;
 }
 .clear-both{
     clear: both;
@@ -280,7 +283,7 @@ background: none;
     text-align: center;
     line-height: 150px;
     float: right;
-    color: #fff;
+    color: white;
 }
 .bind-header{
     height: 100%;
@@ -303,12 +306,12 @@ background: none;
     text-align: center;
     line-height: 150px;
     float: left;
-    color: #fff;
+    color: white;
 
 }
-#app .header-options{
-    color: white;
-}
+/*#app .header-options{*/
+    /*color: white;*/
+/*}*/
 
 #app .header-options.header-span-background{
     color: #185795;
@@ -333,7 +336,7 @@ background: none;
     cursor: pointer;
     font-family: "andalemo";
     position: relative;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 150px;
     width: 46%;
     display: block;
@@ -1040,8 +1043,7 @@ a{
     font-family: Verdana;
     text-align: justify;
     font-size: 13px;
-    line-height:17px;
-    height: 260px;
+    line-height:1.5;
 }
 .svg-info {
     width: 245px;
@@ -1067,14 +1069,14 @@ a{
 }
 .flip-container {
     width: 312px;
-    height: 280px;
+    height: 315px;
     cursor: pointer;
     position: relative;
     float: left;
 }
 .card {
     width: 280px;
-    height: 280px;
+    height: 100%;
     /* position: absolute; */
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
@@ -1103,12 +1105,14 @@ a{
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
-    background: #ffd28e;
-    padding: 20px;
+    background: #f3f3f3;
+    padding: 0 20px;
     font-family: Verdana;
     text-align: justify;
     font-size: 15px;
-    /*box-shadow: -8px 10px 25px -5px rgba(121, 118, 118, 0.84);*/
+    display: flex;
+    /* vertical-align: middle; */
+    align-items: center;
 }
 .svg-container {
     width: 20%;
@@ -1515,7 +1519,7 @@ opacity: 1;
 }
 .contact-section {
     width: 95%;
-    height: calc(100% - 28px);
+    height: auto;
     margin: auto;
     display: block;
     box-shadow: 1px 3px 16px 0 rgba(0, 0, 0, 0.4);
@@ -1669,9 +1673,7 @@ opacity: 1;
 .footer-info{
     display: inline-block;
     width: 50%;
-    font-size: 10px;
-    height: 28px;
-    line-height: 28px;
+    line-height: 50px;
     padding: 0 10px;
 }
 .float-left{
@@ -1845,7 +1847,7 @@ opacity: 1;
     z-index: 111;
     float: left;
     left: 0;
-    transition: left 2s linear;
+    transition: left 0.5s linear;
 }
 .jigsaw2 {
     width: 300px;
@@ -1857,7 +1859,7 @@ opacity: 1;
     z-index: 1;
     float: right;
     right: 0;
-    transition: right 2s linear;
+    transition: right 0.5s linear;
 }
 .jigsaw3 {
     width: 100%;
@@ -1925,7 +1927,6 @@ opacity: 1;
     height: 55%;
     color: #fff;
     margin-left: 60px;
-    display: flex;
     align-items: center;
 }
 .vission-name p,.vision-name p{
@@ -2006,7 +2007,7 @@ opacity: 1;
 }
 .jig1{
     top: 0;
-    transition: top 2s linear;
+    transition: top 0.5s linear;
     width: 600px;
     position: relative;
     margin: 54px auto;
@@ -2159,6 +2160,7 @@ opacity: 1;
     list-style: none;
     margin: 0;
     vertical-align: middle;
+    padding: 0;
 }
 .contact-us-left-section section{
     width:30%;
@@ -2228,7 +2230,8 @@ nav p{
 }
 .contact-us-wrapper{
     width: 100%;
-    height: calc(100% - 150px);
+    height: calc(100% - 90px);
+    padding: 30px;
 }
 .contact-parts{
     width: 50%;
@@ -2445,7 +2448,10 @@ canvas {
 }
 footer{
     width: 100%;
-    height: 32px;
+    height: 50px;
+    font-size: 14px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 .mobile-svg{
     position: absolute;

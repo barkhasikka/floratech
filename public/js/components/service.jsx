@@ -160,17 +160,14 @@ class Services extends React.Component {
                                     </blockquote>
                                 </div>
                                 <div className="side back">
-                                    <blockquote className="service-text">You have an awesome App idea and just looking
-                                        for ways to turn it into reality.
-                                        Whether it is Android or iOS, we at Floratechno solutions have years of
-                                        expertise in developing mobile apps for different market segment.
-                                        We understand every app is different and has it’s sets of challenges.
-                                        We work closely to understand our clients Idea and expectation. With our expert
-                                        team at dispose,
-                                        we deliver quick and always stay alert for smooth working on back-end, for their
-                                        growing need.
+                                    <blockquote className="service-text">You have an awesome app idea and just looking
+                                        for ways to turn it into a reality; you have come to a right place.
+                                        Whether it is Android or iOS, we at Floratechno Solutions have expertise in developing mobile apps for different market segments.
+                                        We understand every app is different and has its sets of challenges. With our expert
+                                        team at dispose, we deliver quick and always stay alert for smooth working for your
+                                        growing needs.
                                     </blockquote>
-                                    <span className="see-more-txt">SEE MORE</span>
+                                    {/*<span className="see-more-txt">SEE MORE</span>*/}
                                 </div>
                             </div>
                         </div>
@@ -192,16 +189,12 @@ class Services extends React.Component {
                                     </blockquote>
                                 </div>
                                 <div className="side back">
-                                    <blockquote className="service-text">Our web applications are creative and most
-                                        efficient..
-                                        We plan, strategize, research and develop design keeping our client’s business
-                                        goals in mind from day 1.
-                                        We work with latest technologies and remain clean and clear on with our clients
-                                        without any false promises.
-                                        Whether it is long term support for application or updating as per the new
-                                        technologies we always provide support whenever needed.
+                                    <blockquote className="service-text">We make the most creative and efficient web applications.
+                                        We plan, strategize, research, design and develop keeping our client’s business
+                                        goals in mind from day one.
+                                        We work with latest technologies to make sure your application is always one step ahead. We are always transparent when it comes to our bond with clients.
                                     </blockquote>
-                                    <span className="see-more-txt">SEE MORE</span>
+                                    {/*<span className="see-more-txt">SEE MORE</span>*/}
                                 </div>
                             </div>
                         </div>
@@ -226,14 +219,12 @@ class Services extends React.Component {
                                 <div className="side back">
                                     <blockquote className="service-text">
                                         Every business starts with a website in their mind.
-                                        Your website is your first and last interaction with your potential customer.
-                                        At floratechno solutions, we understand how customer behavior works and come up
-                                        with new and unique web design UI to help you get more in terms of value.
-                                        We don’t believe in ready made template and never pitch them to our client.
-                                        We study and understand the need of our customer in terms of UI and its
-                                        functions.
+                                        Your website is the first and last interaction with your potential customer.
+                                        At Floratechno Solutions, we understand how customer behavior works and so we come up
+                                        with new and unique web design to help you get more in terms of value.
+                                        We study and understand the need of our customer in terms of UI and UX; this is how we ensure that you have a unique website.
                                     </blockquote>
-                                    <span className="see-more-txt">SEE MORE</span>
+                                    {/*<span className="see-more-txt">SEE MORE</span>*/}
                                 </div>
                             </div>
                         </div>
@@ -489,7 +480,7 @@ class Services extends React.Component {
                                         We help you generate online marketing strategies for every facet of digital
                                         marketing.
                                     </blockquote>
-                                    <span className="see-more-txt">SEE MORE</span>
+                                    {/*<span className="see-more-txt">SEE MORE</span>*/}
                                 </div>
                             </div>
                         </div>
