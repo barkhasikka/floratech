@@ -143,7 +143,7 @@ class About extends React.Component {
                             <blockquote className="txt-alignment">
                                 Floratechno solutions is a leading software solution company located at the heart of Pune Maharashtra.
                                 We aim to become one stop destination for all IT solution. Our team is made up of Creative Developers,Young Designers, Analyst and Industry Experts.
-                                All working for one same dream and vision to become the best in industry by providing value to our customer.
+                                All working towards achieving the same dream of becoming the best in the industry by empowering our clients.
                             </blockquote>
                         </div>
                     </div>
@@ -160,7 +160,7 @@ class About extends React.Component {
                         <div className="text-section">
                             <blockquote className="txt-alignment">
                                 We work with industry’s most advance technologies in the field of Mobile Application, Web Application, Web Designing, Digital Marketing and Corporate Branding.
-                                We provide value to our client from these technologies by providing best in industry service for their business to grow and run smooth.
+                                We provide value to our client from these technologies by providing best service in industry for their business to grow and run smoothly.
                                 We run our business with high integrity and transparency and always deliver on our promise.
                             </blockquote>
                         </div>
@@ -176,9 +176,9 @@ class About extends React.Component {
                         </div>
                         <div className="text-section">
                             <blockquote className="txt-alignment">
-                                We have never give up attitude and understand our client business needs.
+                                We understand our client's business needs.
                                 We work with single focus in our mind which is to provide value for money to our clients.
-                                With the years of experience in complex project handling and our team member experience,
+                                With experience in complex project handling 
                                 we are able to deliver as per client expectations on time which helps them turn their dream into reality.
                             </blockquote>
                         </div>
@@ -188,8 +188,8 @@ class About extends React.Component {
 
                 <section className="company-info-container">
                     <div className="company-info-heading">
-                        <span className="motto-txt">WHAT MAKES US</span>
-                        <span className="ceo-txt">DIFFERENT, AND YOU HAPPY</span>
+                        <span className="motto-txt">WHAT MAKES US DIFFERENT</span>
+                        <span className="ceo-txt"> AND YOU HAPPY</span>
                     </div>
 
                     <div className="company-info-section">
