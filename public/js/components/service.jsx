@@ -2,9 +2,9 @@ import React from 'react';
 import {render} from 'react-dom';
 import {smoothScroll} from './commoncomponent/helper.js'
 import DigitalMarketingIcon from '../../assets/digitalmarketing.svg'
-import MobileApplicationDevelopmentIcon from '../../assets/mobile app.svg'
+import MobileApplicationDevelopmentIcon from '../../assets/mobile_app.svg'
 import WebApplicationDevelopmentIcon from '../../assets/webdevelopment.svg'
-import WebDesignIcon from '../../assets/web design.svg'
+import WebDesignIcon from '../../assets/web_design.svg'
 class Services extends React.Component {
     constructor(props) {
         super(props);
