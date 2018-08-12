@@ -2904,6 +2904,27 @@ footer{
         border-left: 200px solid transparent;
     }
     }
+
+.digital-mark-st0{
+    fill:none;
+    stroke:#000000;
+    stroke-width: 6px;
+}
+
+.mobile-app-st0{fill:none;stroke:#020202;stroke-width: 3;stroke-miterlimit:10;}
+.mobile-app-st1{fill:#183C47;stroke:#020202;stroke-width: 3;stroke-miterlimit:10;}
+.mobile-app-st2{fill:none;stroke:#020202;stroke-width: 6;stroke-miterlimit:10;}
+
+.web-development-st0{fill:none;stroke:#020202;stroke-width:5;stroke-miterlimit:10;}
+.web-development-st1{fill:#183C47;stroke:#FFFFFF;stroke-miterlimit:10;}
+.web-development-st2{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
+.web-development-st3{fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:10;}
+.web-development-st4{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
+
+
+.web-design-st0{fill:none;stroke:#020202;stroke-width:3;stroke-miterlimit:10;}
+.web-design-st1{fill:none;stroke:#020202;stroke-width:4;stroke-miterlimit:10;}
+
 @media all and (max-width:349px) and (min-width:320px) and (orientation: portrait) {
     .we-pro-div {
         width: 100%;
@@ -3274,5 +3295,6 @@ footer{
         height: 70px;
     }
 }
+
 
 /*end*/
