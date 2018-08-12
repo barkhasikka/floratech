@@ -139,177 +139,175 @@ class Team extends React.Component {
                         </a>
                     </section>
                 </div>
-                <div className="service-wrapper">
+                <div className="team-main-wrapper">
                     <div id="triangle-topright"></div>
                     <div id="triangle-bottomleft"></div>
                     <div id="triangle-bottomright"></div>
                     <div id="triangle-topleft"></div>
-                <section className="team-info-container clear-both" id="team-containers">
-
-                    <div className="puzzle-body">
-                        <div className="jig">
-                            <div className="jigsaw1">
-                                <span className="t"></span>
-                                <span className="r"></span>
-                                <span className="b"></span>
-                                <span className="l"></span>
+                    <section className="team-info-container clear-both" id="team-containers">
+                        <div className="puzzle-body">
+                            <div className="jig">
+                                <div className="jigsaw1">
+                                    <span className="t"></span>
+                                    <span className="r"></span>
+                                    <span className="b"></span>
+                                    <span className="l"></span>
 
                                     <span className="text">MISSION</span>
-                                <div className="vission-name">
-                                    <p> To be a reality of other’s dreams by building the best teams to work with.</p>
+                                    <div className="vission-name">
+                                        <p> To be a reality of other’s dreams by building the best teams to work with.</p>
                                     </div>
+                                </div>
+                                <div className="jigsaw2">
+                                    <span className="t"></span>
+                                    <span className="r"></span>
+                                    <span className="b"></span>
+
+                                    <span className="text1">VISION</span>
+                                    <div className="vision-name">
+                                        <p>Floratechno turns your ideas into a saleable product by working on its design, development and marketing. We deliver best quality on time, every time.</p>
+                                   </div>
+                                </div>
                             </div>
-
-                            <div className="jigsaw2">
-                                <span className="t"></span>
-                                <span className="r"></span>
-                                <span className="b"></span>
-
-                                <span className="text1">VISION</span>
-                                <div className="vision-name">
-                                <p>Floratechno turns your ideas into a saleable product by working on its design, development and marketing. We deliver best quality on time, every time.</p>
-                               </div>
+                            <div className="jig1">
+                                <div className="jigsaw3">
+                                    <span className="t"></span>
+                                    <span className="r"></span>
+                                    <span className="l"></span>
+                                    <span className="p"></span>
+                                    <span className="text2">VALUES</span>
+                                    <div className="vision-name vission-section">
+                                        <ul>
+                                            <li>Keep it simple, silly!</li>
+                                            <li>Work is not work if you are passionate about it.</li>
+                                            <li>Your time is money, and so is others'</li>
+                                            <li> innovation is the heart beat of progress .</li>
+                                            <li>Trust is directly proportional to transparency.</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className="jig1">
-                            <div className="jigsaw3">
-                                <span className="t"></span>
-                                <span className="r"></span>
-                                <span className="l"></span>
-                                <span className="p"></span>
-                                <span className="text2">VALUES</span>
-                                <div className="vision-name vission-section">
-                                    <ul>
-                                        <li>Keep it simple, silly!</li>
-                                        <li>Work is not work if you are passionate about it.</li>
-                                        <li>Your time is money, and so is others'</li>
-                                        <li> innovation is the heart beat of progress .</li>
-                                        <li>Trust is directly proportional to transparency.</li>
-                                    </ul>
+                    </section>
+                    <section className="team-container" >
+                    <div className="team-text">
+                        <span className="team-txt">TEAM</span>
+                        <span className="behind-txt">BEHIND THIS</span>
+                    </div>
+                    <div className="team-photos-section">
+                        <div className="team-photos-wrapper">
+                            <div className="photos-thumbnail">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/timothy.png"/>
+                                    <span className="pic-name">Timothy Virgillo</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/barkha.png"/>
+                                    <span className="pic-name">Barkha Sikka</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail">
+                                <div className="photos ">
+                                    <img className="photo-wrapper" src="../assets/krishna.png"/>
+                                    <span className="pic-name">Krishna Khandagale</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/nafeesa.png"/>
+                                    <span className="pic-name">Nafeesa Langde</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/tejal.png"/>
+                                    <span className="pic-name">Tejal Ohara</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail photos-thumbnail-margin">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/tejas.png"/>
+                                    <span className="pic-name">Tejas Bari</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/barkha.png"/>
+                                    <span className="pic-name">Barkha Sikka</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/aniket.png"/>
+                                    <span className="pic-name">Aniket Mane</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail pic-wrapper">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/mahendra.png"/>
+                                    <span className="pic-name">Mahendra Kulkarni</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail pic-wrapper margin-left-9">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/clinton.png"/>
+                                    <span className="pic-name">Clinton Fernandes</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail pic-wrapper-one">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/samar.png"/>
+                                    <span className="pic-name">Samar Deshpande</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail pic-wrapper-one">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/shweta.png"/>
+                                    <span className="pic-name">Shweta Takale</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail pic-wrapper-one">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/pratiksha.png"/>
+                                    <span className="pic-name">Pratiksha Kature</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail pic-wrapper-one">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/lalit.png"/>
+                                    <span className="pic-name">Lalit Dhumal</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail pic-wrapper-two margin-left-16">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/reshma.png"/>
+                                    <span className="pic-name">Reshma Ritond</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail pic-wrapper-two">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/aishwarya.png"/>
+                                    <span className="pic-name">Aishwarya Kulkarni</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail pic-wrapper-two">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/vikash.png"/>
+                                    <span className="pic-name">Vikas Kumar</span>
+                                </div>
+                            </div>
+                            <div className="photos-thumbnail pic-wrapper-two">
+                                <div className="photos">
+                                    <img className="photo-wrapper" src="../assets/vikash.png"/>
+                                    <span className="pic-name">Vikas Kumar</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section className="team-container" >
-                <div className="team-text">
-                    <span className="team-txt">TEAM</span>
-                    <span className="behind-txt">BEHIND THIS</span>
                 </div>
-                <div className="team-photos-section">
-                    <div className="team-photos-wrapper">
-                        <div className="photos-thumbnail">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/timothy.png"/>
-                                <span className="pic-name">Timothy Virgillo</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/barkha.png"/>
-                                <span className="pic-name">Barkha Sikka</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail">
-                            <div className="photos ">
-                                <img className="photo-wrapper" src="../assets/krishna.png"/>
-                                <span className="pic-name">Krishna Khandagale</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/nafeesa.png"/>
-                                <span className="pic-name">Nafeesa Langde</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/tejal.png"/>
-                                <span className="pic-name">Tejal Ohara</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail photos-thumbnail-margin">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/tejas.png"/>
-                                <span className="pic-name">Tejas Bari</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/barkha.png"/>
-                                <span className="pic-name">Barkha Sikka</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/aniket.png"/>
-                                <span className="pic-name">Aniket Mane</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail pic-wrapper">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/mahendra.png"/>
-                                <span className="pic-name">Mahendra Kulkarni</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail pic-wrapper margin-left-9">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/clinton.png"/>
-                                <span className="pic-name">Clinton Fernandes</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail pic-wrapper-one">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/samar.png"/>
-                                <span className="pic-name">Samar Deshpande</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail pic-wrapper-one">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/shweta.png"/>
-                                <span className="pic-name">Shweta Takale</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail pic-wrapper-one">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/pratiksha.png"/>
-                                <span className="pic-name">Pratiksha Kature</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail pic-wrapper-one">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/lalit.png"/>
-                                <span className="pic-name">Lalit Dhumal</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail pic-wrapper-two margin-left-16">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/reshma.png"/>
-                                <span className="pic-name">Reshma Ritond</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail pic-wrapper-two">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/aishwarya.png"/>
-                                <span className="pic-name">Aishwarya Kulkarni</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail pic-wrapper-two">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/vikash.png"/>
-                                <span className="pic-name">Vikas Kumar</span>
-                            </div>
-                        </div>
-                        <div className="photos-thumbnail pic-wrapper-two">
-                            <div className="photos">
-                                <img className="photo-wrapper" src="../assets/vikash.png"/>
-                                <span className="pic-name">Vikas Kumar</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-                    </div>
                 <footer>
                     <div className="footer-info float-left">Powered by <span>Floratechno Solutions Pvt. Ltd.</span></div>
                     <div className="footer-info float-right text-align-right"><span className="copyright-info">©2018 India</span></div>
