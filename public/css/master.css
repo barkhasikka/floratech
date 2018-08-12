@@ -1051,7 +1051,7 @@ a{
     margin: 0;
     font-family: Verdana;
     text-align: justify;
-    font-size: 13px;
+    font-size: 1.9vh;
     line-height:1.5;
 }
 .svg-info {
@@ -1064,12 +1064,17 @@ a{
 .svg-description {
     font-family: "andalemo";
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
     width: 100%;
     display: block;
     margin: auto;
     line-height: 35px;
+    font-weight: bold;
     height: 35px;
+    color: #e65a3e;
+}
+.blockquote-txt{
+    
 }
 .about-svg-wrapper{
     height: calc(100% - 35px);
@@ -1206,6 +1211,14 @@ a{
     height: auto;
     padding: 15px;
     margin: auto;
+}
+.full-height-width{
+    height:100%;
+    width:100%;
+}
+.web-design-width{
+    height: 88%;
+    width: 92%;
 }
 .photos-thumbnail {
     width: calc(25% - 30px);
