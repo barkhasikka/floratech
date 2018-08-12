@@ -16,24 +16,25 @@
 <script>
 
 
-    function newMap() {
-        // Styles a map in night mode.
+    function onMapInit() {
+
         var myLatLng = {lat: 18.4912, lng: 73.9095};
         var map = new google.maps.Map(document.getElementById('map'), {
             center:myLatLng ,
             zoom: 15,
+            gestureHandling: 'greedy'
 
         });
         var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Floratechno Solution Pvt.Ltd</h1>'+
+            '<h1 id="firstHeading" className="firstHeading">Floratechno Solution Pvt.Ltd</h1>'+
             '<div id="bodyContent">'+
-            '<p> Astha Seagull Jambhulakar Chowk Wanowrie Pune, </p>'+
+            '<p> Astha Seagull Jambhulakar Chowk Wanowrie Pune-411040. </p>'+
             '</div>'+
             '</div>';
 
-        var infowindow = new google.maps.InfoWindow({
+        var infoWindow = new google.maps.InfoWindow({
             content: contentString,
             maxWidth: 400,
 
@@ -44,7 +45,7 @@
             title: 'FLORATECHNO'
         });
         marker.addListener('click', function() {
-            infowindow.open(map, marker);
+            infoWindow.open(map, marker);
         });
 
     }
@@ -57,5 +58,5 @@
         document.write('<meta name="viewport" content="width=device-width,height='+window.innerHeight+', initial-scale=1.0">');
     }
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAw9iQmS3YSuknIGLIVUODEEvBURDNCW2U&callback=newMap" type="text/javascript"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAw9iQmS3YSuknIGLIVUODEEvBURDNCW2U&callback=onMapInit" type="text/javascript"></script>
 </html>
