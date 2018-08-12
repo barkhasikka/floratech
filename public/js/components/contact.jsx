@@ -271,8 +271,8 @@ class Contact extends React.Component {
                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
                                    </span>
                                    <address>
-                                        Offc No:202, Astha Seagull,
-                                       Jambhulkar Chowk, Wanowrie, Pune.
+                                        Office No.202, Astha Seagull,
+                                       Jambhulkar Chowk, Wanowrie, Pune- 411040.
                                    </address>
                                 </section>
                                  <section>

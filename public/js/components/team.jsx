@@ -224,6 +224,24 @@ class Team extends React.Component {
                         </div>
                         <div className="photos-thumbnail">
                             <div className="photos">
+                                <img className="photo-wrapper" src="../assets/tejal.png"/>
+                                <span className="pic-name">Tejal Ohara</span>
+                            </div>
+                        </div>
+                        <div className="photos-thumbnail photos-thumbnail-margin">
+                            <div className="photos">
+                                <img className="photo-wrapper" src="../assets/tejas.png"/>
+                                <span className="pic-name">Tejas Bari</span>
+                            </div>
+                        </div>
+                        <div className="photos-thumbnail">
+                            <div className="photos">
+                                <img className="photo-wrapper" src="../assets/barkha.png"/>
+                                <span className="pic-name">Barkha Sikka</span>
+                            </div>
+                        </div>
+                        <div className="photos-thumbnail">
+                            <div className="photos">
                                 <img className="photo-wrapper" src="../assets/aniket.png"/>
                                 <span className="pic-name">Aniket Mane</span>
                             </div>
@@ -234,7 +252,7 @@ class Team extends React.Component {
                                 <span className="pic-name">Mahendra Kulkarni</span>
                             </div>
                         </div>
-                        <div className="photos-thumbnail pic-wrapper">
+                        <div className="photos-thumbnail pic-wrapper margin-left-9">
                             <div className="photos">
                                 <img className="photo-wrapper" src="../assets/clinton.png"/>
                                 <span className="pic-name">Clinton Fernandes</span>
@@ -242,8 +260,8 @@ class Team extends React.Component {
                         </div>
                         <div className="photos-thumbnail pic-wrapper-one">
                             <div className="photos">
-                                <img className="photo-wrapper" src="../assets/harpreet.png"/>
-                                <span className="pic-name">Harpreet Arora</span>
+                                <img className="photo-wrapper" src="../assets/samar.png"/>
+                                <span className="pic-name">Samar Deshpande</span>
                             </div>
                         </div>
                         <div className="photos-thumbnail pic-wrapper-one">
@@ -260,11 +278,11 @@ class Team extends React.Component {
                         </div>
                         <div className="photos-thumbnail pic-wrapper-one">
                             <div className="photos">
-                                <img className="photo-wrapper" src="../assets/sneha .png"/>
-                                <span className="pic-name">Sneha Dhumal</span>
+                                <img className="photo-wrapper" src="../assets/lalit.png"/>
+                                <span className="pic-name">Lalit Dhumal</span>
                             </div>
                         </div>
-                        <div className="photos-thumbnail pic-wrapper-two">
+                        <div className="photos-thumbnail pic-wrapper-two margin-left-16">
                             <div className="photos">
                                 <img className="photo-wrapper" src="../assets/reshma.png"/>
                                 <span className="pic-name">Reshma Ritond</span>
@@ -272,8 +290,14 @@ class Team extends React.Component {
                         </div>
                         <div className="photos-thumbnail pic-wrapper-two">
                             <div className="photos">
-                                <img className="photo-wrapper" src="../assets/aishwariya.png"/>
+                                <img className="photo-wrapper" src="../assets/aishwarya.png"/>
                                 <span className="pic-name">Aishwarya Kulkarni</span>
+                            </div>
+                        </div>
+                        <div className="photos-thumbnail pic-wrapper-two">
+                            <div className="photos">
+                                <img className="photo-wrapper" src="../assets/vikash.png"/>
+                                <span className="pic-name">Vikas Kumar</span>
                             </div>
                         </div>
                         <div className="photos-thumbnail pic-wrapper-two">
