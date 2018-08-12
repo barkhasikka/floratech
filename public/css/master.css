@@ -885,11 +885,10 @@ a{
 
 }
 .service-wrapper{
-    float: left;
     width: 100%;
     margin-top: 102px;
     position: relative;
-
+    height: 300px;
 }
 .services-title {
     width: calc(100% - 7em);
@@ -945,7 +944,7 @@ a{
 }
 .services-description {
     width: 1250px;
-    height: 420px;
+    height: auto;
     margin: auto;
     padding-top: 40px;
 }
@@ -1056,11 +1055,14 @@ a{
     font-family: "andalemo";
     text-align: center;
     font-size: 18px;
-    width: 270px;
+    width: 100%;
     display: block;
     margin: auto;
-    padding-top: 3em;
-    line-height: 25px;
+    line-height: 35px;
+    height: 35px;
+}
+.about-svg-wrapper{
+    height: calc(100% - 35px);
 }
 @-moz-document url-prefix() {
     .card {
@@ -1080,16 +1082,19 @@ a{
     /* position: absolute; */
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
-    -webkit-transition: all 1s ease-in-out;
+     transition: all 1s ease-in-out;
+     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
     display: block;
     margin: auto;
+    /* border: 2px solid #607D8B; */
+    box-shadow: 0px 0px 4px 2px #afafaf;
 }
 .card:hover {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
+    box-shadow: none;
 }
 .card .side {
     width: 280px;
@@ -1099,13 +1104,12 @@ a{
     border-radius: 0px;
     position: absolute;
     overflow: hidden;
-    background: #fbfbfb;
 }
 .card .back {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
-    background: #f3f3f3;
+    background: #ffffff;
     padding: 0 20px;
     font-family: Verdana;
     text-align: justify;
@@ -1482,9 +1486,7 @@ opacity: 1;
 }
 
 .built-svg {
-    width: 25%;
-    height: 100%;
-    float: left;
+    width: 100%;
     background-image: url("/assets/timemachine.png");
     background-size:cover;
     background-position: center center;
@@ -2461,6 +2463,16 @@ footer{
     height: 70px;
     left: 12px;
     display: none;
+}
+.service-svg{
+    width: 250px;
+    float: left;
+    display: inline-block;
+}
+.service-detail{
+    width: calc(100% - 250px);
+    float: right;
+    display: inline-block;
 }
 .listn-st0{fill:#FDE463;stroke:#000000;stroke-width:40;stroke-miterlimit:10;}
 .listn-st1{fill:#FFFFFF;}
