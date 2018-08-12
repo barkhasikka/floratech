@@ -886,9 +886,13 @@ a{
 }
 .service-wrapper{
     width: 100%;
+    height: 300px;
+}
+.services-main-wrapper{
+    width: 100%;
     margin-top: 102px;
     position: relative;
-    height: 300px;
+    height: auto;
 }
 .services-title {
     width: calc(100% - 7em);
