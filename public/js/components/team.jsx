@@ -286,7 +286,7 @@ class Team extends React.Component {
                             </div>
                             <div className="photos-thumbnail bottom-90">
                                 <div className="photos">
-                                    <img className="photo-wrapper" src="../assets/lalit.png"/>
+                                    <img className="photo-wrapper" onMouseOver={(e) => this.onImageHover(e,'lalit') } onMouseOut={(e) => this.onImageMouseOut(e,'lalit') } src="../assets/lalit.png"/>
                                     <span className="pic-name">Lalit Dhumal</span>
                                 </div>
                             </div>

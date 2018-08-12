@@ -152,6 +152,7 @@ class Services extends React.Component {
                                 <blockquote className="svg-description">
                                     Mobile Application Devlopment
                                 </blockquote>
+                                <div className="blockquote-txt">
                                 <blockquote className="service-text">You have an awesome app idea and just looking
                                     for ways to turn it into a reality; you have come to a right place.
                                     Whether it is Android or iOS, we at Floratechno Solutions have expertise in developing mobile apps for different market segments.
@@ -159,6 +160,7 @@ class Services extends React.Component {
                                     team at dispose, we deliver quick and always stay alert for smooth working for your
                                     growing needs.
                                 </blockquote>
+                                </div>
                                 {/*<span className="see-more-txt">SEE MORE</span>*/}
                             </div>
                         </div>
