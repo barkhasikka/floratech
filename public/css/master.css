@@ -324,6 +324,9 @@ background: none;
     cursor: pointer;
 
 }
+.margin-left-11{
+    margin-left: 11%;
+}
 .header-section-wrap{
     width: 100%;
     height: 100%;
@@ -898,8 +901,7 @@ a{
     width: calc(100% - 7em);
     height: 100px;
     display: block;
-    margin: auto;
-    margin-left: 7em;
+    margin: auto auto auto 7em;
     line-height: 35px;
 }
 .service-txt {
@@ -1147,7 +1149,7 @@ a{
 }
 .team-text {
     width: calc(100% - 7em);
-    height: 100px;
+    height: 72px;
     display: block;
     margin: auto;
     margin-left: 7em;
@@ -1166,31 +1168,43 @@ a{
     color: rgb(45, 98, 150);
 }
 .team-photos-section {
-    width: 1275px;
+    width: 90%;
     height: 630px;
     padding: 15px;
     margin: auto;
 }
 .photos-thumbnail:nth-child(1) {
-    margin-left: 10%;
+    margin-left: 8%;
 }
 .photos-thumbnail:nth-child(5) {
-    margin-left: 20%;
+    margin-left: 0;
 }
 .photos-thumbnail:nth-child(8) {
-    margin-left: 10%;
+    margin-left: 0;
+}
+.photos-thumbnail:nth-child(6) {
+    margin-left: 16%;
 }
 .photos-thumbnail:nth-child(12) {
-    margin-left: 20%;
+    margin-left: 1%;
+}
+.photos-thumbnail-margin{
+    margin-left: 9%;
+}
+.margin-left-9{
+    margin-left: 9%;
+}
+.margin-left-16{
+    margin-left: 16%;
 }
 .team-photos-wrapper {
-    width: 1190px;
+    width: 100%;
     height: 585px;
     padding: 15px;
     margin: auto;
 }
 .photos-thumbnail {
-    width: 230px;
+    width: 255px;
     height: auto;
     display: inline-block;
     position: relative;
@@ -1205,8 +1219,8 @@ a{
     bottom: 70px;
 }
 .photos {
-    width: 150px;
-    height: 150px;
+    width: 230px;
+    height: 200px;
     display: block;
     margin: auto;
     position: relative;
@@ -1241,7 +1255,7 @@ opacity: 1;
     position: absolute;
     bottom: 0;
     color: white;
-    width: 150px;
+    width: 100%;
     height: 35px;
     line-height: 35px;
     text-align: center;
@@ -1971,7 +1985,7 @@ opacity: 1;
 }
 .jigsaw2 .t {
     width: 3.9em;
-    background-color:#ffd9c0;
+    background-color:#fff;
     height: 3.6em;
     position: absolute;
     top: 39.5%;
@@ -2029,7 +2043,7 @@ opacity: 1;
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
     border-radius: 4em;
-    background-color: #FFE7F2;
+    background-color: #fff;
 }
 
 
@@ -2037,7 +2051,7 @@ opacity: 1;
     width: 3.6em;
     height: 3.6em;
     position: absolute;
-    background: #ffe7e6;
+    background: #fff;
     top: -1.75em;
     left: 18.9%;
     -webkit-border-radius: 4em;
@@ -2179,7 +2193,7 @@ opacity: 1;
     right: 0;
     position: absolute;
     border-top: 800px solid #fdcb6e52;
-    border-left: 900px solid transparent;
+    border-left: 350px solid transparent;
 
 }
 #triangle-topleft {
@@ -2190,7 +2204,7 @@ opacity: 1;
     top:0;
     position: absolute;
     border-top: 900px solid #ff78752e;
-    border-right: 1000px solid transparent;
+    border-right: 350px solid transparent;
 }
 #triangle-topleft1 {
     width: 0;

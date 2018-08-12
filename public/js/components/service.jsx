@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {smoothScroll} from './commoncomponent/helper.js'
+
 class Services extends React.Component {
     constructor(props) {
         super(props);
@@ -127,7 +128,7 @@ class Services extends React.Component {
                         </a>
                     </section>
                 </div>
-                <div className="service-wrapper">
+                <div className="services-main-wrapper">
                     <div id="triangle-topleft"></div>
                     <div id="triangle-topright"></div>
                     <div id="triangle-bottomleft"></div>
