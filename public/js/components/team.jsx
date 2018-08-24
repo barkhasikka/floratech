@@ -54,8 +54,6 @@ class Team extends React.Component {
     render (){
         return(
             <div >
-
-
                 <header className="header-section" id="myHeader">
                     <i className="fa fa-bars cates" onClick={() => this.show()}></i>
                     <div className="bind-header">
@@ -150,10 +148,10 @@ class Team extends React.Component {
                     </section>
                 </div>
                 <div className="team-main-wrapper">
-                    <div id="triangle-topright"></div>
-                    <div id="triangle-bottomleft"></div>
-                    <div id="triangle-bottomright"></div>
-                    <div id="triangle-topleft"></div>
+                    {/*<div id="triangle-topright"></div>*/}
+                    {/*<div id="triangle-bottomleft"></div>*/}
+                    {/*<div id="triangle-bottomright"></div>*/}
+                    {/*<div id="triangle-topleft"></div>*/}
                     <section className="team-info-container clear-both" id="team-containers">
                         <div className="puzzle-body">
                             <div className="jig">
@@ -198,125 +196,125 @@ class Team extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        <section className="team-container" >
+                            <div className="team-text">
+                                <span className="team-txt">TEAM</span>
+                                <span className="behind-txt">BEHIND THIS</span>
+                            </div>
+                            <div className="team-photos-section">
+                                <div className="team-photos-wrapper">
+                                    <div className="photos-thumbnail">
+                                        <div className="photos" onMouseOver={(e) => this.onImageHover(e,'timothy') } onMouseOut={(e) => this.onImageMouseOut(e,'timothy') }>
+                                            <img className="photo-wrapper" src="../assets/timothy.png"/>
+                                            <span className="pic-name">Timothy Virgillo</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'barkha') } onMouseOut={(e) => this.onImageMouseOut(e,'barkha') } className="photo-wrapper" src="../assets/barkha.png"/>
+                                            <span className="pic-name">Barkha Sikka</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail">
+                                        <div className="photos ">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'krishna') } onMouseOut={(e) => this.onImageMouseOut(e,'krishna') } className="photo-wrapper" src="../assets/krishna.png"/>
+                                            <span className="pic-name">Krishna Khandagale</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'nafeesa') } onMouseOut={(e) => this.onImageMouseOut(e,'nafeesa') } className="photo-wrapper" src="../assets/nafeesa.png"/>
+                                            <span className="pic-name">Nafeesa Langde</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-30">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'tejal') } onMouseOut={(e) => this.onImageMouseOut(e,'tejal') } className="photo-wrapper" src="../assets/tejal.png"/>
+                                            <span className="pic-name">Tejal Ohara</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-30">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'tejas') } onMouseOut={(e) => this.onImageMouseOut(e,'tejas') } className="photo-wrapper" src="../assets/tejas.png"/>
+                                            <span className="pic-name">Tejas Bari</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-30">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'barkha') } onMouseOut={(e) => this.onImageMouseOut(e,'barkha') } className="photo-wrapper" src="../assets/barkha.png"/>
+                                            <span className="pic-name">Barkha Sikka</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-60">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'aniket') } onMouseOut={(e) => this.onImageMouseOut(e,'aniket') } className="photo-wrapper" src="../assets/aniket.png"/>
+                                            <span className="pic-name">Aniket Mane</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-60">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'mahendra') } onMouseOut={(e) => this.onImageMouseOut(e,'mahendra') } className="photo-wrapper" src="../assets/mahendra.png"/>
+                                            <span className="pic-name">Mahendra Kulkarni</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-60">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'clinton') } onMouseOut={(e) => this.onImageMouseOut(e,'clinton') } className="photo-wrapper" src="../assets/clinton.png"/>
+                                            <span className="pic-name">Clinton Fernandes</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-60">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'samar') } onMouseOut={(e) => this.onImageMouseOut(e,'samar') } className="photo-wrapper" src="../assets/samar.png"/>
+                                            <span className="pic-name">Samar Deshpande</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-90">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'shweta') } onMouseOut={(e) => this.onImageMouseOut(e,'shweta') } className="photo-wrapper" src="../assets/shweta.png"/>
+                                            <span className="pic-name">Shweta Takale</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-90">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'pratiksha') } onMouseOut={(e) => this.onImageMouseOut(e,'pratiksha') } className="photo-wrapper" src="../assets/pratiksha.png"/>
+                                            <span className="pic-name">Pratiksha Kature</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-90">
+                                        <div className="photos">
+                                            <img className="photo-wrapper" onMouseOver={(e) => this.onImageHover(e,'lalit') } onMouseOut={(e) => this.onImageMouseOut(e,'lalit') } src="../assets/lalit.png"/>
+                                            <span className="pic-name">Lalit Dhumal</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-120">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'reshma') } onMouseOut={(e) => this.onImageMouseOut(e,'reshma') } className="photo-wrapper" src="../assets/reshma.png"/>
+                                            <span className="pic-name">Reshma Ritond</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-120">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'aishwarya') } onMouseOut={(e) => this.onImageMouseOut(e,'aishwarya') } className="photo-wrapper" src="../assets/aishwarya.png"/>
+                                            <span className="pic-name">Aishwarya Kulkarni</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-120">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'vikash') } onMouseOut={(e) => this.onImageMouseOut(e,'vikash') } className="photo-wrapper" src="../assets/vikash.png"/>
+                                            <span className="pic-name">Vikas Kumar</span>
+                                        </div>
+                                    </div>
+                                    <div className="photos-thumbnail bottom-120">
+                                        <div className="photos">
+                                            <img onMouseOver={(e) => this.onImageHover(e,'vikash') } onMouseOut={(e) => this.onImageMouseOut(e,'vikash') } className="photo-wrapper" src="../assets/vikash.png"/>
+                                            <span className="pic-name">Vikas Kumar</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </section>
-                    <section className="team-container" >
-                    <div className="team-text">
-                        <span className="team-txt">TEAM</span>
-                        <span className="behind-txt">BEHIND THIS</span>
-                    </div>
-                    <div className="team-photos-section">
-                        <div className="team-photos-wrapper">
-                            <div className="photos-thumbnail">
-                                <div className="photos" >
-                                    <img onMouseOver={(e) => this.onImageHover(e,'timothy') } onMouseOut={(e) => this.onImageMouseOut(e,'timothy') } className="photo-wrapper" src="../assets/timothy.png"/>
-                                    <span className="pic-name">Timothy Virgillo</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'barkha') } onMouseOut={(e) => this.onImageMouseOut(e,'barkha') } className="photo-wrapper" src="../assets/barkha.png"/>
-                                    <span className="pic-name">Barkha Sikka</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail">
-                                <div className="photos ">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'krishna') } onMouseOut={(e) => this.onImageMouseOut(e,'krishna') } className="photo-wrapper" src="../assets/krishna.png"/>
-                                    <span className="pic-name">Krishna Khandagale</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'nafeesa') } onMouseOut={(e) => this.onImageMouseOut(e,'nafeesa') } className="photo-wrapper" src="../assets/nafeesa.png"/>
-                                    <span className="pic-name">Nafeesa Langde</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-30">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'tejal') } onMouseOut={(e) => this.onImageMouseOut(e,'tejal') } className="photo-wrapper" src="../assets/tejal.png"/>
-                                    <span className="pic-name">Tejal Ohara</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-30">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'tejas') } onMouseOut={(e) => this.onImageMouseOut(e,'tejas') } className="photo-wrapper" src="../assets/tejas.png"/>
-                                    <span className="pic-name">Tejas Bari</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-30">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'barkha') } onMouseOut={(e) => this.onImageMouseOut(e,'barkha') } className="photo-wrapper" src="../assets/barkha.png"/>
-                                    <span className="pic-name">Barkha Sikka</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-60">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'aniket') } onMouseOut={(e) => this.onImageMouseOut(e,'aniket') } className="photo-wrapper" src="../assets/aniket.png"/>
-                                    <span className="pic-name">Aniket Mane</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-60">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'mahendra') } onMouseOut={(e) => this.onImageMouseOut(e,'mahendra') } className="photo-wrapper" src="../assets/mahendra.png"/>
-                                    <span className="pic-name">Mahendra Kulkarni</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-60">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'clinton') } onMouseOut={(e) => this.onImageMouseOut(e,'clinton') } className="photo-wrapper" src="../assets/clinton.png"/>
-                                    <span className="pic-name">Clinton Fernandes</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-60">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'samar') } onMouseOut={(e) => this.onImageMouseOut(e,'samar') } className="photo-wrapper" src="../assets/samar.png"/>
-                                    <span className="pic-name">Samar Deshpande</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-90">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'shweta') } onMouseOut={(e) => this.onImageMouseOut(e,'shweta') } className="photo-wrapper" src="../assets/shweta.png"/>
-                                    <span className="pic-name">Shweta Takale</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-90">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'pratiksha') } onMouseOut={(e) => this.onImageMouseOut(e,'pratiksha') } className="photo-wrapper" src="../assets/pratiksha.png"/>
-                                    <span className="pic-name">Pratiksha Kature</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-90">
-                                <div className="photos">
-                                    <img className="photo-wrapper" onMouseOver={(e) => this.onImageHover(e,'lalit') } onMouseOut={(e) => this.onImageMouseOut(e,'lalit') } src="../assets/lalit.png"/>
-                                    <span className="pic-name">Lalit Dhumal</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-120">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'reshma') } onMouseOut={(e) => this.onImageMouseOut(e,'reshma') } className="photo-wrapper" src="../assets/reshma.png"/>
-                                    <span className="pic-name">Reshma Ritond</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-120">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'aishwarya') } onMouseOut={(e) => this.onImageMouseOut(e,'aishwarya') } className="photo-wrapper" src="../assets/aishwarya.png"/>
-                                    <span className="pic-name">Aishwarya Kulkarni</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-120">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'vikash') } onMouseOut={(e) => this.onImageMouseOut(e,'vikash') } className="photo-wrapper" src="../assets/vikash.png"/>
-                                    <span className="pic-name">Vikas Kumar</span>
-                                </div>
-                            </div>
-                            <div className="photos-thumbnail bottom-120">
-                                <div className="photos">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'vikash') } onMouseOut={(e) => this.onImageMouseOut(e,'vikash') } className="photo-wrapper" src="../assets/vikash.png"/>
-                                    <span className="pic-name">Vikas Kumar</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 </div>
                 <footer>
                     <div className="footer-info float-left">Powered by <span>Floratechno Solutions Pvt. Ltd.</span></div>

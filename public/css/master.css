@@ -639,7 +639,9 @@ html, body{
 #animate-div1 section{
     display: inline-block;
     margin: 16px 11px 0 11px;
-    width:22%;
+    width: 22%;
+    font-size: 16px;
+    letter-spacing: 1px;
 }
 #animate-div1{
     float: right;
@@ -865,20 +867,38 @@ a{
 .services-container {
     width: 100%;
     margin: auto;
-    /*height: auto;*/
+    height: auto;
+    /*background-color: white;*/
+}
+.about-container{
+    width: 100%;
+    margin: auto;
     height: 100%;
-    background-color: white;
+    /*background-color: white;*/
 }
 .service-wrapper{
     width: 100%;
     /*height: 300px;*/
+    height: 250px;
+    margin-bottom: 32px;
+}
+.about-wrapper{
+    width: 100%;
     height: auto;
+    background-image: linear-gradient(335deg, #ff78752e 30%, white 20%, transparent 30%),
+    linear-gradient(45deg, #fdcb6e52 30%, white 20%, transparent 30%),
+    linear-gradient(135deg, #ffba7c4a 30%, white 20%, transparent 30%),
+    linear-gradient(220deg, #98d64f59 30%, white 20%, transparent 30%);
 }
 .services-main-wrapper{
     width: 100%;
     margin-top: 102px;
-    position: relative;
     height: auto;
+    background-image: linear-gradient(335deg, #ff78752e 30%, white 20%, transparent 30%),
+    linear-gradient(45deg, #fdcb6e52 30%, white 20%, transparent 30%),
+    linear-gradient(135deg, #ffba7c4a 30%, white 20%, transparent 30%),
+    linear-gradient(220deg, #98d64f59 30%, white 20%, transparent 30%);
+    /*position: relative;*/
 }
 .services-title {
     width: calc(100% - 7em);
@@ -922,6 +942,10 @@ a{
 .team-main-wrapper{
     height: auto;
     width: 100%;
+    background-image: linear-gradient(335deg, #ff78752e 30%, white 20%, transparent 30%),
+    linear-gradient(45deg, #fdcb6e52 30%, white 20%, transparent 30%),
+    linear-gradient(135deg, #ffba7c4a 30%, white 20%, transparent 30%),
+    linear-gradient(220deg, #98d64f59 30%, white 20%, transparent 30%);
 }
 
 /* Safari */
@@ -946,8 +970,8 @@ a{
     height: 50%;
 }
 .about-technology{
-    width:90%;
-    height:560px;
+    width: 90%;
+    height: 650px;
     margin: auto;
     clear: both;
 }
@@ -971,7 +995,8 @@ a{
     float: left;
 }
 .our-right-technology{
-    width: 35%;
+    /*width: 35%;*/
+    width: 45%;
     float: right;
     height:100%;
 }
@@ -990,6 +1015,8 @@ a{
 .our-technology p,.our-right-technology p{
     color: #2d6296;
     padding-left: 4px;
+    font-size: 15px;
+    font-weight: bold;
 }
 .app-service-section {
     width: 400px;
@@ -1002,15 +1029,16 @@ a{
 .our-technology .techo-div section{
     width: calc(25% - 8px);
     margin: 3px 4px;
-    border:1px solid lightgray;
+    /*border:1px solid lightgray;*/
     height: calc(50% - 7px);
     position: relative;
     display: inline-block;
 }
 .our-right-technology .techo-div section{
-    width: calc(33.33% - 8px);
+    /*width: calc(33.33% - 8px);*/
+    width: calc(25% - 8px);
     margin: 3px 4px;
-    border:1px solid lightgray;
+    /*border:1px solid lightgray;*/
     height: calc(50% - 7px);
     position: relative;
     display: inline-block;
@@ -1031,7 +1059,8 @@ a{
     font-family: Verdana;
     text-align: justify;
     font-size: 1.9vh;
-    line-height:1.5;
+    line-height: 1.5;
+    padding-top: 8px;
 }
 .svg-info {
     width: 245px;
@@ -1041,24 +1070,22 @@ a{
     padding-top: 12px;
 }
 .svg-description {
-    font-family: "andalemo";
+    /*font-family: "andalemo";*/
     text-align: center;
     font-size: 24px;
     width: 100%;
     display: block;
     margin: auto;
-    /*line-height: 35px;*/
+    line-height: 35px;
     font-weight: bold;
-    /*height: 35px;*/
-    height: calc(100% - 176px);
+    height: 35px;
     color: #e65a3e;
 }
 .blockquote-txt{
     
 }
 .about-svg-wrapper{
-    /*height: calc(100% - 35px);*/
-    height: 176px;
+    height: calc(100% - 35px);
 }
 .about-svg-wrapper svg{
     height: 100%;
@@ -1408,11 +1435,11 @@ opacity: 1;
     height: auto;
     display: block;
     margin: auto;
-    padding-top: 50px;
+    padding-top: 150px;
 }
-#team{
-    position: relative;
-}
+/*#team{*/
+    /*position: relative;*/
+/*}*/
 .company-info-heading {
     width: calc(100% - 7em);
     height: 120px;
@@ -1836,7 +1863,8 @@ opacity: 1;
 
 .puzzle-body{
     width: 800px;
-    height:500px;
+    height: 600px;
+    /*height: auto;*/
     margin: auto;
 }
 .jigsaw1{
@@ -2001,7 +2029,8 @@ opacity: 1;
     transition: top 0.5s linear;
     width: 600px;
     position: relative;
-    margin: 54px auto;
+    /*margin: 54px auto;*/
+    margin: 0 auto;
     height: calc(50% - 46px);
 }
 .jigsaw1 .l, .jigsaw2 .l {
@@ -2322,7 +2351,7 @@ nav p{
 /* ---- reset ---- */
 body {
     margin: 0;
-    font:normal 75% Arial, Helvetica, sans-serif;
+    font:normal 75% Helvetica, sans-serif, Arial;
 }
 canvas {
     display: block;
@@ -2442,6 +2471,7 @@ footer{
     width: calc(100% - 250px);
     float: right;
     display: inline-block;
+    padding-top: 32px;
 }
 .bottom-30{
     bottom: 30px;
@@ -3160,8 +3190,16 @@ footer{
     right: -300px;
     opacity: 0;
     text-align: center;
+    display: inline-block;
+    width: 1050px;
+    overflow: hidden;
+    height: 100%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    position: absolute;
 }
-.about-video-container video{
+.about-video-container video, .full-about-video-container video{
     height: 100%;
     width: auto;
     -webkit-user-select: none;
@@ -3175,15 +3213,16 @@ footer{
 .watch-about-video{
     position: absolute;
     right: 260px;
-    background: #afa2a2;
     padding: 8px;
     top: 250px;
+    z-index: 2;
     cursor: pointer;
+    outline: none;
 }
 .temp ~ .close-video{
     position: absolute;
     right: 0;
-    background: #eee;
+    background: #e46224;
     padding: 7px 9px;
     font-size: 16px;
     cursor: pointer;
@@ -3206,4 +3245,110 @@ footer{
 }
 .opacity-0{
     opacity: 0;
+}
+.techo-div label{
+    display: inline-block;
+    width: 100%;
+    padding-top: 8px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    height: 25px;
+}
+.techo-div div{
+    height: calc(100% - 25px);
+    width: 100%;
+    border: 1px solid lightgray;
+    position: relative;
+}
+.padding-top-16px{
+    padding-top: 16px;
+}
+.we-pro-div span{
+    font-size: 18px;
+}
+.services-main-wrapper #triangle-topleft{
+    border-top: 500px solid #ff78752e;
+}
+.services-main-wrapper #triangle-topright{
+    border-top: 500px solid #fdcb6e52;
+}
+.team-main-wrapper #triangle-topleft, .about-wrapper #triangle-topleft{
+    border-top: 600px solid #ff78752e;
+}
+.team-main-wrapper #triangle-topright, .about-wrapper #triangle-topright{
+    border-top: 600px solid #fdcb6e52;
+}
+/* watch button */
+button {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 2px #f45e61;
+    color: #f45e61;
+    font-size: inherit;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+}
+button::before, button::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.spin {
+    width: 5em;
+    height: 5em;
+    padding: 0;
+}
+.spin:hover {
+    color: #0eb7da;
+}
+.spin::before, .spin::after {
+    top: 0;
+    left: 0;
+}
+.spin::before {
+    border: 2px solid transparent;
+}
+.spin:hover::before {
+    border-top-color: #0eb7da;
+    border-right-color: #0eb7da;
+    border-bottom-color: #0eb7da;
+    transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+}
+.spin::after {
+    border: 0 solid transparent;
+}
+.spin:hover::after {
+    border-top: 2px solid #0eb7da;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    transform: rotate(270deg);
+    transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+}
+.thick:hover {
+    color: #fff;
+    font-weight: 700;
+}
+.thick::before {
+    border: 2.5em solid transparent;
+    z-index: -1;
+}
+.thick::after {
+    z-index: -1;
+}
+.thick:hover::before {
+    background: #f45e61;
+    border-top-color: #f45e61;
+    border-right-color: #f45e61;
+    border-bottom-color: #f45e61;
+    transition: background 0s linear 0.4s, border-top-color 0.15s linear, border-right-color 0.15s linear 0.15s, border-bottom-color 0.15s linear 0.25s;
+}
+.thick:hover::after {
+    border-top: 2.5em solid #f45e61;
+    border-left-width: 2.5em;
+    border-right-width: 2.5em;
 }
