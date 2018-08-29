@@ -878,9 +878,7 @@ a{
 }
 .service-wrapper{
     width: 100%;
-    /*height: 300px;*/
-    height: 250px;
-    margin-bottom: 32px;
+    height: 300px;
 }
 .about-wrapper{
     width: 100%;
@@ -990,15 +988,15 @@ a{
     right: 0;
 }
 .our-technology{
-    width:50%;
-    height:100%;
+    width: 50%;
+    height: calc(100% - 62px);
     float: left;
 }
 .our-right-technology{
     /*width: 35%;*/
     width: 45%;
     float: right;
-    height:100%;
+    height: calc(100% - 62px);
 }
 .our-right-technology section{
     width: 100%;
