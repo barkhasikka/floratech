@@ -1,8 +1,8 @@
 package main
 
 import (
-	handlers "ec_webapp/externals/gorilla/handlers"
-	"ec_webapp/externals/gorilla/mux"
+	handlers "floratechno/externals/gorilla/handlers"
+	"floratechno/externals/gorilla/mux"
 	c "floratechno/flag"
 	"log"
 	"net/http"
@@ -18,4 +18,5 @@ func main() {
 	rtr.HandleFunc("/css/{file}", serveResource)
 	rtr.HandleFunc("/assets/{file}", serveResource)
 	log.Fatal(http.ListenAndServe(c.WEBPORT, nil))
+
 }
