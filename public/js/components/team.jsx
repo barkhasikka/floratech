@@ -20,6 +20,34 @@ class Team extends React.Component {
         e.target.src = "../assets/"+imageName+".png";
     }
 
+    sendEmail() {
+        let contactUsParams = {
+            params: [{
+            }],
+            method: "LandingService.GetTeamPictures",
+            id: "1"
+        };
+
+        fetch("/api/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            credentials: "same-origin",
+            body: JSON.stringify(contactUsParams),
+        }).then(response => response.json())
+            .then((contactResponse) => {
+                this.setState({
+                    Email: "",
+                    MobileNo: "",
+                    Content: "",
+                    showContactLoader: false
+                });
+            }).catch(function (error) {
+            console.log(error);
+        });
+    }
+
     componentDidMount(){
         smoothScroll("team-containers", 100);
         this.setState({selectedTab: "team-containers"})
@@ -40,7 +68,9 @@ class Team extends React.Component {
             }
 
         });
+        this.sendEmail()
     }
+
     show (){
         if( document.getElementById("to").style.display == "block"  ){
             document.getElementById("to").style.display = "none" ;

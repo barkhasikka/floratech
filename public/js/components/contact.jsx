@@ -266,7 +266,7 @@ class Contact extends React.Component {
                                         <span>
                                             <i className="fa fa-phone" aria-hidden="true"></i>
                                         </span>
-                                        <p> 8975669513 </p>
+                                        <p> 020-48616736 </p>
                                     </section>
                                     <section>
                                         <span>

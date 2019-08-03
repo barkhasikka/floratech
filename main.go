@@ -1,12 +1,12 @@
 package main
 
 import (
-	gorillarpc "cut2it/externals/gorilla/rpc"
-	gorillajson "cut2it/externals/gorilla/rpc/json"
-	handlers "ec_webapp/externals/gorilla/handlers"
-	"ec_webapp/externals/gorilla/mux"
-	"floratechno/clientrpc/landing"
+	landingservice "floratechno/clientrpc/landing"
 	"floratechno/connections"
+	handlers "floratechno/externals/gorilla/handlers"
+	"floratechno/externals/gorilla/mux"
+	gorillarpc "floratechno/externals/gorilla/rpc"
+	gorillajson "floratechno/externals/gorilla/rpc/json"
 	c "floratechno/flag"
 	"html/template"
 	"log"

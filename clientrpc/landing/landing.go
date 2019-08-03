@@ -13,3 +13,8 @@ func (s *LandingService) SendContactUs(r *http.Request, args *ctxlanding.Contact
 
 	return innerrpc.SendContactUs(args, res)
 }
+
+func (s *LandingService) GetTeamPictures(r *http.Request, args *ctxcommon.EmptyReply, res *ctxlanding.GetTeamPictureRes) error {
+
+	return innerrpc.GetTeamPictures(args, res)
+}

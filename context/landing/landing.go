@@ -7,3 +7,12 @@ type ContactUs struct {
 	MobileNo,
 	Content string
 }
+
+type GetTeamPictureRes struct {
+	Pictures []Picture
+}
+
+type Picture struct {
+	Path string
+	Name string
+}
