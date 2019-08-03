@@ -231,7 +231,7 @@ class App extends React.Component {
                             </div>
                         </div>
                         <div className="introduction-text" id="myH2">
-                            <video autoPlay loop>
+                            <video autoPlay loop muted>
                                 <source src="assets/pinkal_video.mp4" type="video/mp4"/>
                                 Your browser does not support the video tag.
                             </video>
@@ -499,7 +499,7 @@ class App extends React.Component {
                 <footer>
                     <div className="footer-info float-left">Powered by <span>Floratechno Solutions Pvt. Ltd.</span>
                     </div>
-                    <div className="footer-info float-right text-align-right"><span className="copyright-info">©2018 India</span>
+                    <div className="footer-info float-right text-align-right"><span className="copyright-info">©2019 India</span>
                     </div>
                 </footer>
             </div>
