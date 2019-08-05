@@ -147,7 +147,7 @@ class About extends React.Component {
                         <div className="services-description">
                             <div className="video-wrapper">
                                 <div className={"about-video-container " + (this.state.hideCards ? 'opacity-0' : '')}>
-                                    <video autoPlay loop>
+                                    <video autoPlay loop muted>
                                         <source src="../../assets/floratechno.mp4" type="video/mp4"></source>
                                         <source src="../../assets/floratechno.ogg" type="video/ogg"></source>
                                         Your browser does not support the video tag.
@@ -403,7 +403,7 @@ class About extends React.Component {
                                         </div>
                                         <div className="side back">
                                             <blockquote className="service-text">
-                                                We have a reputation of never comming to you with the same concept twicw or repeating our concepts.
+                                                We have a reputation of never coming to you with the same concept twice.
                                                 We prepare the newest templates just for you like no other in the market.
                                             </blockquote>
                                             {/*<span className="see-more-txt">SEE MORE</span>*/}
@@ -420,8 +420,8 @@ class About extends React.Component {
                                         </div>
                                         <div className="side back">
                                             <blockquote className="service-text">
-                                                Present is passe already. We are all about the future.Even though we give are working now, we are keeping in
-                                                the mind the future. Pushing to give you something that will still br of great valu ahead in time.
+                                                Present is passe already. We are all about the future. Even though we are working now, we are keeping in
+                                                mind the future- pushing to give you something that will still be of great value ahead in time.
                                             </blockquote>
                                             {/*<span className="see-more-txt">SEE MORE</span>*/}
                                         </div>
@@ -1143,7 +1143,7 @@ class About extends React.Component {
             {/*</div>*/}
                 <footer>
                     <div className="footer-info float-left">Powered by <span>Floratechno Solutions Pvt. Ltd.</span></div>
-                    <div className="footer-info float-right text-align-right"><span className="copyright-info">©2018 India</span></div>
+                    <div className="footer-info float-right text-align-right"><span className="copyright-info">©2019 India</span></div>
                 </footer>
             </div>
         );

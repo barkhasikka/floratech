@@ -915,7 +915,7 @@ a{
 }
 .offer-txt {
     font-family: HelveticaNeue-Light;
-    font-size: 20px;
+    font-size: 24px;
     color: rgb(45, 98, 150);
     margin: 0 4px;
 }
@@ -960,7 +960,6 @@ a{
     width: 1050px;
     height: auto;
     margin: auto;
-    padding-top: 40px;
     position: relative;
 }
 .our-technology section{
@@ -1068,16 +1067,15 @@ a{
     padding-top: 12px;
 }
 .svg-description {
-    /*font-family: "andalemo";*/
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
     width: 100%;
     display: block;
     margin: auto;
     line-height: 35px;
     font-weight: bold;
     height: 35px;
-    color: #e65a3e;
+    color: #123346;
 }
 .blockquote-txt{
     
@@ -1096,17 +1094,17 @@ a{
 }
 .flip-container {
     /*width: 312px;*/
-    width: 50%;
+    /* width: 50%; */
     /*height: 315px;*/
-    height: 205px;
+    /* height: 205px; */
     cursor: pointer;
     position: relative;
-    float: left;
+    /* float: left; */
     margin-bottom: 16px;
 }
 .card {
     width: 280px;
-    height: 100%;
+    height: 250px;
     /* position: absolute; */
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
@@ -1126,7 +1124,7 @@ a{
 }
 .card .side {
     width: 280px;
-    height: 100%;
+    height: 250px;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     border-radius: 0px;
@@ -1520,8 +1518,8 @@ opacity: 1;
 }
 .built-svg {
     width: 100%;
-    /*background-image: url("/assets/timemachine.png");*/
-    background-image: url("/assets/transparent-bg.jpg");
+    background-image: url("/assets/timemachine.png");
+    /* background-image: url("/assets/transparent-bg.jpg"); */
     background-size:cover;
     background-position: center center;
     background-repeat: no-repeat
@@ -2349,7 +2347,7 @@ nav p{
 /* ---- reset ---- */
 body {
     margin: 0;
-    font:normal 75% Helvetica, sans-serif, Arial;
+    font:Helvetica, sans-serif, Arial;
 }
 canvas {
     display: block;
@@ -2830,23 +2828,24 @@ footer{
 }
 
 .digital-mark-st0{
-    fill:none;
-    stroke:#000000;
-    stroke-width: 6px;
+    fill: none;
+    stroke: #e6560f;
+    stroke-width: 10;
+    stroke-miterlimit: 10;
 }
 
-.mobile-app-st0{fill:none;stroke:#020202;stroke-width: 3;stroke-miterlimit:10;}
-.mobile-app-st1{fill:#183C47;stroke:#020202;stroke-width: 3;stroke-miterlimit:10;}
-.mobile-app-st2{fill:none;stroke:#020202;stroke-width: 6;stroke-miterlimit:10;}
+.mobile-app-st0{fill:none;stroke:#e6560f;stroke-width: 10;stroke-miterlimit:10;}
+.mobile-app-st1{fill:#e6560f;stroke:#e6560f;stroke-width: 10;stroke-miterlimit:10;}
+.mobile-app-st2{fill:none;stroke:#e6560f;stroke-width: 10;stroke-miterlimit:10;}
 
-.web-development-st0{fill:none;stroke:#020202;stroke-width:5;stroke-miterlimit:10;}
-.web-development-st1{fill:#183C47;stroke:#FFFFFF;stroke-miterlimit:10;}
-.web-development-st2{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
-.web-development-st3{fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:10;}
-.web-development-st4{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
+.web-development-st0{fill:none;stroke:#e6560f;stroke-width:10;stroke-miterlimit:10;}
+.web-development-st1{fill:#e6560f;stroke:#e6560f;stroke-miterlimit:10;}
+.web-development-st2{fill:none;stroke:#e6560f;stroke-width:10;stroke-miterlimit:10;}
+.web-development-st3{fill:none;stroke:#e6560f;stroke-width:10;stroke-miterlimit:10;}
+.web-development-st4{fill:none;stroke:#e6560f;stroke-width:10;stroke-miterlimit:10;}
 
-.web-design-st0{fill:none;stroke:#020202;stroke-width:3;stroke-miterlimit:10;}
-.web-design-st1{fill:none;stroke:#020202;stroke-width:4;stroke-miterlimit:10;}
+.web-design-st0{fill:none;stroke:#e6560f;stroke-width:10;stroke-miterlimit:10;}
+.web-design-st1{fill:none;stroke:#e6560f;stroke-width:10;stroke-miterlimit:10;}
 
 @media all and (max-width:349px) and (min-width:320px) and (orientation: portrait) {
     .we-pro-div {
@@ -3161,7 +3160,8 @@ footer{
 /*end*/
 
 .about-flip-container{
-    display: inline-block;
+    display: grid;
+    grid-template-columns: auto auto;
     width: calc(100% - 300px);
 }
 .video-wrapper{
@@ -3170,7 +3170,7 @@ footer{
     bottom: 0;
     position: absolute;
     width: 1050px;
-    height: calc(100vh - 120px);
+    height: 550px;
     overflow: hidden;
 }
 .about-video-container{
@@ -3212,7 +3212,9 @@ footer{
     position: absolute;
     right: 260px;
     padding: 8px;
-    top: 250px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
     z-index: 2;
     cursor: pointer;
     outline: none;
