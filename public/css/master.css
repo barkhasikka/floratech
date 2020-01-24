@@ -376,9 +376,7 @@ html, body{
     background: #e46224;
     border: 1px solid transparent;
 }
-.arrow{
 
-}
 .arrow a:nth-child(1){
     position: absolute;
     top: 0;
@@ -426,6 +424,7 @@ html, body{
 }
 .header-options-span:hover .span-border,.header-option-span:hover .span-border{
     width: 50%;
+    color: #e46224;
 }
 .login-text {
     font-family: "Helvetica Neue";
@@ -852,6 +851,7 @@ a{
     display: block;
     /* margin: auto; */
     padding: 20px 10px;
+    box-shadow: 1px 3px 16px 0 rgba(0, 0, 0, 0.4);
 }
 .txt-alignment {
     padding: 5px 15px;
@@ -900,10 +900,12 @@ a{
 }
 .services-title {
     width: calc(100% - 7em);
-    height: 100px;
+    height: auto;
     display: block;
     margin: auto auto auto 7em;
     line-height: 35px;
+    text-align: left;
+    padding-bottom: 22px;
 }
 .service-txt {
     font-family: "Arial Black";
@@ -938,7 +940,7 @@ a{
     animation: spin 2s linear infinite;
 }
 .team-main-wrapper{
-    height: auto;
+    height: fit-content;
     width: 100%;
     background-image: linear-gradient(335deg, #ff78752e 30%, white 20%, transparent 30%),
     linear-gradient(45deg, #fdcb6e52 30%, white 20%, transparent 30%),
@@ -957,7 +959,7 @@ a{
 }
 .services-description {
     /*width: 1250px;*/
-    width: 1050px;
+    width: 1200px;
     height: auto;
     margin: auto;
     position: relative;
@@ -1055,7 +1057,7 @@ a{
     margin: 0;
     font-family: Verdana;
     text-align: justify;
-    font-size: 1.9vh;
+    font-size: 16px;
     line-height: 1.5;
     padding-top: 8px;
 }
@@ -1068,7 +1070,6 @@ a{
 }
 .svg-description {
     text-align: center;
-    font-size: 18px;
     width: 100%;
     display: block;
     margin: auto;
@@ -1114,7 +1115,7 @@ a{
     display: block;
     margin: auto;
     /* border: 2px solid #607D8B; */
-    box-shadow: 0px 0px 4px 2px #afafaf;
+    box-shadow: 1px 3px 16px 0 rgba(0, 0, 0, 0.4);
 }
 .card:hover {
     transform: rotateY(180deg);
@@ -1143,6 +1144,7 @@ a{
     display: flex;
     /* vertical-align: middle; */
     align-items: center;
+    box-shadow: 1px 3px 16px 0 rgba(0, 0, 0, 0.4);
 }
 .svg-container {
     width: 20%;
@@ -1174,6 +1176,7 @@ a{
     margin: auto;
     margin-left: 7em;
     line-height: 35px;
+    text-align: left;
 }
 .team-txt {
     font-family: "Arial Black";
@@ -1189,7 +1192,7 @@ a{
 }
 .team-photos-section {
     width: 90%;
-    height: auto;
+    height: 650px;
     padding: 15px;
     margin: auto;
 }
@@ -1226,6 +1229,7 @@ a{
 .full-height-width{
     height:100%;
     width:100%;
+    max-height: 200px;
 }
 .web-design-width{
     height: 88%;
@@ -1257,18 +1261,21 @@ a{
     background-size: cover;
     background-repeat: none;
     cursor: pointer;
+    border: 2px solid #FFA500;
 }
 .photo-wrapper {
     width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
+    max-width: 350px;
+    max-height: 320px;
+    height: auto;  
 }
+
 .photos-thumbnail .photos:hover{
     transform: scale(1.2, 1.2); /** default is 1, scale it to 1.5 */
-opacity: 1;
+    opacity: 1;
     filter: none !important;
     z-index: 1;
+    transition: transform .3s;
 }
 .photos-thumbnail:hover .pic-name {
     display: block;
@@ -1428,7 +1435,7 @@ opacity: 1;
 }
 .team-info-container {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     margin: auto;
     padding-top: 150px;
@@ -1593,16 +1600,20 @@ opacity: 1;
 }
 .contact-wrapper label,.contact-textarea label{
     position: absolute;
-    top: 22px;
-    left: 14px;
+    top: 10px;
+    left: 12px;
     transition: top 0.2s ease-in;
-    font-size: 16px;
+    font-size: 12px;
+    color: #c0c0c0;
 }
 .contact-wrapper input:focus ~ label,.contact-wrapper input:valid ~ label,.contact-textarea textarea:focus ~ label,.contact-textarea textarea:valid ~ label{
-    top: 4px;
-    left:7px;
     font-size: 12px;
     color: #f29f41;
+    position: absolute;
+    top: -7px;
+    left: 16px;
+    pointer-events: none;
+    background-color: #ffffff;
 }
 .input-data:focus,textarea:focus{
     outline: none;
@@ -1635,7 +1646,7 @@ opacity: 1;
     width: 100%;
     padding: 5px;
     padding-left: 7px;
-    height: 80%;
+    height: 70%;
     border: 1px solid #dadada;
     font-size: 13px;
     color: #555;
@@ -1945,7 +1956,7 @@ opacity: 1;
     font-family: "HelveticaNeue-Light";
     height: 55%;
     color: #fff;
-    margin-left: 60px;
+    margin: 0 auto;
     align-items: center;
 }
 .vission-name p,.vision-name p{
@@ -1984,11 +1995,11 @@ opacity: 1;
 }
 .jigsaw2 .t {
     width: 3.9em;
-    background-color:#fff;
+    background-color: #408eda;
     height: 3.6em;
     position: absolute;
-    top: 39.5%;
-    left: -5%;
+    top: -3.3em;
+    left: 42%;
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
     border-radius: 4em;
@@ -2029,17 +2040,30 @@ opacity: 1;
     margin: 0 auto;
     height: calc(50% - 46px);
 }
-.jigsaw1 .l, .jigsaw2 .l {
+.jigsaw1 .l {
     width: 4em;
     height: 4em;
     position: absolute;
     top: 39%;
-    left: -.4em;
+    left: -3em;
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
     border-radius: 4em;
-    background-color: #fff;
+    background-color: #33a241;
 }
+
+.jigsaw2 .l {
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    top: 38%;
+    left: -3em;
+    -webkit-border-radius: 4em;
+    -moz-border-radius: 4em;
+    border-radius: 4em;
+    background-color: #ffffff;
+}
+
 .jigsaw3 .t {
     width: 3.6em;
     height: 3.6em;
@@ -2057,7 +2081,7 @@ opacity: 1;
     position: absolute;
     background: #fff;
     top: -1.75em;
-    right: 24.8%;
+    right: 21.8%;
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
     border-radius: 4em;
@@ -2247,14 +2271,14 @@ nav p{
 }
 .about-contact{
     width:100%;
-    height:105px;
-    padding-top: 10px;
+    height:112px;
 }
 .about-contact section{
     width: calc(33.33% - 10px);
     height: calc(100% - 30px);
     float: left;
     margin: 15px 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .about-contact section:nth-child(2){
     height: calc(100% - 30px);
@@ -2262,14 +2286,16 @@ nav p{
     width: calc(26% - 17px);
     margin: 15px 10px 0 17px
 }
-.about-contact span{
+.icon-wrapper{
     display: block;
     width: 30px;
     margin: auto;
     height: 30px;
     border-radius: 50%;
     background: #f29f41;
+    margin-top: 5px;
 }
+
 .about-contact span i{
     text-align: center;
     color: #fff;
@@ -2298,10 +2324,9 @@ nav p{
     font-family: sans-serif;
 }
 .drop{
-    width: 92%;
+    width: 100%;
     margin: auto;
     height: calc(100% - 115px);
-    padding-top: 26px
 }
 .google-map{
     width:100%;
@@ -2324,9 +2349,9 @@ nav p{
     cursor: pointer;
     float: left;
     background: #fff;
-    border: 1px solid #f29f41;
     color: #f29f41;
     padding: 9px 20px;
+    border-radius: 20px;
 }
 .go-st0{fill:#000;stroke:#000000;stroke-miterlimit:10;}
 .go-st1{fill:#ffebd9;stroke:#000000;stroke-miterlimit:10;}
@@ -2448,7 +2473,9 @@ footer{
     font-size: 14px;
     padding: 0 20px;
     box-sizing: border-box;
-}
+    background-color: #185795;
+    color: #ffffff;
+  }
 .mobile-svg{
     position: absolute;
     top:8px;
@@ -2464,7 +2491,7 @@ footer{
     display: inline-block;
 }
 .service-detail{
-    width: calc(100% - 250px);
+    width: calc(100% - 260px);
     float: right;
     display: inline-block;
     padding-top: 32px;
@@ -3351,4 +3378,238 @@ button::before, button::after {
     border-top: 2.5em solid #f45e61;
     border-left-width: 2.5em;
     border-right-width: 2.5em;
+}
+/*----------my css --------------------------------*/
+.head_title {
+    font-weight: bold;
+}
+
+.icon-wrapper:hover{
+    background: #ffffff;
+}
+
+.icon-wrapper:hover .fa{
+    color: #f29f41;
+}
+
+a.polaroid {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 10px 20px 10px;
+    width: 150px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    z-index: 2;
+    font-size: 0.7em;
+    -webkit-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+    box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+}
+a.polaroid:hover,
+a.polaroid:focus,
+a.polaroid:active {
+    z-index: 999;
+    border-color: #6A6A6A;
+    -webkit-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+    -moz-box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+    box-shadow: 2px 2px 4px rgba(0,0, 0, 0.3);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+    height: 250px;
+    width: 250px;
+}
+
+a.polaroid:hover .photo-wrapper{
+    height: 220px;
+    width: 250px;
+}
+
+.polaroid img {
+    margin: 0 0 15px;
+    width: 150px;
+    height: 150px;
+}
+
+a img {
+    border: none;
+    display: block;
+}
+
+.portfolio-thumbnails {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 70em;
+    height: 450px;
+    margin-top: 5em;
+    min-width: 800px;
+    max-width: 1000px;
+}
+
+.portfolio-thumbnails .polaroid {
+    position: absolute;
+}
+
+.portfolio-thumbnails h1 {
+    position: absolute;
+    z-index: 5;
+    top: 150px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.9;
+}
+
+.portfolio-thumbnails .small {
+    width: 75px;
+    padding: 6px 6px 12px 6px;
+    font-size: 0.6em;
+}
+
+.portfolio-thumbnails .small img {
+    width: 75px;
+    height: 75px;
+}
+.portfolio-thumbnails .medium {
+    width: 200px;
+    padding: 13px 13px 26px 13px;
+    font-size: 0.8em;
+}
+
+.portfolio-thumbnails .medium img {
+    width: 200px;
+    height: 200px;
+}
+
+.portfolio-thumbnails .large {
+    width: 300px;
+    padding: 20px 20px 30px 20px;
+    font-size: 1em;
+}
+
+.portfolio-thumbnails .large img {
+    width: 300px;
+    height: 300px;
+}
+
+.portfolio-thumbnails .img1 {
+    bottom: 10px;
+    right: 462px;
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+
+.portfolio-thumbnails .img2 {
+    top: 50px;
+    right: 60px;
+    -webkit-transform: rotate(-4deg);
+    -moz-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+}
+.portfolio-thumbnails .img3 {
+    left: 400px;
+    top: 0;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+}
+.portfolio-thumbnails .img4 {
+    top: 10px;
+    left: 495px;
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+}
+.portfolio-thumbnails .img5 {
+    bottom: 0;
+    right: 0;
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    transform: rotate(1deg);
+}
+.portfolio-thumbnails .img6 {
+    bottom: 10px;
+    right: 198px;
+    -webkit-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    transform: rotate(6deg);
+}
+.portfolio-thumbnails .img7 {
+    bottom:0;
+    left:452px;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.portfolio-thumbnails .img8 {
+    bottom: -20px;
+    left: 700px;
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+}
+
+.portfolio-thumbnails .img9 {
+    bottom: 0;
+    left: 0;
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+}
+
+.portfolio-thumbnails .img10 {
+    top: 0;
+    left: 20px;
+    -webkit-transform: rotate(8deg);
+    -moz-transform: rotate(8deg);
+    transform: rotate(8deg);
+}
+
+.portfolio-thumbnails .img11 {
+    top: 0;
+    right: 0;
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+}
+
+.portfolio-thumbnails .img12 {
+    top: 0;
+    left: 680px;
+    -webkit-transform: rotate(18deg);
+    -moz-transform: rotate(18deg);
+    transform: rotate(18deg);
+}
+
+.portfolio-thumbnails .img13 {
+    bottom: -20px;
+    right: 630px;
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    transform: rotate(4deg);
+}
+
+.portfolio-thumbnails .img14 {
+    top: 90px;
+    left: 430px;
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+.portfolio-thumbnails .img15 {
+    left:176px;
+    top:20px;
+    -webkit-transform: rotate(-8deg);
+    -moz-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+}
+
+a:hover,
+a:focus {
+    z-index: 5;
 }

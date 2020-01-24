@@ -10,8 +10,8 @@ var config = {
         "floratechnoabout":APP_DIR+"/public/js/components/about.jsx",
         "floratechnoteam":APP_DIR+"/public/js/components/team.jsx",
         "floratechnocontact":APP_DIR+"/public/js/components/contact.jsx",
-        "floratechnoservices":APP_DIR+"/public/js/components/service.jsx"
-
+        "floratechnoservices":APP_DIR+"/public/js/components/service.jsx",
+        "floratechnoheader":APP_DIR+"/public/js/components/header.jsx"
     },
     module : {
 

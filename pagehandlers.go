@@ -9,6 +9,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"fmt"
 )
 
 var (
@@ -34,7 +35,6 @@ func landing(wr http.ResponseWriter, req *http.Request) {
 func serveResource(wr http.ResponseWriter, req *http.Request) {
 	log.Println("In :" + req.URL.Path)
 	path := "public" + req.URL.Path
-
 	var contentType string
 
 	// identify the content type of the requested file
@@ -82,6 +82,8 @@ func serveResource(wr http.ResponseWriter, req *http.Request) {
 		br.WriteTo(wr)           // write the buffer to the client
 
 	} else {
+		fmt.Println("==================>>>",err);
+	
 		http.NotFound(wr, req) // return a 404 if there was an error Opening the file
 	}
 

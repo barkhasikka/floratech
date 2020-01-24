@@ -5,6 +5,7 @@ import DigitalMarketingIcon from '../../assets/digitalmarketing.svg'
 import MobileApplicationDevelopmentIcon from '../../assets/mobile_app.svg'
 import WebApplicationDevelopmentIcon from '../../assets/webdevelopment.svg'
 import WebDesignIcon from '../../assets/web_design.svg'
+import HeaderComponent from './header.jsx'
 class Services extends React.Component {
     constructor(props) {
         super(props);
@@ -29,61 +30,7 @@ class Services extends React.Component {
     render() {
         return (
             <div >
-                <header className="header-section" id="myHeader">
-                    <i className="fa fa-bars cates" onClick={() => this.show()}></i>
-                    <div className="bind-header">
-                        <div className="header-options-right" id="myHeaderSpan1">
-                            <a href="/about" target="_parent" className="header-a">
-                                <span className="header-option-span " onClick={(e) => this.goToElement(e, "about-container", 70, false)}>ABOUT
-                                    <span className="span-border"></span>
-                                </span>
-                            </a>
-                            <a href="/team" target="_parent" className="header-a">
-                                <span className="header-option-span " onClick={(e) => this.goToElement(e, "team-containers", 101, false)}>TEAM
-                                    <span className="span-border"></span>
-                                </span>
-                            </a>
-                        </div>
-                        <div className="logo-section">
-                            <a href="/" target="_parent">
-                                <div className="flower-svg">
-                                    <svg version="1.1" id="Layer_1" className="ft-logo" x="0px" y="0px" viewBox="0 0 400 400">
-                                        <g>
-                                            <path className="st0" d="M206.5,33.5c-107,0-166,81.3-166,168s70.3,157,157,157s165-77.3,165-164S293.2,33.5,206.5,33.5z M205.5,346.5
-                                                c-84.4,0-157-74.6-157-159s66.5-143.8,152-144c84.4-0.2,152.2,72.1,152.2,156.5S289.9,346.5,205.5,346.5z"/>
-                                            <g className="st1">
-                                                <path className="st2" d="M129,172.7v-9.9h27.6V131c0-21.6,15.3-30.6,33.9-30.6c4.5,0,9,0.6,13.5,1.5v9.9c-4.5-0.9-9-1.5-13.5-1.5
-                                                    c-12.6,0-22.5,4.5-22.5,21.6v30.9h32.1v9.9H168V317h-11.4V172.7H129z"/>
-                                            </g>
-                                            <g className="st1">
-                                                <path className="st3" d="M273.8,172.7h-33.6v107.7c0,24.9,11.7,27.3,33.3,26.7v9.9c-23.4,1.5-45.9-1.8-44.7-36.6V172.7h-28.5v-9.9
-                                                    h28.5v-48h11.4v48h33.6L273.8,172.7L273.8,172.7z"/>
-                                            </g>
-                                        </g>
-                                    </svg>
-
-                                </div>
-                            </a>
-                        </div>
-                        <div className="header-options desktop-nav" id="myHeaderSpan">
-
-                            <a href="/services" target="_parent" className="header-a">
-                            <span
-                                className={"header-option-span " + (this.state.selectedTab == 'servicesContainer' ? 'orange-color' : '')}
-                                onClick={(e) => this.goToElement(e, "servicesContainer", 85, false)}>SERVICES
-                             <span className="span-border"></span>
-                            </span>
-                            </a>
-                            <a href="/contact" target="_parent" className="header-a">
-                            <span
-                                className="header-option-span "
-                                onClick={(e) => this.goToElement(e, "contact-container", 40, false)}>CONTACT
-                             <span className="span-border"></span>
-                            </span>
-                            </a>
-                        </div>
-                    </div>
-                </header>
+                <HeaderComponent selectedTab={this.state.selectedTab} />
                 <div className="Drop-down" id="to">
                     <section className="section-icon">
                         <section className="icon-place">
@@ -144,9 +91,9 @@ class Services extends React.Component {
                                    <MobileApplicationDevelopmentIcon/>
                                 </div>
                                 <div className="service-detail">
-                                    <blockquote className="svg-description">
+                                    <h2 className="svg-description">
                                         Mobile Application Devlopment
-                                    </blockquote>
+                                    </h2>
                                     <div className="blockquote-txt">
                                     <blockquote className="service-text">You have an awesome app idea and just looking
                                         for ways to turn it into a reality; you have come to a right place.
@@ -165,9 +112,9 @@ class Services extends React.Component {
                                    <WebApplicationDevelopmentIcon/>
                                 </div>
                                 <div className="service-detail">
-                                    <blockquote className="svg-description">
+                                    <h2 className="svg-description">
                                         Web Applications
-                                    </blockquote>
+                                    </h2>
                                     <blockquote className="service-text">We make the most creative and efficient web applications.
                                         We plan, strategize, research, design and develop keeping our client’s business
                                         goals in mind from day one.
@@ -182,9 +129,9 @@ class Services extends React.Component {
                                     <WebDesignIcon/>
                                 </div>
                                 <div className="service-detail">
-                                    <blockquote className="svg-description">
+                                    <h2 className="svg-description">
                                         Web Designing
-                                    </blockquote>
+                                    </h2>
                                     <blockquote className="service-text">
                                         Every business starts with a website in their mind.
                                         Your website is the first and last interaction with your potential customer.
@@ -201,9 +148,9 @@ class Services extends React.Component {
                                     <DigitalMarketingIcon/>
                                 </div>
                                 <div className="service-detail">
-                                    <blockquote className="svg-description">
+                                    <h2 className="svg-description">
                                         Digital Marketing
-                                    </blockquote>
+                                    </h2>
                                     <blockquote className="service-text">
                                         With our digital marketing services, we help business owners create brand image
                                         and generate traffic which helps in sales.
@@ -671,7 +618,7 @@ class Services extends React.Component {
                 <footer>
                     <div className="footer-info float-left">Powered by <span>Floratechno Solutions Pvt. Ltd.</span>
                     </div>
-                    <div className="footer-info float-right text-align-right"><span className="copyright-info">©2019 India</span>
+                    <div className="footer-info float-right text-align-right"><span className="copyright-info">©2020 India</span>
                     </div>
                 </footer>
             </div>

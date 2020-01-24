@@ -28,6 +28,7 @@ func main() {
 	rtr.HandleFunc("/js/{subdir}/{file}", serveResource)
 	rtr.HandleFunc("/css/{file}", serveResource)
 	rtr.HandleFunc("/assets/{file}", serveResource)
+	rtr.HandleFunc("/assets/{file}/{file}", serveResource)
 	rtr.HandleFunc("/{file}", headerPage)
 
 	jsonRPC := gorillarpc.NewServer()
