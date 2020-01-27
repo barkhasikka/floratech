@@ -13,8 +13,34 @@ class Team extends React.Component {
 
     }
 
-    onImageHover(e, imageName) {
-        e.target.src = "/assets/coloured/" + imageName + ".jpg";
+    // onImageHover(e, imageName) {
+    //     e.target.src = "/assets/coloured/" + imageName + ".jpg";
+    // }
+
+    onImageHover(e, img) {
+        if (img == "imgThumbnail1") {
+            e.target.src = "/assets/coloured/Barkha_Sikka_coloured.jpg";
+        } else if(img == "imgThumbnail2"){
+            e.target.src = "/assets/coloured/Komal_Pardeshi_coloured.jpg";
+        } else if(img == "imgThumbnail3"){
+            e.target.src = "/assets/coloured/Mahesh_Navgire_coloured.jpg";
+        } else if(img == "imgThumbnail4"){
+            e.target.src = "/assets/coloured/Vikash_Kumar_coloured.jpg";
+        } else if(img == "imgThumbnail5"){
+            e.target.src = "/assets/coloured/Preeti_Ladde_coloured.jpg";
+        } else if(img == "imgThumbnail6"){
+            e.target.src = "/assets/coloured/Nafeesa_Langde_coloured.jpg";
+        } else if(img == "imgThumbnail7"){
+            e.target.src = "/assets/coloured/Tejas_Bari_coloured.jpg";
+        } else if(img == "imgThumbnail8"){
+            e.target.src = "/assets/coloured/Shweta_Takale_coloured.jpg";
+        }  else if(img == "imgThumbnail9"){
+            e.target.src = "/assets/coloured/Sayma_Shaikh_coloured.jpg";
+        }  else if(img == "imgThumbnail10"){
+            e.target.src = "/assets/coloured/Timothy_Virgillo_coloured.jpg";
+        }  else if(img == "imgThumbnail11"){
+            e.target.src = "/assets/coloured/Aniket_Mane_coloured.jpg";
+        }
     }
 
     onImageMouseOut(e, imageName) {
@@ -186,30 +212,42 @@ class Team extends React.Component {
                             <div className="team-photos-section">
                                 <div class="portfolio-thumbnails">
                                     <a href="#" class="large polaroid img1">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'Mahesh_Navgire_coloured') } onMouseOut={(e) => this.onImageMouseOut(e,'Mahesh_Navgire_sketch') } src="/assets/team/Mahesh_Navgire_sketch.jpg" className="photo-wrapper" alt="" />
-                                    Mahesh Navgire</a>                                     
-                                    <a href="#" class="polaroid img2">
-                                        <img onMouseOver={(e) => this.onImageHover(e,'Komal_Pardeshi_coloured') } onMouseOut={(e) => this.onImageMouseOut(e,'Komal_Pardeshi_sketch') } src="/assets/team/Komal_Pardeshi_sketch.jpg" className="photo-wrapper" alt="" />
+                                    <img id="imgThumbnail1" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail1') } onMouseOut={(e) => this.onImageMouseOut(e,'Barkha_Sikka_sketch') } src="/assets/team/Barkha_Sikka_sketch.jpg" className="photo-wrapper" alt="" />Barkha Sikka</a>                                    
+                                    <a href="#" class="polaroid img2"><img id="imgThumbnail2" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail2') } onMouseOut={(e) => this.onImageMouseOut(e,'Komal_Pardeshi_sketch') } src="/assets/team/Komal_Pardeshi_sketch.jpg" className="photo-wrapper" alt="" />
                                         Komal Pardesi</a>
-                                    <a href="#" class="small polaroid img3">
-                                        <img onMouseOver={(e) => this.onImageHover(e,'Barkha_Sikka_coloured') } onMouseOut={(e) => this.onImageMouseOut(e,'Barkha_Sikka_sketch') } src="/assets/team/Barkha_Sikka_sketch.jpg" className="photo-wrapper" alt="" />Barkha Sikka</a>
+                                    <a href="#" class="small polaroid img3"> <img id="imgThumbnail3" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail3') } onMouseOut={(e) => this.onImageMouseOut(e,'Mahesh_Navgire_sketch') } src="/assets/team/Mahesh_Navgire_sketch.jpg" className="photo-wrapper" alt="" />
+                                    Mahesh Navgire</a>                                        
                                     <a href="/assets/team/Vikash_Kumar_sketch.jpg" class="medium polaroid img4">
-                                        <img onMouseOver={(e) => this.onImageHover(e,'Vikash_Kumar_coloured') } onMouseOut={(e) => this.onImageMouseOut(e,'Vikash_Kumar_sketch') } src="/assets/team/Vikash_Kumar_sketch.jpg" className="photo-wrapper" alt="" />Vikash Kumar</a>
+                                        <img id="imgThumbnail4" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail4') } onMouseOut={(e) => this.onImageMouseOut(e,'Vikash_Kumar_sketch') } src="/assets/team/Vikash_Kumar_sketch.jpg" className="photo-wrapper" alt="" />Vikash Kumar</a>
                                     <a href="#" class="polaroid img5">
-                                        <img onMouseOver={(e) => this.onImageHover(e,'Preeti_Ladde_coloured') } onMouseOut={(e) => this.onImageMouseOut(e,'Preeti_Ladde_sketch') } src="/assets/team/Preeti_Ladde_sketch.jpg" className="photo-wrapper" alt="" />Preeti Ladde</a>
+                                        <img id="imgThumbnail5" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail5') } onMouseOut={(e) => this.onImageMouseOut(e,'Preeti_Ladde_sketch') } src="/assets/team/Preeti_Ladde_sketch.jpg" className="photo-wrapper" alt="" />Preeti Ladde</a>
                                     <a href="#" class="polaroid img6">
-                                        <img onMouseOver={(e) => this.onImageHover(e,'Nafeesa_Langde_coloured') } onMouseOut={(e) => this.onImageMouseOut(e,'Nafeesa_Langde_sketch') } src="/assets/team/Nafeesa_Langde_sketch.jpg" className="photo-wrapper" alt="" />Nafeesa Langde</a>
+                                        <img id="imgThumbnail6" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail6') } onMouseOut={(e) => this.onImageMouseOut(e,'Nafeesa_Langde_sketch') } src="/assets/team/Nafeesa_Langde_sketch.jpg" className="photo-wrapper" alt="" />Nafeesa Langde</a>
                                     <a href="#" class="polaroid img7">
-                                        <img onMouseOver={(e) => this.onImageHover(e,'Tejas_Bari_coloured') } onMouseOut={(e) => this.onImageMouseOut(e,'Tejas_Bari_sketch') } src="/assets/team/Tejas_Bari_sketch.jpg" className="photo-wrapper" alt="" />Tejas Bari</a>
+                                        <img id="imgThumbnail7" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail7') } onMouseOut={(e) => this.onImageMouseOut(e,'Tejas_Bari_sketch') } src="/assets/team/Tejas_Bari_sketch.jpg" className="photo-wrapper" alt="" />Tejas Bari</a>
                                     <a href="#" class="medium polaroid img9">
-                                        <img onMouseOver={(e) => this.onImageHover(e,'Shweta_Takale_coloured') } onMouseOut={(e) => this.onImageMouseOut(e,'Shweta_Takale_sketch') } src="/assets/team/Shweta_Takale_sketch.jpg" className="photo-wrapper" alt="" />Shweta Takale</a>
+                                        <img id="imgThumbnail8" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail8') } onMouseOut={(e) => this.onImageMouseOut(e,'Shweta_Takale_sketch') } src="/assets/team/Shweta_Takale_sketch.jpg" className="photo-wrapper" alt="" />Shweta Takale</a>
                                     <a href="#" class="polaroid img10">
-                                        <img onMouseOver={(e) => this.onImageHover(e,'Sayma_Shaikh_coloured') } onMouseOut={(e) => this.onImageMouseOut(e,'Sayma_Shaikh_sketch') } src="/assets/team/Sayma_Shaikh_sketch.jpg" className="photo-wrapper" alt="" />Sayma Shaikh</a>
+                                        <img id="imgThumbnail9" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail9') } onMouseOut={(e) => this.onImageMouseOut(e,'Sayma_Shaikh_sketch') } src="/assets/team/Sayma_Shaikh_sketch.jpg" className="photo-wrapper" alt="" />Sayma Shaikh</a>
                                     <a href="#" class="small polaroid img11">
-                                    <img onMouseOver={(e) => this.onImageHover(e,'Timothy_Virgillo_coloured') } onMouseOut={(e) => this.onImageMouseOut(e,'Timothy_Virgillo_sketch') }src="/assets/team/Timothy_Virgillo_sketch.jpg" className="photo-wrapper" alt="" />
+                                    <img id="imgThumbnail10" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail10') }  onMouseOut={(e) => this.onImageMouseOut(e,'Timothy_Virgillo_sketch') }src="/assets/team/Timothy_Virgillo_sketch.jpg" className="photo-wrapper" alt="" />
                                         Timothy Vigillo</a>
                                     <a href="#" class="small polaroid img12">
-                                        <img onMouseOver={(e) => this.onImageHover(e,'Aniket_Mane_coloured') } onMouseOut={(e) => this.onImageMouseOut(e,'Aniket_Mane_sketch') } src="/assets/team/Aniket_Mane_sketch.jpg" className="photo-wrapper" alt="" />Aniket Mane!</a>
+                                        <img id="imgThumbnail11" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail11') } onMouseOut={(e) => this.onImageMouseOut(e,'Aniket_Mane_sketch') } src="/assets/team/Aniket_Mane_sketch.jpg" className="photo-wrapper" alt="" />Aniket Mane!</a>
+                                </div>
+                            </div>
+                            <div className="team-photos-section">
+                            <div class="grid">
+                                <div class="grid-item"><img id="imgThumbnail3" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail3') } onMouseOut={(e) => this.onImageMouseOut(e,'Mahesh_Navgire_sketch') } src="/assets/team/Mahesh_Navgire_sketch.jpg" className="photo-wrapper grid-inner" alt="" /></div>
+                                <div class="grid-item"><img id="imgThumbnail2" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail2') } onMouseOut={(e) => this.onImageMouseOut(e,'Komal_Pardeshi_sketch') } src="/assets/team/Komal_Pardeshi_sketch.jpg" className="photo-wrapper grid-inner" alt="" /></div>
+                                <div class="grid-item"><img id="imgThumbnail5" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail5') } onMouseOut={(e) => this.onImageMouseOut(e,'Preeti_Ladde_sketch') } src="/assets/team/Preeti_Ladde_sketch.jpg" className="photo-wrapper grid-inner" alt="" /></div>
+                                <div class="grid-item"><img id="imgThumbnail4" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail4') } onMouseOut={(e) => this.onImageMouseOut(e,'Vikash_Kumar_sketch') } src="/assets/team/Vikash_Kumar_sketch.jpg" className="photo-wrapper grid-inner" alt="" /></div>
+                                <div class="grid-item"><img id="imgThumbnail1" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail1') } onMouseOut={(e) => this.onImageMouseOut(e,'Barkha_Sikka_sketch') } src="/assets/team/Barkha_Sikka_sketch.jpg" className="photo-wrapper grid-inner" alt="" /></div>
+                                <div class="grid-item"><img id="imgThumbnail6" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail6') } onMouseOut={(e) => this.onImageMouseOut(e,'Nafeesa_Langde_sketch') } src="/assets/team/Nafeesa_Langde_sketch.jpg" className="photo-wrapper grid-inner" alt="" /></div>
+                                <div class="grid-item"><img id="imgThumbnail7" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail7') } onMouseOut={(e) => this.onImageMouseOut(e,'Tejas_Bari_sketch') } src="/assets/team/Tejas_Bari_sketch.jpg" className="photo-wrapper grid-inner" alt="" /></div>
+                                <div class="grid-item"><img id="imgThumbnail8" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail8') } onMouseOut={(e) => this.onImageMouseOut(e,'Shweta_Takale_sketch') } src="/assets/team/Shweta_Takale_sketch.jpg" className="photo-wrapper grid-inner" alt="" /></div>
+                                <div class="grid-item"><img id="imgThumbnail9" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail9') } onMouseOut={(e) => this.onImageMouseOut(e,'Sayma_Shaikh_sketch') } src="/assets/team/Sayma_Shaikh_sketch.jpg" className="photo-wrapper grid-inner" alt="" /></div>
+                                <div class="grid-item"><img id="imgThumbnail11" onMouseOver={(e) => this.onImageHover(e, 'imgThumbnail11') } onMouseOut={(e) => this.onImageMouseOut(e,'Aniket_Mane_sketch') } src="/assets/team/Aniket_Mane_sketch.jpg" className="photo-wrapper grid-inner" alt="" /></div>                              
                                 </div>
                             </div>
                         </section>

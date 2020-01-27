@@ -43,16 +43,16 @@ html, body{
     height: 100%;
     margin: auto;
 }
-.flora-btn:hover{
+
+.flora-btn:hover {
     display: inline-block;
-    margin: auto;
     padding: 10px 20px;
-    border: none;
     color: white;
     cursor: pointer;
-    float: left;
     background: #f29f41;
+    box-shadow: none;
 }
+
 .Drp-dwn{
     width: 0;
     right: 0;
@@ -876,10 +876,41 @@ a{
     height: 100%;
     /*background-color: white;*/
 }
-.service-wrapper{
+
+.service-wrapper {
     width: 100%;
     height: 300px;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
 }
+
+.service-wrapper:nth-child(1){
+ 	animation-duration: 2s;
+}
+
+.service-wrapper:nth-child(2){
+	animation-duration: 3s;
+}
+
+.service-wrapper:nth-child(3){
+	animation-duration: 4s;
+}
+
+.service-wrapper:nth-child(4){
+	animation-duration: 5s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 .about-wrapper{
     width: 100%;
     height: auto;
@@ -888,6 +919,7 @@ a{
     linear-gradient(135deg, #ffba7c4a 30%, white 20%, transparent 30%),
     linear-gradient(220deg, #98d64f59 30%, white 20%, transparent 30%);
 }
+
 .services-main-wrapper{
     width: 100%;
     margin-top: 102px;
@@ -898,6 +930,7 @@ a{
     linear-gradient(220deg, #98d64f59 30%, white 20%, transparent 30%);
     /*position: relative;*/
 }
+
 .services-title {
     width: calc(100% - 7em);
     height: auto;
@@ -907,6 +940,17 @@ a{
     text-align: left;
     padding-bottom: 22px;
 }
+
+.contact-title {
+    width: calc(100% - 7em);
+    height: auto;
+    display: block;
+    margin: auto auto auto 1em;
+    line-height: 35px;
+    text-align: left;
+    padding-bottom: 22px;
+}
+
 .service-txt {
     font-family: "Arial Black";
     font-size: 35px;
@@ -1025,15 +1069,25 @@ a{
     overflow: hidden;
     position: relative;
 }
-.our-technology .techo-div section{
+
+.our-technology .techo-div section {
     width: calc(25% - 8px);
     margin: 3px 4px;
-    /*border:1px solid lightgray;*/
     height: calc(50% - 7px);
     position: relative;
     display: inline-block;
+    box-shadow: 1px 3px 16px 0 rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+    transition: top ease 0.5s;
+    top: 0;
 }
-.our-right-technology .techo-div section{
+
+.our-technology .techo-div section:hover {
+    top: -12px;
+    background-color: rgb(242, 159, 65);
+}
+
+.our-right-technology .techo-div section {
     /*width: calc(33.33% - 8px);*/
     width: calc(25% - 8px);
     margin: 3px 4px;
@@ -1041,7 +1095,17 @@ a{
     height: calc(50% - 7px);
     position: relative;
     display: inline-block;
+    box-shadow: 1px 3px 16px 0 rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+    transition: top ease 0.5s;
+    top: 0;
 }
+
+.our-right-technology .techo-div section:hover {
+    top: -12px;
+    background-color: rgb(242, 159, 65);
+}
+
 .app-service-wrapper {
     width: 360px;
     height: 385px;
@@ -1069,7 +1133,7 @@ a{
     padding-top: 12px;
 }
 .svg-description {
-    text-align: center;
+    text-align: left;
     width: 100%;
     display: block;
     margin: auto;
@@ -1077,10 +1141,11 @@ a{
     font-weight: bold;
     height: 35px;
     color: #123346;
+    background-color: #f29f41b5;
+    text-indent: 12px;
+    font-size: 22px;
 }
-.blockquote-txt{
-    
-}
+
 .about-svg-wrapper{
     height: calc(100% - 35px);
 }
@@ -1234,6 +1299,7 @@ a{
 .web-design-width{
     height: 88%;
     width: 92%;
+    max-height: 200px;
 }
 .photos-thumbnail {
     width: calc(25% - 30px);
@@ -2245,9 +2311,10 @@ a{
     border-left: 900px solid transparent;
 }
 nav{
-    height: 150px;
+    height: 262px;
     width: 100%;
-    background-image: url("https://cdn.cultofmac.com/wp-content/uploads/2017/12/5-Tools-for-Your-Mac-Main-Image-780x390.jpg");
+    /* background-image: url("https://cdn.cultofmac.com/wp-content/uploads/2017/12/5-Tools-for-Your-Mac-Main-Image-780x390.jpg"); */
+    background-image: url("http://www.first-aidbox.com/assets/images/wgd-contact-us.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -2257,6 +2324,7 @@ nav p{
     line-height: 150px;
     color: white;
     font-size: 2em;
+    padding-top: 32px;
 }
 .contact-us-wrapper{
     width: 100%;
@@ -2475,6 +2543,8 @@ footer{
     box-sizing: border-box;
     background-color: #185795;
     color: #ffffff;
+    position: fixed;
+    bottom: 0;
   }
 .mobile-svg{
     position: absolute;
@@ -2494,7 +2564,7 @@ footer{
     width: calc(100% - 260px);
     float: right;
     display: inline-block;
-    padding-top: 32px;
+    padding-top: 0;
 }
 .bottom-30{
     bottom: 30px;
@@ -3285,9 +3355,9 @@ footer{
 .techo-div div{
     height: calc(100% - 25px);
     width: 100%;
-    border: 1px solid lightgray;
     position: relative;
 }
+
 .padding-top-16px{
     padding-top: 16px;
 }
@@ -3309,22 +3379,23 @@ footer{
 /* watch button */
 button {
     background: none;
-    border: 0;
-    box-sizing: border-box;
-    box-shadow: inset 0 0 0 2px #f45e61;
+    border: 2px solid #f29f41;
+    box-sizing: border-box;    
     color: #f45e61;
     font-size: inherit;
     font-weight: 700;
     position: relative;
     vertical-align: middle;
 }
-button::before, button::after {
+
+/* button::before, button::after {
     box-sizing: inherit;
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-}
+} */
+
 .spin {
     width: 5em;
     height: 5em;
@@ -3613,3 +3684,78 @@ a:hover,
 a:focus {
     z-index: 5;
 }
+
+
+/************************diaond-grid-gallery-----------------------------*/
+.grid {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .grid::after {
+    content: "";
+    display: block;
+    clear: both;
+  } 
+  
+  .grid-item {
+    width: 21.833%;
+    padding-bottom: 21.833%;
+    overflow: hidden;
+    float: left;
+    background: #fff;
+    transform: rotate(45deg);
+    margin: 5.5%;
+    margin-top: -11%;
+    border: 1px solid #dcdcdc;
+  }
+  
+  .grid-item:nth-child(1),
+  .grid-item:nth-child(2),
+  .grid-item:nth-child(3) {
+     margin-top: 5%;
+  }
+  
+  .grid-item:nth-child(5n+4) {
+      margin-left: 21.9%;
+  }
+  
+  .grid-item:nth-child(5n+6) {
+      clear:left;
+  }
+  
+  .grid-item:nth-child(5n+6):last-of-type {
+    margin-left: 38.25%;
+  }
+  
+  .grid-item:hover {
+    background: #FFF;
+    transform: rotate(-45deg) rotateY(360deg);
+   /* width: 500px;
+    height: 200px;
+    margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);*/
+   }
+  
+  .grid-inner {
+    box-sizing: border-box;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg);
+    text-align: center;
+    font-size: 2em;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  } 
+   
+   .grid-inner:hover {
+       transform: none;
+      transform: rotate(45deg) scale(1.5);
+   }

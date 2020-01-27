@@ -200,10 +200,10 @@ class Contact extends React.Component {
                 <div className="contact-container" id="contact-container">
                     <div className="contact-section">
                         <nav>
-                            <p>CONTACT US</p>
-                            
+                            <p></p>                            
                         </nav>
                         <div className="contact-us-wrapper">
+                        <div class="contact-title"><span class="service-txt">CONTACT US</span></div>
                             <div className="contact-parts">
                                 <section className="about-contact">
                                     <section>
