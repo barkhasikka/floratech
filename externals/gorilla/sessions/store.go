@@ -13,7 +13,7 @@ import (
 	"strings"
 	"sync"
 
-	"cut2it/externals/gorilla/securecookie"
+	"floratechno/externals/gorilla/securecookie"
 )
 
 // Store is an interface for custom session stores.

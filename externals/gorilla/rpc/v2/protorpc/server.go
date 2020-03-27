@@ -13,7 +13,7 @@ import (
 	"net/http"
 	"strings"
 
-	"cut2it/externals/gorilla/rpc/v2"
+	"floratechno/externals/gorilla/rpc/v2"
 )
 
 var null = json.RawMessage([]byte("null"))

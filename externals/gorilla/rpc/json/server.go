@@ -10,7 +10,7 @@ import (
 	"errors"
 	"net/http"
 
-	"cut2it/externals/gorilla/rpc"
+	"floratechno/externals/gorilla/rpc"
 )
 
 var null = json.RawMessage([]byte("null"))

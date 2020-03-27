@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"time"
 
-	"cut2it/externals/gorilla/context"
+	"floratechno/externals/gorilla/context"
 )
 
 // Default flashes key.

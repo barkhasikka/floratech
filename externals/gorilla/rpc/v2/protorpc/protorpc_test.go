@@ -13,7 +13,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"cut2it/externals/gorilla/rpc/v2"
+	"floratechno/externals/gorilla/rpc/v2"
 )
 
 var ErrResponseError = errors.New("response error")

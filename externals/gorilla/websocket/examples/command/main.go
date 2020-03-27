@@ -15,7 +15,7 @@ import (
 	"text/template"
 	"time"
 
-	"cut2it/externals/gorilla/websocket"
+	"floratechno/externals/gorilla/websocket"
 )
 
 var (

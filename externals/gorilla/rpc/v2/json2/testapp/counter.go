@@ -10,8 +10,8 @@ import (
 	"log"
 	"net/http"
 
-	"cut2it/externals/gorilla/rpc/v2"
-	"cut2it/externals/gorilla/rpc/v2/json2"
+	"floratechno/externals/gorilla/rpc/v2"
+	"floratechno/externals/gorilla/rpc/v2/json2"
 )
 
 type Counter struct {
