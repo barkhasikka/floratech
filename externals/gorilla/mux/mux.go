@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"path"
 
-	"floratechno/externals/gorilla/conext"
+	"floratechno/externals/gorilla/context"
 )
 
 // NewRouter returns a new router instance.
