@@ -6,9 +6,9 @@
 package main
 
 import (
-	"cut2it/externals/gorilla/websocket"
 	"errors"
 	"flag"
+	"floratechno/externals/gorilla/websocket"
 	"io"
 	"log"
 	"net/http"

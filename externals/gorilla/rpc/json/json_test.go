@@ -14,7 +14,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"cut2it/externals/gorilla/rpc"
+	"floratechno/externals/gorilla/rpc"
 )
 
 var ErrResponseError = errors.New("response error")

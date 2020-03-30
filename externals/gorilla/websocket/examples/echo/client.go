@@ -12,7 +12,7 @@ import (
 	"net/url"
 	"time"
 
-	"cut2it/externals/gorilla/websocket"
+	"floratechno/externals/gorilla/websocket"
 )
 
 var addr = flag.String("addr", "localhost:8080", "http service address")

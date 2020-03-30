@@ -5,7 +5,7 @@
 package main
 
 import (
-	"cut2it/externals/websocket"
+	"floratechno/externals/websocket"
 	"log"
 	"net/http"
 	"time"

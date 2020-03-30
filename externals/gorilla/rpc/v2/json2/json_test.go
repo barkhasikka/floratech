@@ -12,7 +12,7 @@ import (
 	"net/http"
 	"testing"
 
-	"cut2it/externals/gorilla/rpc/v2"
+	"floratechno/externals/gorilla/rpc/v2"
 )
 
 // ResponseRecorder is an implementation of http.ResponseWriter that
