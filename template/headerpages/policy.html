@@ -1,16 +1,695 @@
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>FloraTechno</title>
-    <meta name="viewport" content="width=device width, initial-scale= 1.0">
-    <link rel="stylesheet" href="../css/master.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/ft_logo_favicon.png"/>
+  <title>Privacy Policy</title>
+  <link rel="icon" href="https://d1d65i3hb61njs.cloudfront.net/website/logo/favicon_logo_1.ico">
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
+
+  <style>
+    /* Lato font */
+
+@font-face {
+  font-family: 'lato-regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'lato-bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons Outlined', 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+* {
+  --opacity-06: 0.6;
+  --input-bg: #1d8cdd;
+  --accent-bg-color: var(--accent-color, #1e4b6f);
+  --bg-color: var(--background-color, #4bbb47);
+  --text-color: #fff;
+  --padding: var(--allpadding, 8px 16px);
+  --margin: var(--allmargin, 8px);
+  --height: var(--allheight, auto);
+  --width: var(--allwidth, auto);
+  --fontsize: var(--allfonts, 16px);
+  --disabled-cursor: not-allowed;
+  --font-family-regular: 'lato-regular';
+  --font-family-bold: 'lato-bold';
+  --grey-bg: #838296;
+  --navy-blue-bg: #060f16;
+  --light-navy-blue-bg: #08141d;
+  --dark-blue-bg: #050d14;
+  --dark-theme: #021A2D;
+  --firefly-blue-bg: #0F2638;
+  --big-stone-blue-bg: #162C3D;
+  --thin-blue-bg: #0d304d;
+  --picton-blue-bg: #2590ed;
+  --mustard-bg: #FFB03D;
+  --light-mustard-bg: #f9c225;
+  --orange-bg: #FB7108;
+  --green-bg: #21BA45;
+  --charcoal-black: #191919;
+  --red-color:#CB2438;
+  --yellow-color: #fbbd08;
+}
+
+html {
+  height: 100%;
+  /* iOS Safari */
+  -webkit-touch-callout: none;
+  /* Safari */
+  -webkit-user-select: none;
+  /* Konqueror HTML */
+  -khtml-user-select: none;
+  /* Firefox */
+  -moz-user-select: none;
+  /* Internet Explorer/Edge */
+  -ms-user-select: none;
+  /* Non-prefixed version, currently */
+  user-select: none;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--dark-theme);
+  overflow: hidden;
+  font-family: var(--font-family-regular, sans-serif);
+  line-height: 1.2;
+  height: 100%;
+}
+
+/* For Google Chrome */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(148, 148, 148, 0.38);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:horizontal {
+  background-color: var(--picton-blue-bg);
+  border-radius: 10px;
+}
+
+.scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: var(--picton-blue-bg) rgba(148, 148, 148, 0.38);
+  scrollbar-width: thin;
+}
+
+.h-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-color: var(--picton-blue-bg) rgba(148, 148, 148, 0.38);
+  scrollbar-width: thin;
+  white-space: nowrap;
+}
+
+/* broken img hide css */
+
+img[alt] {
+  font-size: 0;
+  overflow: hidden;
+}
+
+img[alt]::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #E2E2E2;
+  content: '';
+}
+
+/*  end */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-bold);
+}
+
+input, textarea {
+  font-family: var(--font-family-regular);
+  outline-color: #1d8cdd;
+  outline-width: thin;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+input:focus, textarea:focus {
+  border-color: #1d8cdd;
+}
+
+.breadcrumb-wrapper {
+  height: 100%;
+  display: block;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-wrap {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.icon-hover {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.icon-hover:hover {
+  background-color: rgba(156, 154, 154, 0.25);
+}
+
+.icon-hover::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  background-color: rgba(156, 154, 154, 0.5);
+  border-radius: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.icon-hover:hover::before {
+  -webkit-animation: circle .75s;
+  animation: circle .75s;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    opacity: 0.25;
+  }
+  40% {
+    opacity: 0.25;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
+@keyframes circle {
+  0% {
+    opacity: 0.25;
+  }
+  40% {
+    opacity: 0.25;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
+
+    body {
+      background-color: #fff;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .header {
+      padding: 8px 16px 8px 62px;
+      color: #fff;
+      height: 75px;
+      box-sizing: border-box;
+      vertical-align: middle;
+      display: flex;
+      width: 100%;
+      background-color: var(--firefly-blue-bg);
+      margin: auto 0;
+    }
+
+    .web-logo {
+      height: 45px;
+      width: 80px;
+      background-image: url(https://d1d65i3hb61njs.cloudfront.net/website/logo/vm_logo_1.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: auto;
+      cursor: pointer;
+    }
+
+    main {
+      height: calc(100% - 75px);
+      scroll-behavior: smooth;
+    }
+
+    .term-condition-wrapper {
+      width: 70%;
+      margin: 0 auto;
+      padding-top: 12px;
+    }
+
+    .left-section {
+      width: 310px;
+      float: left
+    }
+
+    .term-condition-menu {
+      padding: 0;
+      margin: 0;
+      position: sticky;
+      top: 30px;
+      padding-top: 0;
+      background-color: #fff;
+      z-index: 1;
+    }
+
+    .term-condition-menu-item {
+      list-style-type: none;
+      /* padding: 6px 0; */
+      cursor: pointer;
+      display: inline-block;
+      padding-bottom: 16px;
+      /* margin-right: 40px; */
+      width: 100%;
+      font-size: 24px;
+      text-align: left;
+    }
+
+    .right-section {
+      width: calc(100% - 310px);
+      float: right;
+    }
+
+    .right-section p:last-child {
+      margin-bottom: 82px;
+    }
+
+    .title {
+      font-size: 18px;
+      margin: 0 0 8px;
+      padding-top: 34px;
+    }
+
+    .sub-title {
+      font-family: var(--font-family-bold);
+      margin: 16px 0;
+    }
+
+    .term-condition-title {
+      font-size: 2.2vw;
+      text-align: center;
+      margin: 0 0 52px;
+    }
+
+    .important-text {
+      font-family: var(--font-family-bold);
+      padding-bottom: 12px;
+      margin: 0
+    }
+
+    .term-text {
+      border-bottom: 1px solid var(--grey-bg);
+      padding-bottom: 32px;
+    }
+
+    .navigate {
+      text-decoration: none;
+      color: #1da1f2;
+    }
+
+    .term-condition-menu-wrapper {
+      display: inline-flex;
+      /* width: 100%; */
+    }
+
+    .introduction {
+      margin-left: 310px;
+      float: right;
+    }
+
+    .social-media-thumbnail {
+      height: 30px;
+      width: 30px;
+      vertical-align: middle;
+      box-sizing: border-box;
+      margin-left: 12px;
+    }
+
+    .bottom-footer-wrapper {
+      background-color: #143059;
+      color: #fff;
+      padding: 32px 0;
+    }
+
+    .download-app-store-thumbnail {
+      height: 30px;
+      width: auto;
+    }
+
+    .fb-img {
+      height: 16px;
+      width: 16px;
+    }
+
+    .vm-img {
+      height: 16px;
+    }
+
+    .bottom-footer-wrapper .term-condition-wrapper {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+
+    .copy-right-info {
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .bottom-left-footer-wrapper {
+      width: 50%;
+      font-size: 12px;
+    }
+
+    .bottom-right-footer-wrapper {
+      width: 50%;
+      text-align: right;
+    }
+
+    .mobile-header {
+      display: none;
+    }
+
+    .breadcrumb-menu-icon {
+      font-size: 46px;
+      height: 46px;
+      width: 46px;
+    }
+
+    .breadcrumb-menu-wrapper {
+      position: relative;
+    }
+
+    .breadcrumb-menu-container {
+      position: absolute;
+      right: 0;
+      top: 16px;
+      background-color: var(--firefly-blue-bg);
+      color: #fff;
+      padding: 16px 32px;
+      margin: 0;
+      list-style-type: none;
+      width: 540px;
+      border-radius: 12px;
+      border: 1px solid;
+    }
+
+    .breadcrumb-menu-item {
+      cursor: pointer;
+      display: inline-block;
+      padding-bottom: 36px;
+      width: 100%;
+      font-size: 24px;
+    }
+
+    .breadcrumb-navigate {
+      text-decoration: none;
+      color: #fff;
+      line-height: 1.5;
+    }
+
+    .popup-wrapper {
+      position: relative;
+    }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+      .introduction {
+        margin: 0;
+      }
+
+      .left-section {
+        display: none;
+      }
+
+      .right-section {
+        width: 100%;
+      }
+    }
+
+    @media (min-device-width: 320px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) {
+      .term-condition-title {
+        font-size: 32px;
+      }
+
+      .mobile-header {
+        display: block;
+      }
+
+      .left-section {
+        display: none;
+      }
+
+      .right-section,
+      .introduction {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<section id='policy'>Policy page</section>
+  <header class="header">
+    <a href="/" class="web-logo"></a>
+    <div class="breadcrumb-menu-wrapper mobile-header js-mobile-header">
+      <span class="material-icons breadcrumb-menu-icon"> menu </span>
+      <div class="popup-wrapper">
+        <ul class="breadcrumb-menu-container js-breadcrumb-menu-container display-none">
+          <li class="breadcrumb-menu-item">
+            <a class="breadcrumb-navigate" href="#chapter1" data-target-id="chapter1">1. Terms of Use</a>
+          </li>
+          <li class="breadcrumb-menu-item">
+            <a class="breadcrumb-navigate" href="#chapter2" data-target-id="chapter2">2. Disclaimer of Services</a>
+          </li>
+          <li class="breadcrumb-menu-item">
+            <a class="breadcrumb-navigate" href="#chapter3" data-target-id="chapter3">3. Accounts and membership</a>
+          </li>
+          <li class="breadcrumb-menu-item">
+            <a class="breadcrumb-navigate" href="#chapter4" data-target-id="chapter4">4. Prohibited uses</a>
+          </li>
+          <li class="breadcrumb-menu-item">
+            <a class="breadcrumb-navigate" href="#chapter5" data-target-id="chapter5">5. Intellectual property rights</a>
+          </li>
+          <li class="breadcrumb-menu-item">
+            <a class="breadcrumb-navigate" href="#chapter6" data-target-id="chapter6">6. Intellectual property rights</a>
+          </li>
+          <li class="breadcrumb-menu-item">
+            <a class="breadcrumb-navigate" href="#chapter7" data-target-id="chapter7">7. Indemnification</a>
+          </li>
+          <li class="breadcrumb-menu-item">
+            <a class="breadcrumb-navigate" href="#chapter8" data-target-id="chapter8">8. Dispute resolution</a>
+          </li>
+          <li class="breadcrumb-menu-item">
+            <a class="breadcrumb-navigate" href="#chapter9" data-target-id="chapter9">9. Changes and amendments</a>
+          </li>
+          <li class="breadcrumb-menu-item">
+            <a class="breadcrumb-navigate" href="#chapter10" data-target-id="chapter10">10. Acceptance of these terms</a>
+          </li>
+        </ul>
+        <i></i>
+      </div>
+    </div>
+    <!-- <button class="login-button-wrapper js-header-sign-in" title="SIGN IN" type="button">SIGN IN</button> -->
+  </header>
+  <main class="scroll">
+    <section class="term-condition-wrapper">
+      <section>
+        <h1 class="term-condition-title">PRIVACY POLICY FOR USE OF Sahaayak</h1>
+        <div class="introduction">
+          <h3 class="important-text">IMPORTANT READ CAREFULLY: </h3>
+          <p>This document is an electronic record in terms of Information Technology Act, 2000 and rules there under as applicable and the amended provisions pertaining to electronic records in various statutes as amended by the Information Technology Act, 2000. This document is published in accordance with the provisions of Rule 3 (1) of the Information Technology (Intermediaries guidelines) Rules, 2011 that require publishing the rules and regulations, privacy policy and Terms of Use for access or usage of ‘Sahaayak’ application for mobile and handheld devices.</p>
+        </div>
+        <section class="term-condition-menu-wrapper">
+          <section class="left-section">
+            <ul class="term-condition-menu">
+              <!-- <li class="term-condition-menu-item">Purpose and Scope</li> -->
+              <li class="term-condition-menu-item">
+                <a class="navigate" href="#chapter1" data-target-id="chapter1">1. Terms of Use</a>
+              </li>
+              <li class="term-condition-menu-item">
+                <a class="navigate" href="#chapter2" data-target-id="chapter2">2. Disclaimer of Services</a>
+              </li>
+              <li class="term-condition-menu-item">
+                <a class="navigate" href="#chapter3" data-target-id="chapter3">3. Accounts and membership</a>
+              </li>
+              <li class="term-condition-menu-item">
+                <a class="navigate" href="#chapter4" data-target-id="chapter4">4. Prohibited uses</a>
+              </li>
+              <li class="term-condition-menu-item">
+                <a class="navigate" href="#chapter5" data-target-id="chapter5">5. Intellectual property rights</a>
+              </li>
+              <li class="term-condition-menu-item">
+                <a class="navigate" href="#chapter6" data-target-id="chapter6">6. Intellectual property rights</a>
+              </li>
+              <li class="term-condition-menu-item">
+                <a class="navigate" href="#chapter7" data-target-id="chapter7">7. Indemnification</a>
+              </li>
+              <li class="term-condition-menu-item">
+                <a class="navigate" href="#chapter8" data-target-id="chapter8">8. Dispute resolution</a>
+              </li>
+              <li class="term-condition-menu-item">
+                <a class="navigate" href="#chapter9" data-target-id="chapter9">9. Changes and amendments</a>
+              </li>
+              <li class="term-condition-menu-item">
+                <a class="navigate" href="#chapter10" data-target-id="chapter10">10. Acceptance of these terms</a>
+              </li>
+            </ul>
+          </section>
+          <section class="right-section">
+
+            <h4 class="title" id="chapter1">Terms of Use</h4>
+            <ul>
+              <li>These terms of use (the "Terms of Use") govern your use of our ‘Sahaayak’ application for mobile and handheld devices (the "App"). Please read these Terms of Use carefully before you use the services. If you do not agree to these Terms of Use, you may not use the services on the App, and we request you to uninstall the App. By installing, downloading or even merely using the App, you shall be contracting with “Sahaayak” and you signify your acceptance to the Terms of Use and other “Sahaayak” policies as posted on the App from time to time, which takes effect on the date on which you download, install or use the services, and create a legally binding arrangement to abide by the same.</li>
+              <li>The App is operated and owned by ‘Floratechno Solutions Private Limited’, a company incorporated under the Companies Act, 2013 and having its registered office at Pune. For the purpose of these Terms of Use, wherever the context so requires, "you" shall mean any natural or legal person who has agreed to become a user on the App by providing Registration Data while registering on the App as a registered user using any mobile systems. The terms " Sahaayak", "we", "us" or "our" shall mean Floratechno Solutions Private Limited.</li>
+              <li>“Sahaayak” enables various services between participant volunteers and help seekers, dealing in social services ("App Services"). The ‘Help seeker/s’ can request for Prepared Food or Grocery by tagging his/her location on the App and The ‘Volunteer’ is able see the details of available requests by various neighborhood Help seekers and thus “Sahaayak” enables Help Seekers and Volunteers to bridge the gap allowing volunteers to go the right location and deliver prepared food or groceries to the Help seekers. For the App services rendered, “does not charge you any fee or charge by whatever name it may be called.</li>
+              <li>These Terms of Use are subject to modifications at any time. We reserve the right to modify or change these Terms of Use and other “Sahaayak” policies at any time by posting changes on the App, and you shall be liable to update yourself of such changes, if any, by accessing the changes on the App. You shall, at all times, be responsible for regularly reviewing the Terms of Use and the other “Sahaayak” policies and note the changes made on the App. Your continued usage of the services after any change is posted constitutes your acceptance of the amended Terms of Use and other “Sahaayak” policies. As long as you comply with these Terms of Use, “Sahaayak” grants you a personal, non-exclusive, non-transferable, limited privilege to access, enter, and use the App. By accepting these Terms of Use, you also accept and agree to be bound by the other terms and conditions and “Sahaayak”s policies as may be posted on the App from time to time.</li>
+              <li>“Sahaayak” is constantly evolving in order to provide the best possible experience and information to its users. You acknowledge and agree that the form and nature of the Services which “Sahaayak” provides, may require effecting certain changes in it, therefore, “Sahaayak” reserves the right to suspend/cancel, or discontinue any or all products or services at any time without notice, make modifications and alterations in any or all of its contents, products and services contained on the App without any prior notice.</li>
+              <li>We, the software, or the software application store that makes the software available for download may include functionality to automatically check for updates or upgrades to the software. Unless your device or its settings does not permit transmission or use of upgrades or updates, you agree that we, or the applicable software or software application store, may provide notice to you of the availability of such upgrades or updates and automatically push such upgrade or update to your device from time-to-time. You may be required to install certain upgrades or updates to the software in order to continue to access or use the Services, or portions thereof (including upgrades or updates designed to correct issues with the Services). Any updates or upgrades provided to you by us under the Terms shall be considered part of the Services.</li>
+            </ul>
+            <p>You acknowledge and agree that if “Sahaayak” disables access to your account, you may be prevented from accessing the Services, your account details or any files or other content, which is contained in your account.</p>
+
+            <h4 class="title" id="chapter2">Disclaimer of Services</h4>
+    
+            <ul>
+                <li>The Content on these Services is for informational purposes only. “Sahaayak”s disclaims any liability for any information that may have become outdated since the last time the particular piece of information was updated. “Sahaayak”s reserves the right to make changes and corrections to any part of the Content on these Services at any time without prior notice. </li>
+                <li>“Sahaayak”s does not guarantee quality of the Goods and Services offered by Volunteers or users. Unless stated otherwise, all pictures and information contained on these Services are believed to be owned by or licensed to “Sahaayak”. Please email a takedown request (by using the "Contact Us" tab on the App) to the webmaster if you are the copyright owner of any Content on these Services and you think the use of the above material violates Your copyright in any way. Please indicate the exact URL of the App/webpage in your request. All images shown here have been digitized by “Sahaayak”. No other party is authorized to reproduce or republish these digital versions in any format whatsoever without the prior written permission of “Sahaayak”.</li>
+                <li>“Sahaayak” shall not be liable for any acts or omissions on part of the Volunteer including deficiency in service, quality of food or groceries, time taken to prepare or deliver the same, etc.For the users in India, it is hereby clarified by “Sahaayak” that the liability of any violation of the Food Safety and Standards Act, 2006 and applicable rules and regulations made thereunder shall solely rest with the volunteers, vendors or manufacturers of the food products or any Pre-Packed Goods accordingly. For the purpose of clarity Pre-Packed Goods shall mean the food and beverages items which is placed in a package of any nature, in such a manner that the contents cannot be changed without tampering it and which is ready for sale to the customer or as may be defined under the Food Safety and Standards Act, 2006 from time to time.</li>
+                <li>Delivery of the food or groceries requested by help seekers or supplied by volunteers through the “Sahaayak” App may either be undertaken directly by the volunteer or facilitated by volunteers through third-party who may be available to provide delivery services to you. In both these cases, “Sahaayak” is merely acting as an intermediary between Help seekers and such Delivery service providers, or Help seekers and the Volunteers, as the case may be.</li>
+            </ul>
+
+          
+            <h4 class="title" id="chapter3">Accounts and membership:</h4>
+            <p>If you register yourself on the App, you are responsible for maintaining the security of your account and you are fully responsible for all activities that occur under the account and any other actions taken in connection with it. We may, but have no obligation to, monitor and review new accounts before you may sign in and use our Services. Providing false contact information of any kind may result in the termination of your account. You must immediately notify us of any unauthorized uses of your account or any other breaches of security. We will not be liable for any acts or omissions by you, including any damages of any kind incurred as a result of such acts or omissions. We may suspend, disable, or delete your account (or any part thereof) if we determine that you have violated any provision of this Agreement or that your conduct or content would tend to damage our reputation and goodwill. If we delete your account for the foregoing reasons, you may not re-register for our Services. We may block your email address and Internet protocol address to prevent further registration.</p>
+            
+            <h4 class="title" id="chapter4">Prohibited uses</h4>
+            <p>In addition to other terms as set forth in the Agreement, you are prohibited from using the App or its services: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to collect or track the personal information of others; (h) to spam, phish, pharm, pretext, spider, crawl, or scrape; (i) for any obscene or immoral purpose; or (j) to interfere with or circumvent the security features of the Service or any related app or website, other apps or websites, or the Internet. We reserve the right to terminate your use of the Service or any related app or website for violating any of the prohibited uses.</p>
+            
+            <h4 class="title" id="chapter5">Intellectual property rights</h4>
+            <p>This Agreement does not transfer to you any intellectual property owned by “Sahaayak”, Floratechno Solutions Private Limited or third-parties, and all rights, titles, and interests in and to such property will remain (as between the parties) solely with Floratechno Solutions Private Limited. All trademarks, service marks, graphics, and logos used in connection with our App or Services are trademarks or registered trademarks of Floratechno Solutions Private Limited.</p>
+
+            <h4 class="title" id="chapter6">Disclaimer of warranty</h4>
+            <p>You agree that your use of our App or Services is solely at your own risk. You agree that such Service is provided on an "as is" and "as available" basis. We expressly disclaim all warranties of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose and non-infringement. We make no warranty that the Services will meet your requirements, or that the Service will be uninterrupted, timely, secure, or error-free; nor do we make any warranty as to the results that may be obtained from the use of the Service or as to the accuracy or reliability of any information obtained through the Service or that defects in the Service will be corrected. You understand and agree that any material and/or data downloaded or otherwise obtained through the use of Service is done at your own discretion and risk and that you will be solely responsible for any damage to your mobile system or loss of data that results from the download of such material and/or data. We make no warranty regarding any goods or services obtained through the Service or any transactions entered into through the Service. No advice or information, whether oral or written, obtained by you from us or through the Service shall create any warranty not expressly made herein.</p>
+
+            <h4 class="title" id="chapter7">Indemnification</h4>
+            <p>You agree to indemnify and hold Floratechno Solutions Private Limited and its affiliates, directors, officers, employees, and agents harmless from and against any liabilities, losses, damages or costs, including reasonable attorneys' fees, incurred in connection with or arising from any third-party allegations, claims, actions, disputes, or demands asserted against any of them as a result of or relating to your Content, your use of the App or Services or any willful misconduct on your part.</p>
+            
+
+            <h4 class="title" id="chapter8">Dispute resolution</h4>
+            <p>The formation, interpretation, and performance of this Agreement and any disputes arising out of it shall be governed by the substantive and procedural laws of Maharashtra, India without regard to its rules on conflicts or choice of law and, to the extent applicable, the laws of India. The exclusive jurisdiction and venue for actions related to the subject matter hereof shall be the courts located in Maharashtra, India, and you hereby submit to the personal jurisdiction of such courts. You hereby waive any right to a jury trial in any proceeding arising out of or related to this Agreement. The United Nations Convention on Contracts for the International Sale of Goods does not apply to this Agreement.</p>
+            
+            
+
+            <h4 class="title" id="chapter9">Changes and amendments</h4>
+            <p>We reserve the right to modify this agreement or its policies relating to the App or Services at any time, effective upon posting of an updated version of this on the App. When we do, we will revise the updated date at the bottom of this page. Continued use of the App after any such changes shall constitute your consent to such changes.
+            </p>
+
+            <h4 class="title" id="chapter10">Acceptance of these terms</h4>
+            
+            <p>You acknowledge that you have read this term of service and agree to all its terms and conditions. By using the app or its Services you agree to be bound by this. If you do not agree to abide by the terms, you are not authorized to use or access the App and its Services.</p>
+            
+          </section>
+        </section>
+      </section>
+    </section>
+    <footer class="bottom-footer-wrapper">
+      <div class="copy-right-info">© 2020 Cut2it, Inc. All Rights Reserved.</div>
+    </footer>
+    <!-- <footer class="bottom-footer-wrapper">
+      <div class="term-condition-wrapper">
+        <div class="bottom-left-footer-wrapper">© 2020 VideoMine, Inc. All Rights Reserved.</div>
+        <div class="bottom-right-footer-wrapper">
+          <div class="social-media-wrapper">
+            <img loading="lazy" class="social-media-thumbnail fb-img"
+              src="https://d1d65i3hb61njs.cloudfront.net/website/social/facebook-color.png" alt="Facebook">
+            <img loading="lazy" class="social-media-thumbnail"
+              src="https://d1d65i3hb61njs.cloudfront.net/website/social/twitter-color.png" alt="Twitter">
+            <img loading="lazy" class="social-media-thumbnail vm-img"
+              src="https://d1d65i3hb61njs.cloudfront.net/website/logo/vm_logo_1.png" alt="Videomine">
+            <img loading="lazy" class="social-media-thumbnail"
+              src="https://d1d65i3hb61njs.cloudfront.net/website/social/youtube-color.png" alt="Youtube">
+          </div>
+          <img loading="lazy" class="download-app-store-thumbnail"
+              src="https://www.aaos.org/globalassets/annual-meeting/business-solutions---annual-meeting/download-app-store.png"
+              alt="Download Ios App" />
+            <img loading="lazy" class="download-app-store-thumbnail"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQb-o1J7yEOL6He88fC-gq1Nw9AOejzQX3KxK56QvEmLuvVakCz"
+              alt="Download Ios App" />
+        </div>
+      </div>
+    </footer> -->
+  </main>
+
+  <script>
+    document.querySelector('.js-mobile-header').addEventListener('click', function () {
+      let breadcrumbMenuElement = document.querySelector('.js-breadcrumb-menu-container');
+      if (breadcrumbMenuElement.classList.contains('display-none')) {
+        breadcrumbMenuElement.classList.remove('display-none');
+      } else {
+        breadcrumbMenuElement.classList.add('display-none');
+      }
+    })
+  </script>
 </body>
 
 </html>
