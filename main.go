@@ -24,6 +24,7 @@ func main() {
 	rtr.HandleFunc("/about", about)
 	rtr.HandleFunc("/team", team)
 	rtr.HandleFunc("/contact", contact)
+	rtr.HandleFunc("/privacy-policy", policy)
 	rtr.HandleFunc("/services", service)
 	rtr.HandleFunc("/js/{subdir}/{file}", serveResource)
 	rtr.HandleFunc("/css/{file}", serveResource)
@@ -74,6 +75,19 @@ func contact(wr http.ResponseWriter, req *http.Request) {
 		}
 	}
 }
+
+func policy(wr http.ResponseWriter, req *http.Request) {
+	if req.Method == "GET" {
+		//Get API call to find the color config of user.
+		t := template.Must(template.ParseFiles("template/headerpages/policy.html"))
+
+		err := t.Execute(wr, nil)
+		if err != nil {
+			http.Error(wr, "Error parsing template, ["+err.Error()+"]", http.StatusInternalServerError)
+		}
+	}
+}
+
 func service(wr http.ResponseWriter, req *http.Request) {
 	if req.Method == "GET" {
 		//Get API call to find the color config of user.
