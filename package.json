@@ -4,7 +4,9 @@
   "description": "dream project",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "lint": "./node_modules/.bin/eslint .",
+    "build": "./node_modules/.bin/webpack -d"
   },
   "author": "Barkha",
   "license": "ISC",
@@ -15,10 +17,6 @@
     "react-dom": "^16.2.0",
     "react-google-maps": "^9.4.5",
     "react-sticky-header": "^0.1.9"
-  },
-  "scripts": {
-    "lint": "./node_modules/.bin/eslint .",
-    "build": "./node_modules/.bin/webpack -d"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
